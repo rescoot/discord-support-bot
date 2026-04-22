@@ -1,48 +1,40 @@
 id: librescoot-intro
 aliases: [open-firmware, custom-firmware, flashen, free-firmware]
 title:
-  de: "Was ist LibreScoot und wie fange ich an?"
-  en: "What is LibreScoot and how do I start?"
+  de: "Was ist LibreScoot?"
+  en: "What is LibreScoot?"
 body:
   de: |
-    **LibreScoot** ist eine offene Firmware für den unu Scooter Pro.
-    Sie ersetzt die proprietären Services durch freie Alternativen und bietet
-    das CLI-Werkzeug `lsc`.
+    **LibreScoot** ist eine alternative, offene Firmware für den unu
+    Scooter Pro. Sie befindet sich laut Channel-Status aktuell noch in
+    Entwicklung und **ist noch nicht als stabil bezeichnet**.
 
-    **Einstieg:**
-    1. Tech-Reference lesen: https://github.com/reunu/tech-reference
-    2. LibreScoot-Repos durchstöbern: https://github.com/librescoot
-    3. In `#librescoot-talk` mitlesen/fragen, bevor du flashst.
+    LibreScoot hat nichts mit der offiziellen unu-App zu tun — die App
+    greift weiterhin auf die unu-Cloud zu, LibreScoot ersetzt nur die
+    Firmware auf dem Roller.
 
-    **Erste `lsc`-Kommandos:**
-    ```
-    lsc status              # Systemstatus
-    lsc battery             # Akku-Infos
-    lsc svc list            # laufende Services
-    lsc svc logs vehicle -f # vehicle-Logs folgen
-    ```
+    Infos & Code:
+    • Tech-Reference: <https://github.com/reunu/tech-reference>
+    • LibreScoot-Repos: <https://github.com/librescoot>
+    • Diskussion: `#librescoot-talk`
 
-    ⚠️ Flashen ersetzt die Werksfirmware — OTA von unu funktioniert dann nicht
-    mehr. Lies die Doku und stell sicher, dass du den Rollback-Weg kennst.
+    Wenn du überlegst zu flashen, lies dich bitte vorher in die Doku ein
+    und frag im `#librescoot-talk`-Channel — gefragt wird dort regelmäßig.
   en: |
-    **LibreScoot** is an open firmware for the unu Scooter Pro. It replaces
-    the proprietary services with free alternatives and ships the `lsc` CLI.
+    **LibreScoot** is an alternative, open firmware for the unu Scooter
+    Pro. Per channel status it's currently still in development and is
+    **not yet described as stable**.
 
-    **Getting started:**
-    1. Read the tech reference: https://github.com/reunu/tech-reference
-    2. Browse LibreScoot repos: https://github.com/librescoot
-    3. Lurk/ask in `#librescoot-talk` before you flash.
+    LibreScoot is unrelated to the official unu app — the app still hits
+    the unu cloud; LibreScoot only replaces firmware on the scooter.
 
-    **First `lsc` commands:**
-    ```
-    lsc status              # overall status
-    lsc battery             # battery info
-    lsc svc list            # running services
-    lsc svc logs vehicle -f # follow vehicle logs
-    ```
+    Info & code:
+    • Tech reference: <https://github.com/reunu/tech-reference>
+    • LibreScoot repos: <https://github.com/librescoot>
+    • Discussion: `#librescoot-talk`
 
-    ⚠️ Flashing replaces the factory firmware — OTA from unu won't work
-    anymore. Read the docs and make sure you know the rollback path.
+    If you're thinking about flashing, read the docs first and ask in
+    `#librescoot-talk` — it comes up regularly there.
 links:
   - url: https://github.com/librescoot
     label:

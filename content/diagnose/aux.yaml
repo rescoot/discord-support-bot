@@ -4,139 +4,227 @@ title:
   en: "AUX battery / scooter won't wake"
 description:
   de: |-
-    Geführte Fehlersuche bei wackeligem Aufwachen, toten LEDs und App-Verbindungsproblemen.
+    Geführte Fehlersuche für „wacht nicht auf", tote LEDs und Blinker-Ausfälle.
+    Nutzt die unu-App als Diagnose; Multimeter ist optional.
   en: |-
-    Guided troubleshoot for flaky wake-ups, dead LEDs and app connection problems.
-start: age
+    Guided troubleshoot for "won't wake", dead LEDs and broken turn
+    signals. Uses the unu app for diagnostics; multimeter is optional.
+start: symptom
 
 steps:
+  symptom:
+    prompt:
+      de: "Was genau passiert?"
+      en: "What exactly is happening?"
+    choices:
+      - label: { de: "Roller reagiert gar nicht (Keycard + App)", en: "No reaction to keycard or app" }
+        goto: dead-cold
+      - label: { de: "Grüne LED aus, App sagt „wacht auf", en: "Green LED off, app says \"waking up\"" }
+        goto: can-use-app
+      - label: { de: "Dashboard startet kurz und geht wieder aus", en: "Dashboard briefly starts, then dies" }
+        goto: brownout
+      - label: { de: "Blinker / Beleuchtung funktionieren nicht richtig", en: "Turn signals / lighting not working right" }
+        goto: brownout
+      - label: { de: "App kann sich nicht verbinden", en: "App can't connect" }
+        goto: app-flow
+
+  dead-cold:
+    prompt:
+      de: "Hält die Keycard physisch ans Dashboard. Blinkt oder leuchtet irgendwas?"
+      en: "Hold the keycard physically to the dashboard. Does anything blink or light up?"
+    choices:
+      - label: { de: "Nichts passiert", en: "Nothing happens" }
+        goto: aux-or-cbb
+      - label: { de: "Etwas blinkt, kommt aber nicht weiter", en: "Something blinks but never proceeds" }
+        goto: aux-likely
+      - label: { de: "Roller kommt kurz, geht wieder aus", en: "Scooter briefly wakes, then dies" }
+        goto: brownout
+
+  can-use-app:
+    prompt:
+      de: "Verbindet sich die App mit dem Roller?"
+      en: "Is the app actually connecting to the scooter?"
+    choices:
+      - label: { de: "Ja, verbunden", en: "Yes, connected" }
+        goto: app-long-press
+      - label: { de: "Nein, verbindet nicht", en: "No, won't connect" }
+        goto: age
+
+  app-long-press:
+    prompt:
+      de: |-
+        In der unu-App den AUX-Button **lange gedrückt halten**, solange
+        verbunden ist. Die App zeigt dir den AUX-Zustand. Wie sieht's aus?
+      en: |-
+        In the unu app, **long-press the AUX button** while connected —
+        the app shows the AUX state. What does it say?
+    choices:
+      - label: { de: "AUX sichtbar schwach / niedrig", en: "AUX clearly weak / low" }
+        goto: replace
+      - label: { de: "AUX sieht ok aus", en: "AUX looks OK" }
+        goto: ask-channel
+      - label: { de: "Finde das in der App nicht", en: "Can't find that in the app" }
+        goto: age
+
+  brownout:
+    answer:
+      de: |-
+        Dashboard-Brownout und/oder ausfallende Blinker sind klassische
+        Anzeichen einer schwachen AUX: die Ruhespannung reicht noch zum
+        Aufwachen, bricht aber unter Last zusammen.
+
+        Nächster Schritt: **AUX tauschen**. Siehe `/faq aux-battery`
+        und vor dem Arbeiten `/faq dc-converter-safety` lesen.
+
+        Wenn du unsicher bist, frag im `#roller-support` — mit Angabe,
+        wie alt der Roller ist und welche Symptome auftreten.
+      en: |-
+        A dashboard brownout and/or flaky turn signals are classic signs
+        of a weak AUX: resting voltage is still fine, but it collapses
+        under load.
+
+        Next step: **replace the AUX**. See `/faq aux-battery` and read
+        `/faq dc-converter-safety` before working on it.
+
+        If you're unsure, ask in `#roller-support` with the scooter's age
+        and the symptoms.
+
+  aux-or-cbb:
+    prompt:
+      de: "Wie alt ist der Roller?"
+      en: "How old is the scooter?"
+    choices:
+      - label: { de: "< 2 Jahre", en: "< 2 years" }
+        goto: ask-channel
+      - label: { de: "2–4 Jahre", en: "2–4 years" }
+        goto: replace
+      - label: { de: "> 4 Jahre", en: "> 4 years" }
+        goto: replace
+      - label: { de: "Weiß ich nicht", en: "Not sure" }
+        goto: replace
+
   age:
     prompt:
       de: "Wie alt ist dein unu-Roller?"
       en: "How old is your unu scooter?"
     choices:
       - label: { de: "< 2 Jahre", en: "< 2 years" }
-        goto: symptoms
+        goto: ask-channel
       - label: { de: "2–4 Jahre", en: "2–4 years" }
-        goto: aux-suspect
+        goto: aux-likely
       - label: { de: "> 4 Jahre", en: "> 4 years" }
-        goto: aux-very-suspect
-
-  aux-very-suspect:
-    prompt:
-      de: "Bei Rollern über 4 Jahre ist die AUX fast immer am Ende. Willst du trotzdem messen?"
-      en: "On 4+ year scooters the AUX is almost always done. Measure anyway?"
-    choices:
-      - label: { de: "Ja, Spannung messen", en: "Yes, measure voltage" }
-        goto: measure
-      - label: { de: "Nein, direkt tauschen", en: "No, just swap it" }
         goto: replace
 
-  aux-suspect:
+  aux-likely:
     prompt:
-      de: "Die AUX ist der übliche Verdächtige. Misst du die Ruhespannung?"
-      en: "AUX is the usual suspect. Will you measure resting voltage?"
+      de: "AUX ist der wahrscheinlichste Kandidat. Kannst du sie tauschen?"
+      en: "AUX is the most likely suspect. Can you swap it?"
     choices:
-      - label: { de: "Messen", en: "Measure" }
+      - label: { de: "Ja, ich tausche sie", en: "Yes, I'll swap it" }
+        goto: replace
+      - label: { de: "Nein, dafür brauche ich Hilfe", en: "No, I need help for that" }
+        goto: find-help
+      - label: { de: "Erst Multimeter-Messung", en: "Multimeter check first" }
         goto: measure
-      - label: { de: "Anderes Symptom beschreiben", en: "Describe other symptom" }
-        goto: symptoms
-
-  symptoms:
-    prompt:
-      de: "Was passiert beim Wecken?"
-      en: "What happens when you try to wake the scooter?"
-    choices:
-      - label: { de: "Gar nichts (keine LED, kein Piep)", en: "Nothing (no LED, no beep)" }
-        goto: nothing
-      - label: { de: "Grüne LED aus, App zeigt „wacht auf", en: "Green LED off, app says \"waking up\"" }
-        goto: measure
-      - label: { de: "Dashboard startet kurz und geht wieder aus", en: "Dashboard briefly starts then dies" }
-        goto: brownout
-      - label: { de: "App kann sich nicht verbinden", en: "App can't connect" }
-        goto: app-flow
-
-  nothing:
-    prompt:
-      de: "Keycard probiert? Liest das Dashboard sie (LED-Reaktion)?"
-      en: "Tried the keycard? Does the dashboard read it (LED reaction)?"
-    choices:
-      - label: { de: "Keine Reaktion auf Keycard", en: "No reaction to keycard" }
-        goto: measure
-      - label: { de: "Keycard wird gelesen, Roller geht trotzdem aus", en: "Keycard is read, scooter still dies" }
-        goto: brownout
 
   measure:
     prompt:
-      de: "Miss die AUX-Ruhespannung (Multimeter direkt an den Polen)."
-      en: "Measure AUX resting voltage (multimeter on the posts)."
+      de: |-
+        Miss die AUX-Ruhespannung am besten direkt an den Polen.
+        Was zeigt das Multimeter?
+      en: |-
+        Measure the AUX resting voltage — best directly on the posts.
+        What does the meter show?
     choices:
-      - label: { de: "> 12,4 V", en: "> 12.4 V" }
-        goto: under-load
-      - label: { de: "11,8–12,4 V", en: "11.8–12.4 V" }
-        goto: under-load
-      - label: { de: "< 11,8 V", en: "< 11.8 V" }
+      - label: { de: "Klar unter 12 V", en: "Clearly below 12 V" }
         goto: replace
-
-  under-load:
-    prompt:
-      de: "Schalte die Blinker ein und miss erneut. Bricht die Spannung ein?"
-      en: "Turn on the blinkers and measure again. Does voltage sag?"
-    choices:
-      - label: { de: "Ja, stark (< 11 V)", en: "Yes, a lot (< 11 V)" }
+      - label: { de: "Um 12 V herum", en: "Around 12 V" }
         goto: replace
-      - label: { de: "Nein, stabil", en: "No, stable" }
-        goto: wiring
+      - label: { de: "Über 12,5 V, scheint ok", en: "Above 12.5 V, looks OK" }
+        goto: ask-channel
+      - label: { de: "Ich hab kein Multimeter", en: "I don't have a multimeter" }
+        goto: aux-likely-short
 
-  wiring:
+  aux-likely-short:
     answer:
-      de: |
-        AUX scheint ok. Jetzt Verkabelung prüfen:
-        • Pluspol-Kontakt (Korrosion, lockere Schraube)
-        • DC-Wandler-Stecker (fest, nicht verbrannt)
-        • Masse zum Rahmen
-        Wenn alles sauber aussieht und der Roller trotzdem nicht aufwacht,
-        poste im `#roller-support` mit Fotos und den gemessenen Spannungen.
-      en: |
-        AUX looks fine. Now check the wiring:
-        • + post contact (corrosion, loose screw)
-        • DC converter plug (tight, not burned)
-        • Ground to the frame
-        If everything looks clean and the scooter still won't wake, post in
-        `#roller-support` with photos and the voltages you measured.
-
-  brownout:
-    answer:
-      de: |
-        Klassisches AUX-Brownout-Symptom: AUX hat noch Ruhespannung, bricht
-        aber unter Last komplett weg. → AUX tauschen.
-        Sicherheitshinweis: `/faq dc-converter-safety` vor dem Arbeiten lesen.
-      en: |
-        Classic AUX brownout: AUX has resting voltage but collapses under
-        load. → Replace the AUX.
-        Safety: read `/faq dc-converter-safety` before working on electrics.
+      de: |-
+        Ohne Messung: wenn der Roller ≥ 2 Jahre alt ist und die typischen
+        Symptome zeigt (keine grüne LED, Dashboard-Brownout, Blinker
+        schwach), ist AUX tauschen der wahrscheinlichste Fix.
+        Siehe `/faq aux-battery` und `/faq dc-converter-safety`.
+      en: |-
+        Without measuring: if the scooter is ≥ 2 years old and shows the
+        usual symptoms (no green LED, dashboard brownout, weak signals),
+        replacing the AUX is the most likely fix. See `/faq aux-battery`
+        and `/faq dc-converter-safety`.
 
   replace:
     answer:
-      de: |
-        AUX ist tot. Ersatz ist eine 12V-Blei-Gel-Batterie passender Größe
-        (Community-Doku im `#ressourcen`-Kanal).
-        ⚠️ **Hauptakku rausnehmen**, bevor du irgendwas ziehst.
-        Siehe `/faq dc-converter-safety` und `/faq aux-battery`.
-      en: |
-        AUX is dead. Replace with a matching 12V gel lead-acid (see the
-        community docs in `#ressourcen`).
-        ⚠️ **Remove the main battery** before unplugging anything.
-        See `/faq dc-converter-safety` and `/faq aux-battery`.
+      de: |-
+        **AUX tauschen.** Bauform und Maße wie das Original
+        (12V-Blei-Gel-Batterie). Konkret bewährte Ersatztypen gibt's im
+        `#roller-support` auf Nachfrage.
+
+        ⚠️ **Vor dem Arbeiten:** Hauptakku raus, AUX-Stecker erst danach
+        lösen. Unbedingt `/faq dc-converter-safety` lesen.
+
+        Wenn danach immer noch kein Wake: CBB prüfen (`/glossar cbb`)
+        oder im `#roller-support` mit Symptomen posten.
+      en: |-
+        **Replace the AUX.** Same form factor and size as the original
+        (12V gel lead-acid). Ask in `#roller-support` for currently known-
+        good replacement types.
+
+        ⚠️ **Before working on it:** remove the main battery first, only
+        then disconnect the AUX. Read `/faq dc-converter-safety`.
+
+        If it still won't wake after the swap: check the CBB
+        (`/glossary cbb`) or post in `#roller-support` with your symptoms.
     links:
       - url: https://github.com/Julinho666/UNU-CBB-Battery
-        label: { de: "CBB/AUX Community-Doku", en: "CBB/AUX community docs" }
+        label: { de: "CBB/AUX Community-Repo", en: "CBB/AUX community repo" }
+
+  find-help:
+    answer:
+      de: |-
+        Für Hilfe bei der Reparatur: siehe `/faq service-partner` und
+        poste in `#roller-support` mit **PLZ/Region** — dort kommen
+        regionale Empfehlungen. In Berlin ist *Fa. Wilhelm Fahrzeugtechnik*
+        am Südkreuz die etablierte Adresse.
+      en: |-
+        For repair help: see `/faq service-partner` and post in
+        `#roller-support` with your **zip/region** — you'll get regional
+        recommendations. In Berlin *Fa. Wilhelm Fahrzeugtechnik* near
+        Südkreuz is the established shop.
+
+  ask-channel:
+    answer:
+      de: |-
+        Klingt nicht nach dem klassischen AUX-Muster. Poste am besten im
+        `#roller-support`:
+        • Alter/Baujahr des Rollers
+        • Was genau passiert (und was nicht)
+        • Ob/was die App anzeigt (falls verbunden)
+        • Ob du an AUX/CBB schon etwas verändert hast
+
+        Je mehr Details, desto schneller die richtige Spur.
+      en: |-
+        Doesn't sound like the classic AUX pattern. Post in
+        `#roller-support` with:
+        • Scooter age / year
+        • What exactly happens (and what doesn't)
+        • What the app shows (if it connects)
+        • Whether you've already touched AUX/CBB
+
+        More detail → faster triage.
 
   app-flow:
     answer:
-      de: |
-        Wenn der Roller physisch aufwacht (LED, Dashboard), aber die App
-        nicht verbindet, siehe `/diagnose app` oder `/faq app-connect`.
-      en: |
-        If the scooter wakes physically (LED, dashboard) but the app can't
-        connect, see `/diagnose app` or `/faq app-connect`.
+      de: |-
+        Wenn der Roller physisch reagiert (Keycard weckt ihn, Dashboard
+        kommt hoch), ist das eher ein App-Thema → `/diagnose app` oder
+        `/faq app-connect`.
+      en: |-
+        If the scooter reacts physically (keycard wakes it, dashboard
+        comes up), this is more of an app issue → `/diagnose app` or
+        `/faq app-connect`.

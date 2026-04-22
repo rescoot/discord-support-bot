@@ -1,36 +1,30 @@
 id: firmware
-aliases: [update, version, v1.15, stock-firmware]
+aliases: [update, version, scooteros, stock-firmware]
 title:
-  de: "Stock-Firmware und App-Versionen"
-  en: "Stock firmware and app versions"
+  de: "Stock-Firmware-Versionen"
+  en: "Stock firmware versions"
 body:
   de: |
-    Die letzten offiziellen unu-Versionen, die im Channel als stabil gelten:
+    Im Channel erwähnte unu ScooterOS-Versionen (chronologisch):
+    V1.5.0, V1.6.0, V1.8.0, V1.12.0, V1.13.2, **V1.15.0**.
 
-    - **Roller-Firmware:** V1.15 (und Vorgänger V1.13.2)
-    - **iOS-App:** Prod im App Store; bei Problemen hilft meist die TestFlight-Beta.
-    - **Android-App:** aktuelle Version aus dem Play Store.
+    V1.15.0 ist nach Aussage im Channel der letzte Release-Candidate für
+    MDB und DBC und dürfte die letzte offizielle Version sein, die unu
+    selbst herausgegeben hat.
 
-    Seit unu pleite ist, gibt es keine offiziellen neuen Roller-Firmwares mehr —
-    für Weiterentwicklung siehe **LibreScoot** (`/glossar librescoot`).
+    Seit unus Pleite gibt es keine neuen offiziellen Roller-Firmwares —
+    Weiterentwicklung findet unter **LibreScoot** statt
+    (`/glossar librescoot`), die Firmware ist dort aber aktuell noch in
+    Entwicklung und *nicht als stabil* bezeichnet.
   en: |
-    Latest official unu versions that the channel considers stable:
+    unu ScooterOS versions mentioned in the channel (chronological):
+    V1.5.0, V1.6.0, V1.8.0, V1.12.0, V1.13.2, **V1.15.0**.
 
-    - **Scooter firmware:** V1.15 (previously V1.13.2)
-    - **iOS app:** prod via App Store; the TestFlight beta often helps when
-      prod misbehaves.
-    - **Android app:** current Play Store version.
+    Per channel statements V1.15.0 is the last release candidate for MDB
+    and DBC and is probably the last official version unu itself shipped.
 
-    Since unu went bankrupt there are no new official scooter firmware
-    releases — for continued development see **LibreScoot**
-    (`/glossary librescoot`).
-links:
-  - url: https://testflight.apple.com/join/Uzcy1kSH
-    label:
-      de: "unu iOS Beta (TestFlight)"
-      en: "unu iOS beta (TestFlight)"
-  - url: https://github.com/librescoot
-    label:
-      de: "LibreScoot"
-      en: "LibreScoot"
-tags: [firmware, app]
+    Since unu's bankruptcy there are no new official scooter firmwares.
+    Continued development happens under **LibreScoot**
+    (`/glossary librescoot`), though that firmware is still in development
+    and is *not yet described as stable*.
+tags: [firmware]

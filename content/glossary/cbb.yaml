@@ -5,18 +5,29 @@ title:
   en: "CBB — Connectivity Box Battery"
 body:
   de: |
-    Die **Connectivity Box Battery (CBB)** ist ein kleiner Li-Ion-Akku, der die
-    Mobilfunk- und GPS-Systeme auch bei abgezogenem Hauptakku mit Strom versorgt.
-    Typisches Ausfallsymptom: Roller meldet sich nicht mehr in der App, wenn der
-    Hauptakku raus ist.
+    Die **Connectivity Box Battery (CBB)** ist ein kleiner Li-Ion-Akku,
+    der Mobilfunk/GPS auch dann versorgt, wenn der Hauptakku nicht aktiv
+    oder raus ist. Der Roller schaltet im Standby zwischen AUX und CBB um,
+    je nachdem, was aktiv ist.
 
-    Community-Doku und Ersatz-Optionen findest du im CBB-Repo von Julinho.
+    Typisches Symptom einer leeren CBB: die App meldet „internal battery
+    low"; in dem Moment ist die CBB nicht mehr verbunden. Wenn zusätzlich
+    AUX und CBB beide leer sind, lässt sich der Roller nicht mehr starten.
+
+    Community-Doku und Reverse-Engineering dazu:
+    <https://github.com/Julinho666/UNU-CBB-Battery>.
   en: |
-    The **Connectivity Box Battery (CBB)** is a small Li-ion pack that keeps the
-    cellular and GPS systems alive while the main battery is out. Typical failure:
-    the scooter goes silent in the app once you remove the main battery.
+    The **Connectivity Box Battery (CBB)** is a small Li-ion pack that
+    keeps cellular/GPS alive when the main battery is inactive or removed.
+    In standby the scooter switches between AUX and CBB depending on
+    what's active.
 
-    Community docs and replacement options are in Julinho's CBB repo.
+    Typical dead-CBB symptom: the app shows "internal battery low"; at
+    that moment the CBB is no longer connected. If AUX *and* CBB are both
+    empty, the scooter won't start.
+
+    Community docs / reverse engineering:
+    <https://github.com/Julinho666/UNU-CBB-Battery>.
 links:
   - url: https://github.com/Julinho666/UNU-CBB-Battery
     label:

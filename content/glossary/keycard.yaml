@@ -5,17 +5,11 @@ title:
   en: "Keycard — NFC key"
 body:
   de: |
-    Die **Keycard** ist eine NFC-Karte, mit der der Roller freigeschaltet wird.
-    Gelesen wird sie vom PN7150-NFC-Chip im DBC. Die Status-LED im Dashboard
-    (LP5662) signalisiert Lese-Zustand und Fehler.
-
-    Verlorene Keycard? In der unu-App lassen sich neue Karten anlernen — oder
-    du nutzt alternativ die LibreScoot-Tooling.
+    Die **Keycard** ist eine NFC-Karte, mit der der Roller freigeschaltet
+    wird. Gelesen wird sie vom PN7150-NFC-Chip im DBC; eine LP5662-LED im
+    Dashboard zeigt Lese-Zustand und Fehler an.
   en: |
-    The **keycard** is an NFC card that unlocks the scooter. It's read by a
-    PN7150 NFC chip inside the DBC, with the LP5662 dashboard LED showing
+    The **keycard** is an NFC card that unlocks the scooter. A PN7150 NFC
+    chip inside the DBC reads it, and an LP5662 LED on the dashboard shows
     read state and errors.
-
-    Lost card? You can enroll new cards from the unu app — or use LibreScoot
-    tooling as an alternative.
 tags: [hardware, auth]

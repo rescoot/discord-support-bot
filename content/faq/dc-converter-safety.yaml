@@ -1,28 +1,39 @@
 id: dc-converter-safety
-aliases: [dc-wandler, dc-converter, safety, sicherheitshinweis, warning]
+aliases: [dc-wandler, dc-converter, safety, sicherheitshinweis, warning, mdb-tot]
 title:
-  de: "⚠️ Sicherheit: DC-Wandler und Hauptakku"
-  en: "⚠️ Safety: DC converter and main battery"
+  de: "⚠️ Sicherheit: DC-Wandler nie unter Spannung trennen"
+  en: "⚠️ Safety: never unplug the DC converter under power"
 body:
   de: |
-    **NIEMALS** den Stecker vom DC-Wandler abziehen, solange der Hauptakku
-    eingesetzt ist — der Wandler kann dabei sterben und im Worst Case gibt's
-    Lichtbögen an den Kontakten.
+    **Community-Warnung aus `#roller-support`:**
 
-    Vor jedem Eingriff an der Elektrik:
-    1. Hauptakku raus.
-    2. Kurz warten, bis die Caps entladen sind.
-    3. Dann erst Stecker ziehen.
+    > „Wenn möglich zieht NIE den Stecker vom DC-Wandler wenn der Hauptakku
+    > eingelegt ist! Und anschließen auch nur wenn wirklich alle anderen
+    > Spannungsquellen ab sind. Ich habe damit mindestens 3 MDBs zerlegt."
 
-    Gleiches gilt für alle anderen Hochstrom-Verbindungen in Richtung Motor/ECU.
+    Also vor jedem Eingriff am DC-Wandler oder an angrenzender Elektronik:
+
+    1. **Hauptakku raus.**
+    2. Sicherstellen, dass auch sonst keine Spannungsquelle anliegt
+       (AUX, CBB-Anschluss).
+    3. Erst dann Stecker lösen.
+
+    Ein beschädigtes MDB zu ersetzen ist teuer und bei der aktuellen
+    Ersatzteillage sehr schwierig.
   en: |
-    **NEVER** unplug the DC converter while the main battery is inserted —
-    it can destroy the converter, and worst case you'll arc the contacts.
+    **Community warning from `#roller-support`:**
 
-    Before any work on the electrics:
-    1. Remove the main battery.
-    2. Wait a moment for caps to discharge.
+    > "If at all possible, NEVER unplug the DC converter while the main
+    > battery is inserted! And only plug it in when all other power sources
+    > are actually disconnected. I've destroyed at least 3 MDBs doing it."
+
+    So before touching the DC converter or adjacent electronics:
+
+    1. **Remove the main battery.**
+    2. Make sure no other source is still powering things (AUX, CBB
+       connector).
     3. Then unplug.
 
-    Same applies for any high-current connection toward motor/ECU.
+    Replacing a damaged MDB is expensive and hard given the current spare-
+    parts situation.
 tags: [safety, repair]

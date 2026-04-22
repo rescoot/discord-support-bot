@@ -1,43 +1,46 @@
 id: app-connect
-aliases: [app-verbindung, bluetooth, ble, app-funktioniert-nicht, wacht-auf, waking-up]
+aliases: [app-verbindung, bluetooth, ble, app-funktioniert-nicht]
 title:
-  de: "App verbindet nicht / hängt bei „wacht auf"
-  en: "App won't connect / stuck on \"waking up\""
+  de: "App verbindet nicht"
+  en: "App won't connect"
 body:
   de: |
-    Die offizielle unu-App nutzt Bluetooth + Cloud, um den Roller zu wecken.
-    Häufige Ursachen, wenn es hakt:
+    Was im Channel bestätigt ist:
 
-    1. **Hauptakku leer oder raus** — die CBB überbrückt zwar, aber wenn der
-       Roller tief im Hibernate ist, kann das Wecken fehlschlagen.
-    2. **AUX leer** → siehe `/faq aux-battery`.
-    3. **Bluetooth-Cache** im Telefon: Bluetooth am Handy einmal aus/ein,
-       App-Cache leeren, App neu starten.
-    4. **iOS-Beta**: wenn die Prod-App zickt, hilft oft die TestFlight-Beta.
-    5. **Roller-Firmware veraltet**: die letzten offiziellen Updates (V1.15)
-       haben Wake-Bugs gefixt.
+    1. **Der Roller nutzt BLE (Bluetooth Low Energy).** Solange AUX *oder*
+       CBB noch Spannung haben, ist BLE immer an — das ist nicht
+       abschaltbar.
+    2. **Der Roller kann nur mit einem Handy gleichzeitig verbunden sein.**
+       Wenn die App nicht findet, hilft oft: am alten/zweiten Handy die
+       Verbindung trennen oder das Handy ausschalten.
+    3. **iOS-Beta (TestFlight)** behebt häufig Verbindungsprobleme der
+       Prod-App.
+    4. Wenn *gar nichts* passiert (weder App-Wake noch Keycard reagiert),
+       ist es meist kein App-Problem, sondern **AUX/CBB leer** —
+       siehe `/faq aux-battery`.
 
-    **Wenn der Roller gar nicht reagiert:** physisch mit der Keycard wecken
-    und prüfen, ob er aus eigener Kraft hochkommt. Wenn ja, ist die App
-    wahrscheinlich der Knackpunkt. Wenn nein → AUX/CBB checken.
+    **Erster Schritt zur Abgrenzung:** Keycard physisch ans Dashboard
+    halten. Wacht der Roller auf? Dann liegt's an der App.
+    Wacht er nicht auf? Dann an der Stromversorgung.
 
     👉 Interaktiv: `/diagnose app`
   en: |
-    The official unu app uses Bluetooth + cloud to wake the scooter. Common
-    reasons for stalls:
+    What's confirmed in the channel:
 
-    1. **Main battery empty or removed** — the CBB bridges it, but if the
-       scooter is deep in hibernate the wake can fail.
-    2. **AUX dead** → see `/faq aux-battery`.
-    3. **Bluetooth cache** on the phone: toggle BT off/on, clear app cache,
-       restart the app.
-    4. **iOS beta**: when the prod app misbehaves, the TestFlight beta often
-       helps.
-    5. **Outdated scooter firmware**: the last official updates (V1.15) fixed
-       several wake bugs.
+    1. **The scooter uses BLE (Bluetooth Low Energy).** As long as AUX
+       *or* CBB has power, BLE stays on — it can't be turned off.
+    2. **The scooter only pairs with one phone at a time.** If the app
+       can't find it, disconnecting on an old/second phone (or switching
+       it off) often fixes it.
+    3. **iOS TestFlight beta** often fixes connection issues that exist
+       in the production app.
+    4. If *nothing* happens — neither app wake nor keycard reaction —
+       it's usually not an app problem but **dead AUX/CBB** — see
+       `/faq aux-battery`.
 
-    **If the scooter doesn't react at all:** wake it physically with the
-    keycard. If it comes up, the app is the problem. If not → check AUX/CBB.
+    **First step to narrow it down:** hold the keycard physically to the
+    dashboard. Does the scooter wake? Then it's the app. No reaction?
+    Then it's power.
 
     👉 Interactive: `/diagnose app`
 links:

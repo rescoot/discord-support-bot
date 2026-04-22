@@ -5,23 +5,31 @@ title:
   en: "AUX — 12V auxiliary battery"
 body:
   de: |
-    Die **AUX-Batterie** ist ein kleiner 12V-Bleiakku, der die Steuerelektronik
-    (MDB, DBC, Beleuchtung, Blinker) versorgt. Bei entferntem Hauptakku oder im
-    Hibernate-Modus läuft alles über sie.
+    Die **AUX-Batterie** ist ein kleiner 12V-Bleiakku, der die Steuer-
+    elektronik (MDB, DBC, Beleuchtung, Blinker) versorgt. Im Hibernate und
+    bei entferntem Hauptakku läuft alles über sie bzw. die CBB.
 
-    Faustregel: Bei Rollern **älter als ~2 Jahre** ist die AUX oft altersschwach —
-    typisches Symptom ist, dass die App einen guten Ladestand meldet, aber die
-    grüne Status-LED nicht mehr leuchtet oder der Roller nicht aufwacht.
+    Im `#roller-support` ist sie mit großem Abstand der häufigste Defekt —
+    Faustregel aus dem Channel: **ab ~2 Jahren Lebensdauer** sterben AUX
+    gerne. Typische Folgen sind fehlende grüne LED, hängender Boot,
+    nicht funktionierende Blinker und „Roller wacht nicht auf".
 
-    Siehe `/diagnose aux` für den Troubleshooter.
+    Zustand prüfen: In der unu-App lässt sich per Long-Press auf den
+    AUX-Button der Zustand anzeigen, solange der Roller verbunden ist.
+
+    Siehe `/diagnose aux` und `/faq aux-battery`.
   en: |
-    The **AUX battery** is a small 12V lead-acid pack that powers the control
-    electronics (MDB, DBC, lighting, turn signals). With the main battery removed
-    or the scooter in hibernate, everything runs off it.
+    The **AUX battery** is a small 12V lead-acid pack that powers the
+    control electronics (MDB, DBC, lighting, turn signals). In hibernate
+    and with the main battery removed, everything runs off it and the CBB.
 
-    Rule of thumb: scooters **older than ~2 years** often have an aging AUX —
-    the app may report a fine charge while the green status LED is dead or the
-    scooter won't wake up.
+    In `#roller-support` it's by far the most common fault — channel rule
+    of thumb: **once AUX hits ~2 years**, it tends to die. Typical fallout:
+    no green LED, stalled boot, turn signals not working, "scooter won't
+    wake".
 
-    See `/diagnose aux` for the troubleshooter.
+    Check state: in the unu app, long-press the AUX button (while
+    connected) to see the AUX state.
+
+    See `/diagnose aux` and `/faq aux-battery`.
 tags: [hardware, battery]

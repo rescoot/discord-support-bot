@@ -1,55 +1,66 @@
 id: aux-battery
-aliases: [aux, bleiakku, 12v, no-green-light, keine-grüne-led, wacht-nicht-auf]
+aliases: [aux, bleiakku, 12v, keine-grüne-led, wacht-nicht-auf]
 title:
   de: "AUX-Batterie: Roller wacht nicht auf / kein grünes Licht"
   en: "AUX battery: scooter won't wake / no green light"
 body:
   de: |
-    **Typisches Bild:** Die App zeigt den Hauptakku voll und "Idealzustand",
-    aber die grüne Status-LED am Dashboard ist aus oder der Roller lässt sich
-    nicht aus dem Hibernate wecken.
+    **Typisches Bild:** Die App zeigt den Hauptakku voll, aber der Roller
+    reagiert nicht auf Keycard/App, oder die grüne LED blinkt im
+    „Master-Erwartungs-Modus" und kommt nicht weiter.
 
-    Sehr wahrscheinlich ist die **12V-AUX-Bleibatterie altersschwach**.
-    Bei unu-Rollern, die älter als ca. zwei Jahre sind, ist das der häufigste
-    Fehler in diesem Channel.
+    In so gut wie allen Fällen, die hier im Channel aufgetaucht sind, war die
+    **12V-AUX-Bleibatterie am Ende** — bei Rollern ab ~2 Jahren ist das die
+    Standardursache. Typische Reparaturberichte:
+    „AUX getauscht, startet einwandfrei."
 
-    **Prüfen:**
-    1. Spannung direkt an der AUX messen (Ruhespannung > 12,4 V ist ok,
-       unter 11,8 V ist tot/stark degradiert).
-    2. Unter Last beobachten — bricht sie beim Einschalten der Blinker weg?
-    3. Kabel/Stecker (insbesondere der Pluspol) auf Korrosion prüfen.
+    **Schnellcheck (ohne Werkzeug):** Halte die AUX-Taste in der unu-App
+    lange gedrückt, solange der Roller verbunden ist — die App zeigt dir
+    den AUX-Zustand. Bei sichtbar niedriger AUX-Spannung ist das Urteil
+    eindeutig.
 
-    **Fix:** AUX tauschen. Standard ist eine 12V-Blei-Gel-Batterie passender
-    Kapazität — im Support-Channel und in der Community-Doku findest du
-    bewährte Ersatztypen.
+    **Weitere Anzeichen für eine schwache AUX:**
+    • Dashboard geht beim Anschalten kurz an und wieder aus
+    • Blinker funktionieren gar nicht oder flackern
+    • Roller bleibt im Standby hängen
 
-    ⚠️ **Wichtig:** Den Stecker des DC-Wandlers *nie* abziehen, solange der
-    Hauptakku eingesetzt ist.
+    **Fix:** AUX tauschen. Bauform und Maße so wie die Original-Batterie
+    (12V-Blei-Gel). Frag im `#roller-support` nach konkret bewährten
+    Ersatztypen — dort gibt es aktuelle Empfehlungen.
+
+    ⚠️ **Wichtig:** Den Stecker des DC-Wandlers **nie** abziehen, solange
+    der Hauptakku eingesetzt ist — siehe `/faq dc-converter-safety`.
 
     👉 Interaktiv: `/diagnose aux`
   en: |
-    **Typical symptoms:** the app shows a full main battery and "ideal" state,
-    but the dashboard status LED is dark or the scooter won't wake from
-    hibernate.
+    **Typical symptoms:** the app shows the main battery full, but the
+    scooter doesn't react to keycard or app, or the green LED keeps blinking
+    in "master waiting" mode without progressing.
 
-    Most likely the **12V AUX lead-acid battery is aged**. On unu scooters
-    older than ~2 years this is the single most common issue in this channel.
+    In nearly every case that's come up in the channel, the **12V AUX lead-
+    acid battery was done** — on scooters around 2+ years old this is the
+    default answer. Typical repair reports: "Swapped the AUX, starts fine."
 
-    **Check:**
-    1. Measure AUX resting voltage (> 12.4 V is fine, below 11.8 V is dead).
-    2. Watch under load — does it collapse when you switch the turn signals?
-    3. Inspect cables/connectors (especially the + post) for corrosion.
+    **Quick check (no tools):** With the scooter connected in the unu app,
+    long-press the AUX button in the app — it shows you the AUX state.
+    Clearly low? Verdict's in.
 
-    **Fix:** swap the AUX. It's a standard 12V gel lead-acid pack of matching
-    capacity — the support channel and community docs have known-good types.
+    **Other low-AUX signs:**
+    • Dashboard briefly powers on then dies
+    • Turn signals don't work or flicker
+    • Scooter hangs in standby
 
-    ⚠️ **Never** disconnect the DC-converter plug while the main battery is
-    inserted.
+    **Fix:** replace the AUX. Same form factor as the original (12V gel
+    lead-acid). Ask in `#roller-support` for currently recommended
+    replacements — people there track what still works.
+
+    ⚠️ **Never** unplug the DC converter while the main battery is
+    inserted — see `/faq dc-converter-safety`.
 
     👉 Interactive: `/diagnose aux`
 links:
   - url: https://github.com/Julinho666/UNU-CBB-Battery
     label:
-      de: "CBB/AUX Community-Doku"
-      en: "CBB/AUX community docs"
+      de: "CBB-Akku Community-Repo (auch Infos zur AUX)"
+      en: "CBB battery community repo (AUX info too)"
 tags: [battery, hardware, troubleshooting]

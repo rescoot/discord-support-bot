@@ -4,9 +4,10 @@ title:
   en: "App won't connect"
 description:
   de: |-
-    Fehlersuche bei hängender unu-App, Bluetooth und steckenbleibendem Wecken.
+    Fehlersuche, wenn die unu-App den Roller nicht findet oder nicht
+    wecken kann.
   en: |-
-    Troubleshoot the unu app stalling on Bluetooth or the waking step.
+    Troubleshoot when the unu app can't find or wake the scooter.
 start: wake
 
 steps:
@@ -16,7 +17,7 @@ steps:
       en: "Does the scooter wake physically when you hold the keycard to the dashboard?"
     choices:
       - label: { de: "Ja, Dashboard kommt hoch", en: "Yes, dashboard comes up" }
-        goto: platform
+        goto: other-phone
       - label: { de: "Nein, gar keine Reaktion", en: "No reaction at all" }
         goto: aux-redirect
       - label: { de: "Dashboard flackert / geht wieder aus", en: "Dashboard flickers / dies again" }
@@ -24,12 +25,38 @@ steps:
 
   aux-redirect:
     answer:
-      de: |
+      de: |-
         Das klingt nicht nach einem App-Problem, sondern nach AUX/CBB.
         → `/diagnose aux` bzw. `/faq aux-battery`.
-      en: |
+      en: |-
         That's not an app problem, it's AUX/CBB.
         → `/diagnose aux` or `/faq aux-battery`.
+
+  other-phone:
+    prompt:
+      de: |-
+        Der Roller kann nur mit **einem Handy gleichzeitig** verbunden sein.
+        Ist das aktuell verbundene Handy vielleicht ein anderes als deins?
+      en: |-
+        The scooter only pairs with **one phone at a time**. Is the
+        currently-connected phone maybe a different one than yours?
+    choices:
+      - label: { de: "Ja, anderes Handy disconnecten / ausschalten", en: "Yes, disconnect/switch off the other phone" }
+        goto: disconnect-other
+      - label: { de: "Nein, nur mein Handy", en: "No, only my phone" }
+        goto: platform
+
+  disconnect-other:
+    answer:
+      de: |-
+        Am zweiten Handy in der unu-App die Verbindung trennen oder das
+        Handy ausschalten, dann in deiner App neu versuchen.
+        Wenn's trotzdem klemmt → `/diagnose app` neu starten und „Nein"
+        wählen, oder im `#app-support`-Channel posten.
+      en: |-
+        On the other phone, disconnect in the unu app or simply switch it
+        off, then try again on yours. If it still fails → restart
+        `/diagnose app` and pick "No", or post in `#app-support`.
 
   platform:
     prompt:
@@ -43,54 +70,49 @@ steps:
 
   ios:
     prompt:
-      de: "Nutzt du die Prod-App oder die TestFlight-Beta?"
-      en: "Prod app or the TestFlight beta?"
+      de: "Prod-App oder TestFlight-Beta?"
+      en: "Prod app or TestFlight beta?"
     choices:
       - label: { de: "Prod-App (App Store)", en: "Prod app (App Store)" }
         goto: try-beta
       - label: { de: "Beta (TestFlight)", en: "Beta (TestFlight)" }
-        goto: bluetooth-reset
+        goto: escalate
 
   try-beta:
     answer:
-      de: |
-        Probier die TestFlight-Beta — die behebt viele Verbindungsprobleme,
-        die in der Prod-App stecken.
-      en: |
-        Try the TestFlight beta — it fixes many connection issues that are
-        still in the prod app.
+      de: |-
+        Im Channel wird die **TestFlight-Beta** regelmäßig als Workaround
+        empfohlen, wenn die Prod-App streikt.
+      en: |-
+        The channel regularly recommends the **TestFlight beta** as a
+        workaround when the prod app misbehaves.
     links:
       - url: https://testflight.apple.com/join/Uzcy1kSH
-        label: { de: "unu iOS Beta", en: "unu iOS beta" }
+        label: { de: "unu iOS Beta (TestFlight)", en: "unu iOS beta (TestFlight)" }
 
   android:
-    prompt:
-      de: "App-Cache schon geleert und neugestartet?"
-      en: "Already cleared app cache and restarted?"
-    choices:
-      - label: { de: "Ja", en: "Yes" }
-        goto: bluetooth-reset
-      - label: { de: "Noch nicht", en: "Not yet" }
-        goto: clear-cache
-
-  clear-cache:
     answer:
-      de: |
-        Android: Einstellungen → Apps → unu → Speicher → Cache leeren.
-        App komplett beenden, neu starten. Wenn's danach noch klemmt,
-        Bluetooth-Reset (siehe `/faq app-connect`).
-      en: |
-        Android: Settings → Apps → unu → Storage → Clear cache. Force-stop
-        the app and restart it. If it's still stuck afterwards, do a
-        Bluetooth reset (see `/faq app-connect`).
+      de: |-
+        Für Android liegen im Channel keine festen Schritte vor. Probier
+        das übliche: App komplett beenden und neu starten, Handy-Bluetooth
+        aus/an, anderes Handy ausschließen (siehe oben).
+        Wenn's weiter klemmt → im `#app-support` posten mit Handymodell
+        und Android-Version.
+      en: |-
+        No canonical recipe in the channel for Android. Try the usual:
+        force-stop and restart the app, toggle phone Bluetooth, rule out
+        a second phone being paired. Still stuck → post in `#app-support`
+        with your phone model and Android version.
 
-  bluetooth-reset:
+  escalate:
     answer:
-      de: |
-        Bluetooth am Handy einmal aus/ein, App neu starten. Wenn das nicht
-        hilft: CBB prüfen (`/glossar cbb`). Bei anhaltendem Problem im
-        `#app-support`-Channel posten, inkl. Handymodell und OS-Version.
-      en: |
-        Toggle Bluetooth off/on, restart the app. If that doesn't help,
-        check the CBB (`/glossary cbb`). If it keeps failing, post in
-        `#app-support` with your phone model and OS version.
+      de: |-
+        Auch die TestFlight-Beta macht's nicht? Poste bitte im
+        `#app-support`-Channel mit iPhone-Modell, iOS-Version, App-Version
+        und wie weit der Verbindungsaufbau kommt — wichtig ist, ob der
+        Roller physisch reagiert (Keycard-Test) oder nicht.
+      en: |-
+        Even the TestFlight beta won't work? Post in `#app-support` with
+        your iPhone model, iOS version, app version, and how far the
+        connection gets — including whether the scooter reacts physically
+        (keycard test) or not.

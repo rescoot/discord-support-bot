@@ -1,31 +1,46 @@
 id: spare-parts
-aliases: [ersatzteile, parts, reparatur, 3d-drucke, thingiverse]
+aliases: [ersatzteile, parts, reparatur]
 title:
-  de: "Ersatzteile, Reparatur und 3D-Drucke"
-  en: "Spare parts, repair and 3D prints"
+  de: "Ersatzteile und Reverse-Engineering-Ressourcen"
+  en: "Spare parts and reverse-engineering resources"
 body:
   de: |
-    Seit unu pleite ist, gibt's keinen offiziellen Ersatzteil-Shop mehr.
-    Die Community hat aber einiges zusammengetragen:
+    Seit der unu-Pleite gibt es keinen offiziellen Teile-Shop mehr. Teile
+    sind meist Eigen- oder Community-Beschaffung.
 
-    - **Ersatzteilkatalog** (Community-Spreadsheet) für unu Pro 2019+
-    - **3D-druckbare Teile** (Halter, Verkleidungsclips, …) auf Thingiverse
-    - **Reverse-Engineering** (Schaltpläne, Pinouts) im `#reverse-engineering`-Channel
-    - **Service-Partner-Liste** — unumotors.com/de-de/service-hub/ ist oft offline,
-      frag im Channel nach aktuellen Empfehlungen.
+    **Was die Community hat:**
+    • **Reverse-Engineering & Schaltpläne:** `#reverse-engineering`
+    • **Doku zum CBB-Akku (Julinho):**
+      <https://github.com/Julinho666/UNU-CBB-Battery>
+    • **LibreScoot (Firmware-/Service-Quelltext):**
+      <https://github.com/librescoot>
+    • **Weitere Links:** Kanal `#ressourcen`, angepinnte Posts in
+      `#roller-support`.
 
-    Konkrete Teile-Quellen rotieren — wenn du was Bestimmtes suchst, frag in
-    `#roller-support` oder schau im angepinnten Post dort.
+    Für konkrete Teile am besten direkt in `#roller-support` fragen — mit
+    genauer Beschreibung (wo, was, ggf. Foto).
   en: |
-    Since unu went bankrupt there is no official parts shop anymore. The
-    community has collected a lot though:
+    Since the unu bankruptcy there is no official parts shop. Parts mostly
+    come from DIY or community.
 
-    - **Parts catalog** (community spreadsheet) for unu Pro 2019+
-    - **3D-printable parts** (mounts, fairing clips, …) on Thingiverse
-    - **Reverse-engineering** (schematics, pinouts) in `#reverse-engineering`
-    - **Service-partner list** — unumotors.com/de-de/service-hub/ is often
-      down, ask in the channel for current recommendations.
+    **What the community has:**
+    • **Reverse engineering & schematics:** `#reverse-engineering`
+    • **CBB battery docs (Julinho):**
+      <https://github.com/Julinho666/UNU-CBB-Battery>
+    • **LibreScoot (firmware/service source):**
+      <https://github.com/librescoot>
+    • **More links:** `#ressourcen` channel, pinned posts in
+      `#roller-support`.
 
-    Specific part sources rotate — if you need something particular, ask in
-    `#roller-support` or check the pinned post there.
+    For specific parts, ask directly in `#roller-support` with a clear
+    description (location, part, photo if possible).
+links:
+  - url: https://github.com/Julinho666/UNU-CBB-Battery
+    label:
+      de: "UNU-CBB-Battery"
+      en: "UNU-CBB-Battery"
+  - url: https://github.com/librescoot
+    label:
+      de: "LibreScoot"
+      en: "LibreScoot"
 tags: [parts, repair, community]
