@@ -1,0 +1,23 @@
+id: ecu
+aliases: [engine-ecu, motorcontroller, motor-controller, bosch, lingbo]
+title:
+  de: "ECU — Motor-Controller"
+  en: "ECU — Motor Controller"
+body:
+  de: |
+    Die **Electronic Control Unit (ECU)** steuert den Motor und die Rekuperation.
+    Im unu Pro kommen BOSCH/Lingbo-Controller zum Einsatz:
+
+    - **unu 4kW**: 4 kW Peak / 2,7 kW Dauerleistung
+    - **unu 3kW**: 3 kW Peak / 1,9 kW Dauerleistung
+
+    Die ECU kommuniziert über einen verschlüsselten CAN-Bus mit dem MDB.
+  en: |
+    The **Electronic Control Unit (ECU)** drives the motor and handles regenerative
+    braking. The unu Pro uses BOSCH/Lingbo controllers:
+
+    - **unu 4kW**: 4 kW peak / 2.7 kW continuous
+    - **unu 3kW**: 3 kW peak / 1.9 kW continuous
+
+    It talks to the MDB over an encrypted CAN bus.
+tags: [hardware, motor]

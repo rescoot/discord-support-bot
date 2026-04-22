@@ -1,0 +1,28 @@
+id: display-repair
+aliases: [display, dbc-display, glas, kleben, dashboard-repair]
+title:
+  de: "Display/Dashboard: Glas kleben & Reparatur"
+  en: "Display / dashboard: glueing glass & repair"
+body:
+  de: |
+    Das Display-Glas sitzt auf dem DBC und kann sich lösen. Im Channel
+    bewährt hat sich **schwarzer Karosserie-/Scheibenkleber** oder ein
+    dünnes, schwarzes Doppelklebeband mit UV-Beständigkeit — *nicht*
+    Sekundenkleber (macht Fäden im Sichtbereich) und *nicht* Silikon (hält
+    schlecht auf Kunststoff).
+
+    Wichtig: das DBC sitzt unter dem Glas, **keine Kabel quetschen** und
+    keine Feuchtigkeit in den Ring zwischen Glas und Gehäuse bringen.
+
+    Bei Lese-/Boot-Fehlern des Dashboards → `/glossar dbc`.
+  en: |
+    The display glass sits on the DBC and can come loose. What works
+    (per channel reports): **black automotive windshield adhesive** or a
+    thin, black, UV-resistant double-sided tape — *not* cyanoacrylate
+    (hazes the view) and *not* silicone (poor adhesion on plastic).
+
+    Important: the DBC sits right under the glass — **don't pinch cables**
+    and keep moisture out of the ring between glass and housing.
+
+    Dashboard read/boot errors → `/glossary dbc`.
+tags: [repair, dashboard]

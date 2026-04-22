@@ -1,0 +1,36 @@
+id: firmware
+aliases: [update, version, v1.15, stock-firmware]
+title:
+  de: "Stock-Firmware und App-Versionen"
+  en: "Stock firmware and app versions"
+body:
+  de: |
+    Die letzten offiziellen unu-Versionen, die im Channel als stabil gelten:
+
+    - **Roller-Firmware:** V1.15 (und Vorgänger V1.13.2)
+    - **iOS-App:** Prod im App Store; bei Problemen hilft meist die TestFlight-Beta.
+    - **Android-App:** aktuelle Version aus dem Play Store.
+
+    Seit unu pleite ist, gibt es keine offiziellen neuen Roller-Firmwares mehr —
+    für Weiterentwicklung siehe **LibreScoot** (`/glossar librescoot`).
+  en: |
+    Latest official unu versions that the channel considers stable:
+
+    - **Scooter firmware:** V1.15 (previously V1.13.2)
+    - **iOS app:** prod via App Store; the TestFlight beta often helps when
+      prod misbehaves.
+    - **Android app:** current Play Store version.
+
+    Since unu went bankrupt there are no new official scooter firmware
+    releases — for continued development see **LibreScoot**
+    (`/glossary librescoot`).
+links:
+  - url: https://testflight.apple.com/join/Uzcy1kSH
+    label:
+      de: "unu iOS Beta (TestFlight)"
+      en: "unu iOS beta (TestFlight)"
+  - url: https://github.com/librescoot
+    label:
+      de: "LibreScoot"
+      en: "LibreScoot"
+tags: [firmware, app]

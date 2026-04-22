@@ -1,0 +1,28 @@
+id: librescoot
+aliases: [libre-scoot, open-firmware, custom-firmware]
+title:
+  de: "LibreScoot — Open-Source-Firmware"
+  en: "LibreScoot — open-source firmware"
+body:
+  de: |
+    **LibreScoot** ist eine Open-Source-Firmware für den unu Scooter Pro.
+    Sie ersetzt die Werks-Services durch freie Alternativen und bringt dazu
+    `lsc`, ein CLI-Werkzeug für Vehicle-Steuerung, Service-Management,
+    Akku-/GPS-Monitoring, Alarm, Einstellungen und OTA-Updates.
+
+    Hauptkomponenten: `vehicle`, `ecu`, `battery`, `keycard`, `modem`,
+    `bluetooth`, `alarm`, `update`, `settings`, `ums`, `pm`, `scootui` (Qt/QML).
+  en: |
+    **LibreScoot** is open-source firmware for the unu Scooter Pro.
+    It replaces the factory services with free alternatives and ships `lsc`,
+    a CLI tool for vehicle control, service management, battery/GPS monitoring,
+    alarm, settings, and OTA updates.
+
+    Main services: `vehicle`, `ecu`, `battery`, `keycard`, `modem`,
+    `bluetooth`, `alarm`, `update`, `settings`, `ums`, `pm`, `scootui` (Qt/QML).
+links:
+  - url: https://github.com/librescoot
+    label:
+      de: "LibreScoot auf GitHub"
+      en: "LibreScoot on GitHub"
+tags: [librescoot, software]

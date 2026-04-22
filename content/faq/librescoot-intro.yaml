@@ -1,0 +1,55 @@
+id: librescoot-intro
+aliases: [open-firmware, custom-firmware, flashen, free-firmware]
+title:
+  de: "Was ist LibreScoot und wie fange ich an?"
+  en: "What is LibreScoot and how do I start?"
+body:
+  de: |
+    **LibreScoot** ist eine offene Firmware für den unu Scooter Pro.
+    Sie ersetzt die proprietären Services durch freie Alternativen und bietet
+    das CLI-Werkzeug `lsc`.
+
+    **Einstieg:**
+    1. Tech-Reference lesen: https://github.com/reunu/tech-reference
+    2. LibreScoot-Repos durchstöbern: https://github.com/librescoot
+    3. In `#librescoot-talk` mitlesen/fragen, bevor du flashst.
+
+    **Erste `lsc`-Kommandos:**
+    ```
+    lsc status              # Systemstatus
+    lsc battery             # Akku-Infos
+    lsc svc list            # laufende Services
+    lsc svc logs vehicle -f # vehicle-Logs folgen
+    ```
+
+    ⚠️ Flashen ersetzt die Werksfirmware — OTA von unu funktioniert dann nicht
+    mehr. Lies die Doku und stell sicher, dass du den Rollback-Weg kennst.
+  en: |
+    **LibreScoot** is an open firmware for the unu Scooter Pro. It replaces
+    the proprietary services with free alternatives and ships the `lsc` CLI.
+
+    **Getting started:**
+    1. Read the tech reference: https://github.com/reunu/tech-reference
+    2. Browse LibreScoot repos: https://github.com/librescoot
+    3. Lurk/ask in `#librescoot-talk` before you flash.
+
+    **First `lsc` commands:**
+    ```
+    lsc status              # overall status
+    lsc battery             # battery info
+    lsc svc list            # running services
+    lsc svc logs vehicle -f # follow vehicle logs
+    ```
+
+    ⚠️ Flashing replaces the factory firmware — OTA from unu won't work
+    anymore. Read the docs and make sure you know the rollback path.
+links:
+  - url: https://github.com/librescoot
+    label:
+      de: "LibreScoot auf GitHub"
+      en: "LibreScoot on GitHub"
+  - url: https://github.com/reunu/tech-reference
+    label:
+      de: "reunu tech-reference"
+      en: "reunu tech-reference"
+tags: [librescoot, software]

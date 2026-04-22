@@ -1,0 +1,96 @@
+id: app
+title:
+  de: "App verbindet nicht"
+  en: "App won't connect"
+description:
+  de: |-
+    Fehlersuche bei hängender unu-App, Bluetooth und steckenbleibendem Wecken.
+  en: |-
+    Troubleshoot the unu app stalling on Bluetooth or the waking step.
+start: wake
+
+steps:
+  wake:
+    prompt:
+      de: "Wacht der Roller physisch auf, wenn du die Keycard ans Dashboard hältst?"
+      en: "Does the scooter wake physically when you hold the keycard to the dashboard?"
+    choices:
+      - label: { de: "Ja, Dashboard kommt hoch", en: "Yes, dashboard comes up" }
+        goto: platform
+      - label: { de: "Nein, gar keine Reaktion", en: "No reaction at all" }
+        goto: aux-redirect
+      - label: { de: "Dashboard flackert / geht wieder aus", en: "Dashboard flickers / dies again" }
+        goto: aux-redirect
+
+  aux-redirect:
+    answer:
+      de: |
+        Das klingt nicht nach einem App-Problem, sondern nach AUX/CBB.
+        → `/diagnose aux` bzw. `/faq aux-battery`.
+      en: |
+        That's not an app problem, it's AUX/CBB.
+        → `/diagnose aux` or `/faq aux-battery`.
+
+  platform:
+    prompt:
+      de: "Welches Handy nutzt du?"
+      en: "Which phone are you on?"
+    choices:
+      - label: { de: "iPhone", en: "iPhone" }
+        goto: ios
+      - label: { de: "Android", en: "Android" }
+        goto: android
+
+  ios:
+    prompt:
+      de: "Nutzt du die Prod-App oder die TestFlight-Beta?"
+      en: "Prod app or the TestFlight beta?"
+    choices:
+      - label: { de: "Prod-App (App Store)", en: "Prod app (App Store)" }
+        goto: try-beta
+      - label: { de: "Beta (TestFlight)", en: "Beta (TestFlight)" }
+        goto: bluetooth-reset
+
+  try-beta:
+    answer:
+      de: |
+        Probier die TestFlight-Beta — die behebt viele Verbindungsprobleme,
+        die in der Prod-App stecken.
+      en: |
+        Try the TestFlight beta — it fixes many connection issues that are
+        still in the prod app.
+    links:
+      - url: https://testflight.apple.com/join/Uzcy1kSH
+        label: { de: "unu iOS Beta", en: "unu iOS beta" }
+
+  android:
+    prompt:
+      de: "App-Cache schon geleert und neugestartet?"
+      en: "Already cleared app cache and restarted?"
+    choices:
+      - label: { de: "Ja", en: "Yes" }
+        goto: bluetooth-reset
+      - label: { de: "Noch nicht", en: "Not yet" }
+        goto: clear-cache
+
+  clear-cache:
+    answer:
+      de: |
+        Android: Einstellungen → Apps → unu → Speicher → Cache leeren.
+        App komplett beenden, neu starten. Wenn's danach noch klemmt,
+        Bluetooth-Reset (siehe `/faq app-connect`).
+      en: |
+        Android: Settings → Apps → unu → Storage → Clear cache. Force-stop
+        the app and restart it. If it's still stuck afterwards, do a
+        Bluetooth reset (see `/faq app-connect`).
+
+  bluetooth-reset:
+    answer:
+      de: |
+        Bluetooth am Handy einmal aus/ein, App neu starten. Wenn das nicht
+        hilft: CBB prüfen (`/glossar cbb`). Bei anhaltendem Problem im
+        `#app-support`-Channel posten, inkl. Handymodell und OS-Version.
+      en: |
+        Toggle Bluetooth off/on, restart the app. If that doesn't help,
+        check the CBB (`/glossary cbb`). If it keeps failing, post in
+        `#app-support` with your phone model and OS version.

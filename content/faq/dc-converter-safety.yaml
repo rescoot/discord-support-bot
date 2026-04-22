@@ -1,0 +1,28 @@
+id: dc-converter-safety
+aliases: [dc-wandler, dc-converter, safety, sicherheitshinweis, warning]
+title:
+  de: "⚠️ Sicherheit: DC-Wandler und Hauptakku"
+  en: "⚠️ Safety: DC converter and main battery"
+body:
+  de: |
+    **NIEMALS** den Stecker vom DC-Wandler abziehen, solange der Hauptakku
+    eingesetzt ist — der Wandler kann dabei sterben und im Worst Case gibt's
+    Lichtbögen an den Kontakten.
+
+    Vor jedem Eingriff an der Elektrik:
+    1. Hauptakku raus.
+    2. Kurz warten, bis die Caps entladen sind.
+    3. Dann erst Stecker ziehen.
+
+    Gleiches gilt für alle anderen Hochstrom-Verbindungen in Richtung Motor/ECU.
+  en: |
+    **NEVER** unplug the DC converter while the main battery is inserted —
+    it can destroy the converter, and worst case you'll arc the contacts.
+
+    Before any work on the electrics:
+    1. Remove the main battery.
+    2. Wait a moment for caps to discharge.
+    3. Then unplug.
+
+    Same applies for any high-current connection toward motor/ECU.
+tags: [safety, repair]

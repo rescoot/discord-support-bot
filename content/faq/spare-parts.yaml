@@ -1,0 +1,31 @@
+id: spare-parts
+aliases: [ersatzteile, parts, reparatur, 3d-drucke, thingiverse]
+title:
+  de: "Ersatzteile, Reparatur und 3D-Drucke"
+  en: "Spare parts, repair and 3D prints"
+body:
+  de: |
+    Seit unu pleite ist, gibt's keinen offiziellen Ersatzteil-Shop mehr.
+    Die Community hat aber einiges zusammengetragen:
+
+    - **Ersatzteilkatalog** (Community-Spreadsheet) für unu Pro 2019+
+    - **3D-druckbare Teile** (Halter, Verkleidungsclips, …) auf Thingiverse
+    - **Reverse-Engineering** (Schaltpläne, Pinouts) im `#reverse-engineering`-Channel
+    - **Service-Partner-Liste** — unumotors.com/de-de/service-hub/ ist oft offline,
+      frag im Channel nach aktuellen Empfehlungen.
+
+    Konkrete Teile-Quellen rotieren — wenn du was Bestimmtes suchst, frag in
+    `#roller-support` oder schau im angepinnten Post dort.
+  en: |
+    Since unu went bankrupt there is no official parts shop anymore. The
+    community has collected a lot though:
+
+    - **Parts catalog** (community spreadsheet) for unu Pro 2019+
+    - **3D-printable parts** (mounts, fairing clips, …) on Thingiverse
+    - **Reverse-engineering** (schematics, pinouts) in `#reverse-engineering`
+    - **Service-partner list** — unumotors.com/de-de/service-hub/ is often
+      down, ask in the channel for current recommendations.
+
+    Specific part sources rotate — if you need something particular, ask in
+    `#roller-support` or check the pinned post there.
+tags: [parts, repair, community]

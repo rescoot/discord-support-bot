@@ -1,0 +1,55 @@
+id: aux-battery
+aliases: [aux, bleiakku, 12v, no-green-light, keine-grüne-led, wacht-nicht-auf]
+title:
+  de: "AUX-Batterie: Roller wacht nicht auf / kein grünes Licht"
+  en: "AUX battery: scooter won't wake / no green light"
+body:
+  de: |
+    **Typisches Bild:** Die App zeigt den Hauptakku voll und "Idealzustand",
+    aber die grüne Status-LED am Dashboard ist aus oder der Roller lässt sich
+    nicht aus dem Hibernate wecken.
+
+    Sehr wahrscheinlich ist die **12V-AUX-Bleibatterie altersschwach**.
+    Bei unu-Rollern, die älter als ca. zwei Jahre sind, ist das der häufigste
+    Fehler in diesem Channel.
+
+    **Prüfen:**
+    1. Spannung direkt an der AUX messen (Ruhespannung > 12,4 V ist ok,
+       unter 11,8 V ist tot/stark degradiert).
+    2. Unter Last beobachten — bricht sie beim Einschalten der Blinker weg?
+    3. Kabel/Stecker (insbesondere der Pluspol) auf Korrosion prüfen.
+
+    **Fix:** AUX tauschen. Standard ist eine 12V-Blei-Gel-Batterie passender
+    Kapazität — im Support-Channel und in der Community-Doku findest du
+    bewährte Ersatztypen.
+
+    ⚠️ **Wichtig:** Den Stecker des DC-Wandlers *nie* abziehen, solange der
+    Hauptakku eingesetzt ist.
+
+    👉 Interaktiv: `/diagnose aux`
+  en: |
+    **Typical symptoms:** the app shows a full main battery and "ideal" state,
+    but the dashboard status LED is dark or the scooter won't wake from
+    hibernate.
+
+    Most likely the **12V AUX lead-acid battery is aged**. On unu scooters
+    older than ~2 years this is the single most common issue in this channel.
+
+    **Check:**
+    1. Measure AUX resting voltage (> 12.4 V is fine, below 11.8 V is dead).
+    2. Watch under load — does it collapse when you switch the turn signals?
+    3. Inspect cables/connectors (especially the + post) for corrosion.
+
+    **Fix:** swap the AUX. It's a standard 12V gel lead-acid pack of matching
+    capacity — the support channel and community docs have known-good types.
+
+    ⚠️ **Never** disconnect the DC-converter plug while the main battery is
+    inserted.
+
+    👉 Interactive: `/diagnose aux`
+links:
+  - url: https://github.com/Julinho666/UNU-CBB-Battery
+    label:
+      de: "CBB/AUX Community-Doku"
+      en: "CBB/AUX community docs"
+tags: [battery, hardware, troubleshooting]

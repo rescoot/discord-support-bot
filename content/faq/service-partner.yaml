@@ -1,0 +1,27 @@
+id: service-partner
+aliases: [werkstatt, reparaturdienst, service-hub]
+title:
+  de: "Service-Partner / Werkstatt finden"
+  en: "Finding a service partner / workshop"
+body:
+  de: |
+    Die offizielle Service-Partner-Seite (unumotors.com/de-de/service-hub/)
+    ist nach der Pleite unzuverlässig — Links funktionieren mal, mal nicht.
+
+    **Aktuelle Anlaufstellen:**
+    - Frag in `#roller-support` mit **Postleitzahl/Region** — die Community
+      kennt die Werkstätten, die noch arbeiten.
+    - Viele Reparaturen lassen sich mit der Community-Doku und einem lokalen
+      Elektro-Zweirad-Mechaniker machen.
+    - Für Firmware/Software-Seite: `#librescoot-talk`.
+  en: |
+    The official service partner page (unumotors.com/de-de/service-hub/)
+    has been unreliable since the bankruptcy — links come and go.
+
+    **Where to ask:**
+    - Post in `#roller-support` with your **zip code / region** — the
+      community tracks which shops still work on unu scooters.
+    - Most repairs can be done by a local e-scooter mechanic using the
+      community docs.
+    - Firmware/software side: `#librescoot-talk`.
+tags: [service, community]

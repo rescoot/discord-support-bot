@@ -1,0 +1,19 @@
+id: dbc
+aliases: [dashboard-controller, display]
+title:
+  de: "DBC — Dashboard Controller"
+  en: "DBC — Dashboard Controller"
+body:
+  de: |
+    Der **Dashboard Controller (DBC)** treibt das Display und die Benutzeroberfläche.
+    Er basiert auf einem Freescale i.MX6 und enthält den NFC-Leser für die Keycard.
+    Als USB-Host ist er mit dem MDB verbunden.
+
+    Per SSH erreichbar unter **192.168.7.2** (vom MDB aus, `ssh root@192.168.7.2`).
+  en: |
+    The **Dashboard Controller (DBC)** drives the display and the user interface.
+    It's built around a Freescale i.MX6 and contains the NFC reader for the keycard.
+    As USB host it connects to the MDB.
+
+    Reachable over SSH at **192.168.7.2** (from the MDB: `ssh root@192.168.7.2`).
+tags: [hardware, architecture]

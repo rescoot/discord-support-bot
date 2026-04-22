@@ -1,0 +1,25 @@
+id: cbb
+aliases: [connectivity-box-battery, innenbatterie, internal-battery]
+title:
+  de: "CBB — Connectivity Box Battery"
+  en: "CBB — Connectivity Box Battery"
+body:
+  de: |
+    Die **Connectivity Box Battery (CBB)** ist ein kleiner Li-Ion-Akku, der die
+    Mobilfunk- und GPS-Systeme auch bei abgezogenem Hauptakku mit Strom versorgt.
+    Typisches Ausfallsymptom: Roller meldet sich nicht mehr in der App, wenn der
+    Hauptakku raus ist.
+
+    Community-Doku und Ersatz-Optionen findest du im CBB-Repo von Julinho.
+  en: |
+    The **Connectivity Box Battery (CBB)** is a small Li-ion pack that keeps the
+    cellular and GPS systems alive while the main battery is out. Typical failure:
+    the scooter goes silent in the app once you remove the main battery.
+
+    Community docs and replacement options are in Julinho's CBB repo.
+links:
+  - url: https://github.com/Julinho666/UNU-CBB-Battery
+    label:
+      de: "UNU-CBB-Battery (GitHub)"
+      en: "UNU-CBB-Battery (GitHub)"
+tags: [hardware, battery]

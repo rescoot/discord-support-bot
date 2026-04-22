@@ -1,0 +1,27 @@
+id: aux
+aliases: [aux-battery, 12v, hilfsbatterie, bleiakku, auxiliary-battery]
+title:
+  de: "AUX — 12V-Hilfsbatterie"
+  en: "AUX — 12V auxiliary battery"
+body:
+  de: |
+    Die **AUX-Batterie** ist ein kleiner 12V-Bleiakku, der die Steuerelektronik
+    (MDB, DBC, Beleuchtung, Blinker) versorgt. Bei entferntem Hauptakku oder im
+    Hibernate-Modus läuft alles über sie.
+
+    Faustregel: Bei Rollern **älter als ~2 Jahre** ist die AUX oft altersschwach —
+    typisches Symptom ist, dass die App einen guten Ladestand meldet, aber die
+    grüne Status-LED nicht mehr leuchtet oder der Roller nicht aufwacht.
+
+    Siehe `/diagnose aux` für den Troubleshooter.
+  en: |
+    The **AUX battery** is a small 12V lead-acid pack that powers the control
+    electronics (MDB, DBC, lighting, turn signals). With the main battery removed
+    or the scooter in hibernate, everything runs off it.
+
+    Rule of thumb: scooters **older than ~2 years** often have an aging AUX —
+    the app may report a fine charge while the green status LED is dead or the
+    scooter won't wake up.
+
+    See `/diagnose aux` for the troubleshooter.
+tags: [hardware, battery]

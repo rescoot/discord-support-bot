@@ -1,0 +1,23 @@
+id: hibernate
+aliases: [hibernation, ruhezustand, tiefschlaf, standby]
+title:
+  de: "Hibernate — Tiefschlaf"
+  en: "Hibernate — deep sleep"
+body:
+  de: |
+    Der Roller kennt mehrere Power-States:
+    *Hibernating*, *Booting*, *Stand-By*, *Parked*, *Ready*, *Shutting Down*.
+
+    Im **Hibernate** ist fast alles aus — nur Weckquellen laufen. Aufwecken
+    per Hauptschalter, Keycard oder App (wenn CBB noch Saft hat) dauert einige
+    Sekunden bis zum Boot. Wenn die App "wacht auf" zeigt, aber nichts passiert,
+    ist oft die AUX oder die CBB leer.
+  en: |
+    The scooter has several power states:
+    *Hibernating*, *Booting*, *Stand-By*, *Parked*, *Ready*, *Shutting Down*.
+
+    In **hibernate**, nearly everything is off — only wake sources remain.
+    Waking via the main switch, keycard or the app (when CBB still has juice)
+    takes a few seconds to boot. If the app reads "waking up" but nothing
+    happens, the AUX or CBB is often the culprit.
+tags: [software, power]
