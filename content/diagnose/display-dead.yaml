@@ -1,0 +1,157 @@
+id: display-dead
+title:
+  de: "Display bleibt aus"
+  en: "Display won't come on"
+description:
+  de: |-
+    Fehlersuche, wenn das Dashboard (DBC) gar nichts mehr anzeigt,
+    obwohl der Roller sonst reagiert.
+  en: |-
+    Troubleshoot when the dashboard (DBC) stays blank even though the
+    scooter otherwise reacts.
+start: other-alive
+
+steps:
+  other-alive:
+    prompt:
+      de: "Reagiert der Roller sonst? (Keycard-LED leuchtet, Licht geht an, App verbindet?)"
+      en: "Does anything else respond? (keycard LED, lights, app connecting?)"
+    choices:
+      - label: { de: "Ja, nur das Display ist aus", en: "Yes, only the display is dead" }
+        goto: flicker
+      - label: { de: "Nein, gar nichts geht", en: "No, nothing works" }
+        goto: aux-first
+      - label: { de: "Display startet kurz und geht aus", en: "Display briefly starts, then dies" }
+        goto: brownout
+
+  aux-first:
+    answer:
+      de: |-
+        Wenn gar nichts reagiert, ist das kein reines Display-Thema.
+        Starte mit `/diagnose aux` — fast immer ist AUX oder CBB schuld.
+      en: |-
+        If nothing responds, it's not a pure display issue. Start with
+        `/diagnose aux` — AUX or CBB is almost always the cause.
+
+  brownout:
+    answer:
+      de: |-
+        Dashboard flackert oder stirbt gleich wieder = klassisches
+        AUX-Brownout. → `/faq aux-battery`. Nicht weiter Display jagen,
+        bevor die 12V-Versorgung stabil ist.
+      en: |-
+        Dashboard flickers or dies immediately = classic AUX brownout.
+        → `/faq aux-battery`. Don't chase the display until the 12V
+        supply is stable.
+
+  flicker:
+    prompt:
+      de: "Siehst du sichtbare Feuchtigkeit oder Beschlag unterm Displayglas?"
+      en: "Any visible moisture or fog under the display glass?"
+    choices:
+      - label: { de: "Ja, beschlagen / Kondenswasser", en: "Yes, foggy / condensation" }
+        goto: moisture
+      - label: { de: "Nein, Glas ist klar", en: "No, glass is clear" }
+        goto: fpc
+
+  moisture:
+    answer:
+      de: |-
+        Kondenswasser im DBC legt die Elektronik lahm — oft intermittierend.
+        Im Wartungshandbuch Kapitel 7.1 („Display beschlägt") beschrieben.
+        Displaycover ab (ist geklebt, mit 3M 468MP ersetzen — `/faq display-repair`),
+        4 Schrauben lösen, DBC vorsichtig trocknen (Luft, Silikagel), dann
+        neu versiegeln.
+        Zum DBC-Test siehe nächster Schritt — wenn du's gerade eh offen hast.
+      en: |-
+        Condensation inside the DBC kills the electronics — often
+        intermittently. Wartungshandbuch section 7.1 ("Display
+        beschlägt"). Pull the display cover (it's glued; re-glue with
+        3M 468MP — see `/faq display-repair`), undo 4 screws, dry the
+        DBC carefully (air, silica gel), reseal.
+        If you have it open, run the DBC test in the next step.
+
+  fpc:
+    prompt:
+      de: |-
+        Klingt wie ein defektes oder lockeres **USB-Kabel MDB ↔ DBC** oder
+        das DBC selbst. Du kannst das DBC **isoliert testen**: mit Mini-USB
+        extern bestromen (Powerbank/Computer reicht) — das DBC hat ein
+        eigenes Betriebssystem und kommt unabhängig hoch.
+
+        Hast du das schon gemacht?
+      en: |-
+        Sounds like a flaky **MDB ↔ DBC USB cable** or the DBC itself.
+        The DBC can be **tested isolated**: power it via mini-USB from a
+        powerbank or computer — it has its own OS and boots independently.
+
+        Have you tried that?
+    choices:
+      - label: { de: "Noch nicht — Anleitung bitte", en: "Not yet — show me" }
+        goto: dbc-isolate
+      - label: { de: "Ja, DBC kommt extern hoch", en: "Yes, DBC boots when externally powered" }
+        goto: mdb-side
+      - label: { de: "Ja, bleibt auch extern schwarz", en: "Yes, and it stays dark externally too" }
+        goto: dbc-dead
+
+  dbc-isolate:
+    answer:
+      de: |-
+        Wartungshandbuch 2.2.8 (DBC/Display Funktionstest):
+        1. Alle Batterien vom Roller trennen (Haupt + intern).
+        2. Entweder am MDB-Ende des USB-Kabels mit Mini-USB→USB-A-Adapter
+           an eine Powerbank/Computer (2.2.8.1), oder direkt am
+           DBC-Anschluss mit externem Mini-USB-Kabel (2.2.8.2).
+        3. Das Display sollte innerhalb von ~10 Sekunden das unu-Logo
+           zeigen, nach ~30 s die Parkmodus-Oberfläche.
+
+        Wenn's hochkommt → DBC lebt, das Problem ist MDB-seitig oder am
+        USB-Kabel (`/faq water-damage-mdb` ansehen).
+        Wenn nicht → DBC selbst defekt.
+
+        Starte `/diagnose display-dead` neu, wenn du das Ergebnis hast.
+      en: |-
+        Wartungshandbuch 2.2.8 (DBC/Display function test):
+        1. Disconnect all batteries (main + internal).
+        2. Either at the MDB end of the USB cable with a mini-USB→USB-A
+           adapter to a powerbank/computer (2.2.8.1), or directly at the
+           DBC connector with an external mini-USB cable (2.2.8.2).
+        3. The display should show the unu logo within ~10 s and the
+           park-mode UI within ~30 s.
+
+        If it boots → DBC is alive; the problem is on the MDB side or
+        in the USB cable (see `/faq water-damage-mdb`).
+        If not → the DBC itself is dead.
+
+        Restart `/diagnose display-dead` with the result.
+
+  mdb-side:
+    answer:
+      de: |-
+        DBC lebt. Dann liegt's am MDB, am USB-Kabel oder am A1-Stecker.
+        Mit großer Wahrscheinlichkeit: **Wasserschaden am MDB-USB-Port** —
+        siehe `/faq water-damage-mdb`.
+        Wartungshandbuch 6.3 / 3.3.2 nennt Austausch von MDB und
+        USB-Kabel als Fix (Teilenummern SP-S-ASM-PCBA-MDB1-01 und
+        SP-S-05-06-002), oder im `#roller-support` nach der Community-
+        Prüfservice-Option fragen.
+      en: |-
+        DBC is alive. So the issue is MDB, USB cable, or the A1
+        connector. High probability: **water damage at the MDB USB
+        port** — see `/faq water-damage-mdb`.
+        Wartungshandbuch 6.3 / 3.3.2 lists MDB and USB cable replacement
+        as the fix (part numbers SP-S-ASM-PCBA-MDB1-01 and SP-S-05-06-002),
+        or ask in `#roller-support` about the community test service.
+
+  dbc-dead:
+    answer:
+      de: |-
+        DBC kommt auch extern nicht hoch → DBC ist defekt. Austausch
+        nach Wartungshandbuch (Teilenummer SP-S-ASM-PCBA-DBC1-01).
+        Der Community-Prüfservice im `#roller-support` nimmt DBCs an —
+        vielleicht lässt sich's noch reanimieren. Siehe `/faq spare-parts`.
+      en: |-
+        DBC won't boot externally either → DBC is dead. Replace per
+        Wartungshandbuch (part number SP-S-ASM-PCBA-DBC1-01).
+        The community test service in `#roller-support` accepts DBCs —
+        it may still be salvageable. See `/faq spare-parts`.

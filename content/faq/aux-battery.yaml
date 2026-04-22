@@ -25,8 +25,8 @@ body:
        Dialog mit AUX-Spannung und Ladezustand.
 
     **Ersatz:** 12V-Bleibatterie in kompakter Bauform, ähnlich Original.
-    Kanonischer Channel-Vorschlag (Zanooda): **EMOS B9653** (ca. 18 €) —
-    <https://www.amazon.de/dp/B01N95DUQB>, „Im Zweifel: Den hier einbauen."
+    Kanonischer Channel-Vorschlag: **EMOS B9653** (ca. 18 €) —
+    <https://www.amazon.de/dp/B01N95DUQB>.
     Weitere Optionen und LiFePO4-Alternative: `/faq spare-parts`.
 
     ⚠️ **Vor jedem Eingriff** `/faq dc-converter-safety` lesen.
@@ -53,10 +53,9 @@ body:
        charge state.
 
     **Replacement:** a 12V lead-acid in a compact form factor, similar to
-    the original. Canonical channel suggestion (Zanooda): **EMOS B9653**
-    (~ €18) — <https://www.amazon.de/dp/B01N95DUQB>, "When in doubt, put
-    this one in." More options and a LiFePO4 alternative:
-    `/faq spare-parts`.
+    the original. Canonical channel suggestion: **EMOS B9653** (~ €18) —
+    <https://www.amazon.de/dp/B01N95DUQB>. More options and a LiFePO4
+    alternative: `/faq spare-parts`.
 
     ⚠️ **Before any work** read `/faq dc-converter-safety`.
 

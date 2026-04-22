@@ -14,7 +14,7 @@ body:
     low"; in dem Moment ist die CBB nicht mehr verbunden. Wenn zusätzlich
     AUX und CBB beide leer sind, lässt sich der Roller nicht mehr starten.
 
-    Community-Doku und Reverse-Engineering dazu:
+    Community-Doku und Reverse-Engineering:
     <https://github.com/Julinho666/UNU-CBB-Battery>.
   en: |
     The **Connectivity Box Battery (CBB)** is a small Li-ion pack that
@@ -28,6 +28,7 @@ body:
 
     Community docs / reverse engineering:
     <https://github.com/Julinho666/UNU-CBB-Battery>.
+    (Repo URL includes the original maintainer's GitHub handle.)
 links:
   - url: https://github.com/Julinho666/UNU-CBB-Battery
     label:

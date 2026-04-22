@@ -14,8 +14,9 @@ body:
     gerne. Typische Folgen sind fehlende grüne LED, hängender Boot,
     nicht funktionierende Blinker und „Roller wacht nicht auf".
 
-    Zustand prüfen: In der unu-App lässt sich per Long-Press auf den
-    AUX-Button der Zustand anzeigen, solange der Roller verbunden ist.
+    Zustand prüfen: In der unu-App auf die **Batterie-Leiste** tippen,
+    dann das **AUX-Symbol lange drücken** — der Dialog zeigt AUX-Spannung
+    und Ladezustand.
 
     Siehe `/diagnose aux` und `/faq aux-battery`.
   en: |
@@ -28,8 +29,9 @@ body:
     no green LED, stalled boot, turn signals not working, "scooter won't
     wake".
 
-    Check state: in the unu app, long-press the AUX button (while
-    connected) to see the AUX state.
+    Check state: in the unu app, tap the **battery bar**, then
+    **long-press the AUX icon** — the dialog shows AUX voltage and
+    charge state.
 
     See `/diagnose aux` and `/faq aux-battery`.
 tags: [hardware, battery]

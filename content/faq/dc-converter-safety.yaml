@@ -5,15 +5,15 @@ title:
   en: "⚠️ Safety: never unplug the DC converter under power"
 body:
   de: |
-    Warnung aus dem `#roller-support` (erollerberlin_jLn, mit ihrer Werkstatt-
-    Erfahrung von drei zerlegten MDBs):
+    Community-Warnung aus dem `#roller-support` (Werkstatt-Erfahrung
+    mit drei dabei zerlegten MDBs):
 
     > „Wenn möglich zieht NIE den Stecker vom DC-Wandler wenn der Hauptakku
     > eingelegt ist! Und anschließen auch nur wenn wirklich alle anderen
     > Spannungsquellen ab sind. Ich habe damit mindestens 3 MDBs zerlegt."
 
-    Zusatz von Zanooda dazu: auf originalen AUX-Batterien klebte früher
-    (und in unus Wartungsdokumenten stand) derselbe Hinweis — also
+    Ergänzend: auf originalen AUX-Batterien klebte früher (und in unus
+    Wartungsdokumenten stand) derselbe Hinweis — also
     **niemals an AUX/DC-Wandler arbeiten, wenn der Fahrakku drin ist**.
 
     **Reihenfolge beim Arbeiten:**
@@ -25,14 +25,14 @@ body:
     Ein beschädigtes MDB zu ersetzen ist teuer und bei der aktuellen
     Ersatzteillage schwierig.
   en: |
-    Warning from `#roller-support` (erollerberlin_jLn, with workshop
-    experience of three destroyed MDBs):
+    Community warning from `#roller-support` (workshop experience,
+    three destroyed MDBs):
 
     > "If at all possible, NEVER unplug the DC converter while the main
     > battery is inserted! And only plug it in when all other power sources
     > are actually disconnected. I've destroyed at least 3 MDBs doing it."
 
-    Zanooda adds: original AUX batteries used to have the same warning
+    Context: original AUX batteries used to have the same warning
     stickered on them (and it was in unu's maintenance docs) — so
     **never work on the AUX or DC converter while the main battery is
     in the scooter**.

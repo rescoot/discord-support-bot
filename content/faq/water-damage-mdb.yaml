@@ -1,0 +1,78 @@
+id: water-damage-mdb
+aliases: [wasser, wasserschaden, feuchtigkeit, usb-rost, korrosion, mdb-usb]
+title:
+  de: "Wasserschaden am MDB (USB-Buchse)"
+  en: "MDB water damage (USB port)"
+body:
+  de: |
+    **Der wahrscheinlich häufigste Folgeschaden an älteren Rollern.** Das
+    USB-B-Kabel zwischen MDB und DBC ist konstruktionsbedingt eine
+    Schwachstelle — Wasser läuft in die Buchse am MDB und korrodiert die
+    Kontakte (und dann gern auch das Board dahinter).
+
+    Aus dem `#roller-support`:
+    > „Das mit der nicht funktionierenden Kommunikation hast Du schon
+    > ziemlich gut eingeordnet. Leider liegt das ziemlich oft an
+    > Wassereintritt am MDB — konstruktionsbedingt kanns in die
+    > USB-Buchse ziemlich gut rein und gammelt dann fröhlich im MDB vor
+    > sich hin."
+
+    **Symptome:**
+    • Roller reagiert zwar, aber Display bleibt dunkel oder zeigt keine
+      Daten vom MDB (Geschwindigkeit, Akkustand, Blinker).
+    • Kommunikationsfehler zwischen MDB und DBC (im Wartungshandbuch als
+      „USB-Kabel / A1-Stecker-Problem" beschrieben).
+    • Oft nach längerem Draußenstehen (gerade ohne Abdeckung).
+
+    **Check (ohne Öffnen):** Frontverkleidung ab, MDB-Schacht auf Wasser-
+    spuren und Korrosion prüfen — grüner Kupferoxid-Film am Stecker ist
+    ein klares Zeichen.
+
+    **Wenn der USB-Stecker sichtbar korrodiert ist:**
+    1. Hauptakku raus, `/faq dc-converter-safety` lesen.
+    2. MDB ausbauen, USB-Stecker öffnen.
+    3. Mit 99%-Isopropanol reinigen, trocknen lassen.
+    4. Wieder zusammenbauen, hoffen, dass das Board dahinter nicht
+       auch schon hinüber ist.
+
+    Wenn danach nichts geht: im `#roller-support` fragen — dort gibt es
+    einen Community-Service, der defekte MDBs/DBCs im Tester prüft.
+    Siehe `/faq spare-parts`.
+
+    **Vorbeugung:** Roller abdecken oder drinnen parken, besonders im
+    Winter — Kondenswasser im MDB-Schacht ist der Killer.
+  en: |
+    **Probably the most common failure on older scooters.** The USB-B
+    cable between MDB and DBC is a design weak point — water gets into
+    the port on the MDB and corrodes the contacts (often followed by
+    the board behind them).
+
+    From `#roller-support`:
+    > "Sadly it often comes down to water ingress at the MDB — the USB
+    > socket has no proper seal, and it then happily corrodes away
+    > inside the MDB."
+
+    **Symptoms:**
+    • Scooter reacts but the display stays dark or shows no MDB data
+      (speed, battery, turn signals).
+    • MDB↔DBC communication errors (Wartungshandbuch calls this the
+      "USB cable / A1 connector" problem).
+    • Often after extended outdoor storage without a cover.
+
+    **Check (without opening):** pull the front cover, inspect the MDB
+    bay for water marks and corrosion — green copper-oxide film on the
+    connector is a clear giveaway.
+
+    **If the USB connector is visibly corroded:**
+    1. Main battery out, read `/faq dc-converter-safety` first.
+    2. Remove the MDB, open the USB plug.
+    3. Clean with 99% isopropanol, let dry.
+    4. Reassemble and hope the board behind it isn't also dead.
+
+    If nothing works afterwards: ask in `#roller-support` — there's a
+    community-run service that will test defective MDBs/DBCs in a
+    tester. See `/faq spare-parts`.
+
+    **Prevention:** cover the scooter or park indoors, especially in
+    winter — condensation in the MDB bay is what kills them.
+tags: [hardware, water-damage, repair, mdb]

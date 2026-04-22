@@ -1,0 +1,39 @@
+id: hauptakku
+aliases: [fahrakku, main-battery, battery, akku]
+title:
+  de: "Hauptakku / Fahrakku"
+  en: "Main battery"
+body:
+  de: |
+    Der **Hauptakku** (im Channel oft „Fahrakku") ist der große, heraus-
+    nehmbare Lithium-Akku, der den Motor des unu antreibt.
+
+    Grunddaten (aus der Tech-Reference):
+    • 14s7p in INR22/71-7-Zellen
+    • 50,8 V nominell, bis 58,2 V beim Laden
+    • 35 Ah / ~1778 Wh Kapazität
+    • LED-Ring ums Schloss als Statusanzeige
+    • Datenübertragung zum Roller über NFC
+
+    Der Hauptakku versorgt den Motor über die ECU — für die
+    Steuerelektronik (MDB/DBC/Licht) ist im Stand die **AUX**
+    zuständig, nicht der Hauptakku direkt.
+
+    Siehe auch `/glossar aux`, `/glossar cbb`, `/glossar ecu`.
+  en: |
+    The **main battery** ("Fahrakku" in-channel) is the big removable
+    lithium pack that drives the motor.
+
+    Basics (from the tech reference):
+    • 14s7p, INR22/71-7 cells
+    • 50.8 V nominal, up to 58.2 V while charging
+    • 35 Ah / ~1778 Wh
+    • LED ring around the lock for status
+    • Data link to the scooter via NFC
+
+    The main battery powers the motor via the ECU — when parked, the
+    **AUX** runs the control electronics (MDB/DBC/lights), not the main
+    battery directly.
+
+    See also `/glossary aux`, `/glossary cbb`, `/glossary ecu`.
+tags: [hardware, battery]

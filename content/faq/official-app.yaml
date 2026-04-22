@@ -1,0 +1,56 @@
+id: official-app
+aliases: [unu-app, app-server, server-down, abschaltung, registrieren, login]
+title:
+  de: "Offizielle unu-App: Server sind abgeschaltet — was jetzt?"
+  en: "Official unu app: servers are off — what now?"
+body:
+  de: |
+    Die offizielle unu-App ist nach der Insolvenz nur noch eingeschränkt
+    nutzbar — Login, Registrierung und Cloud-Funktionen (Live-Standort,
+    Remote-Kommandos) sind seit Abschaltung der Server **weg und kommen
+    auch nicht wieder**.
+
+    Aus dem Channel (2024-06):
+    > „Roller kann und muss nicht registriert werden. Die Server sind
+    > abgeschaltet, gibt eigentlich keinen Grund die offizielle App zu
+    > nutzen."
+
+    **Was nutzt man stattdessen?**
+
+    - **unu by Emco** (iOS + Android) — die offizielle Nachfolger-App
+      von Emco. Service-Partner-Liste ist hier drin (`/faq service-partner`).
+    - **unustasis** (Android; iOS separat verfügbar) — reine BLE-App,
+      kein Login, kein Internet nötig, Open Source. Community-
+      entwickelt; für viele Nutzer faktisch der Standard.
+
+    Beide Apps kommen ohne Cloud aus und funktionieren lokal per
+    Bluetooth zum Roller (siehe `/faq app-connect` und `/glossar nrf`).
+
+    Wenn du noch in der alten Original-App feststeckst: deinstallieren
+    und eine der beiden oben installieren — die SIM im Roller ist
+    ohnehin tot, es gibt also nichts aus dem alten Account zu retten.
+  en: |
+    The original unu app barely works anymore — login, registration
+    and cloud features (live location, remote commands) have been
+    **gone and won't come back** since the servers were shut down after
+    bankruptcy.
+
+    From the channel (2024-06):
+    > "The scooter can't and doesn't need to be registered. The servers
+    > are off, there's no real reason to use the official app anymore."
+
+    **What to use instead:**
+
+    - **unu by Emco** (iOS + Android) — Emco's official successor app.
+      The service-partner list lives here (`/faq service-partner`).
+    - **unustasis** (Android; separate iOS release) — pure BLE app, no
+      login, no internet required, open source. Community-built; for
+      many users this is the default now.
+
+    Both apps work without cloud and talk to the scooter locally over
+    Bluetooth (see `/faq app-connect` and `/glossary nrf`).
+
+    If you're still stuck on the original app: uninstall it and install
+    one of the above — the SIM in the scooter is dead anyway, there's
+    nothing in the old account to preserve.
+tags: [app, migration]

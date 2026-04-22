@@ -1,0 +1,60 @@
+id: kickstand
+aliases: [seitenständer, seitenständerschalter, ständer, kickstand-sensor, fahrt-licht]
+title:
+  de: "Roller geht nicht in den Fahrmodus (Seitenständer-Sensor)"
+  en: "Scooter won't enter drive mode (kickstand sensor)"
+body:
+  de: |
+    **Symptom:** Alles ist an (Dashboard, Licht), aber der Roller bleibt
+    im Park-Modus oder geht kurz in „Ready" und wieder zurück. Das
+    Standlicht bleibt an statt in den Fahrbetrieb zu wechseln.
+
+    Häufige Ursache: der **Seitenständer-Sensor** meldet dem Roller
+    nicht sauber „Ständer oben".
+
+    **Schnellcheck:**
+    1. Ständer *mechanisch* voll einrasten (manchmal klemmt er leicht).
+    2. Wenn er klemmt oder die Feder hängt — reinigen/fetten.
+    3. Wenn der Ständer sauber oben ist und der Roller trotzdem nicht in
+       den Fahrmodus geht, ist der Sensor oder das Kabel hin.
+
+    Aus dem `#roller-support`:
+    > „Wenn es direkt nach dem Losfahren passiert, eventuell
+    > Seitenständersensor."
+
+    **Mit Multimeter:** Durchgang zwischen den beiden Kontakten am
+    Schalter messen, Ständer oben vs. unten. Kein sauberer Wechsel →
+    Schalter tauschen (Wartungshandbuch Kapitel 1.6.6.4 beschreibt den
+    Austausch). Auch das 16-polige Kabel zwischen DBC und Schalter auf
+    Sitz/Korrosion prüfen.
+
+    **Hinweis:** Wenn das Dashboard zusätzlich „Steering column locked"
+    zeigt, kann auch ein 12V-Problem (AUX) dahinterstecken — dann
+    `/faq aux-battery` zuerst.
+  en: |
+    **Symptom:** everything's on (dashboard, lights), but the scooter
+    stays in park or briefly goes into "Ready" and flips back. Running
+    light stays on instead of switching to drive.
+
+    Common cause: the **kickstand sensor** doesn't cleanly report
+    "stand up" to the scooter.
+
+    **Quick check:**
+    1. Fully engage the kickstand (it sometimes sticks slightly).
+    2. If it sticks or the spring drags — clean/grease it.
+    3. If the stand is clearly up and the scooter still won't enter
+       drive mode, the sensor or cable is the issue.
+
+    From `#roller-support`:
+    > "If it happens right after starting off, possibly the kickstand
+    > sensor."
+
+    **With a multimeter:** check continuity across the switch contacts,
+    stand up vs. down. No clean change → replace the switch
+    (Wartungshandbuch section 1.6.6.4 covers the swap). Also check the
+    16-pin cable between DBC and switch for seating/corrosion.
+
+    **Note:** if the dashboard *also* shows "Steering column locked",
+    a 12V (AUX) problem may be underneath — run `/faq aux-battery`
+    first.
+tags: [hardware, kickstand, troubleshooting]

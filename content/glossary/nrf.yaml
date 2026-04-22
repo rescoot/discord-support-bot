@@ -1,0 +1,31 @@
+id: nrf
+aliases: [nrf52, nrf52840, bluetooth-chip, ble-chip]
+title:
+  de: "nRF — der Bluetooth-Chip"
+  en: "nRF — the Bluetooth chip"
+body:
+  de: |
+    Der **nRF** ist der kleine Funk-Chip im Roller, der die
+    Bluetooth-Verbindung zum Handy macht. Damit überhaupt die App mit
+    dem Roller reden kann, muss der nRF laufen — und zwar auch dann,
+    wenn der Roller sonst schläft (solange AUX oder CBB noch Strom haben).
+
+    Er hat eine eigene kleine Firmware, die unabhängig von der
+    ScooterOS-Version (MDB/DBC) gepflegt wird. Aktueller Soll-Stand:
+    **v1.12.0** (siehe `/faq firmware`).
+
+    Für Nutzer relevant: wenn der nRF nicht auf dem passenden Stand ist,
+    kann das App-Verbindungen zickig machen.
+  en: |
+    The **nRF** is the small radio chip inside the scooter that handles
+    the Bluetooth link to your phone. The app can only talk to the
+    scooter if the nRF is running — including when the scooter is
+    otherwise asleep (as long as AUX or CBB still have power).
+
+    It has its own small firmware, versioned independently from
+    ScooterOS (MDB/DBC). Target version: **v1.12.0** (see
+    `/faq firmware`).
+
+    User-relevant: a mismatched nRF firmware can make app connections
+    flaky.
+tags: [hardware, bluetooth]

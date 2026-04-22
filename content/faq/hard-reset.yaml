@@ -1,0 +1,70 @@
+id: hard-reset
+aliases: [reset, reboot, neustart, bremshebel-reset, physischer-neustart, stromlos]
+title:
+  de: "Roller neu starten / stromlos machen"
+  en: "Reboot / fully de-power the scooter"
+body:
+  de: |
+    Zwei verschiedene Dinge, nicht verwechseln:
+
+    **Bevorzugt: Bremshebel-Neustart (Reboot ohne Werkzeug)**
+    Roller muss **an sein**. Kein Zerlegen nötig — die empfohlene Methode
+    für hängende Systeme (Dauer-„Steering column locked", stecken­
+    gebliebene Sitzindikation, Software-Glitches nach Update).
+
+    1. Beide Bremshebel gleichzeitig ziehen und **40 Sekunden halten**.
+    2. Dabei den **rechten Bremshebel alle 10 Sekunden einmal kurz
+       (≈ 1 s) loslassen**.
+    3. Nach 40 s beide Hebel loslassen.
+    4. Der Roller sollte rebooten.
+
+    **Stromlos machen (physischer Reset, Wartungshandbuch 2.2.4)**
+    Nicht als Reboot gedacht — wird gebraucht, um den Roller **komplett
+    spannungsfrei** zu kriegen (z. B. vor Reparatur an der Elektrik, oder
+    wenn der Bremshebel-Reset nicht geht, weil der Roller nicht an ist).
+
+    1. Hauptakku raus, wenn möglich. Wenn er drin bleiben muss: beide
+       Stecker am DC-Wandler abziehen.
+    2. Rotes Kabel von der AUX abziehen.
+    3. CB-Batterie-Stecker trennen.
+    4. **10 Sekunden warten.**
+    5. In umgekehrter Reihenfolge wieder anschließen.
+
+    ⚠️ Vor dem Stromlos-Machen `/faq dc-converter-safety` lesen — DC-
+    Wandler-Stecker niemals unter Spannung trennen.
+
+    Für „Scooter bootet gar nicht mehr" gibt's eine vollständige
+    Prozedur ab Wartungshandbuch 2.2.5 (AUX messen → laden/tauschen →
+    CBB tauschen → weiter).
+  en: |
+    Two different things, don't mix them up:
+
+    **Preferred: brake-lever reboot (no tools)**
+    Scooter must be **on**. No disassembly — the go-to method for stuck
+    systems (persistent "Steering column locked", seat indication
+    frozen, post-update glitches).
+
+    1. Pull both brake levers and **hold for 40 s**.
+    2. While holding, **briefly release the right brake (~1 s) every
+       10 s**.
+    3. After 40 s release both.
+    4. The scooter should reboot.
+
+    **Full de-power (physical reset, Wartungshandbuch 2.2.4)**
+    Not meant as a reboot — this one is for getting the scooter
+    **completely de-powered** (before electrical repair work, or when
+    the brake-lever reset doesn't apply because the scooter isn't on).
+
+    1. Remove the main battery if possible; if it has to stay in,
+       disconnect both plugs on the DC converter.
+    2. Unplug the red cable from the AUX.
+    3. Disconnect the CB battery plug.
+    4. **Wait 10 seconds.**
+    5. Reconnect in reverse order.
+
+    ⚠️ Read `/faq dc-converter-safety` first — never unplug a DC-converter
+    connector under power.
+
+    For "scooter won't boot at all" there's a full procedure starting at
+    Wartungshandbuch 2.2.5 (measure AUX → charge/swap → swap CBB → …).
+tags: [troubleshooting, reset]

@@ -1,0 +1,82 @@
+id: e-error-codes
+aliases: [e04, e05, e11, e16, ecu-fehler, motor-fehler, fehlercode-ecu]
+title:
+  de: "Motor-/ECU-Fehlercodes (E-Codes)"
+  en: "Motor / ECU error codes (E-codes)"
+body:
+  de: |
+    Fehler am Motor-Controller (ECU) beginnen mit **E**. Aus dem
+    offiziellen unu-Wartungshandbuch (Kapitel 5.1 und 6.7/6.8):
+
+    **E04 — Acceleration stalling**
+    Gas wurde beim Beschleunigen blockiert (z. B. leichtes Bremsen). →
+    Gasgriff loslassen, nochmal beschleunigen.
+
+    **E05 — Motor sensor issue**
+    Hall-Sensor im Motor wird nicht gelesen. → Meist Motor- oder ECU-
+    Thema; Wartungshandbuch Kapitel 6.7 beschreibt die Messungen.
+
+    **E06 / E16 — ECU issue / ECU damage** → ECU-Austausch.
+
+    **E07 — Motor open-circuit**
+    ECU erkennt eine offene Verbindung zum Motor. → Motorkabel-
+    Schrauben prüfen, dann mit Multimeter die drei Phasenleitungen
+    messen. Falls eine hohen Widerstand hat → Motor tauschen; falls
+    alles ok → ECU tauschen.
+
+    **E10 — Self-check failed** → Hauptbatterie einmal raus, dann wieder
+    rein.
+
+    **E11 — ECU too hot (>105 °C)**
+    ECU hat abgeschaltet. → Roller + ECU abkühlen lassen; nach längerer
+    Bergfahrt oder Volllast durchaus normal.
+
+    **E12 — Abnormal throttle**
+    Gasfehler. → Loslassen, nochmal; Gasgriff kontrollieren lassen.
+
+    **E14 — Acceleration blocked**
+    Gas wurde beim Einschalten schon gezogen. → Vermeiden, beim
+    Einschalten nicht zu beschleunigen.
+
+    Bei ECU- oder Motor-Austausch: kein DIY, Service-Partner
+    (`/faq service-partner`).
+
+    Quelle: unu GmbH Reparaturplan 2.X, Kapitel 5.1.
+  en: |
+    Motor-controller (ECU) errors start with **E**. From the official
+    unu maintenance manual (chapters 5.1 and 6.7/6.8):
+
+    **E04 — Acceleration stalling**
+    Throttle got blocked during acceleration (e.g. light braking).
+    → Release throttle, accelerate again.
+
+    **E05 — Motor sensor issue**
+    Hall sensor can't be read. → Usually motor or ECU; Wartungshandbuch
+    chapter 6.7 walks the measurements.
+
+    **E06 / E16 — ECU issue / ECU damage** → ECU replacement.
+
+    **E07 — Motor open-circuit**
+    ECU detects an open connection to the motor. → Check motor cable
+    screws, then use a multimeter on the three phase lines. One with
+    high resistance → replace motor; all clean → replace ECU.
+
+    **E10 — Self-check failed** → Remove the main battery once, then
+    reinsert.
+
+    **E11 — ECU too hot (>105 °C)**
+    ECU has shut down. → Let scooter + ECU cool; quite normal after a
+    long hill or full-load ride.
+
+    **E12 — Abnormal throttle**
+    Throttle fault. → Release, retry; have the throttle checked.
+
+    **E14 — Acceleration blocked**
+    Throttle was engaged during startup. → Don't accelerate while
+    powering on.
+
+    ECU or motor replacement is not DIY — service partner
+    (`/faq service-partner`).
+
+    Source: unu GmbH Reparaturplan 2.X, chapter 5.1.
+tags: [fault-codes, motor, ecu, troubleshooting]

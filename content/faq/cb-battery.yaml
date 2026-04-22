@@ -33,8 +33,8 @@ body:
     • Alternative: **Sicherung wechseln** — *riskant*, nur mit
       entsprechendem Hintergrundwissen angehen.
 
-    Community-Doku (Reverse-Engineering): Julinho hat die CBB
-    dokumentiert — <https://github.com/Julinho666/UNU-CBB-Battery>.
+    Community-Doku (Reverse-Engineering): das CBB-Repo auf GitHub —
+    <https://github.com/Julinho666/UNU-CBB-Battery>.
     Für aktuelle Bezugsquellen im `#roller-support` fragen.
   en: |
     The **CB battery (CBB)** — "Connectivity Box Battery" — is the small
@@ -63,12 +63,12 @@ body:
     • Alternative: **replace the fuse** — *risky*, only attempt with the
       relevant background knowledge.
 
-    Community docs (reverse engineering): Julinho has documented the CBB —
-    <https://github.com/Julinho666/UNU-CBB-Battery>. Ask in `#roller-support`
-    for current sources.
+    Community docs (reverse engineering): the CBB repo on GitHub —
+    <https://github.com/Julinho666/UNU-CBB-Battery>. Ask in
+    `#roller-support` for current sources.
 links:
   - url: https://github.com/Julinho666/UNU-CBB-Battery
     label:
-      de: "UNU-CBB-Battery (Julinho, GitHub)"
-      en: "UNU-CBB-Battery (Julinho, GitHub)"
+      de: "UNU-CBB-Battery Community-Repo (GitHub)"
+      en: "UNU-CBB-Battery community repo (GitHub)"
 tags: [battery, hardware, troubleshooting]
