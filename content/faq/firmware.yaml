@@ -1,30 +1,34 @@
 id: firmware
-aliases: [update, version, scooteros, stock-firmware]
+aliases: [update, version, scooteros, stock-firmware, nrf]
 title:
-  de: "Stock-Firmware-Versionen"
-  en: "Stock firmware versions"
+  de: "Stock-Firmware: Soll-Versionen"
+  en: "Stock firmware: target versions"
 body:
   de: |
-    Im Channel erwähnte unu ScooterOS-Versionen (chronologisch):
-    V1.5.0, V1.6.0, V1.8.0, V1.12.0, V1.13.2, **V1.15.0**.
+    Das sind die letzten offiziellen Stände, die ein Roller drauf haben
+    sollte:
 
-    V1.15.0 ist nach Aussage im Channel der letzte Release-Candidate für
-    MDB und DBC und dürfte die letzte offizielle Version sein, die unu
-    selbst herausgegeben hat.
+    • **MDB:** V1.15.0
+    • **DBC:** V1.15.0 (oder die aktuellste gesehene — faktisch 1.15.0)
+    • **nRF:** V1.12.0
 
-    Seit unus Pleite gibt es keine neuen offiziellen Roller-Firmwares —
-    Weiterentwicklung findet unter **LibreScoot** statt
-    (`/glossar librescoot`), die Firmware ist dort aber aktuell noch in
-    Entwicklung und *nicht als stabil* bezeichnet.
+    Wenn dein Roller ältere Versionen zeigt, ist das ein Grund, sich
+    beim **Verkäufer** zu melden und den offiziellen Update-Stand
+    nachzufordern — nicht etwas, das man selbst nachbessern muss.
+
+    Neue offizielle Firmwares wird es nicht mehr geben; für
+    Weiterentwicklung siehe **LibreScoot** (`/glossar librescoot`).
   en: |
-    unu ScooterOS versions mentioned in the channel (chronological):
-    V1.5.0, V1.6.0, V1.8.0, V1.12.0, V1.13.2, **V1.15.0**.
+    These are the last official builds a scooter should be running:
 
-    Per channel statements V1.15.0 is the last release candidate for MDB
-    and DBC and is probably the last official version unu itself shipped.
+    • **MDB:** V1.15.0
+    • **DBC:** V1.15.0 (or the newest seen — effectively 1.15.0)
+    • **nRF:** V1.12.0
 
-    Since unu's bankruptcy there are no new official scooter firmwares.
-    Continued development happens under **LibreScoot**
-    (`/glossary librescoot`), though that firmware is still in development
-    and is *not yet described as stable*.
+    If your scooter shows older versions, that's a reason to go back to
+    whoever **sold** it and ask for the official update — not something
+    you have to sort out yourself.
+
+    No new official firmwares will be released; for continued development
+    see **LibreScoot** (`/glossary librescoot`).
 tags: [firmware]

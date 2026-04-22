@@ -6,9 +6,7 @@ Glad you're here. A few pointers to get started:
 • `#allgemein` – general chat (mostly German)
 • `#roller-support` – scooter hardware/firmware issues
 • `#app-support` – unu app, Bluetooth, waking
-• `#librescoot-talk` – the open-source firmware
 • `#ressourcen` – spare parts, 3D prints, docs
-• `#reverse-engineering` – hardware/software analysis
 
 **The bot can help:**
 • `/faq` – common questions on battery, app, firmware, repairs…

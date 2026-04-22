@@ -1,66 +1,69 @@
 id: aux-battery
 aliases: [aux, bleiakku, 12v, keine-grüne-led, wacht-nicht-auf]
 title:
-  de: "AUX-Batterie: Roller wacht nicht auf / kein grünes Licht"
-  en: "AUX battery: scooter won't wake / no green light"
+  de: "AUX-Batterie: Roller wacht nicht auf, Blinker tot, Sitzbank wird nicht erkannt"
+  en: "AUX battery: scooter won't wake, dead blinkers, seatbox not detected"
 body:
   de: |
-    **Typisches Bild:** Die App zeigt den Hauptakku voll, aber der Roller
-    reagiert nicht auf Keycard/App, oder die grüne LED blinkt im
-    „Master-Erwartungs-Modus" und kommt nicht weiter.
+    Die **12V-AUX-Bleibatterie** ist der häufigste Defekt am unu Pro.
+    Faustregel aus dem `#roller-support`: ab ~2 Jahren Lebensdauer
+    geht die AUX gerne kaputt. Typische Reparaturberichte lauten schlicht
+    „AUX getauscht, startet einwandfrei".
 
-    In so gut wie allen Fällen, die hier im Channel aufgetaucht sind, war die
-    **12V-AUX-Bleibatterie am Ende** — bei Rollern ab ~2 Jahren ist das die
-    Standardursache. Typische Reparaturberichte:
-    „AUX getauscht, startet einwandfrei."
-
-    **Schnellcheck (ohne Werkzeug):** Halte die AUX-Taste in der unu-App
-    lange gedrückt, solange der Roller verbunden ist — die App zeigt dir
-    den AUX-Zustand. Bei sichtbar niedriger AUX-Spannung ist das Urteil
-    eindeutig.
-
-    **Weitere Anzeichen für eine schwache AUX:**
+    **Typische Symptome einer schwachen/leeren AUX:**
+    • Roller reagiert nicht auf Keycard oder App
     • Dashboard geht beim Anschalten kurz an und wieder aus
-    • Blinker funktionieren gar nicht oder flackern
-    • Roller bleibt im Standby hängen
+    • Blinker funktionieren nicht oder flackern
+    • **Sitzbank wird nicht als geschlossen erkannt**, dadurch wird der
+      Hauptakku gar nicht erst aktiviert
+    • **CBB und AUX laden nicht mehr** (Folge, sobald die AUX zu schwach ist)
 
-    **Fix:** AUX tauschen. Bauform und Maße so wie die Original-Batterie
-    (12V-Blei-Gel). Frag im `#roller-support` nach konkret bewährten
-    Ersatztypen — dort gibt es aktuelle Empfehlungen.
+    **Schnellcheck ohne Werkzeug — Zustand in der App anzeigen:**
+    1. unu-App mit dem Roller verbinden.
+    2. Auf die **Batterie-Leiste** tippen.
+    3. Das **AUX-Symbol lange gedrückt halten** — es öffnet sich ein
+       Dialog mit AUX-Spannung und Ladezustand.
 
-    ⚠️ **Wichtig:** Den Stecker des DC-Wandlers **nie** abziehen, solange
-    der Hauptakku eingesetzt ist — siehe `/faq dc-converter-safety`.
+    **Ersatz:** 12V-Bleibatterie in kompakter Bauform, ähnlich Original.
+    Kanonischer Channel-Vorschlag (Zanooda): **EMOS B9653** (ca. 18 €) —
+    <https://www.amazon.de/dp/B01N95DUQB>, „Im Zweifel: Den hier einbauen."
+    Weitere Optionen und LiFePO4-Alternative: `/faq spare-parts`.
+
+    ⚠️ **Vor jedem Eingriff** `/faq dc-converter-safety` lesen.
 
     👉 Interaktiv: `/diagnose aux`
   en: |
-    **Typical symptoms:** the app shows the main battery full, but the
-    scooter doesn't react to keycard or app, or the green LED keeps blinking
-    in "master waiting" mode without progressing.
+    The **12V AUX lead-acid battery** is the single most common fault on
+    the unu Pro. Channel rule of thumb in `#roller-support`: from about
+    2 years of age the AUX tends to die. Typical repair reports are just
+    "swapped the AUX, starts fine".
 
-    In nearly every case that's come up in the channel, the **12V AUX lead-
-    acid battery was done** — on scooters around 2+ years old this is the
-    default answer. Typical repair reports: "Swapped the AUX, starts fine."
-
-    **Quick check (no tools):** With the scooter connected in the unu app,
-    long-press the AUX button in the app — it shows you the AUX state.
-    Clearly low? Verdict's in.
-
-    **Other low-AUX signs:**
-    • Dashboard briefly powers on then dies
+    **Typical weak/dead-AUX symptoms:**
+    • Scooter doesn't react to keycard or app
+    • Dashboard briefly powers on, then dies
     • Turn signals don't work or flicker
-    • Scooter hangs in standby
+    • **Seatbox isn't detected as closed**, so the main battery never
+      gets activated
+    • **CBB and AUX no longer charge** (knock-on effect once AUX is weak)
 
-    **Fix:** replace the AUX. Same form factor as the original (12V gel
-    lead-acid). Ask in `#roller-support` for currently recommended
-    replacements — people there track what still works.
+    **Quick check without tools — show state in the app:**
+    1. Connect the unu app to the scooter.
+    2. Tap the **battery bar**.
+    3. **Long-press the AUX icon** — a dialog pops up with AUX voltage and
+       charge state.
 
-    ⚠️ **Never** unplug the DC converter while the main battery is
-    inserted — see `/faq dc-converter-safety`.
+    **Replacement:** a 12V lead-acid in a compact form factor, similar to
+    the original. Canonical channel suggestion (Zanooda): **EMOS B9653**
+    (~ €18) — <https://www.amazon.de/dp/B01N95DUQB>, "When in doubt, put
+    this one in." More options and a LiFePO4 alternative:
+    `/faq spare-parts`.
+
+    ⚠️ **Before any work** read `/faq dc-converter-safety`.
 
     👉 Interactive: `/diagnose aux`
 links:
-  - url: https://github.com/Julinho666/UNU-CBB-Battery
+  - url: https://www.amazon.de/dp/B01N95DUQB
     label:
-      de: "CBB-Akku Community-Repo (auch Infos zur AUX)"
-      en: "CBB battery community repo (AUX info too)"
+      de: "EMOS B9653 (Amazon)"
+      en: "EMOS B9653 (Amazon)"
 tags: [battery, hardware, troubleshooting]

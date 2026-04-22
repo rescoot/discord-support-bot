@@ -6,9 +6,7 @@ Schön, dass du da bist. Ein paar Tipps für den Start:
 • `#allgemein` – allgemeine Unterhaltung
 • `#roller-support` – Hardware/Firmware-Probleme am Roller
 • `#app-support` – unu-App, Bluetooth, Wecken
-• `#librescoot-talk` – die Open-Source-Firmware
 • `#ressourcen` – Ersatzteile, 3D-Drucke, Doku
-• `#reverse-engineering` – Hardware-/Software-Analyse
 
 **Der Bot kann dir helfen:**
 • `/faq` – häufige Fragen zu Akku, App, Firmware, Reparaturen …

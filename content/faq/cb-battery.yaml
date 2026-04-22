@@ -1,0 +1,74 @@
+id: cb-battery
+aliases: [cbb, connectivity-box-battery, innenbatterie, internal-battery, internal-battery-low]
+title:
+  de: "CB-Batterie (CBB): Standby kurz, AUX geht schnell leer, kein Ladesymbol"
+  en: "CB battery (CBB): short standby, AUX drains fast, no charging icon"
+body:
+  de: |
+    Die **CB-Batterie (CBB)** — „Connectivity Box Battery" — ist der kleine
+    Li-Ion-Akku in der Konnektivitäts-Box. Wenn sie schwach oder defekt
+    ist, hält die Steuerelektronik im Standby deutlich kürzer durch und
+    belastet stattdessen die AUX.
+
+    **Typische Symptome einer schwachen/defekten CBB:**
+    • Roller hält im Standby **nicht mehr lange durch**, geht früher in
+      Hibernate oder sogar unerwartet dorthin.
+    • **AUX wird auffällig schnell leer**, obwohl sie neu/ok ist.
+    • **Kein CB-Ladesymbol im Dashboard** (das Symbol fehlt, wenn die CBB
+      nicht geladen wird).
+    • In der unu-App: beim **Long-Press auf die CBB-Kachel** erscheint
+      „not charging" und/oder ein sehr niedriger Ladezustand.
+
+    **Was mit Mobilfunk ist:** die meisten unus sind ohnehin **offline**
+    (keine aktive Cloud-Verbindung), daher ist „Roller ist nicht über
+    Mobilfunk erreichbar" *kein* brauchbares Symptom — das ist der
+    Normalzustand.
+
+    **Abgrenzung zur AUX:** AUX ≠ CBB. Eine kaputte CBB kann die AUX aber
+    schneller entleeren (siehe oben), also beide Symptome lassen sich am
+    selben Roller sehen.
+
+    **Ersatz:**
+    • Standardlösung: **neue CBB einbauen.**
+    • Alternative: **Sicherung wechseln** — *riskant*, nur mit
+      entsprechendem Hintergrundwissen angehen.
+
+    Community-Doku (Reverse-Engineering): Julinho hat die CBB
+    dokumentiert — <https://github.com/Julinho666/UNU-CBB-Battery>.
+    Für aktuelle Bezugsquellen im `#roller-support` fragen.
+  en: |
+    The **CB battery (CBB)** — "Connectivity Box Battery" — is the small
+    Li-ion pack inside the connectivity box. When it's weak or dead, the
+    control electronics can't ride out standby as long, and the AUX
+    starts carrying the load instead.
+
+    **Typical symptoms of a weak/dead CBB:**
+    • Scooter **doesn't last long in standby**, drops into hibernate
+      earlier or unexpectedly.
+    • **AUX drains noticeably fast**, even when the AUX itself is fine.
+    • **No CB charging icon on the dashboard** (the icon is absent when
+      CBB is not charging).
+    • In the unu app: **long-press the CBB tile** — it shows "not charging"
+      and/or a very low state of charge.
+
+    **About cellular:** most unus are **offline anyway** (no active cloud
+    connection), so "scooter unreachable over cellular" is *not* a useful
+    symptom — that's the normal state.
+
+    **AUX vs CBB:** AUX ≠ CBB. A dead CBB *can* drain the AUX faster (see
+    above), so both symptoms can show up on the same scooter.
+
+    **Replacement:**
+    • Default: **install a new CBB.**
+    • Alternative: **replace the fuse** — *risky*, only attempt with the
+      relevant background knowledge.
+
+    Community docs (reverse engineering): Julinho has documented the CBB —
+    <https://github.com/Julinho666/UNU-CBB-Battery>. Ask in `#roller-support`
+    for current sources.
+links:
+  - url: https://github.com/Julinho666/UNU-CBB-Battery
+    label:
+      de: "UNU-CBB-Battery (Julinho, GitHub)"
+      en: "UNU-CBB-Battery (Julinho, GitHub)"
+tags: [battery, hardware, troubleshooting]

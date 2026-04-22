@@ -1,46 +1,85 @@
 id: spare-parts
-aliases: [ersatzteile, parts, reparatur]
+aliases: [ersatzteile, parts, replacement, teile]
 title:
-  de: "Ersatzteile und Reverse-Engineering-Ressourcen"
-  en: "Spare parts and reverse-engineering resources"
+  de: "Ersatzteile: konkrete Bezugsquellen aus der Community"
+  en: "Spare parts: specific community-sourced replacements"
 body:
   de: |
-    Seit der unu-Pleite gibt es keinen offiziellen Teile-Shop mehr. Teile
-    sind meist Eigen- oder Community-Beschaffung.
+    Konkrete Ersatzteile, die im `#roller-support` / `#ressourcen` von
+    Community-Mitgliedern verlinkt und als passend bestätigt wurden.
+    Links/Preise wandern — falls ein Angebot weg ist, such nach dem
+    Produktnamen.
 
-    **Was die Community hat:**
-    • **Reverse-Engineering & Schaltpläne:** `#reverse-engineering`
-    • **Doku zum CBB-Akku (Julinho):**
-      <https://github.com/Julinho666/UNU-CBB-Battery>
-    • **LibreScoot (Firmware-/Service-Quelltext):**
-      <https://github.com/librescoot>
-    • **Weitere Links:** Kanal `#ressourcen`, angepinnte Posts in
-      `#roller-support`.
+    **12V-AUX-Batterie (Blei-Gel):**
+    • **EMOS B9653**, ca. 18 € — <https://www.amazon.de/dp/B01N95DUQB>
+      *(Zanooda: „Im Zweifel: Den hier einbauen.")*
+    • Alternative: **Tecnoware** 12V 5Ah Faston 6,3 mm —
+      <https://www.amazon.de/dp/B00FG8FC90>
 
-    Für konkrete Teile am besten direkt in `#roller-support` fragen — mit
-    genauer Beschreibung (wo, was, ggf. Foto).
+    **12V-AUX-Batterie (LiFePO4-Alternative):**
+    • LiFePo4 12V, ca. 25 € — <https://www.amazon.de/dp/B0CPPBKL16>
+
+    **Rückspiegel (Set, „long stem"):**
+    • <https://www.aliexpress.com/item/1005003917463727.html>
+
+    **Spiegelhalter (nicht original, aber nah dran):**
+    • <https://www.aliexpress.com/item/1005006152846369.html>
+
+    **Sitzschloss (4-Pin-Version):**
+    • <https://de.aliexpress.com/item/1005007041507776.html>
+
+    **Bremsbeläge vorne (Typ 07, Ersatz):**
+    • TRW MCB519EC — <https://www.amazon.de/dp/B0068NOJZK>
+    • AliExpress Typ 07 — <https://de.aliexpress.com/item/33001185246.html>
+
+    **Radlager vorne (6201-2RS, ca. 7 € statt 18 € bei Emco):**
+    • <https://www.amazon.de/dp/B01N7614S0>
+      *(Zanooda: „XiKe 6201-2RS Rillenkugellager")*
+
+    **Bremslichtschalter (identisch zum Original):**
+    • <https://de.aliexpress.com/item/1005005233851432.html>
+
+    **Display-Glas wieder kleben:** → `/faq display-repair` (3M 468MP)
+
+    **Kategorisch nichts gefunden?** Ersatzteilkatalog-PDF im
+    `#ressourcen`-Channel, dann im `#roller-support` mit Beschreibung
+    und Foto fragen.
   en: |
-    Since the unu bankruptcy there is no official parts shop. Parts mostly
-    come from DIY or community.
+    Specific spare parts that community members have linked and
+    confirmed as fits in `#roller-support` / `#ressourcen`. Links and
+    prices drift — if a listing is gone, search for the product name.
 
-    **What the community has:**
-    • **Reverse engineering & schematics:** `#reverse-engineering`
-    • **CBB battery docs (Julinho):**
-      <https://github.com/Julinho666/UNU-CBB-Battery>
-    • **LibreScoot (firmware/service source):**
-      <https://github.com/librescoot>
-    • **More links:** `#ressourcen` channel, pinned posts in
-      `#roller-support`.
+    **12V AUX battery (lead-acid):**
+    • **EMOS B9653**, ~ €18 — <https://www.amazon.de/dp/B01N95DUQB>
+      *(Zanooda: "When in doubt, put this one in.")*
+    • Alternative: **Tecnoware** 12V 5Ah Faston 6.3 mm —
+      <https://www.amazon.de/dp/B00FG8FC90>
 
-    For specific parts, ask directly in `#roller-support` with a clear
-    description (location, part, photo if possible).
-links:
-  - url: https://github.com/Julinho666/UNU-CBB-Battery
-    label:
-      de: "UNU-CBB-Battery"
-      en: "UNU-CBB-Battery"
-  - url: https://github.com/librescoot
-    label:
-      de: "LibreScoot"
-      en: "LibreScoot"
+    **12V AUX battery (LiFePO4 alternative):**
+    • LiFePO4 12V, ~ €25 — <https://www.amazon.de/dp/B0CPPBKL16>
+
+    **Mirrors (pair, "long stem"):**
+    • <https://www.aliexpress.com/item/1005003917463727.html>
+
+    **Mirror mounts (not OEM, close fit):**
+    • <https://www.aliexpress.com/item/1005006152846369.html>
+
+    **Seat lock (4-pin version):**
+    • <https://de.aliexpress.com/item/1005007041507776.html>
+
+    **Front brake pads (Type 07 replacement):**
+    • TRW MCB519EC — <https://www.amazon.de/dp/B0068NOJZK>
+    • AliExpress Type 07 — <https://de.aliexpress.com/item/33001185246.html>
+
+    **Front wheel bearings (6201-2RS, ~ €7 vs €18 at Emco):**
+    • Search "XiKe 6201-2RS" on amazon.de (Zanooda's recommendation)
+
+    **Brake light switch (identical to OEM):**
+    • <https://de.aliexpress.com/item/1005005233851432.html>
+
+    **Re-glueing the display glass:** → `/faq display-repair` (3M 468MP)
+
+    **Category not covered?** The parts-catalog PDF is pinned in the
+    `#ressourcen` channel, then ask in `#roller-support` with a
+    description and a photo.
 tags: [parts, repair, community]

@@ -1,32 +1,25 @@
 id: service-partner
-aliases: [werkstatt, reparaturdienst, mechaniker]
+aliases: [werkstatt, reparaturdienst, mechaniker, emco, unustasis]
 title:
   de: "Werkstatt / Service-Partner finden"
   en: "Finding a workshop / service partner"
 body:
   de: |
-    Seit der unu-Pleite ist die Werkstatt-Landschaft dünn und
-    regional. Strategie im Channel ist meistens:
+    **Emco** übernimmt den Service für die unu-Roller. Eine Liste der
+    Service-Partner findest du direkt in den Roller-Apps:
 
-    **In `#roller-support` mit Postleitzahl/Region fragen.** Wer gerade
-    was anbietet, wechselt — die aktive Community weiß das am besten.
+    • **unu by Emco** (iOS und Android)
+    • **unustasis** (Android) — ebenfalls mit Partnerliste
 
-    **Einzige explizit genannte Werkstatt** (aus dem Support-Channel):
-    • **Berlin:** *Fa. Wilhelm Fahrzeugtechnik* am Südkreuz — im Channel
-      beschrieben als „*die* unu-Werkstatt in Berlin".
-
-    Für Firmware/Software-Fragen ist eher `#librescoot-talk` der richtige
-    Ort.
+    **Berlin:** In der Nähe gilt *Fa. Wilhelm Fahrzeugtechnik* (Südkreuz)
+    als empfohlene Adresse.
   en: |
-    Since the unu bankruptcy the workshop landscape is thin and regional.
-    The channel's default approach:
+    **Emco** now handles unu scooter service. You'll find the list of
+    service partners directly in the scooter apps:
 
-    **Ask in `#roller-support` with your zip code / region.** Who's
-    currently offering what changes; the active community tracks it.
+    • **unu by Emco** (iOS and Android)
+    • **unustasis** (Android) — also has the partner list
 
-    **Only workshop named explicitly** (from the support channel):
-    • **Berlin:** *Fa. Wilhelm Fahrzeugtechnik* near Südkreuz — described
-      in the channel as "*the* unu workshop in Berlin".
-
-    Firmware/software questions: `#librescoot-talk`.
-tags: [service, community]
+    **Berlin area:** *Fa. Wilhelm Fahrzeugtechnik* near Südkreuz is
+    recommended.
+tags: [service]

@@ -5,35 +5,44 @@ title:
   en: "⚠️ Safety: never unplug the DC converter under power"
 body:
   de: |
-    **Community-Warnung aus `#roller-support`:**
+    Warnung aus dem `#roller-support` (erollerberlin_jLn, mit ihrer Werkstatt-
+    Erfahrung von drei zerlegten MDBs):
 
     > „Wenn möglich zieht NIE den Stecker vom DC-Wandler wenn der Hauptakku
     > eingelegt ist! Und anschließen auch nur wenn wirklich alle anderen
     > Spannungsquellen ab sind. Ich habe damit mindestens 3 MDBs zerlegt."
 
-    Also vor jedem Eingriff am DC-Wandler oder an angrenzender Elektronik:
+    Zusatz von Zanooda dazu: auf originalen AUX-Batterien klebte früher
+    (und in unus Wartungsdokumenten stand) derselbe Hinweis — also
+    **niemals an AUX/DC-Wandler arbeiten, wenn der Fahrakku drin ist**.
 
+    **Reihenfolge beim Arbeiten:**
     1. **Hauptakku raus.**
     2. Sicherstellen, dass auch sonst keine Spannungsquelle anliegt
        (AUX, CBB-Anschluss).
     3. Erst dann Stecker lösen.
 
     Ein beschädigtes MDB zu ersetzen ist teuer und bei der aktuellen
-    Ersatzteillage sehr schwierig.
+    Ersatzteillage schwierig.
   en: |
-    **Community warning from `#roller-support`:**
+    Warning from `#roller-support` (erollerberlin_jLn, with workshop
+    experience of three destroyed MDBs):
 
     > "If at all possible, NEVER unplug the DC converter while the main
     > battery is inserted! And only plug it in when all other power sources
     > are actually disconnected. I've destroyed at least 3 MDBs doing it."
 
-    So before touching the DC converter or adjacent electronics:
+    Zanooda adds: original AUX batteries used to have the same warning
+    stickered on them (and it was in unu's maintenance docs) — so
+    **never work on the AUX or DC converter while the main battery is
+    in the scooter**.
 
+    **Order of operations:**
     1. **Remove the main battery.**
-    2. Make sure no other source is still powering things (AUX, CBB
-       connector).
+    2. Make sure no other source is still powering things (AUX,
+       CBB connector).
     3. Then unplug.
 
-    Replacing a damaged MDB is expensive and hard given the current spare-
-    parts situation.
+    Replacing a damaged MDB is expensive and hard given the current
+    spare-parts situation.
 tags: [safety, repair]

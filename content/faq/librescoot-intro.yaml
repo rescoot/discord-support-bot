@@ -1,47 +1,38 @@
 id: librescoot-intro
-aliases: [open-firmware, custom-firmware, flashen, free-firmware]
+aliases: [open-firmware, custom-firmware, flashen, free-firmware, installer]
 title:
   de: "Was ist LibreScoot?"
   en: "What is LibreScoot?"
 body:
   de: |
-    **LibreScoot** ist eine alternative, offene Firmware für den unu
-    Scooter Pro. Sie befindet sich laut Channel-Status aktuell noch in
-    Entwicklung und **ist noch nicht als stabil bezeichnet**.
+    **LibreScoot** ist die offene, community-entwickelte Firmware für
+    den unu Scooter Pro.
+
+    **Status:** Noch nicht als stabil freigegeben — aber nicht mehr weit
+    davon entfernt. Technisch versierte Nutzer:innen können über den
+    **Installer** den **Testing-Channel** installieren; für die breite
+    Masse wird das im Moment **nicht empfohlen**. Also: lieber ein bisschen
+    warten, bis es offiziell freigegeben wird.
 
     LibreScoot hat nichts mit der offiziellen unu-App zu tun — die App
-    greift weiterhin auf die unu-Cloud zu, LibreScoot ersetzt nur die
-    Firmware auf dem Roller.
+    spricht die Cloud, LibreScoot ersetzt nur die Firmware auf dem Roller.
 
-    Infos & Code:
+    Code und Doku:
+    • <https://github.com/librescoot>
     • Tech-Reference: <https://github.com/reunu/tech-reference>
-    • LibreScoot-Repos: <https://github.com/librescoot>
-    • Diskussion: `#librescoot-talk`
-
-    Wenn du überlegst zu flashen, lies dich bitte vorher in die Doku ein
-    und frag im `#librescoot-talk`-Channel — gefragt wird dort regelmäßig.
   en: |
-    **LibreScoot** is an alternative, open firmware for the unu Scooter
-    Pro. Per channel status it's currently still in development and is
-    **not yet described as stable**.
+    **LibreScoot** is the open, community-developed firmware for the unu
+    Scooter Pro.
 
-    LibreScoot is unrelated to the official unu app — the app still hits
-    the unu cloud; LibreScoot only replaces firmware on the scooter.
+    **Status:** not yet released as stable — but not far off. Technically
+    proficient users can install the **testing channel** via the
+    **installer**; for the general audience this is **not recommended
+    right now**. Better to wait for an official stable release.
 
-    Info & code:
+    LibreScoot is unrelated to the official unu app — the app talks to
+    the cloud; LibreScoot only replaces firmware on the scooter.
+
+    Code and docs:
+    • <https://github.com/librescoot>
     • Tech reference: <https://github.com/reunu/tech-reference>
-    • LibreScoot repos: <https://github.com/librescoot>
-    • Discussion: `#librescoot-talk`
-
-    If you're thinking about flashing, read the docs first and ask in
-    `#librescoot-talk` — it comes up regularly there.
-links:
-  - url: https://github.com/librescoot
-    label:
-      de: "LibreScoot auf GitHub"
-      en: "LibreScoot on GitHub"
-  - url: https://github.com/reunu/tech-reference
-    label:
-      de: "reunu tech-reference"
-      en: "reunu tech-reference"
 tags: [librescoot, software]
