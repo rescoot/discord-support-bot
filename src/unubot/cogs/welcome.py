@@ -47,7 +47,7 @@ class Welcome(commands.Cog):
         channel = self.bot.get_channel(fallback)
         if isinstance(channel, discord.TextChannel):
             try:
-                await channel.send(f"{member.mention}\n{text}", view=view)
+                await channel.send(t("welcome_fallback_channel", locale, mention=member.mention))
             except discord.HTTPException as e:
                 log.warning("fallback welcome to channel %s failed: %s", fallback, e)
 

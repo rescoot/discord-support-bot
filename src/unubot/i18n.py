@@ -66,6 +66,10 @@ UI: dict[str, dict[Locale, str]] = {
         "de": "DM an {user} fehlgeschlagen (wahrscheinlich DMs deaktiviert).",
         "en": "DM to {user} failed (DMs likely closed).",
     },
+    "welcome_fallback_channel": {
+        "de": "👋 Willkommen, {mention}! Alle Infos zur Community per DM — oder direkt `/faq`, `/glossar` und `/diagnose` ausprobieren.",
+        "en": "👋 Welcome, {mention}! Full community info is in your DMs — or try `/faq`, `/glossary`, and `/diagnose` directly.",
+    },
 }
 
 
