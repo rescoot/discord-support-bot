@@ -1,38 +1,74 @@
 id: librescoot-intro
-aliases: [open-firmware, custom-firmware, flashen, free-firmware, installer]
+aliases: [open-firmware, custom-firmware, flashen, free-firmware, installer, ls]
 title:
   de: "Was ist LibreScoot?"
   en: "What is LibreScoot?"
 body:
   de: |
     **LibreScoot** ist die offene, community-entwickelte Firmware für
-    den unu Scooter Pro.
+    den unu Scooter Pro. Ersetzt die Werks-Firmware komplett (MDB +
+    DBC), eigenes Display-UI, Updates over-the-air, kein Cloud-Zwang.
+    **Stable**, aktiv weiterentwickelt.
 
-    **Status:** Noch nicht als stabil freigegeben — aber nicht mehr weit
-    davon entfernt. Technisch versierte Nutzer:innen können über den
-    **Installer** den **Testing-Channel** installieren; für die breite
-    Masse wird das im Moment **nicht empfohlen**. Also: lieber ein bisschen
-    warten, bis es offiziell freigegeben wird.
+    **Installation:** über den **Installer** (Desktop-App für Linux,
+    macOS, Windows). Du brauchst USB-Mini-B-Kabel, einen
+    Schraubendreher und ungefähr 20 Minuten.
 
-    LibreScoot hat nichts mit der offiziellen unu-App zu tun — die App
-    spricht die Cloud, LibreScoot ersetzt nur die Firmware auf dem Roller.
+    Anleitung und Downloads:
+    <https://librescoot.org/de/docs/install.html>
 
-    Code und Doku:
-    • <https://github.com/librescoot>
-    • Tech-Reference: <https://github.com/reunu/tech-reference>
+    Der Installer ist offiziell noch beta. macOS läuft am
+    reibungslosesten. Auf **Windows** flaggt SmartScreen die exe und
+    je nach Treibern/Admin-Rechten kann's haken. Auf **Linux** gibt's
+    je nach Distro auch Varianz (USB-Permissions, Driver-Auswahl).
+    Wenn's klemmt: im LibreScoot-Discord nachfragen,
+    <https://discord.gg/VrumFruSzJ>.
+
+    Nach der Installation: das **Handbuch** auf
+    <https://librescoot.org/de/handbook/> erklärt die tägliche
+    Bedienung, die Zustände, Akkus, Updates und Fehlerbehebung.
+
+    Kurzdefinition siehe `/glossar librescoot`.
   en: |
-    **LibreScoot** is the open, community-developed firmware for the unu
-    Scooter Pro.
+    **LibreScoot** is the open, community-developed firmware for the
+    unu Scooter Pro. Full replacement for the stock firmware (MDB +
+    DBC), own display UI, OTA updates, no cloud dependency. **Stable**
+    and actively developed.
 
-    **Status:** not yet released as stable — but not far off. Technically
-    proficient users can install the **testing channel** via the
-    **installer**; for the general audience this is **not recommended
-    right now**. Better to wait for an official stable release.
+    **Installation:** via the **installer** (desktop app for Linux,
+    macOS, Windows). You need a USB Mini-B cable, a screwdriver, and
+    around 20 minutes.
 
-    LibreScoot is unrelated to the official unu app — the app talks to
-    the cloud; LibreScoot only replaces firmware on the scooter.
+    Guide and downloads:
+    <https://librescoot.org/docs/install.html>
 
-    Code and docs:
-    • <https://github.com/librescoot>
-    • Tech reference: <https://github.com/reunu/tech-reference>
+    The installer is officially still beta. macOS runs the smoothest.
+    On **Windows** SmartScreen flags the exe and driver / admin-
+    rights variance can cause hiccups. On **Linux** there's distro
+    variance too (USB permissions, driver selection). If it gets
+    stuck: ask in the LibreScoot Discord,
+    <https://discord.gg/VrumFruSzJ>.
+
+    After install: the **handbook** at
+    <https://librescoot.org/handbook/> covers daily operation, power
+    states, batteries, updates and troubleshooting.
+
+    Short definition: `/glossary librescoot`.
+links:
+  - url: https://librescoot.org/de/docs/install.html
+    label:
+      de: "Installer & Anleitung"
+      en: "Installer & guide"
+  - url: https://librescoot.org/de/handbook/
+    label:
+      de: "Handbuch"
+      en: "Handbook"
+  - url: https://github.com/librescoot
+    label:
+      de: "Quellcode (GitHub)"
+      en: "Source code (GitHub)"
+  - url: https://discord.gg/VrumFruSzJ
+    label:
+      de: "LibreScoot Discord"
+      en: "LibreScoot Discord"
 tags: [librescoot, software]

@@ -1,0 +1,101 @@
+id: engine-errors
+aliases: [e04, e05, e06, e07, e10, e11, e12, e14, e16, ecu-fehler, motor-fehler, fehlercode-ecu, engine-error]
+title:
+  de: "Motor-/ECU-Fehlercodes (E-Codes)"
+  en: "Motor / ECU error codes (E-codes)"
+body:
+  de: |
+    Motor- und ECU-Fehler beginnen mit **E**.
+
+    **Vorab:** Wenn der Antrieb plötzlich wegbricht und das Display
+    „Electrical error, please stop driving" oder einen passenden
+    E-Code zeigt, kann das auch der **ECU-Defekt aus früher Charge** früher ECU-Chargen
+    sein — typischerweise bei niedrigem Akkustand unter Last, aber das
+    Muster ist nicht immer sauber. Siehe `/faq ecu-defect`.
+
+    **E04 — Acceleration stalling**
+    Gas wurde beim Beschleunigen blockiert (z. B. leichtes Bremsen).
+    Gas loslassen, neu beschleunigen. Tritt das wiederholt bei
+    niedrigem SOC auf, ist's eher ECU-Defekt-Verdacht.
+
+    **E05 — Motor sensor issue**
+    Der Hall-Sensor im Motor wird nicht gelesen. Wartungshandbuch
+    Kapitel 6.7 beschreibt die Messungen. Werkstatt-Sache.
+
+    **E06 / E16 — ECU issue / ECU damage**
+    Interne Komponente der ECU defekt. ECU-Austausch.
+
+    **E07 — Motor open-circuit**
+    ECU sieht eine offene Verbindung zum Motor. Motorkabel-Schrauben
+    nachziehen; dann mit dem Multimeter die drei Motor-Phasen messen.
+    Eine mit deutlich höherem Widerstand → Motor tauschen; alles ok
+    → ECU tauschen.
+
+    **E10 — Self-check failed**
+    Hauptbatterie einmal raus und wieder rein. Wenn's bleibt, ist die
+    ECU dran.
+
+    **E11 — ECU zu heiß (>105 °C)**
+    ECU hat sich abgeschaltet, bis sie kühl ist. Sollte eigentlich
+    nicht passieren — wenn ja, **bei Gelegenheit in eine Werkstatt**,
+    bevor der Roller liegen bleibt.
+
+    **E12 — Abnormal throttle**
+    Gasgriff-Fehler. Loslassen, neu probieren. Wenn's bleibt,
+    Gasgriff/Verkabelung prüfen lassen.
+
+    **E14 — Acceleration blocked**
+    Gas wurde schon beim Einschalten gezogen. Beim Powern nicht
+    beschleunigen, dann ist's weg.
+
+    ECU- oder Motor-Austausch ist kein DIY — über `/faq service-partner`
+    laufen lassen.
+
+    Quelle: unu GmbH Reparaturplan 2.X, Kapitel 5.1.
+  en: |
+    Motor and ECU faults start with **E**.
+
+    **Note up front:** if drive suddenly cuts out and the display shows
+    "Electrical error, please stop driving" or a matching E-code, that
+    can also be the **early-batch ECU defect** in early ECU batches — typically
+    at low SOC under load, though the pattern isn't always clean. See
+    `/faq ecu-defect`.
+
+    **E04 — Acceleration stalling**
+    Throttle got blocked while accelerating (e.g. light braking).
+    Release throttle, accelerate again. Repeated occurrence at low SOC
+    is more likely an dem ECU-Defekt aus früher Charge.
+
+    **E05 — Motor sensor issue**
+    Motor hall sensor can't be read. Wartungshandbuch chapter 6.7 has
+    the measurements. Workshop job.
+
+    **E06 / E16 — ECU issue / ECU damage**
+    Internal ECU component failed. ECU replacement.
+
+    **E07 — Motor open-circuit**
+    ECU sees an open connection to the motor. Tighten the motor cable
+    bolts; then measure the three motor phases with a multimeter. One
+    phase with markedly higher resistance → swap the motor; all clean
+    → swap the ECU.
+
+    **E10 — Self-check failed**
+    Take the main battery out and back in once. If it persists, ECU.
+
+    **E11 — ECU too hot (>105 °C)**
+    ECU has shut itself down until it cools. Shouldn't really happen —
+    if it does, **get it looked at at a workshop when you can**,
+    before it strands you somewhere.
+
+    **E12 — Abnormal throttle**
+    Throttle fault. Release, retry. If it stays, have the throttle and
+    wiring checked.
+
+    **E14 — Acceleration blocked**
+    Throttle was engaged while powering on. Don't accelerate during
+    power-up, fault clears.
+
+    ECU or motor replacement is not DIY — go via `/faq service-partner`.
+
+    Source: unu GmbH Reparaturplan 2.X, chapter 5.1.
+tags: [fault-codes, motor, ecu, troubleshooting]

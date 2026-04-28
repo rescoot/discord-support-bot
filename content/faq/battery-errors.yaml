@@ -1,0 +1,96 @@
+id: battery-errors
+aliases: [b32, b33, b34, b35, b11, batterie-fehler, battery-error, fehlercode-batterie, b-codes]
+title:
+  de: "Batterie-Fehlercodes (B-Codes)"
+  en: "Battery error codes (B-codes)"
+body:
+  de: |
+    Im Roller fangen Batterie-Fehlercodes mit **B** an. Die häufigsten:
+
+    **B32 / B33 — Akku reagiert nicht / Aktivierung fehlgeschlagen**
+
+    Erste Maßnahme: **Akku raus, um 180° drehen, wieder einsetzen.**
+    Hintergrund: jeder Akku hat zwei NFC-Tags, der Roller nur einen
+    Leser. Wenn ein Tag im Akku defekt ist, geht's mit dem zweiten —
+    den findet der Leser nur nach dem Drehen.
+
+    Wenn **B33 immer wieder auftritt**, fehlt am Roller wahrscheinlich
+    die **Potenzialausgleichs-Leitung** (Reparaturplan 8.1). Das ist
+    ein einfaches Erdungskabel vom Sitzschloss-Scharnier zur
+    Massesammelschiene — fängt elektrostatische Entladungen beim
+    Öffnen/Schließen des Sitzes ab. Soll die Werkstatt nachrüsten;
+    Material und Anleitung stehen in der Reparaturanleitung im
+    `#ressourcen`-Channel.
+
+    **B34 / B35 — NFC- / Kommunikationsfehler**
+
+    Sporadisch: 180° drehen, neu einsetzen, oft reicht das.
+    Dauerhaft: zweiten Akku probieren — geht der, ist's der NFC-Leser
+    am Roller. Geht er auch nicht, ist die Verkabelung oder der Akku
+    selbst dran. Im `#roller-support` weitermachen.
+
+    **B11 — Tiefentladen**
+
+    Akku ist komplett leer. Laden. Wenn er das Ladegerät gar nicht mehr
+    annimmt, ist meistens das BMS in den Tiefschlaf gegangen — Akku
+    eine Weile am Ladegerät lassen, sonst im `#roller-support` fragen.
+
+    **Seltener:**
+    - **B03 / B04 / B08:** Temperatur (zu heiß bei >65 °C bzw. >110 °C,
+      zu kalt bei <-20 °C). 30 min abkühlen oder auf Raumtemperatur
+      bringen.
+    - **B09 — Voltage too high:** Roller neu starten.
+    - **B13 / B14 — hoher Entladestrom:** Akku 5 Minuten raus, dann
+      wieder rein.
+    - **B05 / B06 — Battery damage:** Hauptbatterie tauschen. Akkus
+      sind tatsächlich gut zu kriegen — gebraucht z. B. über
+      Werkstätten für um die 500 €, auf Kleinanzeigen oft günstiger
+      (Zyklenzahl prüfen!), Neuware gibt es auch noch.
+
+    Quelle: unu GmbH Reparaturplan 2.X, Kapitel 5.2.
+    Verwandt: `/faq service-partner`.
+  en: |
+    On the unu, battery error codes start with **B**. The common ones:
+
+    **B32 / B33 — battery doesn't respond / activation failed**
+
+    First move: **take the battery out, rotate 180°, put it back.**
+    Why: each battery has two NFC tags, the scooter has only one
+    reader. If one tag in the battery is dead, the other one works —
+    the reader only sees it after the rotation.
+
+    If **B33 keeps coming back**, the scooter is probably missing the
+    **bonding / equipotential cable** (Reparaturplan 8.1). It's a
+    simple ground wire from the seat-lock hinge to the main ground bus
+    bar — it shunts electrostatic discharges from opening/closing the
+    seat. Workshop fits it; material and instructions are in the
+    repair manual shared in the `#ressourcen` channel.
+
+    **B34 / B35 — NFC / communication error**
+
+    Sporadic: rotate 180°, reinsert, usually enough.
+    Persistent: try a second battery. If it works, the NFC reader on
+    the scooter is the suspect. If neither works, it's the wiring or
+    the battery itself — continue in `#roller-support`.
+
+    **B11 — deeply discharged**
+
+    Battery is fully flat. Charge it. If the charger doesn't even
+    engage, the BMS has usually gone into deep sleep — leave it on the
+    charger for a while, otherwise ask in `#roller-support`.
+
+    **Less common:**
+    - **B03 / B04 / B08:** temperature (too hot at >65 °C or >110 °C,
+      too cold below -20 °C). 30 min cooldown or warm to room
+      temperature.
+    - **B09 — voltage too high:** restart the scooter.
+    - **B13 / B14 — high discharge current:** pull the battery for
+      5 min, then reinsert.
+    - **B05 / B06 — battery damage:** replace the main battery. Packs
+      are actually obtainable — used via workshops around €500,
+      cheaper on Kleinanzeigen (check cycle count!), and new ones are
+      still sold.
+
+    Source: unu GmbH Reparaturplan 2.X, chapter 5.2.
+    Related: `/faq service-partner`.
+tags: [fault-codes, battery, troubleshooting]

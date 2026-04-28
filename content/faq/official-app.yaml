@@ -1,56 +1,74 @@
 id: official-app
-aliases: [unu-app, app-server, server-down, abschaltung, registrieren, login]
+aliases: [unu-app, app-server, server-down, abschaltung, registrieren, login, unustasis, emco-app]
 title:
-  de: "Offizielle unu-App: Server sind abgeschaltet — was jetzt?"
-  en: "Official unu app: servers are off — what now?"
+  de: "Welche App nutze ich noch?"
+  en: "Which app do I still use?"
 body:
   de: |
-    Die offizielle unu-App ist nach der Insolvenz nur noch eingeschränkt
-    nutzbar — Login, Registrierung und Cloud-Funktionen (Live-Standort,
-    Remote-Kommandos) sind seit Abschaltung der Server **weg und kommen
-    auch nicht wieder**.
+    Die alte unu-App geht noch, solange du auf deinem aktuellen Handy
+    verbunden und eingeloggt bist. Bei einem Handywechsel oder einer
+    Neuinstallation klappt das Login aber nicht mehr — die Server sind
+    seit unus Pleite aus.
 
-    Aus dem Channel (2024-06):
-    > „Roller kann und muss nicht registriert werden. Die Server sind
-    > abgeschaltet, gibt eigentlich keinen Grund die offizielle App zu
-    > nutzen."
+    Solange das alte Setup noch läuft, **jetzt umsteigen** ist die
+    sichere Variante. Zwei Apps, beide ohne Cloud, beide reine
+    BLE-Verbindung zum Roller:
 
-    **Was nutzt man stattdessen?**
+    **unustasis** (empfohlen, Community/FOSS):
+    - Android: <https://play.google.com/store/apps/details?id=de.freal.unustasis>
+    - iOS: aktuell nur über TestFlight,
+      <https://testflight.apple.com/join/Uzcy1kSH>
+    - Quellcode: <https://github.com/reunu/unustasis>
 
-    - **unu by Emco** (iOS + Android) — die offizielle Nachfolger-App
-      von Emco. Service-Partner-Liste ist hier drin (`/faq service-partner`).
-    - **unustasis** (Android; iOS separat verfügbar) — reine BLE-App,
-      kein Login, kein Internet nötig, Open Source. Community-
-      entwickelt; für viele Nutzer faktisch der Standard.
+    **unu by Emco** (von Emco veröffentlichte Variante, abgeleitet von
+    unustasis):
+    - Android: <https://play.google.com/store/apps/details?id=com.unumotors.ossapp>
+    - iOS: <https://apps.apple.com/app/unu-by-emco/id6566196417>
 
-    Beide Apps kommen ohne Cloud aus und funktionieren lokal per
-    Bluetooth zum Roller (siehe `/faq app-connect` und `/glossar nrf`).
-
-    Wenn du noch in der alten Original-App feststeckst: deinstallieren
-    und eine der beiden oben installieren — die SIM im Roller ist
-    ohnehin tot, es gibt also nichts aus dem alten Account zu retten.
+    Beide sprechen den Roller lokal über Bluetooth an, kein Login, kein
+    Internet (siehe `/faq app-connect`). Wenn du noch in der alten
+    Original-App steckst: deinstallieren, eine der beiden installieren,
+    fertig. Der alte Account bringt dir nichts mehr — die SIM im Roller
+    ist seit Server-Abschaltung ohnehin tot.
   en: |
-    The original unu app barely works anymore — login, registration
-    and cloud features (live location, remote commands) have been
-    **gone and won't come back** since the servers were shut down after
-    bankruptcy.
+    The original unu app still works as long as you're already logged
+    in and paired on your current phone. Switch phones or reinstall and
+    the login won't go through any more — the servers have been off
+    since unu's bankruptcy.
 
-    From the channel (2024-06):
-    > "The scooter can't and doesn't need to be registered. The servers
-    > are off, there's no real reason to use the official app anymore."
+    While the old setup still runs, **switch now** is the safe move.
+    Two apps, both cloud-free, both BLE-only:
 
-    **What to use instead:**
+    **unustasis** (recommended, community / FOSS):
+    - Android: <https://play.google.com/store/apps/details?id=de.freal.unustasis>
+    - iOS: currently TestFlight only,
+      <https://testflight.apple.com/join/Uzcy1kSH>
+    - Source: <https://github.com/reunu/unustasis>
 
-    - **unu by Emco** (iOS + Android) — Emco's official successor app.
-      The service-partner list lives here (`/faq service-partner`).
-    - **unustasis** (Android; separate iOS release) — pure BLE app, no
-      login, no internet required, open source. Community-built; for
-      many users this is the default now.
+    **unu by Emco** (Emco's published version, derived from unustasis):
+    - Android: <https://play.google.com/store/apps/details?id=com.unumotors.ossapp>
+    - iOS: <https://apps.apple.com/app/unu-by-emco/id6566196417>
 
-    Both apps work without cloud and talk to the scooter locally over
-    Bluetooth (see `/faq app-connect` and `/glossary nrf`).
-
-    If you're still stuck on the original app: uninstall it and install
-    one of the above — the SIM in the scooter is dead anyway, there's
-    nothing in the old account to preserve.
+    Both talk to the scooter locally over Bluetooth, no login, no
+    internet (see `/faq app-connect`). If you're still on the original
+    app: uninstall, install one of the above, done. Your old account is
+    worth nothing anyway — the SIM in the scooter has been dead since
+    the servers went off.
+links:
+  - url: https://play.google.com/store/apps/details?id=de.freal.unustasis
+    label:
+      de: "unustasis (Google Play)"
+      en: "unustasis (Google Play)"
+  - url: https://testflight.apple.com/join/Uzcy1kSH
+    label:
+      de: "unustasis (TestFlight)"
+      en: "unustasis (TestFlight)"
+  - url: https://apps.apple.com/app/unu-by-emco/id6566196417
+    label:
+      de: "unu by Emco (iOS)"
+      en: "unu by Emco (iOS)"
+  - url: https://play.google.com/store/apps/details?id=com.unumotors.ossapp
+    label:
+      de: "unu by Emco (Google Play)"
+      en: "unu by Emco (Google Play)"
 tags: [app, migration]

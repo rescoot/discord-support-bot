@@ -4,115 +4,180 @@ title:
   en: "App won't connect"
 description:
   de: |-
-    Fehlersuche, wenn die unu-App den Roller nicht findet oder nicht
-    wecken kann.
+    Geführte Fehlersuche bei „App findet den Roller nicht" oder
+    „verbindet nicht".
   en: |-
-    Troubleshoot when the unu app can't find or wake the scooter.
-start: wake
+    Guided troubleshoot for "app can't find the scooter" / "won't
+    connect".
+start: visible
 
 steps:
-  wake:
+  visible:
     prompt:
-      de: "Wacht der Roller physisch auf, wenn du die Keycard ans Dashboard hältst?"
-      en: "Does the scooter wake physically when you hold the keycard to the dashboard?"
+      de: "Findest du den Roller in der Bluetooth-Geräteliste deines Handys?"
+      en: "Does the scooter appear in your phone's Bluetooth device list?"
     choices:
-      - label: { de: "Ja, Dashboard kommt hoch", en: "Yes, dashboard comes up" }
-        goto: other-phone
-      - label: { de: "Nein, gar keine Reaktion", en: "No reaction at all" }
-        goto: aux-redirect
-      - label: { de: "Dashboard flackert / geht wieder aus", en: "Dashboard flickers / dies again" }
-        goto: aux-redirect
+      - label:
+          de: "Nein, taucht gar nicht auf"
+          en: "No, doesn't appear at all"
+        goto: unpowered
+      - label:
+          de: "Ja, ist sichtbar — App kommt aber nicht ran"
+          en: "Yes, visible — but the app can't connect"
+        goto: keycard-check
+      - label:
+          de: "App sagt verbunden, Roller reagiert aber nicht"
+          en: "App says connected, but the scooter doesn't react"
+        goto: bonding-lost
 
-  aux-redirect:
+  unpowered:
     answer:
       de: |-
-        Das klingt nicht nach einem App-Problem, sondern nach AUX/CBB.
-        → `/diagnose aux` bzw. `/faq aux-battery`.
-      en: |-
-        That's not an app problem, it's AUX/CBB.
-        → `/diagnose aux` or `/faq aux-battery`.
+        Wenn der Roller **gar nicht** in der BT-Liste auftaucht, ist
+        der nRF stromlos. Das ist meistens kein App-Thema:
 
-  other-phone:
+        - Best case: AUX und/oder CBB sind leer.
+        - Worst case: MDB ist hin (z. B. Wasserschaden).
+
+        → `/diagnose aux`, `/faq cb-battery`, `/faq water-damage-mdb`.
+      en: |-
+        If the scooter doesn't show up in the BT list **at all**, the
+        nRF is unpowered. Usually not an app problem:
+
+        - Best case: AUX and/or CBB are flat.
+        - Worst case: MDB is dead (e.g. water damage).
+
+        → `/diagnose aux`, `/faq cb-battery`, `/faq water-damage-mdb`.
+
+  keycard-check:
     prompt:
-      de: |-
-        Der Roller kann nur mit **einem Handy gleichzeitig** verbunden sein.
-        Ist das aktuell verbundene Handy vielleicht ein anderes als deins?
-      en: |-
-        The scooter only pairs with **one phone at a time**. Is the
-        currently-connected phone maybe a different one than yours?
+      de: "Reagiert der Roller, wenn du die Keycard ans Dashboard hältst?"
+      en: "Does the scooter react when you hold the keycard against the dashboard?"
     choices:
-      - label: { de: "Ja, anderes Handy disconnecten / ausschalten", en: "Yes, disconnect/switch off the other phone" }
-        goto: disconnect-other
-      - label: { de: "Nein, nur mein Handy", en: "No, only my phone" }
-        goto: platform
+      - label:
+          de: "Nein, keine Reaktion"
+          en: "No reaction"
+        goto: hibernate-wake
+      - label:
+          de: "Ja, kommt hoch / entsperrt"
+          en: "Yes, wakes / unlocks"
+        goto: connection-state
 
-  disconnect-other:
+  hibernate-wake:
     answer:
       de: |-
-        Am zweiten Handy in der unu-App die Verbindung trennen oder das
-        Handy ausschalten, dann in deiner App neu versuchen.
-        Wenn's trotzdem klemmt → `/diagnose app` neu starten und „Nein"
-        wählen, oder im `#app-support`-Channel posten.
-      en: |-
-        On the other phone, disconnect in the unu app or simply switch it
-        off, then try again on yours. If it still fails → restart
-        `/diagnose app` and pick "No", or post in `#app-support`.
+        Klingt nach **Hibernate**. Aufwecken:
 
-  platform:
+        Beide Bremshebel **etwa 10 Sekunden** gleichzeitig halten, bis
+        die LED am Dashboard grün wird, dann loslassen.
+
+        Danach nochmal in der App probieren. Wenn der Roller weiter
+        nicht aufwacht: AUX oder CBB sind dran, → `/faq aux-battery`,
+        `/faq cb-battery`.
+      en: |-
+        Sounds like **hibernate**. Wake-up:
+
+        Hold both brake levers together for **about 10 seconds**, until
+        the dashboard LED turns green, then release.
+
+        Try the app again afterwards. If the scooter still won't wake,
+        AUX or CBB is the cause → `/faq aux-battery`, `/faq cb-battery`.
+
+  connection-state:
     prompt:
-      de: "Welches Handy nutzt du?"
-      en: "Which phone are you on?"
+      de: "Ist auf dem Display das BT-Symbol zu sehen, wenn der Roller entsperrt ist?"
+      en: "Is the BT icon shown on the dashboard when the scooter is unlocked?"
     choices:
-      - label: { de: "iPhone", en: "iPhone" }
-        goto: ios
-      - label: { de: "Android", en: "Android" }
-        goto: android
+      - label:
+          de: "Ja, BT-Symbol da → ein anderes Gerät ist verbunden"
+          en: "Yes, BT icon visible → another device is connected"
+        goto: other-device
+      - label:
+          de: "Nein, kein BT-Symbol → fresh pair"
+          en: "No BT icon → fresh pair"
+        goto: fresh-pair
 
-  ios:
-    prompt:
-      de: "Prod-App oder TestFlight-Beta?"
-      en: "Prod app or TestFlight beta?"
-    choices:
-      - label: { de: "Prod-App (App Store)", en: "Prod app (App Store)" }
-        goto: try-beta
-      - label: { de: "Beta (TestFlight)", en: "Beta (TestFlight)" }
-        goto: escalate
-
-  try-beta:
+  other-device:
     answer:
       de: |-
-        Im Channel wird die **TestFlight-Beta** regelmäßig als Workaround
-        empfohlen, wenn die Prod-App streikt.
-      en: |-
-        The channel regularly recommends the **TestFlight beta** as a
-        workaround when the prod app misbehaves.
-    links:
-      - url: https://testflight.apple.com/join/Uzcy1kSH
-        label: { de: "unu iOS Beta (TestFlight)", en: "unu iOS beta (TestFlight)" }
+        Der Roller verbindet sich immer nur mit **einem** Gerät
+        gleichzeitig. Wenn das BT-Symbol da ist, hängt aktuell ein
+        anderes (eigenes) Handy oder Tablet drin.
 
-  android:
+        Lösungen, in dieser Reihenfolge:
+        1. Auf dem anderen Gerät die Verbindung trennen oder das Gerät
+           ausschalten.
+        2. Falls die App auf deinem aktuellen Handy zwar mal verbunden
+           war und jetzt kein Bonding mehr findet: Roller in der App
+           neu hinzufügen.
+        3. Wenn das nicht klappt: Bluetooth-Eintrag auf dem Handy
+           löschen, Roller in der App löschen, danach neu pairen
+           (Roller entsperrt → BLE-Code erscheint auf dem Display →
+           in der App bestätigen).
+      en: |-
+        The scooter connects to only **one** device at a time. If the
+        BT icon is showing, another (one of yours) phone or tablet is
+        currently connected.
+
+        In order:
+        1. Disconnect on the other device, or switch it off.
+        2. If the app on your current phone was paired before but now
+           can't find the bond: re-add the scooter in the app.
+        3. If that fails: delete the Bluetooth entry on the phone,
+           delete the scooter in the app, then pair fresh (scooter
+           unlocked → BLE code on the dashboard → confirm in the app).
+
+  fresh-pair:
     answer:
       de: |-
-        Für Android liegen im Channel keine festen Schritte vor. Probier
-        das übliche: App komplett beenden und neu starten, Handy-Bluetooth
-        aus/an, anderes Handy ausschließen (siehe oben).
-        Wenn's weiter klemmt → im `#app-support` posten mit Handymodell
-        und Android-Version.
-      en: |-
-        No canonical recipe in the channel for Android. Try the usual:
-        force-stop and restart the app, toggle phone Bluetooth, rule out
-        a second phone being paired. Still stuck → post in `#app-support`
-        with your phone model and Android version.
+        Pairing-Setup für ein neues Gerät:
 
-  escalate:
+        1. Roller **entsperren** (Park-Modus).
+        2. In der App neuen Roller hinzufügen.
+        3. Auf dem Display erscheint ein **BLE-Code** — diesen in der
+           App bestätigen.
+
+        Wenn der Code nicht kommt oder die App den Roller trotzdem
+        nicht findet, neu starten und mit `/diagnose app` von vorne
+        beginnen.
+
+        App-Empfehlung: **unustasis**. Mehr in `/faq official-app`.
+      en: |-
+        Pairing a new device:
+
+        1. **Unlock** the scooter (park mode).
+        2. Add a new scooter in the app.
+        3. A **BLE code** appears on the dashboard — confirm it in
+           the app.
+
+        If the code doesn't appear or the app still can't find the
+        scooter, restart and run `/diagnose app` from the top.
+
+        Recommended app: **unustasis**. More in `/faq official-app`.
+
+  bonding-lost:
     answer:
       de: |-
-        Auch die TestFlight-Beta macht's nicht? Poste bitte im
-        `#app-support`-Channel mit iPhone-Modell, iOS-Version, App-Version
-        und wie weit der Verbindungsaufbau kommt — wichtig ist, ob der
-        Roller physisch reagiert (Keycard-Test) oder nicht.
+        Wenn die App „verbunden" sagt, der Roller aber nicht reagiert,
+        ist das Bonding meistens kaputt:
+
+        1. Bluetooth-Gerät auf dem Handy löschen.
+        2. Roller in der App löschen.
+        3. Roller entsperren, in der App neu pairen, BLE-Code auf
+           dem Display in der App bestätigen.
+
+        Wenn das nicht hilft: in `#app-support` posten mit Handy-
+        Modell, OS-Version, App-Version und welcher App du benutzt
+        (`unustasis` oder `unu by Emco`).
       en: |-
-        Even the TestFlight beta won't work? Post in `#app-support` with
-        your iPhone model, iOS version, app version, and how far the
-        connection gets — including whether the scooter reacts physically
-        (keycard test) or not.
+        If the app says "connected" but the scooter doesn't react,
+        the bond is usually broken:
+
+        1. Delete the Bluetooth device on the phone.
+        2. Delete the scooter in the app.
+        3. Unlock the scooter, pair fresh in the app, confirm the
+           BLE code on the dashboard.
+
+        If that doesn't help: post in `#app-support` with phone
+        model, OS version, app version, and which app you're using
+        (`unustasis` or `unu by Emco`).

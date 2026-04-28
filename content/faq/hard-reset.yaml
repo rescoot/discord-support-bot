@@ -8,63 +8,72 @@ body:
     Zwei verschiedene Dinge, nicht verwechseln:
 
     **Bevorzugt: Bremshebel-Neustart (Reboot ohne Werkzeug)**
-    Roller muss **an sein**. Kein Zerlegen nötig — die empfohlene Methode
-    für hängende Systeme (Dauer-„Steering column locked", stecken­
-    gebliebene Sitzindikation, Software-Glitches nach Update).
 
-    1. Beide Bremshebel gleichzeitig ziehen und **40 Sekunden halten**.
+    Roller muss an sein. Kein Zerlegen nötig — das ist die richtige
+    Methode für hängende Systeme: Dauer-„Steering column locked",
+    festgefahrene Sitzindikation, Software-Glitches nach Update.
+
+    1. Beide Bremshebel gleichzeitig ziehen, **40 Sekunden halten**.
     2. Dabei den **rechten Bremshebel alle 10 Sekunden einmal kurz
-       (≈ 1 s) loslassen**.
+       (~1 s) loslassen**.
     3. Nach 40 s beide Hebel loslassen.
-    4. Der Roller sollte rebooten.
+    4. Der Roller rebootet.
 
-    **Stromlos machen (physischer Reset, Wartungshandbuch 2.2.4)**
-    Nicht als Reboot gedacht — wird gebraucht, um den Roller **komplett
-    spannungsfrei** zu kriegen (z. B. vor Reparatur an der Elektrik, oder
-    wenn der Bremshebel-Reset nicht geht, weil der Roller nicht an ist).
+    **Stromlos machen (vor Reparaturarbeiten am MDB / im Trittbrett)**
 
-    1. Hauptakku raus, wenn möglich. Wenn er drin bleiben muss: beide
-       Stecker am DC-Wandler abziehen.
-    2. Rotes Kabel von der AUX abziehen.
-    3. CB-Batterie-Stecker trennen.
-    4. **10 Sekunden warten.**
-    5. In umgekehrter Reihenfolge wieder anschließen.
+    Nicht als Reboot gedacht — das hier ist der Weg, um den Roller
+    komplett spannungsfrei zu kriegen.
 
-    ⚠️ Vor dem Stromlos-Machen `/faq dc-converter-safety` lesen — DC-
-    Wandler-Stecker niemals unter Spannung trennen.
+    1. Sitz öffnen, **Hauptakku herausnehmen**.
+    2. **Einen Pol der AUX abklemmen.**
+    3. **CBB-Stecker abziehen.**
+    4. Kurz warten, dann in umgekehrter Reihenfolge wieder anschließen.
 
-    Für „Scooter bootet gar nicht mehr" gibt's eine vollständige
-    Prozedur ab Wartungshandbuch 2.2.5 (AUX messen → laden/tauschen →
-    CBB tauschen → weiter).
+    Den **DC-Wandler musst du dafür normalerweise nicht trennen** und
+    solltest es auch nicht, siehe `/faq dc-converter-safety`.
+
+    Spezialfall: wenn der Sitz sich gar nicht erst öffnen lässt, weil
+    der Roller komplett tot ist, ist die Hauptbatterie sehr
+    wahrscheinlich ohnehin schon inaktiv. Trotzdem mit der gleichen
+    Vorsicht arbeiten.
+
+    Wenn der Roller gar nicht mehr bootet, gibt's eine vollständige
+    Prozedur ab Wartungshandbuch 2.2.5 (AUX messen → laden/tauschen,
+    CBB tauschen, weiter).
   en: |
     Two different things, don't mix them up:
 
     **Preferred: brake-lever reboot (no tools)**
-    Scooter must be **on**. No disassembly — the go-to method for stuck
-    systems (persistent "Steering column locked", seat indication
-    frozen, post-update glitches).
 
-    1. Pull both brake levers and **hold for 40 s**.
-    2. While holding, **briefly release the right brake (~1 s) every
-       10 s**.
+    Scooter must be on. No disassembly — this is the right method for
+    stuck systems: persistent "Steering column locked", frozen seat
+    indication, post-update glitches.
+
+    1. Pull both brake levers, **hold 40 seconds**.
+    2. While holding, **release the right brake briefly (~1 s) every
+       10 seconds**.
     3. After 40 s release both.
-    4. The scooter should reboot.
+    4. The scooter reboots.
 
-    **Full de-power (physical reset, Wartungshandbuch 2.2.4)**
-    Not meant as a reboot — this one is for getting the scooter
-    **completely de-powered** (before electrical repair work, or when
-    the brake-lever reset doesn't apply because the scooter isn't on).
+    **Full de-power (before repair work on the MDB / in the footrest
+    area)**
 
-    1. Remove the main battery if possible; if it has to stay in,
-       disconnect both plugs on the DC converter.
-    2. Unplug the red cable from the AUX.
-    3. Disconnect the CB battery plug.
-    4. **Wait 10 seconds.**
-    5. Reconnect in reverse order.
+    Not for rebooting — this is how you take the scooter completely
+    off-power.
 
-    ⚠️ Read `/faq dc-converter-safety` first — never unplug a DC-converter
-    connector under power.
+    1. Open the seat, **remove the main battery**.
+    2. **Disconnect one pole of the AUX.**
+    3. **Disconnect the CBB plug.**
+    4. Wait briefly, then reconnect in reverse order.
 
-    For "scooter won't boot at all" there's a full procedure starting at
-    Wartungshandbuch 2.2.5 (measure AUX → charge/swap → swap CBB → …).
+    You **normally don't need to disconnect the DC converter**, and
+    you shouldn't, see `/faq dc-converter-safety`.
+
+    Edge case: if the seat won't even open because the scooter is
+    fully dead, the main battery is most likely already inactive. Work
+    with the same caution anyway.
+
+    For "scooter won't boot at all" there's a full procedure starting
+    at Wartungshandbuch 2.2.5 (measure AUX → charge/swap, swap CBB,
+    keep going).
 tags: [troubleshooting, reset]

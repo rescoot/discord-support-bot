@@ -1,48 +1,69 @@
 id: dc-converter-safety
-aliases: [dc-wandler, dc-converter, safety, sicherheitshinweis, warning, mdb-tot]
+aliases: [dc-wandler, dc-converter, safety, sicherheitshinweis, warning, mdb-tot, 58v]
 title:
-  de: "⚠️ Sicherheit: DC-Wandler nie unter Spannung trennen"
-  en: "⚠️ Safety: never unplug the DC converter under power"
+  de: "⚠️ Sicher arbeiten am Roller (DC-Wandler, AUX, CBB)"
+  en: "⚠️ Working safely on the scooter (DC converter, AUX, CBB)"
 body:
   de: |
-    Community-Warnung aus dem `#roller-support` (Werkstatt-Erfahrung
-    mit drei dabei zerlegten MDBs):
+    **Warum das überhaupt eine Sache ist:** Mit eingelegter Hauptbatterie
+    und **geschlossener Sitzbox** ist die Batterie aktiv, und es liegen
+    bis zu **58 V** an verschiedenen Stellen im Trittbrett an. Wer in
+    diesem Zustand Stecker zieht (DC-Wandler, AUX, CBB), zerlegt sich
+    sehr zuverlässig das MDB. Aus dem `#roller-support` (Werkstatt-
+    Erfahrung mit drei dabei zerlegten MDBs):
 
-    > „Wenn möglich zieht NIE den Stecker vom DC-Wandler wenn der Hauptakku
-    > eingelegt ist! Und anschließen auch nur wenn wirklich alle anderen
-    > Spannungsquellen ab sind. Ich habe damit mindestens 3 MDBs zerlegt."
+    > „Wenn möglich zieht NIE den Stecker vom DC-Wandler wenn der
+    > Hauptakku eingelegt ist! Und anschließen auch nur wenn wirklich
+    > alle anderen Spannungsquellen ab sind. Ich habe damit mindestens
+    > 3 MDBs zerlegt."
 
-    Ergänzend: auf originalen AUX-Batterien klebte früher (und in unus
-    Wartungsdokumenten stand) derselbe Hinweis — also
-    **niemals an AUX/DC-Wandler arbeiten, wenn der Fahrakku drin ist**.
+    Auf den originalen AUX-Batterien klebte früher derselbe Hinweis,
+    und in unus Wartungsdokumenten stand er auch.
 
-    **Reihenfolge beim Arbeiten:**
-    1. **Hauptakku raus.**
-    2. Sicherstellen, dass auch sonst keine Spannungsquelle anliegt
-       (AUX, CBB-Anschluss).
-    3. Erst dann Stecker lösen.
+    **Sauberer Weg, bevor du irgendwas im Trittbrett anfasst:**
 
-    Ein beschädigtes MDB zu ersetzen ist teuer und bei der aktuellen
-    Ersatzteillage schwierig.
+    Variante A — Sitzbox öffnen:
+    Sobald der Sitz auf ist, deaktiviert der Roller die Hauptbatterien
+    (Sitzsensor). Zum Sicherheits-Boost zusätzlich den Hauptakku aus
+    dem vorderen Slot rausnehmen.
+
+    Variante B — Roller in Hibernate schicken (sofern möglich).
+    Dasselbe Ergebnis, Hauptbatterien sind aus.
+
+    Erst danach **AUX abklemmen** (ein Pol reicht) und **CBB-Stecker
+    abziehen**. Den DC-Wandler musst du normalerweise gar nicht
+    trennen.
+
+    Ein beschädigtes MDB zu ersetzen ist teuer und unbequem, also lieber
+    zwei Minuten mehr Vorsicht.
   en: |
-    Community warning from `#roller-support` (workshop experience,
-    three destroyed MDBs):
+    **Why this matters:** with the main battery inserted and the
+    **seatbox closed**, the battery is active and up to **58 V** sits
+    on various points in the footrest area. Pull a connector in that
+    state (DC converter, AUX, CBB) and you reliably destroy the MDB.
+    From `#roller-support` (workshop experience, three killed MDBs):
 
-    > "If at all possible, NEVER unplug the DC converter while the main
-    > battery is inserted! And only plug it in when all other power sources
-    > are actually disconnected. I've destroyed at least 3 MDBs doing it."
+    > "If at all possible, NEVER unplug the DC converter while the
+    > main battery is inserted! And only plug it in when all other
+    > power sources are actually disconnected. I've destroyed at least
+    > 3 MDBs doing it."
 
-    Context: original AUX batteries used to have the same warning
-    stickered on them (and it was in unu's maintenance docs) — so
-    **never work on the AUX or DC converter while the main battery is
-    in the scooter**.
+    The original AUX batteries used to have the same warning
+    stickered on them, and unu's maintenance docs say it too.
 
-    **Order of operations:**
-    1. **Remove the main battery.**
-    2. Make sure no other source is still powering things (AUX,
-       CBB connector).
-    3. Then unplug.
+    **Clean way to set up before any work in the footrest:**
 
-    Replacing a damaged MDB is expensive and hard given the current
-    spare-parts situation.
+    Option A — open the seatbox:
+    With the seat open, the scooter deactivates the main batteries
+    (seat sensor). For extra safety, also pull the main battery out of
+    the forward slot.
+
+    Option B — send the scooter into hibernate (if possible).
+    Same result, main batteries off.
+
+    Then disconnect the **AUX** (one pole is enough) and the **CBB
+    plug**. You normally don't need to touch the DC converter at all.
+
+    Replacing a damaged MDB is expensive and a hassle, so spend the
+    extra two minutes being careful.
 tags: [safety, repair]

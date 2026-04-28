@@ -5,30 +5,47 @@ title:
   en: "Stock firmware: target versions"
 body:
   de: |
-    Das sind die letzten offiziellen Stände, die ein Roller drauf haben
-    sollte:
+    Letzter offizieller Stand auf einem unu Pro:
 
-    • **MDB:** V1.15.0
-    • **DBC:** V1.15.0 (oder die aktuellste gesehene — faktisch 1.15.0)
-    • **nRF:** V1.12.0
+    - **MDB:** v1.15.0
+    - **DBC:** v1.15.0
+    - **nRF:** v1.12.0
 
-    Wenn dein Roller ältere Versionen zeigt, ist das ein Grund, sich
-    beim **Verkäufer** zu melden und den offiziellen Update-Stand
-    nachzufordern — nicht etwas, das man selbst nachbessern muss.
+    Alles, was älter ist, ist zu alt. Solche Roller verbinden sich oft
+    gar nicht mehr per Bluetooth, haben Bugs und Dinge funktionieren
+    schlicht nicht.
 
-    Neue offizielle Firmwares wird es nicht mehr geben; für
-    Weiterentwicklung siehe **LibreScoot** (`/glossar librescoot`).
+    Versionen am Roller ablesen: bei eingeschaltetem Roller beide
+    Bremshebel mindestens 5 s halten, dann erscheint die Versionsbox.
+
+    Wenn deins älter ist:
+
+    - Technisch versierte Nutzer:innen kann man durchs Update walken —
+      meld dich im `#roller-support`.
+    - Sonst lieber zur **Werkstatt** (`/faq service-partner`).
+    - Oder gleich auf **LibreScoot** umsteigen
+      (`/faq librescoot-intro`).
+
+    Neue offizielle Firmwares kommen nicht mehr — die Server sind aus.
   en: |
-    These are the last official builds a scooter should be running:
+    Last official build on a unu Pro:
 
-    • **MDB:** V1.15.0
-    • **DBC:** V1.15.0 (or the newest seen — effectively 1.15.0)
-    • **nRF:** V1.12.0
+    - **MDB:** v1.15.0
+    - **DBC:** v1.15.0
+    - **nRF:** v1.12.0
 
-    If your scooter shows older versions, that's a reason to go back to
-    whoever **sold** it and ask for the official update — not something
-    you have to sort out yourself.
+    Anything older is too old. Those scooters often won't connect over
+    Bluetooth at all, have bugs, and things just don't work.
 
-    No new official firmwares will be released; for continued development
-    see **LibreScoot** (`/glossary librescoot`).
+    To read the versions on the scooter: with the scooter on, hold
+    both brake levers for at least 5 s — the Versionsbox appears.
+
+    If yours is older:
+
+    - Technically inclined users can be walked through the update —
+      ask in `#roller-support`.
+    - Otherwise, take it to a **workshop** (`/faq service-partner`).
+    - Or just switch to **LibreScoot** (`/faq librescoot-intro`).
+
+    No new official firmwares are coming — the servers are off.
 tags: [firmware]

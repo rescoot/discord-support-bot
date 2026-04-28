@@ -1,0 +1,69 @@
+id: ecu-defect
+aliases: [ecu-hardware, acceleration-blocked, motor-aus, fe04, e04, frühe-ecu, early-ecu]
+title:
+  de: "Motor schaltet bei <30 % Ladung plötzlich ab (ECU-Frühserienfehler)"
+  en: "Motor cuts out at <30 % charge during acceleration (early-batch ECU defect)"
+body:
+  de: |
+    **Symptom:** Beim Beschleunigen unter ca. **20–30 % Hauptakku-
+    Ladung** schaltet der Motor plötzlich ab. Auf dem Dashboard kommt
+    entweder der Code **E04 „Acceleration blocked"** oder die generische
+    Meldung **„Electrical error — please stop driving"**. Kurz Gas
+    loslassen und vorsichtig wieder reingehen funktioniert meistens —
+    unter Last tritt der Fehler oft direkt wieder auf.
+
+    **Ursache:** Eine frühere Produktionscharge der ECU wurde mit den
+    falschen Bauteilen bestückt — dadurch ist die Spannungsmessung
+    verfälscht. Unter Last + niedrigem SOC misst die ECU dann Werte,
+    die außerhalb ihrer Grenzen liegen, und schaltet den Antrieb ab
+    bzw. löst Schutzabschaltungen über die Batterie aus.
+
+    Das ist **kein Software-Bug, der sich OTA fixen lässt** — die
+    Flash-Tools für die ECU sind nie an Service-Partner rausgegangen.
+    unu hat betroffene ECUs damals im größeren Umfang getauscht, aber
+    gerade auf Gebrauchtrollern sind etliche nie ausgewechselt worden
+    und das Problem taucht bis heute auf.
+
+    **Workaround ohne Teiletausch:** Unter ~30 % SOC sehr sanft
+    anfahren und dosiert Gas geben — der Fehler tritt dann meist nicht
+    auf. Langfristig ist das natürlich keine Lösung.
+
+    **Richtiger Fix:** ECU-Austausch. Beim Service-Partner anfragen
+    (`/faq service-partner`) — ECU-Tausch ist laut Reparaturplan ein
+    Standard-Vorgang (Kapitel 1.6.5.1, vier Inbus-Schrauben + 30-poliger
+    Stecker). Für die Einordnung hilft die ECU-Seriennummer, die auf
+    einem Label unter der Trittbrettverkleidung sitzt.
+
+    Verwandt: `/faq e-error-codes`.
+  en: |
+    **Symptom:** while accelerating at roughly **20–30 % main battery
+    charge or lower**, the motor suddenly cuts out. The dashboard shows
+    either code **E04 "Acceleration blocked"** or the generic
+    **"Electrical error — please stop driving"** message. Releasing
+    throttle and gently reapplying usually recovers — under load the
+    fault often comes right back.
+
+    **Root cause:** an early production batch of ECUs was assembled
+    with the wrong components, which throws off the voltage
+    measurement. Under load and at low SOC the ECU then reads values
+    outside its limits and either cuts drive itself or triggers
+    protection events on the battery side.
+
+    It's **not a software bug that can be fixed OTA** — the ECU flash
+    tools were never given to service partners. unu did replace
+    affected ECUs in volume at the time, but especially on second-hand
+    scooters plenty were never swapped and the fault still shows up
+    today.
+
+    **Workaround without part replacement:** below ~30 % SOC, take off
+    very gently and feed the throttle slowly — usually keeps you out
+    of the fault. Not a long-term fix, obviously.
+
+    **Real fix:** ECU replacement. Ask the service partner
+    (`/faq service-partner`) — ECU swap is a standard procedure in the
+    Reparaturplan (chapter 1.6.5.1, four hex bolts + 30-pin connector).
+    The ECU serial (on a label under the footrest panel) identifies the
+    production batch.
+
+    Related: `/faq e-error-codes`.
+tags: [ecu, motor, troubleshooting, hardware-defect]

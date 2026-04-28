@@ -11,7 +11,14 @@ body:
     Übergänge werden durch Benutzeraktionen (Lock/Unlock), Power-Management-
     Events und System-Kommandos ausgelöst.
 
-    Im Standby speist die CBB, wenn Hauptakku inaktiv ist, sonst die AUX.
+    Stromversorgung während dieser Zustände:
+
+    - **Stand-by** und **Hibernate** (Roller verriegelt): primär CBB.
+    - **Parked** und **Ready** (Roller entsperrt): primär AUX.
+
+    Wenn die CBB im Hibernate zur Neige geht, weckt der Roller sich
+    selbst auf, schaltet über die AUX kurz die Hauptbatterien an,
+    lädt die CBB nach und schläft wieder ein.
   en: |
     From the tech reference — the scooter's power states:
     *Hibernating*, *Booting*, *Stand-By*, *Parked*, *Ready*, *Shutting Down*.
@@ -19,6 +26,12 @@ body:
     Transitions are triggered by user actions (lock/unlock), power-
     management events, and system commands.
 
-    In standby the CBB powers things when the main battery is inactive,
-    otherwise the AUX does.
+    Power source by state:
+
+    - **Stand-by** and **Hibernate** (locked): mostly CBB.
+    - **Parked** and **Ready** (unlocked): mostly AUX.
+
+    When the CBB runs low in hibernate, the scooter wakes itself,
+    briefly uses the AUX to activate the main batteries, tops up the
+    CBB, and goes back to sleep.
 tags: [software, power]

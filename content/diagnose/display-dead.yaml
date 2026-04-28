@@ -36,12 +36,27 @@ steps:
   brownout:
     answer:
       de: |-
-        Dashboard flackert oder stirbt gleich wieder = klassisches
-        AUX-Brownout. → `/faq aux-battery`. Nicht weiter Display jagen,
-        bevor die 12V-Versorgung stabil ist.
+        Dashboard kommt kurz und geht wieder aus = meistens AUX-
+        Brownout.
+
+        **Erst einen Reset versuchen** (PMICs zurücksetzen — reicht
+        manchmal):
+        Sitzbox auf → **AUX-Stecker abziehen** → **CBB-Stecker abziehen**
+        → kurz warten → in umgekehrter Reihenfolge wieder anschließen.
+
+        Wenn das Display danach immer noch nicht stabil hochkommt:
+        → `/faq aux-battery`. Display weiter jagen, bevor die
+        12-V-Versorgung stabil ist, lohnt sich nicht.
       en: |-
-        Dashboard flickers or dies immediately = classic AUX brownout.
-        → `/faq aux-battery`. Don't chase the display until the 12V
+        Dashboard briefly comes up and dies again = usually an AUX
+        brownout.
+
+        **Try a reset first** (resets the PMICs — sometimes enough):
+        open the seatbox → **disconnect the AUX plug** → **disconnect
+        the CBB plug** → wait briefly → reconnect in reverse order.
+
+        If the display still won't come up cleanly afterwards:
+        → `/faq aux-battery`. Don't chase the display before the 12 V
         supply is stable.
 
   flicker:
@@ -74,16 +89,18 @@ steps:
   fpc:
     prompt:
       de: |-
-        Klingt wie ein defektes oder lockeres **USB-Kabel MDB ↔ DBC** oder
-        das DBC selbst. Du kannst das DBC **isoliert testen**: mit Mini-USB
-        extern bestromen (Powerbank/Computer reicht) — das DBC hat ein
-        eigenes Betriebssystem und kommt unabhängig hoch.
+        Klingt nach einem Problem mit der **Mini-USB-Verbindung** zum
+        DBC oder dem DBC selbst. Das DBC lässt sich **isoliert testen**,
+        indem du es per Mini-USB extern bestromst (Powerbank oder
+        Computer reicht) — das DBC hat ein eigenes Betriebssystem und
+        kommt unabhängig hoch.
 
         Hast du das schon gemacht?
       en: |-
-        Sounds like a flaky **MDB ↔ DBC USB cable** or the DBC itself.
-        The DBC can be **tested isolated**: power it via mini-USB from a
-        powerbank or computer — it has its own OS and boots independently.
+        Sounds like a problem with the **mini-USB link** to the DBC or
+        the DBC itself. The DBC can be **tested isolated** by powering
+        it externally via mini-USB (a powerbank or computer is enough) —
+        it has its own OS and boots independently.
 
         Have you tried that?
     choices:
@@ -97,30 +114,46 @@ steps:
   dbc-isolate:
     answer:
       de: |-
-        Wartungshandbuch 2.2.8 (DBC/Display Funktionstest):
-        1. Alle Batterien vom Roller trennen (Haupt + intern).
-        2. Entweder am MDB-Ende des USB-Kabels mit Mini-USB→USB-A-Adapter
-           an eine Powerbank/Computer (2.2.8.1), oder direkt am
-           DBC-Anschluss mit externem Mini-USB-Kabel (2.2.8.2).
-        3. Das Display sollte innerhalb von ~10 Sekunden das unu-Logo
-           zeigen, nach ~30 s die Parkmodus-Oberfläche.
+        Nach Wartungshandbuch 2.2.8 (DBC/Display Funktionstest):
 
-        Wenn's hochkommt → DBC lebt, das Problem ist MDB-seitig oder am
-        USB-Kabel (`/faq water-damage-mdb` ansehen).
+        1. Roller stromlos machen: Hauptakku raus, einen Pol der AUX
+           abklemmen, CBB-Stecker abziehen.
+        2. Mini-USB-Stecker am MDB lösen — dort sind **zwei kleine
+           Rändelschrauben** (am besten mit Kreuz- oder Schlitz-
+           Schraubenzieher zu öffnen, *keine Sechskant*; die Sechskant-
+           schrauben halten das MDB selbst im Schacht).
+        3. Variante A: das gelöste Roller-USB-Kabel an seinem MDB-Ende
+           über Mini-USB→USB-A-Adapter an Powerbank/Computer hängen
+           (2.2.8.1).
+           Variante B: ein externes Mini-USB-Kabel direkt am DBC
+           anstecken (2.2.8.2).
+        4. Display sollte binnen ~10 s das unu-Logo zeigen, nach ~30 s
+           die Parkmodus-Oberfläche.
+
+        Wenn's hochkommt → DBC lebt, das Problem ist MDB-seitig
+        (`/faq water-damage-mdb`).
         Wenn nicht → DBC selbst defekt.
 
         Starte `/diagnose display-dead` neu, wenn du das Ergebnis hast.
       en: |-
         Wartungshandbuch 2.2.8 (DBC/Display function test):
-        1. Disconnect all batteries (main + internal).
-        2. Either at the MDB end of the USB cable with a mini-USB→USB-A
-           adapter to a powerbank/computer (2.2.8.1), or directly at the
-           DBC connector with an external mini-USB cable (2.2.8.2).
-        3. The display should show the unu logo within ~10 s and the
+
+        1. Fully de-power: main battery out, disconnect one pole of
+           the AUX, then disconnect the CBB.
+        2. Remove the mini-USB plug at the MDB — it's held by **two
+           small thumb screws** (best opened with a Phillips or flat
+           screwdriver; *not* hex — the hex screws hold the MDB itself
+           in the bay).
+        3. Option A: take the loose scooter USB cable, attach a mini-
+           USB→USB-A adapter at its MDB end and plug it into a
+           powerbank/computer (2.2.8.1).
+           Option B: plug an external mini-USB cable directly into the
+           DBC (2.2.8.2).
+        4. The display should show the unu logo within ~10 s and the
            park-mode UI within ~30 s.
 
-        If it boots → DBC is alive; the problem is on the MDB side or
-        in the USB cable (see `/faq water-damage-mdb`).
+        If it boots → DBC is alive; the problem is on the MDB side
+        (`/faq water-damage-mdb`).
         If not → the DBC itself is dead.
 
         Restart `/diagnose display-dead` with the result.
@@ -128,20 +161,21 @@ steps:
   mdb-side:
     answer:
       de: |-
-        DBC lebt. Dann liegt's am MDB, am USB-Kabel oder am A1-Stecker.
-        Mit großer Wahrscheinlichkeit: **Wasserschaden am MDB-USB-Port** —
-        siehe `/faq water-damage-mdb`.
-        Wartungshandbuch 6.3 / 3.3.2 nennt Austausch von MDB und
-        USB-Kabel als Fix (Teilenummern SP-S-ASM-PCBA-MDB1-01 und
-        SP-S-05-06-002), oder im `#roller-support` nach der Community-
-        Prüfservice-Option fragen.
+        DBC lebt. Dann liegt's am MDB oder am USB-Kabel/an der USB-
+        Buchse am MDB. Mit großer Wahrscheinlichkeit: **Wasserschaden
+        am MDB** — siehe `/faq water-damage-mdb`.
+        Wartungshandbuch 6.3 nennt Austausch von MDB und USB-Kabel als
+        Fix (Teilenummern SP-S-ASM-PCBA-MDB1-01 und SP-S-05-06-002).
+        Im `#roller-support` gibt es einen Community-Prüfservice für
+        defekte MDBs.
       en: |-
-        DBC is alive. So the issue is MDB, USB cable, or the A1
-        connector. High probability: **water damage at the MDB USB
-        port** — see `/faq water-damage-mdb`.
-        Wartungshandbuch 6.3 / 3.3.2 lists MDB and USB cable replacement
-        as the fix (part numbers SP-S-ASM-PCBA-MDB1-01 and SP-S-05-06-002),
-        or ask in `#roller-support` about the community test service.
+        DBC is alive. So the problem is the MDB or the USB cable / the
+        USB socket on the MDB itself. Most likely: **water damage at
+        the MDB** — see `/faq water-damage-mdb`.
+        Wartungshandbuch 6.3 lists MDB and USB cable replacement as the
+        fix (part numbers SP-S-ASM-PCBA-MDB1-01 and SP-S-05-06-002).
+        The `#roller-support` channel has a community test service for
+        dead MDBs.
 
   dbc-dead:
     answer:

@@ -1,78 +1,113 @@
 id: water-damage-mdb
-aliases: [wasser, wasserschaden, feuchtigkeit, usb-rost, korrosion, mdb-usb]
+aliases: [wasser, wasserschaden, wassereintritt, feuchtigkeit, korrosion, mdb-usb]
 title:
-  de: "Wasserschaden am MDB (USB-Buchse)"
-  en: "MDB water damage (USB port)"
+  de: "Wassereintritt am MDB"
+  en: "Water ingress at the MDB"
 body:
   de: |
-    **Der wahrscheinlich häufigste Folgeschaden an älteren Rollern.** Das
-    USB-B-Kabel zwischen MDB und DBC ist konstruktionsbedingt eine
-    Schwachstelle — Wasser läuft in die Buchse am MDB und korrodiert die
-    Kontakte (und dann gern auch das Board dahinter).
+    **Sehr häufiger Folgeschaden an älteren Rollern.** Der MDB-Schacht
+    im Trittbrett liegt offen genug, dass Wasser regelmäßig dort
+    landet — durch Kondenswasser, Regen während der Fahrt oder (immer
+    wieder beobachtet) **Hochdruckreinigung** (das ist nie eine gute
+    Idee, lass es).
+
+    Im Schacht trifft das Wasser auf die USB-B-Buchse zwischen MDB und
+    DBC und das MDB selbst. Das Resultat sind korrodierte Kontakte und
+    oft auch Schäden am Board dahinter.
 
     Aus dem `#roller-support`:
-    > „Das mit der nicht funktionierenden Kommunikation hast Du schon
-    > ziemlich gut eingeordnet. Leider liegt das ziemlich oft an
-    > Wassereintritt am MDB — konstruktionsbedingt kanns in die
-    > USB-Buchse ziemlich gut rein und gammelt dann fröhlich im MDB vor
-    > sich hin."
+    > „Leider liegt das ziemlich oft an Wassereintritt am MDB —
+    > konstruktionsbedingt kanns in die USB-Buchse ziemlich gut rein
+    > und gammelt dann fröhlich im MDB vor sich hin."
 
-    **Symptome:**
-    • Roller reagiert zwar, aber Display bleibt dunkel oder zeigt keine
-      Daten vom MDB (Geschwindigkeit, Akkustand, Blinker).
-    • Kommunikationsfehler zwischen MDB und DBC (im Wartungshandbuch als
-      „USB-Kabel / A1-Stecker-Problem" beschrieben).
-    • Oft nach längerem Draußenstehen (gerade ohne Abdeckung).
+    **Typische Symptome:**
+    • DBC geht gar nicht mehr an.
+    • DBC kommt hoch, zeigt aber keine Daten vom MDB
+      (Geschwindigkeit, Akkustand, Blinker-Status, …).
+    • Roller geht nicht in den Fahrmodus.
+    • Sporadische Aussetzer / Kommunikationsfehler MDB↔DBC.
+    • Häufig nach längerem Draußenstehen ohne Abdeckung oder direkt
+      nach einer Wäsche.
 
-    **Check (ohne Öffnen):** Frontverkleidung ab, MDB-Schacht auf Wasser-
-    spuren und Korrosion prüfen — grüner Kupferoxid-Film am Stecker ist
-    ein klares Zeichen.
+    **Sichtprüfung:** Trittbrettverkleidung ab, MDB-Schacht angucken —
+    Wasserspuren, Salzränder, sichtbare Korrosion am Stecker oder am
+    Board sind klare Hinweise. Im USB-Stecker ist die Korrosion oft
+    auch zu sehen, auch wenn der typische grüne Kupferoxid-Belag eher
+    bei den AUX-Steckern (A1/A2) auftritt.
 
-    **Wenn der USB-Stecker sichtbar korrodiert ist:**
-    1. Hauptakku raus, `/faq dc-converter-safety` lesen.
-    2. MDB ausbauen, USB-Stecker öffnen.
-    3. Mit 99%-Isopropanol reinigen, trocknen lassen.
-    4. Wieder zusammenbauen, hoffen, dass das Board dahinter nicht
-       auch schon hinüber ist.
+    **Wenn das MDB ran muss — Reihenfolge fürs Trockenlegen:**
+    1. **Hauptakku raus.**
+    2. **Einen Pol der AUX abklemmen** (reicht).
+    3. **CBB-Stecker abziehen.**
+    4. Erst dann das MDB **komplett ausbauen** und in Ruhe öffnen,
+       reinigen (99 %-Isopropanol), trocknen, prüfen, ob das Board
+       überhaupt noch was tut.
 
-    Wenn danach nichts geht: im `#roller-support` fragen — dort gibt es
-    einen Community-Service, der defekte MDBs/DBCs im Tester prüft.
-    Siehe `/faq spare-parts`.
+    Den **DC-Wandler musst du dafür normalerweise nicht trennen** — und
+    solltest es auch nicht, siehe `/faq dc-converter-safety`.
 
-    **Vorbeugung:** Roller abdecken oder drinnen parken, besonders im
-    Winter — Kondenswasser im MDB-Schacht ist der Killer.
+    Wenn das Board sichtbar grün korrodiert ist (nicht nur der
+    Stecker), sind die Chancen auf eine Reanimation schlecht. Im
+    `#roller-support` gibt's einen Community-Prüfservice, der MDBs in
+    den Tester nimmt.
+
+    **Vorbeugung:**
+    • Roller abdecken oder drinnen parken, gerade im Winter.
+    • **Nicht mit Hochdruckreiniger waschen.**
+    • Eine **Dichtung an der Vorderseite des Trittbretts** anbringen
+      (z. B. Fenster-/Türdichtung mit Kleberücken) — von unten an die
+      Vorderkante des abnehmbaren Trittbrettteils kleben. Fängt einen
+      großen Teil des einlaufenden Wassers ab.
   en: |
-    **Probably the most common failure on older scooters.** The USB-B
-    cable between MDB and DBC is a design weak point — water gets into
-    the port on the MDB and corrodes the contacts (often followed by
-    the board behind them).
+    **Very common failure on older scooters.** The MDB bay in the
+    footrest sits exposed enough that water regularly ends up in it —
+    from condensation, rain while riding, or (recurring story)
+    **pressure washing** (don't, just don't).
+
+    Once in the bay, water hits the USB-B socket between MDB and DBC
+    and the MDB itself. The result is corroded contacts, and often
+    damage to the board behind them.
 
     From `#roller-support`:
     > "Sadly it often comes down to water ingress at the MDB — the USB
     > socket has no proper seal, and it then happily corrodes away
     > inside the MDB."
 
-    **Symptoms:**
-    • Scooter reacts but the display stays dark or shows no MDB data
-      (speed, battery, turn signals).
-    • MDB↔DBC communication errors (Wartungshandbuch calls this the
-      "USB cable / A1 connector" problem).
-    • Often after extended outdoor storage without a cover.
+    **Typical symptoms:**
+    • DBC doesn't power on at all.
+    • DBC powers up but never shows data from the MDB (speed, battery,
+      turn-signal state, …).
+    • Scooter won't enter drive mode.
+    • Sporadic dropouts / MDB↔DBC communication errors.
+    • Often after extended outdoor storage or right after a wash.
 
-    **Check (without opening):** pull the front cover, inspect the MDB
-    bay for water marks and corrosion — green copper-oxide film on the
-    connector is a clear giveaway.
+    **Visual check:** pull the footrest panel and look in the MDB bay —
+    water marks, salt rings, visible corrosion on the connector or
+    board are clear signs. The USB plug usually shows corrosion too,
+    though the classic green copper-oxide deposit is more common on
+    the AUX connectors (A1/A2).
 
-    **If the USB connector is visibly corroded:**
-    1. Main battery out, read `/faq dc-converter-safety` first.
-    2. Remove the MDB, open the USB plug.
-    3. Clean with 99% isopropanol, let dry.
-    4. Reassemble and hope the board behind it isn't also dead.
+    **If you need to get to the MDB — order of disconnects:**
+    1. **Main battery out.**
+    2. **Disconnect one pole of the AUX** (one is enough).
+    3. **Disconnect the CBB.**
+    4. Then **remove the MDB outright** and work on it on the bench:
+       open it, clean (99 % isopropanol), dry, check whether the board
+       is still alive.
 
-    If nothing works afterwards: ask in `#roller-support` — there's a
-    community-run service that will test defective MDBs/DBCs in a
-    tester. See `/faq spare-parts`.
+    You **normally don't need to disconnect the DC converter** — and
+    shouldn't, see `/faq dc-converter-safety`.
 
-    **Prevention:** cover the scooter or park indoors, especially in
-    winter — condensation in the MDB bay is what kills them.
+    If the board itself is visibly green/corroded (not just the
+    connector) the chances of reviving it are poor. The
+    `#roller-support` channel has a community test service that will
+    put MDBs on a tester.
+
+    **Prevention:**
+    • Cover the scooter or park indoors, especially in winter.
+    • **Don't pressure-wash it.**
+    • Add a **gasket at the front of the footrest** (e.g. self-
+      adhesive window/door seal) — stick it underneath the leading
+      edge of the removable footrest panel. Catches a large share of
+      the water that would otherwise run in.
 tags: [hardware, water-damage, repair, mdb]
