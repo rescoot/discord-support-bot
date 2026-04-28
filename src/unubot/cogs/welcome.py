@@ -4,9 +4,10 @@ import logging
 from typing import TYPE_CHECKING
 
 import discord
+from discord import app_commands
 from discord.ext import commands
 
-from ..i18n import Locale, t
+from ..i18n import Locale, resolve_locale, t
 from ..locale_view import welcome_view
 
 if TYPE_CHECKING:
@@ -50,6 +51,19 @@ class Welcome(commands.Cog):
                 await channel.send(t("welcome_fallback_channel", locale, mention=member.mention))
             except discord.HTTPException as e:
                 log.warning("fallback welcome to channel %s failed: %s", fallback, e)
+
+
+    @app_commands.command(name="info", description="Community-Infos und Bot-Hilfe / community info and bot help")
+    async def info(self, interaction: discord.Interaction) -> None:
+        locale = resolve_locale(
+            self.bot.prefs.get(interaction.user.id),
+            str(interaction.locale) if interaction.locale else None,
+        )
+        text = self.bot.content.welcome.get(locale) or self.bot.content.welcome.get("de", "")
+        if not text:
+            await interaction.response.send_message("—", ephemeral=True)
+            return
+        await interaction.response.send_message(text, view=welcome_view(interaction.user.id, locale), ephemeral=True)
 
 
 async def setup(bot: UnuBot) -> None:
