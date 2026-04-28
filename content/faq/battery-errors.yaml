@@ -27,13 +27,13 @@ body:
     Sporadisch: 180° drehen, neu einsetzen, oft reicht das.
     Dauerhaft: zweiten Akku probieren — geht der, ist's der NFC-Leser
     am Roller. Geht er auch nicht, ist die Verkabelung oder der Akku
-    selbst dran. Im `#roller-support` weitermachen.
+    selbst dran. Im `#support` weitermachen.
 
     **B11 — Tiefentladen**
 
     Akku ist komplett leer. Laden. Wenn er das Ladegerät gar nicht mehr
     annimmt, ist meistens das BMS in den Tiefschlaf gegangen — Akku
-    eine Weile am Ladegerät lassen, sonst im `#roller-support` fragen.
+    eine Weile am Ladegerät lassen, sonst im `#support` fragen.
 
     **Seltener:**
     - **B03 / B04 / B08:** Temperatur (zu heiß bei >65 °C bzw. >110 °C,
@@ -71,13 +71,13 @@ body:
     Sporadic: rotate 180°, reinsert, usually enough.
     Persistent: try a second battery. If it works, the NFC reader on
     the scooter is the suspect. If neither works, it's the wiring or
-    the battery itself — continue in `#roller-support`.
+    the battery itself — continue in `#support`.
 
     **B11 — deeply discharged**
 
     Battery is fully flat. Charge it. If the charger doesn't even
     engage, the BMS has usually gone into deep sleep — leave it on the
-    charger for a while, otherwise ask in `#roller-support`.
+    charger for a while, otherwise ask in `#support`.
 
     **Less common:**
     - **B03 / B04 / B08:** temperature (too hot at >65 °C or >110 °C,

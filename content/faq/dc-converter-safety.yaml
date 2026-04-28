@@ -9,7 +9,7 @@ body:
     und **geschlossener Sitzbox** ist die Batterie aktiv, und es liegen
     bis zu **58 V** an verschiedenen Stellen im Trittbrett an. Wer in
     diesem Zustand Stecker zieht (DC-Wandler, AUX, CBB), zerlegt sich
-    sehr zuverlässig das MDB. Aus dem `#roller-support` (Werkstatt-
+    sehr zuverlässig das MDB. Aus dem `#support` (Werkstatt-
     Erfahrung mit drei dabei zerlegten MDBs):
 
     > „Wenn möglich zieht NIE den Stecker vom DC-Wandler wenn der
@@ -41,7 +41,7 @@ body:
     **seatbox closed**, the battery is active and up to **58 V** sits
     on various points in the footrest area. Pull a connector in that
     state (DC converter, AUX, CBB) and you reliably destroy the MDB.
-    From `#roller-support` (workshop experience, three killed MDBs):
+    From `#support` (workshop experience, three killed MDBs):
 
     > "If at all possible, NEVER unplug the DC converter while the
     > main battery is inserted! And only plug it in when all other

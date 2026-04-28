@@ -5,7 +5,7 @@ title:
   en: "Spare parts: specific community-sourced replacements"
 body:
   de: |
-    Konkrete Ersatzteile, die im `#roller-support` / `#ressourcen` von
+    Konkrete Ersatzteile, die im `#support` / `#ressourcen` von
     Community-Mitgliedern verlinkt und als passend bestätigt wurden.
     Links/Preise wandern — falls ein Angebot weg ist, such nach dem
     Produktnamen.
@@ -58,11 +58,11 @@ body:
     nachbauen lässt — passt laut Channel aber auch ohne.
 
     **Kategorisch nichts gefunden?** Ersatzteilkatalog-PDF im
-    `#ressourcen`-Channel, dann im `#roller-support` mit Beschreibung
+    `#ressourcen`-Channel, dann im `#support` mit Beschreibung
     und Foto fragen.
   en: |
     Specific spare parts that community members have linked and
-    confirmed as fits in `#roller-support` / `#ressourcen`. Links and
+    confirmed as fits in `#support` / `#ressourcen`. Links and
     prices drift — if a listing is gone, search for the product name.
 
     **12V AUX battery (lead-acid):**
@@ -113,6 +113,6 @@ body:
     cutter — but per the channel it still fits without.
 
     **Category not covered?** The parts-catalog PDF is pinned in the
-    `#ressourcen` channel, then ask in `#roller-support` with a
+    `#ressourcen` channel, then ask in `#support` with a
     description and a photo.
 tags: [parts, repair, community]

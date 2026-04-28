@@ -166,7 +166,7 @@ steps:
         3. Roller entsperren, in der App neu pairen, BLE-Code auf
            dem Display in der App bestätigen.
 
-        Wenn das nicht hilft: in `#app-support` posten mit Handy-
+        Wenn das nicht hilft: in `#support` posten mit Handy-
         Modell, OS-Version, App-Version und welcher App du benutzt
         (`unustasis` oder `unu by Emco`).
       en: |-
@@ -178,6 +178,6 @@ steps:
         3. Unlock the scooter, pair fresh in the app, confirm the
            BLE code on the dashboard.
 
-        If that doesn't help: post in `#app-support` with phone
+        If that doesn't help: post in `#support` with phone
         model, OS version, app version, and which app you're using
         (`unustasis` or `unu by Emco`).

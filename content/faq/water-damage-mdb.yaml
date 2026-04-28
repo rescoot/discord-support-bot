@@ -15,7 +15,7 @@ body:
     DBC und das MDB selbst. Das Resultat sind korrodierte Kontakte und
     oft auch Schäden am Board dahinter.
 
-    Aus dem `#roller-support`:
+    Aus dem `#support`:
     > „Leider liegt das ziemlich oft an Wassereintritt am MDB —
     > konstruktionsbedingt kanns in die USB-Buchse ziemlich gut rein
     > und gammelt dann fröhlich im MDB vor sich hin."
@@ -48,7 +48,7 @@ body:
 
     Wenn das Board sichtbar grün korrodiert ist (nicht nur der
     Stecker), sind die Chancen auf eine Reanimation schlecht. Im
-    `#roller-support` gibt's einen Community-Prüfservice, der MDBs in
+    `#support` gibt's einen Community-Prüfservice, der MDBs in
     den Tester nimmt.
 
     **Vorbeugung:**
@@ -68,7 +68,7 @@ body:
     and the MDB itself. The result is corroded contacts, and often
     damage to the board behind them.
 
-    From `#roller-support`:
+    From `#support`:
     > "Sadly it often comes down to water ingress at the MDB — the USB
     > socket has no proper seal, and it then happily corrodes away
     > inside the MDB."
@@ -100,7 +100,7 @@ body:
 
     If the board itself is visibly green/corroded (not just the
     connector) the chances of reviving it are poor. The
-    `#roller-support` channel has a community test service that will
+    `#support` channel has a community test service that will
     put MDBs on a tester.
 
     **Prevention:**

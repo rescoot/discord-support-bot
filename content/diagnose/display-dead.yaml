@@ -166,7 +166,7 @@ steps:
         am MDB** — siehe `/faq water-damage-mdb`.
         Wartungshandbuch 6.3 nennt Austausch von MDB und USB-Kabel als
         Fix (Teilenummern SP-S-ASM-PCBA-MDB1-01 und SP-S-05-06-002).
-        Im `#roller-support` gibt es einen Community-Prüfservice für
+        Im `#support` gibt es einen Community-Prüfservice für
         defekte MDBs.
       en: |-
         DBC is alive. So the problem is the MDB or the USB cable / the
@@ -174,7 +174,7 @@ steps:
         the MDB** — see `/faq water-damage-mdb`.
         Wartungshandbuch 6.3 lists MDB and USB cable replacement as the
         fix (part numbers SP-S-ASM-PCBA-MDB1-01 and SP-S-05-06-002).
-        The `#roller-support` channel has a community test service for
+        The `#support` channel has a community test service for
         dead MDBs.
 
   dbc-dead:
@@ -182,10 +182,10 @@ steps:
       de: |-
         DBC kommt auch extern nicht hoch → DBC ist defekt. Austausch
         nach Wartungshandbuch (Teilenummer SP-S-ASM-PCBA-DBC1-01).
-        Der Community-Prüfservice im `#roller-support` nimmt DBCs an —
+        Der Community-Prüfservice im `#support` nimmt DBCs an —
         vielleicht lässt sich's noch reanimieren. Siehe `/faq spare-parts`.
       en: |-
         DBC won't boot externally either → DBC is dead. Replace per
         Wartungshandbuch (part number SP-S-ASM-PCBA-DBC1-01).
-        The community test service in `#roller-support` accepts DBCs —
+        The community test service in `#support` accepts DBCs —
         it may still be salvageable. See `/faq spare-parts`.

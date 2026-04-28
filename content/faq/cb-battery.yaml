@@ -35,7 +35,7 @@ body:
 
     Community-Doku (Reverse-Engineering): das CBB-Repo auf GitHub —
     <https://github.com/Julinho666/UNU-CBB-Battery>.
-    Für aktuelle Bezugsquellen im `#roller-support` fragen.
+    Für aktuelle Bezugsquellen im `#support` fragen.
   en: |
     The **CB battery (CBB)** — "Connectivity Box Battery" — is the small
     Li-ion pack inside the connectivity box. When it's weak or dead, the
@@ -65,7 +65,7 @@ body:
 
     Community docs (reverse engineering): the CBB repo on GitHub —
     <https://github.com/Julinho666/UNU-CBB-Battery>. Ask in
-    `#roller-support` for current sources.
+    `#support` for current sources.
 links:
   - url: https://github.com/Julinho666/UNU-CBB-Battery
     label:

@@ -76,7 +76,7 @@ steps:
         Nächster Schritt: **AUX tauschen**. Siehe `/faq aux-battery`
         und vor dem Arbeiten `/faq dc-converter-safety` lesen.
 
-        Wenn du unsicher bist, frag im `#roller-support` — mit Angabe,
+        Wenn du unsicher bist, frag im `#support` — mit Angabe,
         wie alt der Roller ist und welche Symptome auftreten.
       en: |-
         A dashboard brownout and/or flaky turn signals are classic signs
@@ -86,7 +86,7 @@ steps:
         Next step: **replace the AUX**. See `/faq aux-battery` and read
         `/faq dc-converter-safety` before working on it.
 
-        If you're unsure, ask in `#roller-support` with the scooter's age
+        If you're unsure, ask in `#support` with the scooter's age
         and the symptoms.
 
   aux-or-cbb:
@@ -163,23 +163,23 @@ steps:
       de: |-
         **AUX tauschen.** Bauform und Maße wie das Original
         (12V-Blei-Gel-Batterie). Konkret bewährte Ersatztypen gibt's im
-        `#roller-support` auf Nachfrage.
+        `#support` auf Nachfrage.
 
         ⚠️ **Vor dem Arbeiten:** Hauptakku raus, AUX-Stecker erst danach
         lösen. Unbedingt `/faq dc-converter-safety` lesen.
 
         Wenn danach immer noch kein Wake: CBB prüfen (`/glossar cbb`)
-        oder im `#roller-support` mit Symptomen posten.
+        oder im `#support` mit Symptomen posten.
       en: |-
         **Replace the AUX.** Same form factor and size as the original
-        (12V gel lead-acid). Ask in `#roller-support` for currently known-
+        (12V gel lead-acid). Ask in `#support` for currently known-
         good replacement types.
 
         ⚠️ **Before working on it:** remove the main battery first, only
         then disconnect the AUX. Read `/faq dc-converter-safety`.
 
         If it still won't wake after the swap: check the CBB
-        (`/glossary cbb`) or post in `#roller-support` with your symptoms.
+        (`/glossary cbb`) or post in `#support` with your symptoms.
     links:
       - url: https://github.com/Julinho666/UNU-CBB-Battery
         label: { de: "CBB/AUX Community-Repo", en: "CBB/AUX community repo" }
@@ -188,12 +188,12 @@ steps:
     answer:
       de: |-
         Für Hilfe bei der Reparatur: siehe `/faq service-partner` und
-        poste in `#roller-support` mit **PLZ/Region** — dort kommen
+        poste in `#support` mit **PLZ/Region** — dort kommen
         regionale Empfehlungen. In Berlin ist *Fa. Wilhelm Fahrzeugtechnik*
         am Südkreuz die etablierte Adresse.
       en: |-
         For repair help: see `/faq service-partner` and post in
-        `#roller-support` with your **zip/region** — you'll get regional
+        `#support` with your **zip/region** — you'll get regional
         recommendations. In Berlin *Fa. Wilhelm Fahrzeugtechnik* near
         Südkreuz is the established shop.
 
@@ -201,7 +201,7 @@ steps:
     answer:
       de: |-
         Klingt nicht nach dem klassischen AUX-Muster. Poste am besten im
-        `#roller-support`:
+        `#support`:
         • Alter/Baujahr des Rollers
         • Was genau passiert (und was nicht)
         • Ob/was die App anzeigt (falls verbunden)
@@ -210,7 +210,7 @@ steps:
         Je mehr Details, desto schneller die richtige Spur.
       en: |-
         Doesn't sound like the classic AUX pattern. Post in
-        `#roller-support` with:
+        `#support` with:
         • Scooter age / year
         • What exactly happens (and what doesn't)
         • What the app shows (if it connects)

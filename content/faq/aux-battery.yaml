@@ -6,7 +6,7 @@ title:
 body:
   de: |
     Die **12V-AUX-Bleibatterie** ist der häufigste Defekt am unu Pro.
-    Faustregel aus dem `#roller-support`: ab ~2 Jahren Lebensdauer
+    Faustregel aus dem `#support`: ab ~2 Jahren Lebensdauer
     geht die AUX gerne kaputt. Typische Reparaturberichte lauten schlicht
     „AUX getauscht, startet einwandfrei".
 
@@ -34,7 +34,7 @@ body:
     👉 Interaktiv: `/diagnose aux`
   en: |
     The **12V AUX lead-acid battery** is the single most common fault on
-    the unu Pro. Channel rule of thumb in `#roller-support`: from about
+    the unu Pro. Channel rule of thumb in `#support`: from about
     2 years of age the AUX tends to die. Typical repair reports are just
     "swapped the AUX, starts fine".
 

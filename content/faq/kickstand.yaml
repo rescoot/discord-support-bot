@@ -23,11 +23,11 @@ body:
     CAN ans MDB, der Wert läuft also auch ohne Antriebsleistung
     durch — Antrieb selbst geht aber nicht.
     Das ist meist ein Steck-/Sicherungs-/Kabelthema im Hochstrompfad.
-    Im `#roller-support` mit Bildern und der Beobachtung melden.
+    Im `#support` mit Bildern und der Beobachtung melden.
 
     **3. Tacho läuft, Sitzbox-Icon ok, alles wirkt normal — aber genau
     nach dem Losfahren wirft's dich raus.**
-    Klassischer Seitenständer-Sensor. Aus dem `#roller-support`:
+    Klassischer Seitenständer-Sensor. Aus dem `#support`:
     > „Wenn es direkt nach dem Losfahren passiert, eventuell
     > Seitenständersensor."
 
@@ -59,11 +59,11 @@ body:
     MDB, so that signal flows even without drive power — but actual
     propulsion doesn't.
     Usually a connector / fuse / cable issue in the high-current path.
-    Post in `#roller-support` with photos and what you've observed.
+    Post in `#support` with photos and what you've observed.
 
     **3. Speedo running, seatbox icon fine, everything looks normal —
     but it kicks out of drive right after you set off.**
-    Classic kickstand sensor. From `#roller-support`:
+    Classic kickstand sensor. From `#support`:
     > "If it happens right after setting off, possibly the kickstand
     > sensor."
 

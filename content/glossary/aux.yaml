@@ -10,7 +10,7 @@ body:
     die Versorgung, sobald der Roller entsperrt ist (Park- oder
     Fahrmodus). Verriegelt (Stand-by, Hibernate) speist primär die CBB.
 
-    Im `#roller-support` ist sie mit großem Abstand der häufigste Defekt —
+    Im `#support` ist sie mit großem Abstand der häufigste Defekt —
     Faustregel aus dem Channel: **ab ~2 Jahren Lebensdauer** sterben AUX
     gerne. Typische Folgen sind fehlende grüne LED, hängender Boot,
     nicht funktionierende Blinker und „Roller wacht nicht auf".
@@ -26,7 +26,7 @@ body:
     over once the scooter is unlocked (park or drive mode). When
     locked (stand-by, hibernate) the CBB carries the load.
 
-    In `#roller-support` it's by far the most common fault — channel rule
+    In `#support` it's by far the most common fault — channel rule
     of thumb: **once AUX hits ~2 years**, it tends to die. Typical fallout:
     no green LED, stalled boot, turn signals not working, "scooter won't
     wake".
