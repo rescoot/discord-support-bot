@@ -15,14 +15,7 @@ log = logging.getLogger(__name__)
 
 
 def _pick_locale(member: discord.Member) -> Locale:
-    """Pick the best locale for a joining member.
-
-    Discord doesn't expose a per-member locale; we fall back to the guild's
-    preferred locale. New members from an English-speaking Discord region
-    will get English, everyone else defaults to German.
-    """
-    guild_locale = getattr(member.guild, "preferred_locale", None)
-    return normalise(str(guild_locale) if guild_locale else None)
+    return "de"
 
 
 class Welcome(commands.Cog):

@@ -4,6 +4,7 @@ services:
     image: reunu/unubot:latest
     restart: unless-stopped
     env_file: .env
-    # Mount content as a volume so you can edit YAML and /reload without rebuilding.
+    environment:
+      UNUBOT_CONTENT_DIR: /app/content
     volumes:
       - ./content:/app/content:ro
