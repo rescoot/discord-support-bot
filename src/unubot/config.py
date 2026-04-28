@@ -15,6 +15,7 @@ class Config:
     welcome_fallback_channel_id: int | None
     log_level: str
     content_dir: Path
+    state_dir: Path
 
     @classmethod
     def from_env(cls, content_dir: Path | None = None) -> Config:
@@ -36,6 +37,7 @@ class Config:
             welcome_fallback_channel_id=int(fallback) if fallback.isdigit() else None,
             log_level=os.environ.get("LOG_LEVEL", "INFO").upper(),
             content_dir=content_dir or _default_content_dir(),
+            state_dir=_default_state_dir(),
         )
 
 
@@ -49,3 +51,14 @@ def _default_content_dir() -> Path:
         if candidate.is_dir():
             return candidate
     raise RuntimeError("Could not locate content/ directory")
+
+
+def _default_state_dir() -> Path:
+    override = os.environ.get("UNUBOT_STATE_DIR", "").strip()
+    if override:
+        return Path(override).expanduser().resolve()
+    here = Path(__file__).resolve().parent
+    for parent in here.parents:
+        if (parent / "pyproject.toml").is_file():
+            return parent / "state"
+    return Path.cwd() / "state"

@@ -1,4 +1,4 @@
-from unubot.i18n import DEFAULT_LOCALE, normalise, pick, t
+from unubot.i18n import DEFAULT_LOCALE, normalise, other, pick, resolve_locale, t
 
 
 def test_default_is_german():
@@ -34,3 +34,19 @@ def test_pick_falls_back_when_missing():
 def test_t_formats_with_kwargs():
     msg = t("reload_ok", "de", faq=3, glossary=4, diagnose=2)
     assert "3" in msg and "4" in msg and "2" in msg
+
+
+def test_other_flips_locale():
+    assert other("de") == "en"
+    assert other("en") == "de"
+
+
+def test_resolve_locale_pref_wins():
+    assert resolve_locale("en", "de-DE") == "en"
+    assert resolve_locale("de", "en-US") == "de"
+
+
+def test_resolve_locale_falls_back_to_interaction_locale():
+    assert resolve_locale(None, "en-GB") == "en"
+    assert resolve_locale(None, "fr") == "de"
+    assert resolve_locale(None, None) == "de"

@@ -8,6 +8,10 @@ DEFAULT_LOCALE: Locale = "de"
 SUPPORTED: tuple[Locale, ...] = ("de", "en")
 
 
+def other(locale: Locale) -> Locale:
+    return "en" if locale == "de" else "de"
+
+
 def normalise(locale: str | None) -> Locale:
     """Map a Discord locale string (e.g. 'de', 'en-US') to a supported bot locale.
 
@@ -70,3 +74,18 @@ def t(key: str, locale: Locale, **kwargs: object) -> str:
     if bundle is None:
         return key
     return bundle.get(locale, bundle.get(DEFAULT_LOCALE, key)).format(**kwargs)
+
+
+def resolve_locale(
+    pref: Locale | None,
+    interaction_locale: str | None = None,
+) -> Locale:
+    """Pick the content locale for a user.
+
+    Saved per-user preference wins. Otherwise we try to match the user's Discord
+    client language (which is per-interaction), and if that's neither de nor en
+    we fall back to German — this community is DE-primary.
+    """
+    if pref in SUPPORTED:
+        return pref  # type: ignore[return-value]
+    return normalise(interaction_locale)

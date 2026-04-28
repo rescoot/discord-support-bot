@@ -7,7 +7,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-from ..i18n import normalise, t
+from ..i18n import resolve_locale, t
 
 if TYPE_CHECKING:
     from ..bot import UnuBot
@@ -21,7 +21,10 @@ class Admin(commands.Cog):
 
     @app_commands.command(name="reload", description="Reload content from disk (owner only)")
     async def reload(self, interaction: discord.Interaction) -> None:
-        locale = normalise(str(interaction.locale) if interaction.locale else None)
+        locale = resolve_locale(
+            self.bot.prefs.get(interaction.user.id),
+            str(interaction.locale) if interaction.locale else None,
+        )
         if interaction.user.id not in self.bot.config.owner_ids:
             await interaction.response.send_message(t("reload_denied", locale), ephemeral=True)
             return

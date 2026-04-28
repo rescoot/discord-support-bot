@@ -7,6 +7,8 @@ from discord.ext import commands
 
 from .config import Config
 from .content import ContentStore, load_content
+from .locale_view import register_dynamic_items
+from .prefs import PrefStore
 
 log = logging.getLogger(__name__)
 
@@ -27,12 +29,14 @@ class UnuBot(commands.Bot):
         super().__init__(command_prefix="!unused!", intents=intents)
         self.config = config
         self.content: ContentStore = load_content(config.content_dir)
+        self.prefs = PrefStore(config.state_dir / "prefs.json")
 
     def reload_content(self) -> ContentStore:
         self.content = load_content(self.config.content_dir)
         return self.content
 
     async def setup_hook(self) -> None:
+        register_dynamic_items(self)
         for ext in COGS:
             await self.load_extension(ext)
             log.info("loaded %s", ext)

@@ -9,7 +9,8 @@ from discord.ext import commands
 
 from ..content import DiagnoseFlow, DiagnoseStep
 from ..embeds import LIBRESCOOT_COLOR, UNU_COLOR
-from ..i18n import Locale, normalise, pick, t
+from ..i18n import Locale, other, pick, resolve_locale, t
+from ..locale_view import DiagnoseLocaleToggle
 
 if TYPE_CHECKING:
     from ..bot import UnuBot
@@ -17,6 +18,15 @@ if TYPE_CHECKING:
 log = logging.getLogger(__name__)
 
 VIEW_TIMEOUT = 600  # seconds
+
+
+def _is_terminal(step: DiagnoseStep) -> bool:
+    return step.answer is not None or not step.choices
+
+
+def _wants_locale_toggle(flow: DiagnoseFlow, step: DiagnoseStep) -> bool:
+    """Toggle button shows on the start step and on terminal answers, not in between."""
+    return step.id == flow.start or _is_terminal(step)
 
 
 class DiagnoseView(discord.ui.View):
@@ -37,8 +47,7 @@ class DiagnoseView(discord.ui.View):
             button.callback = self._make_callback(choice.goto)
             self.add_item(button)
 
-        # On terminal steps (answer set, no choices), offer restart/close.
-        if step.answer or not step.choices:
+        if _is_terminal(step):
             restart = discord.ui.Button(
                 style=discord.ButtonStyle.secondary,
                 label=t("diagnose_restart", locale),
@@ -46,6 +55,9 @@ class DiagnoseView(discord.ui.View):
             )
             restart.callback = self._make_callback(flow.start)
             self.add_item(restart)
+
+        if _wants_locale_toggle(flow, step):
+            self.add_item(DiagnoseLocaleToggle(flow.id, step.id, user_id, other(locale)))
 
         cancel = discord.ui.Button(
             style=discord.ButtonStyle.danger,
@@ -65,12 +77,12 @@ class DiagnoseView(discord.ui.View):
             next_step = self.flow.steps.get(goto)
             if next_step is None:
                 await interaction.response.edit_message(
-                    embed=_step_embed(self.flow, self.step, self.locale), view=None
+                    embed=step_embed(self.flow, self.step, self.locale), view=None
                 )
                 return
-            view = DiagnoseView(self.flow, next_step, self.locale, self.user_id)
+            view = build_step_view(self.flow, next_step, self.locale, self.user_id)
             await interaction.response.edit_message(
-                embed=_step_embed(self.flow, next_step, self.locale), view=view
+                embed=step_embed(self.flow, next_step, self.locale), view=view
             )
 
         return cb
@@ -84,8 +96,14 @@ class DiagnoseView(discord.ui.View):
         )
 
 
-def _step_embed(flow: DiagnoseFlow, step: DiagnoseStep, locale: Locale) -> discord.Embed:
-    is_terminal = step.answer is not None
+def build_step_view(
+    flow: DiagnoseFlow, step: DiagnoseStep, locale: Locale, user_id: int
+) -> DiagnoseView:
+    return DiagnoseView(flow, step, locale, user_id)
+
+
+def step_embed(flow: DiagnoseFlow, step: DiagnoseStep, locale: Locale) -> discord.Embed:
+    is_terminal = _is_terminal(step) and step.answer is not None
     color = LIBRESCOOT_COLOR if is_terminal else UNU_COLOR
     title = flow.localized_title(locale)
     if is_terminal:
@@ -115,7 +133,10 @@ class Diagnose(commands.Cog):
     )
     @app_commands.describe(flow="Welcher Diagnoseablauf / which flow")
     async def diagnose(self, interaction: discord.Interaction, flow: str) -> None:
-        locale = normalise(str(interaction.locale) if interaction.locale else None)
+        locale = resolve_locale(
+            self.bot.prefs.get(interaction.user.id),
+            str(interaction.locale) if interaction.locale else None,
+        )
         flows = self.bot.content.diagnose
         chosen = flows.get(flow.strip().lower())
         if chosen is None:
@@ -128,16 +149,19 @@ class Diagnose(commands.Cog):
             )
             log.error("flow %s: start step %r missing", chosen.id, chosen.start)
             return
-        view = DiagnoseView(chosen, start, locale, interaction.user.id)
+        view = build_step_view(chosen, start, locale, interaction.user.id)
         await interaction.response.send_message(
-            embed=_step_embed(chosen, start, locale), view=view
+            embed=step_embed(chosen, start, locale), view=view
         )
 
     @diagnose.autocomplete("flow")
     async def diagnose_autocomplete(
         self, interaction: discord.Interaction, current: str
     ) -> list[app_commands.Choice[str]]:
-        locale = normalise(str(interaction.locale) if interaction.locale else None)
+        locale = resolve_locale(
+            self.bot.prefs.get(interaction.user.id),
+            str(interaction.locale) if interaction.locale else None,
+        )
         flows = self.bot.content.diagnose
         choices: list[app_commands.Choice[str]] = []
         q = current.strip().lower()
