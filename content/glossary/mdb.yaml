@@ -5,21 +5,17 @@ title:
   en: "MDB — Middle Driver Board"
 body:
   de: |
-    Das **Middle Driver Board (MDB)** ist die zentrale Steuerplatine des unu Scooter Pro.
-    Es koordiniert Motorsteuerung, Stromverteilung und die Kommunikation zwischen allen
-    anderen Systemen. Über ein SIM7100E-Modul stellt es auch die Mobilfunk-Verbindung her.
+    Das **Middle Driver Board (MDB)** ist das zentrale Steuergerät im
+    unu Scooter Pro. Es ist die Schnittstelle zwischen den Akkus, der
+    Motorsteuerung (ECU), dem Dashboard (DBC) und dem Mobilfunk.
 
-    Technisch erreichbar unter **192.168.7.1** (USB-Ethernet vom DBC aus),
-    Redis läuft auf Port 6379.
+    Wenn das MDB stirbt — typischerweise durch Wasserschaden — geht am
+    Roller faktisch nichts mehr. Siehe `/faq water-damage-mdb`.
   en: |
-    The **Middle Driver Board (MDB)** is the central control board of the unu Scooter Pro.
-    It coordinates motor control, power distribution and communication between all other
-    systems. A SIM7100E module provides cellular connectivity.
+    The **Middle Driver Board (MDB)** is the scooter's central control
+    unit. It sits between the batteries, the motor controller (ECU),
+    the dashboard (DBC), and the cellular link.
 
-    Reachable at **192.168.7.1** (USB-ethernet from the DBC), with Redis on port 6379.
-links:
-  - url: https://github.com/reunu/tech-reference
-    label:
-      de: "reunu tech-reference"
-      en: "reunu tech-reference"
+    When the MDB dies — typically from water damage — the scooter
+    effectively stops working. See `/faq water-damage-mdb`.
 tags: [hardware, architecture]

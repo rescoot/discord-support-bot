@@ -5,24 +5,30 @@ title:
   en: "LibreScoot — open-source firmware"
 body:
   de: |
-    **LibreScoot** ist eine Open-Source-Firmware für den unu Scooter Pro.
-    Sie ersetzt die Werks-Services durch freie Alternativen und bringt dazu
-    `lsc`, ein CLI-Werkzeug für Vehicle-Steuerung, Service-Management,
-    Akku-/GPS-Monitoring, Alarm, Einstellungen und OTA-Updates.
+    **LibreScoot** ist eine offene, community-entwickelte Firmware für
+    den unu Scooter Pro. Eigene Selbstbeschreibung: *„Die Firmware, die
+    dein Roller verdient hat."*
 
-    Hauptkomponenten: `vehicle`, `ecu`, `battery`, `keycard`, `modem`,
-    `bluetooth`, `alarm`, `update`, `settings`, `ums`, `pm`, `scootui` (Qt/QML).
+    Bringt Offline-Navigation mit Karten, Light-/Dark-Mode, einen
+    Bewegungsalarm, ein verbessertes Lenkradschloss und OTA-Updates
+    mit. Funktioniert komplett ohne Cloud; SIM-Karte ist optional
+    (nur für Updates und Fern-Zugriff).
+
+    Wie installieren / aktueller Status: `/faq librescoot-intro`.
   en: |
-    **LibreScoot** is open-source firmware for the unu Scooter Pro.
-    It replaces the factory services with free alternatives and ships `lsc`,
-    a CLI tool for vehicle control, service management, battery/GPS monitoring,
-    alarm, settings, and OTA updates.
+    **LibreScoot** is an open, community-developed firmware for the
+    unu Scooter Pro. Self-description: *"The firmware your scooter
+    deserves."*
 
-    Main services: `vehicle`, `ecu`, `battery`, `keycard`, `modem`,
-    `bluetooth`, `alarm`, `update`, `settings`, `ums`, `pm`, `scootui` (Qt/QML).
+    Brings offline navigation with maps, light/dark display modes, a
+    motion alarm, an improved steering lock, and OTA updates. Works
+    fully offline; the SIM is optional (only for updates and remote
+    access).
+
+    How to install / current status: `/faq librescoot-intro`.
 links:
-  - url: https://github.com/librescoot
+  - url: https://librescoot.org/
     label:
-      de: "LibreScoot auf GitHub"
-      en: "LibreScoot on GitHub"
+      de: "librescoot.org"
+      en: "librescoot.org"
 tags: [librescoot, software]

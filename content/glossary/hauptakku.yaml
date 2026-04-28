@@ -5,35 +5,40 @@ title:
   en: "Main battery"
 body:
   de: |
-    Der **Hauptakku** (im Channel oft „Fahrakku") ist der große, heraus-
-    nehmbare Lithium-Akku, der den Motor des unu antreibt.
+    Der **Hauptakku** (im Channel oft „Fahrakku") ist der große,
+    herausnehmbare Lithium-Akku, der den Motor antreibt. Pro Roller
+    passen zwei rein.
 
-    Grunddaten (aus der Tech-Reference):
-    • 14s7p in INR22/71-7-Zellen
-    • 50,8 V nominell, bis 58,2 V beim Laden
-    • 35 Ah / ~1778 Wh Kapazität
-    • LED-Ring ums Schloss als Statusanzeige
-    • Datenübertragung zum Roller über NFC
+    Grunddaten:
+    - 14s7p, 21700er Zellen
+    - 50,8 V nominell, bis 58,2 V beim Laden
+    - 35 Ah / ~1778 Wh
+    - LED-Ring oben auf dem Akku zeigt den Ladestand an. Bei Fehlern
+      blinkt er.
+    - Datenübertragung zum Roller läuft über NFC (deshalb die B32/B33-
+      Fehler beim Aktivieren — siehe `/faq battery-errors`).
 
-    Der Hauptakku versorgt den Motor über die ECU — für die
-    Steuerelektronik (MDB/DBC/Licht) ist im Stand die **AUX**
-    zuständig, nicht der Hauptakku direkt.
+    Der Hauptakku treibt den Motor über die ECU. Die Steuerelektronik
+    (MDB/DBC/Licht) hängt nicht direkt am Hauptakku — siehe
+    `/glossar aux` und `/glossar cbb` für die 12-V-Versorgung.
 
-    Siehe auch `/glossar aux`, `/glossar cbb`, `/glossar ecu`.
+    Siehe auch `/glossar ecu`.
   en: |
     The **main battery** ("Fahrakku" in-channel) is the big removable
-    lithium pack that drives the motor.
+    lithium pack that drives the motor. The scooter takes two.
 
-    Basics (from the tech reference):
-    • 14s7p, INR22/71-7 cells
-    • 50.8 V nominal, up to 58.2 V while charging
-    • 35 Ah / ~1778 Wh
-    • LED ring around the lock for status
-    • Data link to the scooter via NFC
+    Basics:
+    - 14s7p, 21700 cells
+    - 50.8 V nominal, up to 58.2 V while charging
+    - 35 Ah / ~1778 Wh
+    - LED ring on top of the battery shows charge level. Blinks on
+      faults.
+    - Data link to the scooter is NFC (which is why activation faults
+      come back as B32/B33 — see `/faq battery-errors`).
 
-    The main battery powers the motor via the ECU — when parked, the
-    **AUX** runs the control electronics (MDB/DBC/lights), not the main
-    battery directly.
+    The main battery drives the motor through the ECU. The control
+    electronics (MDB/DBC/lights) don't run directly off it — see
+    `/glossary aux` and `/glossary cbb` for the 12 V supply.
 
-    See also `/glossary aux`, `/glossary cbb`, `/glossary ecu`.
+    See also `/glossary ecu`.
 tags: [hardware, battery]

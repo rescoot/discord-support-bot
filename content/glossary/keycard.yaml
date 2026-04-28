@@ -1,15 +1,26 @@
 id: keycard
-aliases: [nfc-key, nfc-keycard, schlüsselkarte]
+aliases: [nfc-key, nfc-keycard, schlüsselkarte, schluesselkarte]
 title:
-  de: "Keycard — NFC-Schlüssel"
-  en: "Keycard — NFC key"
+  de: "Keycard / Schlüsselkarte"
+  en: "Keycard"
 body:
   de: |
-    Die **Keycard** ist eine NFC-Karte, mit der der Roller freigeschaltet
-    wird. Gelesen wird sie vom PN7150-NFC-Chip im DBC; eine LP5662-LED im
-    Dashboard zeigt Lese-Zustand und Fehler an.
+    Die **Keycard** (Schlüsselkarte) ist die NFC-Karte, mit der der
+    Roller freigeschaltet wird. Halt sie an die **linke Seite des
+    DBC**, dort sitzt der NFC-Leser. Die **LED rechts im DBC** zeigt,
+    ob's gelesen wurde.
+
+    Wichtig: Die Keycard funktioniert nur, wenn der Roller im
+    **Standby** ist, **nicht im Hibernate**. Aus dem Hibernate musst
+    du den Roller erst wecken — siehe `/diagnose app` (10 s beide
+    Bremshebel halten).
   en: |
-    The **keycard** is an NFC card that unlocks the scooter. A PN7150 NFC
-    chip inside the DBC reads it, and an LP5662 LED on the dashboard shows
-    read state and errors.
+    The **keycard** is the NFC card that unlocks the scooter. Hold it
+    against the **left side of the DBC**, where the NFC reader sits.
+    The **LED on the right side of the DBC** indicates whether it was
+    read.
+
+    Important: the keycard only works while the scooter is in
+    **standby**, **not in hibernate**. Wake it from hibernate first —
+    see `/diagnose app` (hold both brake levers for 10 s).
 tags: [hardware, auth]
