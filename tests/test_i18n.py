@@ -32,7 +32,7 @@ def test_pick_falls_back_when_missing():
 
 
 def test_t_formats_with_kwargs():
-    msg = t("reload_ok", "de", faq=3, glossary=4, diagnose=2)
+    msg = t("reload_ok", "de", faq=3, glossary=4, diagnose=2, forum_welcome=1)
     assert "3" in msg and "4" in msg and "2" in msg
 
 

@@ -42,6 +42,7 @@ class Admin(commands.Cog):
                 faq=len(store.faq),
                 glossary=len(store.glossary),
                 diagnose=len(store.diagnose),
+                forum_welcome=len(store.forum_welcome),
             ),
             ephemeral=True,
         )

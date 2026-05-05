@@ -18,6 +18,7 @@ COGS = (
     "unubot.cogs.welcome",
     "unubot.cogs.diagnose",
     "unubot.cogs.admin",
+    "unubot.cogs.forum_welcome",
 )
 
 

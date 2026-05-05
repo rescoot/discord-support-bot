@@ -13,6 +13,7 @@ class Config:
     owner_ids: frozenset[int]
     dev_guild_id: int | None
     welcome_fallback_channel_id: int | None
+    support_forum_channel_id: int | None
     log_level: str
     content_dir: Path
     state_dir: Path
@@ -29,12 +30,14 @@ class Config:
         }
         dev_guild = os.environ.get("DEV_GUILD_ID", "").strip()
         fallback = os.environ.get("WELCOME_FALLBACK_CHANNEL_ID", "").strip()
+        support_forum = os.environ.get("SUPPORT_FORUM_CHANNEL_ID", "").strip()
 
         return cls(
             token=token,
             owner_ids=frozenset(owners),
             dev_guild_id=int(dev_guild) if dev_guild.isdigit() else None,
             welcome_fallback_channel_id=int(fallback) if fallback.isdigit() else None,
+            support_forum_channel_id=int(support_forum) if support_forum.isdigit() else None,
             log_level=os.environ.get("LOG_LEVEL", "INFO").upper(),
             content_dir=content_dir or _default_content_dir(),
             state_dir=_default_state_dir(),

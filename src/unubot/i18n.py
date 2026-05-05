@@ -50,8 +50,8 @@ UI: dict[str, dict[Locale, str]] = {
         "en": "No match. Try autocompletion to see available entries.",
     },
     "reload_ok": {
-        "de": "Inhalte neu geladen: {faq} FAQ, {glossary} Glossar, {diagnose} Diagnoseflüsse.",
-        "en": "Reloaded: {faq} FAQ, {glossary} glossary, {diagnose} diagnose flows.",
+        "de": "Inhalte neu geladen: {faq} FAQ, {glossary} Glossar, {diagnose} Diagnoseflüsse, {forum_welcome} Forum-Begrüßungen.",
+        "en": "Reloaded: {faq} FAQ, {glossary} glossary, {diagnose} diagnose flows, {forum_welcome} forum welcomes.",
     },
     "reload_denied": {
         "de": "Nur Bot-Owner dürfen das.",

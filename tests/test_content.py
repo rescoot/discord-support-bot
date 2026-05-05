@@ -65,3 +65,9 @@ def test_diagnose_flows_have_valid_goto_targets(store):
 def test_welcome_loaded_for_both_locales(store):
     assert store.welcome.get("de"), "German welcome missing"
     assert store.welcome.get("en"), "English welcome missing"
+
+
+def test_forum_welcome_support_loaded(store):
+    text = store.forum_welcome.get("support")
+    assert text, "support forum welcome missing"
+    assert len(text) <= 2000, "forum welcome must fit a single Discord message"

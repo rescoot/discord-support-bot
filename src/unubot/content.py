@@ -76,6 +76,7 @@ class ContentStore:
     glossary: dict[str, Entry] = field(default_factory=dict)
     diagnose: dict[str, DiagnoseFlow] = field(default_factory=dict)
     welcome: dict[Locale, str] = field(default_factory=dict)
+    forum_welcome: dict[str, str] = field(default_factory=dict)
 
     def lookup_faq(self, query: str) -> Entry | None:
         return _lookup(self.faq, query)
@@ -150,12 +151,14 @@ def load_content(content_dir: Path) -> ContentStore:
     store.glossary = _load_entries(content_dir / "glossary")
     store.diagnose = _load_diagnose(content_dir / "diagnose")
     store.welcome = _load_welcome(content_dir / "welcome")
+    store.forum_welcome = _load_forum_welcome(content_dir / "forum_welcome")
     log.info(
-        "content loaded: faq=%d glossary=%d diagnose=%d welcome=%s",
+        "content loaded: faq=%d glossary=%d diagnose=%d welcome=%s forum_welcome=%s",
         len(store.faq),
         len(store.glossary),
         len(store.diagnose),
         sorted(store.welcome),
+        sorted(store.forum_welcome),
     )
     return store
 
@@ -236,6 +239,17 @@ def _load_welcome(directory: Path) -> dict[Locale, str]:
         path = directory / f"{locale}.md"
         if path.is_file():
             out[locale] = path.read_text(encoding="utf-8").strip()
+    return out
+
+
+def _load_forum_welcome(directory: Path) -> dict[str, str]:
+    out: dict[str, str] = {}
+    if not directory.is_dir():
+        return out
+    for path in sorted(directory.glob("*.md")):
+        text = path.read_text(encoding="utf-8").strip()
+        if text:
+            out[path.stem] = text
     return out
 
 
