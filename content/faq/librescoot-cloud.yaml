@@ -1,0 +1,87 @@
+id: librescoot-cloud
+aliases: [ls-cloud, sunshine, uplink, fernzugriff, remote, cloud-anbindung]
+title:
+  de: "Librescoot: Cloud-Anbindung (Sunshine, Uplink)"
+  en: "Librescoot: cloud connectivity (Sunshine, Uplink)"
+body:
+  de: |
+    Die unu-Cloud ist seit der Insolvenz weg. Librescoot funktioniert
+    standardmäßig komplett offline (`/faq librescoot-intro`).
+
+    Wenn dein Roller eine SIM-Karte hat und du Fernzugriff
+    (Status, Position, Fernsperre etc.) willst, gibt es zwei
+    Optionen aus dem Community-Umfeld:
+
+    **Sunshine** — von einer Person aus der Community entwickelt
+    und betrieben, kostenlos, Web-UI. Roller anmelden, läuft.
+    Funktioniert als Cloud-Ersatz für die alte unu-Cloud und kann
+    deutlich mehr als die je konnte.
+    <https://sunshine.rescoot.org>
+
+    **uplink-server** — wenn du das Cloud-Backend selbst hosten
+    möchtest. Open Source, Go, AGPL.
+    <https://github.com/librescoot/uplink-server>
+
+    **Was ohne Cloud-Anbindung geht:**
+    • Navigation (Offline-Karten, Offline-Routing)
+    • Bewegungsalarm (`/faq librescoot-alarm`)
+    • Eigene Keycards (`/faq librescoot-keycards`)
+    • Firmware-Updates per USB (`/faq librescoot-update-mode`)
+    • OTA-Updates per Mobilfunk — die laufen mit SIM-Karte direkt
+      über Librescoots eigene Infrastruktur und brauchen weder
+      Sunshine noch uplink-server.
+    • Dashboard, Tacho, alle Fahrzeugdaten
+
+    **Was eine Cloud-Anbindung dazu bringt:**
+    • Status/Position remote abrufen
+    • Aus der Ferne sperren/aufsperren oder Alarm scharfschalten
+    • Online-Karten und Remote-Routing über einen externen
+      Valhalla-Server
+
+    Mehr zur Offline-/Online-Frage:
+    <https://librescoot.org/de/docs/features/offline-or-online.html>.
+  en: |
+    The unu cloud is gone after the bankruptcy. Librescoot works
+    fully offline by default (`/faq librescoot-intro`).
+
+    If your scooter has a SIM and you want remote access (status,
+    location, remote lock etc.), two options from the community:
+
+    **Sunshine** — developed and run by one person from the
+    community, free, web UI. Sign the scooter in and you're done.
+    Acts as a cloud replacement for the old unu cloud, and does
+    significantly more than that ever did.
+    <https://sunshine.rescoot.org>
+
+    **uplink-server** — if you want to host the backend yourself.
+    Open source, Go, AGPL.
+    <https://github.com/librescoot/uplink-server>
+
+    **What works without a cloud backend:**
+    • Navigation (offline maps, offline routing)
+    • Motion alarm (`/faq librescoot-alarm`)
+    • Custom keycards (`/faq librescoot-keycards`)
+    • Firmware updates via USB (`/faq librescoot-update-mode`)
+    • OTA updates over cellular — with a SIM these run directly
+      against Librescoot's own infrastructure; they need neither
+      Sunshine nor uplink-server.
+    • Dashboard, speedo, all vehicle data
+
+    **What a cloud backend adds:**
+    • Remote status/location
+    • Remote lock/unlock or arming the alarm
+    • Online tile maps and remote routing via an external Valhalla
+      server
+
+    More on the offline/online tradeoff:
+    <https://librescoot.org/docs/features/offline-or-online.html>.
+links:
+  - url: https://sunshine.rescoot.org
+    label:
+      de: "Sunshine Cloud"
+      en: "Sunshine Cloud"
+  - url: https://github.com/librescoot/uplink-server
+    label:
+      de: "uplink-server (selbst hosten)"
+      en: "uplink-server (self-host)"
+tags: [librescoot, software, cloud]

@@ -1,11 +1,11 @@
 id: librescoot
 aliases: [libre-scoot, open-firmware, custom-firmware]
 title:
-  de: "LibreScoot — Open-Source-Firmware"
-  en: "LibreScoot — open-source firmware"
+  de: "Librescoot — Open-Source-Firmware"
+  en: "Librescoot — open-source firmware"
 body:
   de: |
-    **LibreScoot** ist eine offene, community-entwickelte Firmware für
+    **Librescoot** ist eine offene, community-entwickelte Firmware für
     den unu Scooter Pro. Eigene Selbstbeschreibung: *„Die Firmware, die
     dein Roller verdient hat."*
 
@@ -16,7 +16,7 @@ body:
 
     Wie installieren / aktueller Status: `/faq librescoot-intro`.
   en: |
-    **LibreScoot** is an open, community-developed firmware for the
+    **Librescoot** is an open, community-developed firmware for the
     unu Scooter Pro. Self-description: *"The firmware your scooter
     deserves."*
 

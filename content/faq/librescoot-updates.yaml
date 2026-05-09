@@ -1,0 +1,79 @@
+id: librescoot-updates
+aliases: [ls-updates, ota, ls-ota, ls-update, update-librescoot]
+title:
+  de: "Librescoot: wie Updates funktionieren"
+  en: "Librescoot: how updates work"
+body:
+  de: |
+    Zwei Wege, je nachdem, ob dein Roller eine SIM-Karte hat:
+
+    **Ohne SIM (Standard) — per USB / Updatemodus:**
+    1. <https://downloads.librescoot.org> öffnen, `.mender`-Dateien
+       für deinen Kanal laden (jeweils MDB und DBC).
+    2. Auf dem Roller: `Menü → Einstellungen → System → Updatemodus
+       starten` (oder `lsc usb ums`).
+    3. USB-Kabel zwischen Mini-B-Port am Roller und Laptop. Es
+       erscheint ein Wechsellaufwerk.
+    4. `.mender`-Dateien in den Ordner `system-update/` kopieren.
+    5. Laufwerk **auswerfen, dann USB-Kabel abziehen** — der Roller
+       übernimmt den Rest. Kurzanleitung:
+       `/faq librescoot-update-mode`.
+
+    **Mit SIM — automatisch over-the-air:**
+    Roller prüft etwa alle 6 h selbständig auf neue Versionen, lädt
+    sie und installiert sie. Du musst nichts tun. Sperren,
+    Aufsperren und Fahren funktionieren während Download und
+    Installation normal weiter — ein **DBC-Update** zeigt sich oben
+    rechts mit Symbol und Prozentwert; **MDB-Updates laufen still
+    im Hintergrund**. Eine Hibernation wartet, falls das MDB gerade
+    noch installiert; während des finalen MDB-Reboots (nach min.
+    3 min Standby) ist der Roller für ~30 s nicht bedienbar.
+    DBC-Updates werden beim nächsten kompletten Power-Cycle aktiv.
+
+    Welche Reihe (stable/testing/nightly): siehe
+    `/faq librescoot-update-channels`.
+
+    OTA-Update fehlgeschlagen? Alte Version bleibt aktiv, beim
+    nächsten Check wird's erneut versucht. Im Notfall manuell per
+    Updatemodus drüberbügeln.
+  en: |
+    Two routes, depending on whether your scooter has a SIM card:
+
+    **No SIM (default) — via USB / Update Mode:**
+    1. Open <https://downloads.librescoot.org>, grab the `.mender`
+       files for your channel (one each for MDB and DBC).
+    2. On the scooter: `Menu → Settings → System → Start update mode`
+       (or `lsc usb ums`).
+    3. USB cable between the scooter's Mini-B port and your laptop.
+       A removable drive appears.
+    4. Copy the `.mender` files into the `system-update/` folder.
+    5. **Eject the drive, then unplug the USB cable** — the scooter
+       takes over from there. Short guide:
+       `/faq librescoot-update-mode`.
+
+    **With SIM — automatic OTA:**
+    Scooter checks roughly every 6 h, downloads and installs by
+    itself. You don't have to do anything. Locking, unlocking and
+    riding all keep working during download and install — a **DBC
+    update** shows an icon plus percentage in the top right;
+    **MDB updates run silently in the background**. Hibernation will
+    wait if the MDB is still installing; during the final MDB reboot
+    (after min. 3 min standby) the scooter is unresponsive for
+    ~30 s. DBC updates activate on the next full power cycle.
+
+    Channel (stable/testing/nightly): see
+    `/faq librescoot-update-channels`.
+
+    OTA update failed? Old version stays active and the scooter
+    retries on the next check. Worst case, force-flash via update
+    mode.
+links:
+  - url: https://librescoot.org/de/handbook/updates.html
+    label:
+      de: "Handbuch: Updates"
+      en: "Handbook: updates"
+  - url: https://downloads.librescoot.org/
+    label:
+      de: "Downloads"
+      en: "Downloads"
+tags: [librescoot, software, updates]

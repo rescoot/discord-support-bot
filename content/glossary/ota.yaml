@@ -1,0 +1,46 @@
+id: ota
+aliases: [over-the-air, ota-update, mender]
+title:
+  de: "OTA — Over-the-Air-Updates"
+  en: "OTA — over-the-air updates"
+body:
+  de: |
+    **OTA** = Over-the-Air. Firmware-Updates, die der Roller
+    automatisch über das Mobilfunknetz holt — Voraussetzung ist
+    eine SIM-Karte im Modem.
+
+    Librescoot prüft etwa alle 6 h, lädt fällige Updates und
+    installiert sie. Du musst dich darum nicht kümmern. Sperren,
+    Aufsperren, Fahren funktionieren während Download und
+    Installation normal weiter. Ein **DBC-Update** zeigt sich oben
+    rechts mit einem Symbol und Prozentwert; **MDB-Updates laufen
+    still im Hintergrund**. Eine Hibernation wartet, falls das MDB
+    gerade noch installiert; und während des finalen MDB-Reboots
+    (nach min. 3 min Standby) ist der Roller für ~30 s nicht
+    bedienbar. Format: **Mender**, ein Open-Source-Update-Framework.
+
+    Ohne SIM-Karte werden Updates per **Updatemodus** über USB
+    eingespielt. Mehr zum Updates-Workflow:
+    `/faq librescoot-updates`.
+
+    Auf scooterOS sind OTA-Updates ohne aktive unu-Cloud nicht mehr
+    möglich (`/faq firmware`).
+  en: |
+    **OTA** = Over-the-Air. Firmware updates the scooter pulls
+    automatically over cellular — needs a SIM in the modem.
+
+    Librescoot checks roughly every 6 h, downloads due updates and
+    installs them. You don't have to think about it. Locking,
+    unlocking, riding all keep working during download and install.
+    A **DBC update** shows an icon plus percentage in the top right;
+    **MDB updates run silently in the background**. Hibernation will
+    wait if the MDB is still installing; and during the final MDB
+    reboot (after min. 3 min standby) the scooter is unresponsive
+    for ~30 s. Format: **Mender**, an open-source update framework.
+
+    Without a SIM, updates go through **Update Mode** over USB.
+    More on the updates workflow: `/faq librescoot-updates`.
+
+    On scooterOS, OTA updates no longer work without the active unu
+    cloud (`/faq firmware`).
+tags: [librescoot, software, updates]

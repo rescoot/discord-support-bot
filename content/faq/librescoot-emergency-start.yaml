@@ -1,0 +1,66 @@
+id: librescoot-emergency-start
+aliases: [ls-emergency, notstart, emergency, display-tot, dashboard-defekt, three-button]
+title:
+  de: "Librescoot: Notstart bei kaputtem Display"
+  en: "Librescoot: emergency start with a broken display"
+body:
+  de: |
+    Librescoot hat einen Notstart über eine Drei-Tasten-Kombo, falls
+    das Display tot oder unzuverlässig ist:
+
+    1. Seitenständer **eingeklappt**.
+    2. **Beide Bremsen** drücken und halten.
+    3. Gleichzeitig den **Sitzbank-Knopf** am Lenker drücken.
+
+    Der Roller geht in den Fahrmodus, ohne dass das Display reagieren
+    muss. Du kannst losfahren — auf eigene Gefahr und nur, um den
+    Roller von der Stelle zu bringen, nicht als Dauerlösung.
+
+    Stock-Firmware kann das nicht — dort hängt der Fahrmodus an einem
+    funktionierenden DBC.
+
+    **Wenn das Display dauerhaft schwarz bleibt:**
+    • Hardware-Reset: Roller in den Tiefschlaf bringen
+      (`/glossar hibernate`) und mit der Bremshebel-Geste wecken.
+    • `lsc diag dashboard status` zeigt den DBC-Zustand;
+      `lsc diag dashboard on-wait` schaltet ihn an und wartet auf
+      Bereitschaft.
+    • Mechanische Defekte (gelöste Linse, Kondenswasser) siehe
+      `/faq display-repair` — der Notstart hilft beim Weiterkommen,
+      nicht beim Reparieren.
+
+    **Wenn das Display angeht, der Roller aber nicht „ready" wird
+    oder das Display „keine Verbindung" anzeigt:** das ist das
+    klassische USB-Symptom. Librescoot prüft die Verbindung explizit
+    und meldet sie. Mini-USB-Kabel im Fußraum gegen ein vernünftiges
+    austauschen.
+  en: |
+    Librescoot has an emergency-start three-button combo if the
+    display is dead or flaky:
+
+    1. Side stand **folded in**.
+    2. **Both brakes** pressed and held.
+    3. At the same time, press the **seat button** on the bar.
+
+    The scooter enters drive mode without needing the display to
+    cooperate. You can ride — at your own risk and only to move the
+    scooter, not as a permanent setup.
+
+    Stock firmware can't do this — there, drive mode depends on a
+    functioning DBC.
+
+    **If the display stays dark:**
+    • Hardware reset: hibernate the scooter
+      (`/glossary hibernate`) and wake with the brake-lever gesture.
+    • `lsc diag dashboard status` shows DBC state;
+      `lsc diag dashboard on-wait` powers it on and waits for ready.
+    • Mechanical issues (loose lens, condensation) see
+      `/faq display-repair` — the emergency start gets you home, it
+      doesn't fix anything.
+
+    **If the display does come on but the scooter doesn't become
+    "ready", or the display shows "no connection":** that's the
+    classic USB symptom. Librescoot explicitly checks the connection
+    and reports it. Swap the Mini-USB cable in the footwell for a
+    good one.
+tags: [librescoot, hardware, troubleshooting]

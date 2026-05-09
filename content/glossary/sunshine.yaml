@@ -1,0 +1,49 @@
+id: sunshine
+aliases: [sunshine-cloud, rescoot-cloud, community-cloud]
+title:
+  de: "Sunshine — Community-Cloud"
+  en: "Sunshine — community cloud"
+body:
+  de: |
+    **Sunshine** ist eine Cloud-Anbindung für unu Pros, entwickelt
+    und betrieben von einer Person aus der Community. Web-UI auf
+    <https://sunshine.rescoot.org>, kostenlos. Ersetzt die alte
+    unu-Cloud und kann deutlich mehr als die je konnte: Status und
+    Position abrufen, Fernsperre, VIN-Decoder, und einiges mehr.
+    Roller braucht eine SIM-Karte.
+
+    Sunshine und Librescoot sind getrennte Projekte (Personalüber-
+    schneidung und gemeinsames Ethos, sonst unabhängig). OTA-Updates
+    laufen über Librescoots eigene Infrastruktur, nicht über
+    Sunshine.
+
+    Eine ältere Sunshine-Version ist öffentlich; der aktuelle Code
+    ist nicht offen, damit der neue Markeninhaber von „unu" nicht
+    einfach die Cloud abgreifen kann.
+
+    Selbst hosten als Alternative: `uplink-server`. Mehr:
+    `/faq librescoot-cloud`.
+  en: |
+    **Sunshine** is a cloud backend for unu Pros, developed and run
+    by a single person from the community. Web UI at
+    <https://sunshine.rescoot.org>, free. Replaces the old unu cloud
+    and does significantly more than that ever did: remote status
+    and location, remote lock, VIN decoder, and more. The scooter
+    needs a SIM.
+
+    Sunshine and Librescoot are separate projects (personnel overlap
+    and shared ethos, otherwise independent). OTA updates run on
+    Librescoot's own infrastructure, not through Sunshine.
+
+    An older version of Sunshine is public; the current code isn't
+    open, so the new owner of the "unu" brand can't just grab the
+    cloud.
+
+    Self-hosting alternative: `uplink-server`. More:
+    `/faq librescoot-cloud`.
+links:
+  - url: https://sunshine.rescoot.org
+    label:
+      de: "Sunshine Cloud"
+      en: "Sunshine Cloud"
+tags: [librescoot, software, cloud]

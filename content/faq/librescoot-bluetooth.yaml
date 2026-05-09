@@ -1,0 +1,63 @@
+id: librescoot-bluetooth
+aliases: [ls-bt, ls-bluetooth, kopplung, pairing, unustasis, app-pairing]
+title:
+  de: "Librescoot: Bluetooth-Kopplung mit der App"
+  en: "Librescoot: Bluetooth pairing with the app"
+body:
+  de: |
+    Der Roller ist sichtbar (discoverable), wenn er entsperrt ist.
+    Es kann immer nur **ein Gerät gleichzeitig** verbunden sein.
+
+    **Während der Installation:**
+    1. Im Installer auf den Schritt **„Entsperren und Kopplung
+       starten"** klicken — nicht überspringen.
+    2. Roller in den Bluetooth-Einstellungen deines Handys oder
+       in der App (z.B. Unustasis) auswählen.
+    3. Die **PIN** zeigt dir der Installer an, sobald dein Handy
+       versucht zu verbinden.
+
+    Diesen Schritt zu überspringen führt regelmäßig dazu, dass Leute
+    sich aus ihrem Roller aussperren — vor allem, wenn dann beim
+    Karten-Anlernen auch was schiefgeht.
+
+    **Wenn du den BT-Schlüssel im Handy gelöscht hast:**
+    Komplett neu koppeln — Installer nochmal laufen lassen und in der
+    App den Roller neu hinzufügen.
+
+    **Roller verbindet sich kurz und trennt sich wieder:**
+    Bekannter Bug mit alten nRF-Firmwares (Metro-/Emco-Roller) in
+    sehr frühen Librescoot-Versionen. Ist im **aktuellen stable**
+    behoben — auf den neuesten stable updaten
+    (`/faq librescoot-updates`).
+
+    **Apps:** **Unustasis** (TestFlight für iOS) und die offizielle
+    „unu by Emco"-App funktionieren mit Librescoot. Eine
+    Librescoot-eigene App ist in Entwicklung.
+  en: |
+    The scooter is discoverable when unlocked. Only **one device at a
+    time** can be connected.
+
+    **During install:**
+    1. In the installer click the step **"Unlock and start pairing"**
+       — don't skip it.
+    2. Pick the scooter in your phone's Bluetooth settings or in the
+       app (e.g. Unustasis).
+    3. The **PIN** is shown in the installer once your phone tries
+       to connect.
+
+    Skipping this step regularly leads people to lock themselves
+    out — especially if card enrollment also goes sideways.
+
+    **If you deleted the BT key on your phone:**
+    Full re-pair: re-run the installer and re-add the scooter in the
+    app.
+
+    **Scooter connects briefly then drops:**
+    Known bug with old nRF firmwares (Metro/Emco scooters) on very
+    early Librescoot versions. Fixed in **current stable** — update
+    to the latest stable (`/faq librescoot-updates`).
+
+    **Apps:** **Unustasis** (TestFlight on iOS) and the official
+    "unu by Emco" app work with Librescoot. A Librescoot-native app
+    is in the works.
+tags: [librescoot, software, bluetooth, app]

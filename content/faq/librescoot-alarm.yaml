@@ -1,0 +1,85 @@
+id: librescoot-alarm
+aliases: [ls-alarm, alarmanlage, bewegungsalarm, motion-alarm]
+title:
+  de: "Librescoot: Bewegungsalarm"
+  en: "Librescoot: motion alarm"
+body:
+  de: |
+    Librescoot bringt eine eingebaute Alarmanlage mit. Sie nutzt den
+    BMX055-Beschleunigungssensor im MDB; externe Hardware oder ein
+    Abo brauchst du nicht. Ist out of the box aktiv.
+
+    **Stufen:**
+    • Stufe 1 (leichte Bewegung): Warnblinker als Vorwarnung.
+    • Stufe 2 (anhaltende Bewegung): Warnblinker, plus Hupe falls
+      `alarm.honk` aktiviert ist (Standard: aus).
+
+    Wird **scharfgeschaltet**, sobald der Roller in den Stand-by geht
+    — mit ~5 s Verzögerung, in der du dich noch entscheiden kannst.
+    Wird **entschärft**, sobald der Roller wieder entsperrt wird
+    (egal wie: Keycard, App, `lsc unlock`).
+
+    **Steuern per `lsc`:**
+    ```
+    lsc alarm arm                 # jetzt scharfschalten
+    lsc alarm disarm              # entschärfen
+    lsc alarm status              # Zustand anzeigen
+    lsc alarm trigger [Sekunden]  # manuell auslösen
+    ```
+
+    **Konfigurieren** (Defaults in Klammern):
+    ```
+    lsc set alarm.enabled true             # Auto-Schärfen (default: an)
+    lsc set alarm.duration 60              # Stufe-2-Dauer in s (default: 60)
+    lsc set alarm.honk true                # Hupe in Stufe 2 (default: aus)
+    lsc set alarm.seatbox-trigger true     # bei unautorisiertem Helmfach (default: an)
+    lsc set alarm.hairtrigger true         # kurzer Warnton schon in Stufe 1 (default: aus)
+    lsc set alarm.hairtrigger-duration 3   # Dauer dieser Vorwarnung in s (default: 3)
+    ```
+
+    Mehrere Werte gehen in einem Befehl:
+    `lsc set alarm.enabled true alarm.honk false`.
+
+    Mehr zu `lsc`: `/faq librescoot-lsc`.
+  en: |
+    Librescoot ships with a built-in motion alarm. It uses the MDB's
+    BMX055 accelerometer; no external hardware, no subscription.
+    Active out of the box.
+
+    **Stages:**
+    • Stage 1 (light motion): hazard lights as a warning.
+    • Stage 2 (sustained motion): hazards, plus horn if
+      `alarm.honk` is enabled (default: off).
+
+    **Arms** when the scooter enters stand-by — with a ~5 s delay
+    so you can change your mind. **Disarms** as soon as the scooter
+    is unlocked again (any way: keycard, app, `lsc unlock`).
+
+    **Control via `lsc`:**
+    ```
+    lsc alarm arm                 # arm now
+    lsc alarm disarm              # disarm
+    lsc alarm status              # show state
+    lsc alarm trigger [seconds]   # fire manually
+    ```
+
+    **Configure** (defaults in parentheses):
+    ```
+    lsc set alarm.enabled true             # auto-arm on lock (default: on)
+    lsc set alarm.duration 60              # stage-2 duration in s (default: 60)
+    lsc set alarm.honk true                # horn in stage 2 (default: off)
+    lsc set alarm.seatbox-trigger true     # on unauthorized seatbox (default: on)
+    lsc set alarm.hairtrigger true         # short warning sound during stage 1 (default: off)
+    lsc set alarm.hairtrigger-duration 3   # length of that warning in s (default: 3)
+    ```
+
+    Multiple settings in one go:
+    `lsc set alarm.enabled true alarm.honk false`.
+
+    More on `lsc`: `/faq librescoot-lsc`.
+links:
+  - url: https://librescoot.org/de/docs/features/scooter-alarm.html
+    label:
+      de: "Roller-Alarmanlage"
+      en: "Scooter alarm"
+tags: [librescoot, software, security]

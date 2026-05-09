@@ -1,0 +1,91 @@
+id: librescoot-keycards
+aliases: [ls-keycards, neue-karte, karte-anlernen, master-keycard, nfc-card]
+title:
+  de: "Librescoot: Keycards anlernen und verwalten"
+  en: "Librescoot: enrolling and managing keycards"
+body:
+  de: |
+    Originalfirmware: Karten waren fix mit dem Roller verheiratet,
+    nichts dran zu drehen. Librescoot gibt dir die Liste zurück.
+
+    **Erstkarte (frische Installation):**
+    Beim ersten Boot ohne registrierte Karten startet der
+    Keycard-Service im Auto-Learn-Modus. Die **erste Karte, die du
+    auflegst, wird Master-Keycard**. Die alte Starterkit-Karte tut's
+    auch — Librescoot liest dieselben NFC-UIDs wie die
+    Originalfirmware.
+
+    **Im Installer (während Erstinstallation):**
+    1. Auf **„Start"** klicken → die Status-LED am Tacho leuchtet
+       **gelb** (Anlernmodus).
+    2. Karten **nacheinander** dranhalten — pro angelernte Karte
+       leuchtet die LED kurz **grün**, dann zurück auf gelb. Der
+       Installer zählt mit.
+    3. Auf **„Fertig"** klicken, wenn alle Karten durch sind.
+
+    Wenn die LED nach dem Dranhalten **rot blinkt**, ist die Karte
+    abgelehnt worden (z.B. weil sie schon registriert ist).
+    Reagiert die LED gar nicht: nochmal versuchen, ruhig ~1 s halten.
+
+    **Weitere Karten anlernen — später, am Roller:**
+    1. Master-Keycard auflegen, kurz halten → Teach-In-Modus.
+    2. Neue Karte auflegen → wird angelernt.
+
+    **Per `lsc`:**
+    ```
+    lsc keycard list                    # alle Karten zeigen
+    lsc keycard add <uid>
+    lsc keycard remove <uid>
+    lsc keycard add-master <uid>...     # Master-Karte
+    lsc keycard remove-master <uid>...
+    lsc keycard export cards.json       # Backup
+    lsc keycard import cards.json
+    ```
+
+    Beliebige NFC-Karten oder -Sticker mit UID funktionieren als
+    Keycard. Keine Obergrenze.
+  en: |
+    Stock firmware: cards were welded to the scooter, nothing you
+    could change. Librescoot hands the list back to you.
+
+    **First card (fresh install):**
+    On the first boot with no registered cards, the keycard service
+    starts in auto-learn mode. **The first card you tap becomes the
+    master keycard.** Your old starter-kit card works fine —
+    Librescoot reads the same NFC UIDs the stock firmware did.
+
+    **In the installer (during first-time install):**
+    1. Click **"Start"** → the status LED on the cluster goes
+       **amber** (learn mode).
+    2. Tap your cards **one by one** — each enrolled card briefly
+       lights the LED **green**, then back to amber. The installer
+       counts.
+    3. Click **"Done"** when all cards are in.
+
+    If the LED **flashes red** after a tap, the card was rejected
+    (e.g. already registered). If the LED doesn't react at all,
+    try again, holding steady for ~1 s.
+
+    **Enrolling more cards — later, at the scooter:**
+    1. Tap the master card, hold briefly → teach-in mode.
+    2. Tap a new card → it gets enrolled.
+
+    **Via `lsc`:**
+    ```
+    lsc keycard list                    # show all cards
+    lsc keycard add <uid>
+    lsc keycard remove <uid>
+    lsc keycard add-master <uid>...     # master card
+    lsc keycard remove-master <uid>...
+    lsc keycard export cards.json       # backup
+    lsc keycard import cards.json
+    ```
+
+    Any NFC card or sticker with a UID works as a keycard. No upper
+    limit.
+links:
+  - url: https://librescoot.org/de/docs/features/keycards.html
+    label:
+      de: "Eigene Keycards"
+      en: "Custom keycards"
+tags: [librescoot, software, keycard]

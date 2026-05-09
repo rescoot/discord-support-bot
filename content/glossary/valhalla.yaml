@@ -1,0 +1,41 @@
+id: valhalla
+aliases: [routing-engine, valhalla-tiles]
+title:
+  de: "Valhalla — Routing-Engine in Librescoot"
+  en: "Valhalla — routing engine in Librescoot"
+body:
+  de: |
+    **Valhalla** ist die Open-Source-Routing-Engine, die Librescoot
+    für Turn-by-Turn-Navigation nutzt. Läuft direkt auf dem DBC, die
+    Routing-Daten kommen als `.tar`-Archiv (z.B.
+    `valhalla_tiles.tar`) — **nicht entpacken**, Valhalla liest das
+    Tar direkt.
+
+    Vorgefertigte Pakete für alle 16 deutschen Bundesländer:
+    <https://github.com/librescoot/valhalla-tiles/releases>.
+    Größenordnung: 20 MB (Bremen) bis ~910 MB (Bayern).
+
+    Alternativ Online-Modus mit Remote-Valhalla-Server
+    (`dashboard.valhalla-url`).
+
+    Mehr: `/faq librescoot-navigation`.
+  en: |
+    **Valhalla** is the open-source routing engine Librescoot uses
+    for turn-by-turn navigation. Runs on the DBC; routing data is a
+    `.tar` archive (e.g. `valhalla_tiles.tar`) — **don't unpack**,
+    Valhalla reads the tar directly.
+
+    Pre-built packages for all 16 German states:
+    <https://github.com/librescoot/valhalla-tiles/releases>.
+    Size range: 20 MB (Bremen) to ~910 MB (Bavaria).
+
+    Online alternative: a remote Valhalla server
+    (`dashboard.valhalla-url`).
+
+    More: `/faq librescoot-navigation`.
+links:
+  - url: https://valhalla.github.io/valhalla/
+    label:
+      de: "Valhalla-Projekt"
+      en: "Valhalla project"
+tags: [librescoot, software, navigation]

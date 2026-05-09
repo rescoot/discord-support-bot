@@ -1,0 +1,76 @@
+id: librescoot-lsc
+aliases: [lsc, lsc-cli, ls-cli, command-line]
+title:
+  de: "Librescoot: das `lsc`-CLI"
+  en: "Librescoot: the `lsc` CLI"
+body:
+  de: |
+    `lsc` ist das lokale Kommandozeilen-Tool auf dem Roller —
+    auf MDB und DBC verfügbar. Spricht mit den Librescoot-Services
+    über Redis.
+
+    **Häufige Befehle:**
+    ```
+    lsc status                  # Dashboard: Zustand, Akkus, GPS, Modem
+    lsc battery                 # Akku-Detail
+    lsc faults                  # aktive Fehler
+    lsc version                 # MDB/DBC/ECU/nRF
+    lsc lock / unlock / open    # Sperren/Entsperren/Helmfach
+    lsc ota status / check      # OTA-Status, sofortige Prüfung
+    lsc usb ums / normal        # Updatemodus an/aus
+    lsc settings list           # alle Einstellungen
+    lsc set <key> <wert>        # Einstellung setzen
+    lsc keycard list / add / remove
+    lsc alarm arm / disarm / status
+    lsc logs                    # Service-Logs als Bundle
+    lsc service list / status / restart <name>
+    ```
+
+    **Mehrere Werte gleichzeitig:**
+    `lsc set alarm.enabled true alarm.honk false`
+
+    **Globale Flags:**
+    • `--json` — JSON-Ausgabe für Skripte
+    • `-v` — verbose
+
+    **Komplette Referenz:** <https://librescoot.org/de/docs/lsc.html>
+  en: |
+    `lsc` is the local command-line tool on the scooter — available
+    on both MDB and DBC. Talks to the Librescoot services over
+    Redis.
+
+    **Common commands:**
+    ```
+    lsc status                  # dashboard: state, batteries, GPS, modem
+    lsc battery                 # battery detail
+    lsc faults                  # active faults
+    lsc version                 # MDB/DBC/ECU/nRF
+    lsc lock / unlock / open    # lock/unlock/seatbox
+    lsc ota status / check      # OTA status, immediate check
+    lsc usb ums / normal        # update mode on/off
+    lsc settings list           # all settings
+    lsc set <key> <value>       # set setting
+    lsc keycard list / add / remove
+    lsc alarm arm / disarm / status
+    lsc logs                    # service logs as a bundle
+    lsc service list / status / restart <name>
+    ```
+
+    **Multiple settings in one go:**
+    `lsc set alarm.enabled true alarm.honk false`
+
+    **Global flags:**
+    • `--json` — JSON output for scripts
+    • `-v` — verbose
+
+    **Full reference:** <https://librescoot.org/docs/lsc.html>
+links:
+  - url: https://librescoot.org/de/docs/lsc.html
+    label:
+      de: "lsc-Komplettreferenz"
+      en: "lsc full reference"
+  - url: https://github.com/librescoot/lsc
+    label:
+      de: "Quellcode (GitHub)"
+      en: "Source code (GitHub)"
+tags: [librescoot, software, cli]

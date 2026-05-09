@@ -1,0 +1,154 @@
+id: librescoot-update-mode
+aliases: [ums, ls-ums, updatemodus, update-mode, mass-storage, usb-update]
+title:
+  de: "Librescoot: Updatemodus per USB"
+  en: "Librescoot: Update Mode over USB"
+body:
+  de: |
+    Im Updatemodus stellt der Roller eine 1-GB-Partition als
+    USB-Wechseldatenträger bereit. Du legst Dateien in die passenden
+    Ordner, wirfst das Laufwerk aus, ziehst das USB-Kabel ab — der
+    Roller verarbeitet die Dateien dann automatisch.
+
+    **Aktivieren:**
+    • Am Dashboard: zwei kurze Züge an der linken Bremse → `Menü →
+      Einstellungen → System → Updatemodus starten`.
+    • Per CLI: `lsc usb ums` (zurück: `lsc usb normal`).
+
+    **Beenden ohne Veränderungen:** linken Bremshebel länger halten
+    — der Roller verlässt den Updatemodus sofort.
+
+    **Verzeichnisstruktur auf dem Laufwerk:**
+
+    Reinwerfen (Updates und Daten):
+    • `system-update/` — `.mender`-Firmware-Updates für MDB/DBC
+    • `maps/` — `.mbtiles`-Anzeigekacheln und Valhalla-Routing-Tars
+      (`valhalla_tiles_*.tar`)
+    • `rpms/` — RPM-Pakete (Power-User)
+    • `scripts/` — Scripts zur Ausführung (Power-User)
+
+    Bidirektional (Konfiguration in beide Richtungen):
+    • `settings.toml` — Roller-Einstellungen (Export/Import)
+    • `onboot.sh` — Boot-Skript
+    • `wireguard/` — WireGuard-Configs
+    • `radio-gaga/config.yaml`
+    • `uplink-service/config.yaml`
+
+    Readonly (vom Roller bereitgestellt):
+    • `log-bundles/` — Log-Archive für Bug-Reports
+    • `diagnostics/` — Diagnose-Informationen
+
+    **Ablauf:**
+    1. USB-Kabel an den Mini-B-Port des Rollers (im Fußraum).
+    2. Laufwerk erscheint am Rechner.
+    3. Dateien in den richtigen Ordner kopieren.
+    4. Laufwerk **sicher auswerfen** (damit alle Schreibvorgänge
+       fertig auf der Partition landen).
+    5. **USB-Kabel abziehen** — erst das Trennen des Kabels stößt
+       die Verarbeitung an.
+
+    Beide Schritte sind nötig: nur Auswerfen reicht nicht (die
+    Verarbeitung startet nicht), nur Abziehen ohne Auswerfen
+    riskiert verlorene oder unvollständige Dateien.
+
+    **1 GB ist ein hartes Limit.** Große Pakete (z.B. Bayern-Routing
+    ~910 MB) füllen es schon allein — Anzeige- und Routing-Kacheln
+    dann in zwei Sitzungen einspielen.
+
+    **MDB-Update wirkt nicht?** Häufiger Stolperstein bei manuellen
+    `.mender`-MDB-Updates: das MDB übernimmt die neue Version erst
+    nach **3 Minuten ununterbrochenem Stand-by**. Roller wirklich
+    abschließen, **keine Karte ranhalten und nicht aus der App
+    aufsperren** — beides weckt den Roller, der 3-Minuten-Timer
+    fängt von vorn an. Einfach stehen lassen. Die LED am Tacho
+    leuchtet kurz **grün**, sobald der MDB-Reboot durch ist.
+    Versionsbox prüft den neuen Stand
+    (`/faq librescoot-versionsbox`).
+
+    DBC-Updates wirken beim nächsten kompletten Power-Cycle.
+
+    **Sonstige Probleme:**
+    • Laufwerk erscheint nicht → ist der Roller wirklich im
+      Updatemodus? `lsc usb status` prüft das.
+    • Dateien werden nicht angewendet → wirklich erst auswerfen
+      und _dann_ Kabel abziehen?
+    • Nichts passiert nach Abziehen → `lsc power reboot` auf dem
+      Roller, oder USB neu verbinden und nochmal sauber abziehen.
+    • USB-Disconnect mitten im Vorgang → meist billiges Kabel/
+      Adapter, siehe `/faq librescoot-installer-troubles`.
+  en: |
+    In Update Mode the scooter exposes a 1 GB partition as a USB
+    removable drive. Drop files into the right folders, eject the
+    drive, unplug the USB cable — the scooter then processes the
+    files automatically.
+
+    **Activate:**
+    • At the dashboard: two short pulls on the left brake → `Menu →
+      Settings → System → Start update mode`.
+    • Via CLI: `lsc usb ums` (back: `lsc usb normal`).
+
+    **Bail out without changes:** hold the left brake — the scooter
+    exits Update Mode immediately.
+
+    **Directory structure on the drive:**
+
+    Drop files in (updates and data):
+    • `system-update/` — `.mender` firmware updates for MDB/DBC
+    • `maps/` — `.mbtiles` display tiles and Valhalla routing tars
+      (`valhalla_tiles_*.tar`)
+    • `rpms/` — RPM packages (power user)
+    • `scripts/` — scripts to execute (power user)
+
+    Bidirectional (config in and out):
+    • `settings.toml` — scooter settings (export/import)
+    • `onboot.sh` — boot script
+    • `wireguard/` — WireGuard configs
+    • `radio-gaga/config.yaml`
+    • `uplink-service/config.yaml`
+
+    Read-only (provided by the scooter):
+    • `log-bundles/` — log archives for bug reports
+    • `diagnostics/` — diagnostic information
+
+    **Steps:**
+    1. USB cable into the scooter's Mini-B port (in the footwell).
+    2. Drive shows up on your computer.
+    3. Copy files into the right folder.
+    4. **Safely eject** the drive (so all writes flush to the
+       partition).
+    5. **Unplug the USB cable** — only the cable disconnect
+       triggers processing.
+
+    Both steps matter: ejecting alone won't start processing,
+    unplugging without ejecting risks lost or partial files.
+
+    **The 1 GB cap is hard.** Large bundles (e.g. Bavaria routing
+    ~910 MB) fill it on their own — for display + routing, do it in
+    two sessions.
+
+    **MDB update doesn't take?** Common gotcha for manual `.mender`
+    MDB updates: the MDB only applies the new version after
+    **3 uninterrupted minutes in stand-by**. Lock the scooter
+    properly and **don't tap a keycard, don't unlock from the app**
+    — either wakes the scooter and the 3-minute timer restarts.
+    Just leave it alone. The LED on the cluster briefly goes
+    **green** once the MDB reboot has run. The Versionsbox confirms
+    the new build (`/faq librescoot-versionsbox`).
+
+    DBC updates apply on the next full power-cycle.
+
+    **Other issues:**
+    • Drive doesn't appear → is the scooter really in update mode?
+      `lsc usb status` confirms.
+    • Files not applied → did you eject _then_ unplug, in that
+      order?
+    • Nothing happens after unplug → `lsc power reboot` on the
+      scooter, or reconnect USB and unplug cleanly again.
+    • USB disconnect mid-copy → usually a cheap cable/adapter, see
+      `/faq librescoot-installer-troubles`.
+links:
+  - url: https://librescoot.org/de/docs/ums.html
+    label:
+      de: "Updatemodus-Anleitung"
+      en: "Update mode guide"
+tags: [librescoot, software, updates]

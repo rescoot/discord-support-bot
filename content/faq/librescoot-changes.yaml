@@ -1,0 +1,84 @@
+id: librescoot-changes
+aliases: [ls-vs-stock, scooteros-vs, was-ist-anders, changes, vergleich]
+title:
+  de: "Librescoot vs. Original-Firmware: was ist anders?"
+  en: "Librescoot vs. stock firmware: what changes?"
+body:
+  de: |
+    **Was wegfällt:**
+    • **unu-Cloud** ist abgeschaltet, gab's mit unu GmbH. Librescoot
+      läuft komplett offline; Cloud-Optionen siehe
+      `/faq librescoot-cloud`.
+    • Die **Original-unu-App** ist tot (Backend weg). Es gibt eine
+      Community-App, die auch Basis der „unu by Emco"-App ist.
+
+    **Was dazukommt:**
+    • **Karten + Turn-by-Turn-Navigation** auf dem Display
+      (`/faq librescoot-navigation`)
+    • **Bewegungsalarm** (`/faq librescoot-alarm`)
+    • **Smartes Lenkschloss** mit 60-Sekunden-Fenster für die
+      Endposition
+    • **Doppelakku-Betrieb** (Hardware-Umbau, dann Software-Schalter,
+      `/faq librescoot-dual-battery`)
+    • **Updates per USB-Updatemodus** ohne SIM
+      (`/faq librescoot-update-mode`)
+    • **Notstart per Drei-Tasten-Kombo** bei totem Display
+      (`/faq librescoot-emergency-start`)
+    • **Eigene Keycards anlernen** (`/faq librescoot-keycards`)
+    • **Hop-on / Hop-off** — kurzzeitig sperren ohne Karte/Handy
+    • Funktionierende **Uhr** (GPS-gestützt), Light- und Dark-Mode mit
+      Lichtsensor, Anzeige der Motorleistung in kW oder Ampere,
+      Außentemperatur mit Frostwarnung, Tageskilometerzähler,
+      Fahrdauer, Durchschnittsgeschwindigkeit, Reichweiten-Anzeige
+      alternativ zur Prozent-Anzeige, einstellbare Statusleiste,
+      Warnblinker übers Menü, deutsche Übersetzung.
+    • Konfigurierbare **Auto-Standby-** und **Hibernate-Zeit**.
+
+    **Was unverändert bleibt:**
+    Hardware-Schutz, BMS-Limits, Temperatur-Abschaltungen, Akku-
+    Fehlercodes (B-Reihe) und Motor-Fehlercodes (E-Reihe). Die
+    Codes sind dieselben wie unter scooterOS.
+
+    Vollständige Liste:
+    <https://librescoot.org/de/handbook/aenderungen.html>.
+  en: |
+    **What's gone:**
+    • **unu cloud** is off, died with unu GmbH. Librescoot runs
+      fully offline; cloud options see `/faq librescoot-cloud`.
+    • The **original unu app** is dead (backend gone). A community
+      app exists, also the basis of the "unu by Emco" app.
+
+    **What's new:**
+    • **Maps + turn-by-turn navigation** on the display
+      (`/faq librescoot-navigation`)
+    • **Motion alarm** (`/faq librescoot-alarm`)
+    • **Smart steering lock** with a 60-second window for the
+      end position
+    • **Dual-battery operation** (hardware retrofit, then software
+      switch, `/faq librescoot-dual-battery`)
+    • **Updates via USB update mode**, no SIM needed
+      (`/faq librescoot-update-mode`)
+    • **Three-button emergency start** when the display is dead
+      (`/faq librescoot-emergency-start`)
+    • **Enroll your own keycards** (`/faq librescoot-keycards`)
+    • **Hop-on / hop-off** — short lock without keycard or phone
+    • Working **clock** (GPS-backed), light and dark mode via light
+      sensor, motor power displayed in kW or amps, outside temp with
+      frost warning, trip counters, average speed, range display as
+      an alternative to percentage, customizable status bar, hazards
+      via the menu, German translation.
+    • Configurable **auto-standby** and **hibernate** timers.
+
+    **What stays the same:**
+    Hardware protection, BMS limits, thermal cut-offs, battery
+    fault codes (B-series), motor fault codes (E-series). The codes
+    are the same as scooterOS.
+
+    Full list:
+    <https://librescoot.org/handbook/changes-from-scooteros.html>.
+links:
+  - url: https://librescoot.org/de/handbook/aenderungen.html
+    label:
+      de: "Änderungen gegenüber scooterOS"
+      en: "Changes from scooterOS"
+tags: [librescoot, software]

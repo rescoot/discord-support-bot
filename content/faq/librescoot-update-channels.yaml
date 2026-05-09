@@ -1,0 +1,64 @@
+id: librescoot-update-channels
+aliases: [ls-channels, stable, testing, nightly, release-channels, kanal, kanaele]
+title:
+  de: "Librescoot: Stable, Testing, Nightly"
+  en: "Librescoot: stable, testing, nightly"
+body:
+  de: |
+    Librescoot wird parallel auf drei Reihen veröffentlicht:
+
+    • **Stable** — die empfohlene Reihe für den Alltag, gründlich
+      getestet. Standard für jeden frisch geflashten Roller.
+    • **Testing** — Vorschau-Releases mit neuen Features, auf echter
+      Hardware getestet, gelegentliche Macken sind drin.
+    • **Nightly** — tägliche Schnappschüsse aus dem Entwicklungsstand.
+      Mit ernsthaften Problemen rechnen, im Notfall manuell zurück.
+
+    Welche Reihe gerade läuft, siehst du in der **Versionsbox**
+    (`/faq librescoot-versionsbox`).
+
+    Kanal wechseln per `lsc`-CLI auf dem Roller:
+    ```
+    lsc ota channel stable    # oder: testing, nightly
+    lsc ota check             # sofort prüfen
+    ```
+
+    MDB und DBC haben getrennte Kanäle, beide werden mit dem Befehl
+    auf einmal gesetzt. Granular per `lsc settings`:
+    `updates.mdb.channel` und `updates.dbc.channel`.
+
+    Mehr zu `lsc`: `/faq librescoot-lsc`.
+  en: |
+    Librescoot ships in parallel on three channels:
+
+    • **Stable** — the recommended channel for daily use, thoroughly
+      tested. Default for any freshly flashed scooter.
+    • **Testing** — preview releases with new features, tested on real
+      hardware, occasional rough edges.
+    • **Nightly** — daily snapshots of the current development tree.
+      Expect real problems and have a manual recovery in mind.
+
+    Which channel you're on shows up in the **Versionsbox**
+    (`/faq librescoot-versionsbox`).
+
+    Switch channels via the `lsc` CLI on the scooter:
+    ```
+    lsc ota channel stable    # or: testing, nightly
+    lsc ota check             # check immediately
+    ```
+
+    MDB and DBC have separate channels but the command sets both at
+    once. Granular control via `lsc settings`: `updates.mdb.channel`
+    and `updates.dbc.channel`.
+
+    More on `lsc`: `/faq librescoot-lsc`.
+links:
+  - url: https://librescoot.org/de/handbook/updates.html
+    label:
+      de: "Handbuch: Updates"
+      en: "Handbook: updates"
+  - url: https://downloads.librescoot.org/
+    label:
+      de: "Downloads (alle Kanäle)"
+      en: "Downloads (all channels)"
+tags: [librescoot, software, updates]

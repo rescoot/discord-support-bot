@@ -1,0 +1,66 @@
+id: librescoot-versionsbox
+aliases: [ls-version, versionsbox, version-check, ls-versions, mdb-version, dbc-version]
+title:
+  de: "Librescoot: Versionen am Roller ablesen"
+  en: "Librescoot: read installed versions on the scooter"
+body:
+  de: |
+    Im Parkmodus beide Bremshebel ca. **3 Sekunden** gleichzeitig
+    halten. Unten rechts auf dem Display erscheint die
+    **Versionsbox** — sie ist nach ca. 4 s wieder weg.
+
+    Was steht drin:
+    • **MDB** — Hauptcomputer im Sitzkasten
+    • **DBC** — Display-Computer hinter dem Lenker
+    • **nRF** — Bluetooth-Mikrocontroller
+    • **ECU** — Motorsteuerung
+    • Spannung und Ladestand der Stützakkus (AUX, CBB)
+    • Seriennummer (falls vorhanden)
+
+    Erscheint bei einem Eintrag ein Strich oder „unknown", war beim
+    Flashen vermutlich nicht jede Komponente erfolgreich.
+
+    **Per CLI:**
+    ```
+    lsc version    # = lsc diag version
+    ```
+
+    **Achtung — Stock-Firmware ist anders:** dort ist's
+    `5 Sekunden Bremsen halten`. Librescoot reagiert schon nach 3 s.
+    Wenn du beide Versionen kennst, einfach im Zweifel länger halten.
+
+    Welche Version sollte stand der Dinge sein? Steht im Changelog:
+    <https://librescoot.org/changelog.html>.
+  en: |
+    In park mode hold both brake levers together for about
+    **3 seconds**. The **Versionsbox** pops up bottom-right on the
+    display — it auto-dismisses after ~4 s.
+
+    What it shows:
+    • **MDB** — main computer in the seatbox
+    • **DBC** — display computer behind the bars
+    • **nRF** — Bluetooth microcontroller
+    • **ECU** — motor controller
+    • Voltage and SoC for the support batteries (AUX, CBB)
+    • Serial number (if present)
+
+    If any entry shows a dash or "unknown", a component probably
+    didn't flash successfully.
+
+    **Via CLI:**
+    ```
+    lsc version    # = lsc diag version
+    ```
+
+    **Heads up — stock firmware is different:** there it's
+    `hold brakes for 5 seconds`. Librescoot reacts at 3 s. If you
+    know both, just hold a bit longer if unsure.
+
+    What version should you be on? Changelog:
+    <https://librescoot.org/changelog.html>.
+links:
+  - url: https://librescoot.org/changelog.html
+    label:
+      de: "Librescoot Changelog"
+      en: "Librescoot changelog"
+tags: [librescoot, software, troubleshooting]

@@ -1,11 +1,11 @@
 id: librescoot-intro
 aliases: [open-firmware, custom-firmware, flashen, free-firmware, installer, ls]
 title:
-  de: "Was ist LibreScoot?"
-  en: "What is LibreScoot?"
+  de: "Was ist Librescoot?"
+  en: "What is Librescoot?"
 body:
   de: |
-    **LibreScoot** ist die offene, community-entwickelte Firmware für
+    **Librescoot** ist die offene, community-entwickelte Firmware für
     den unu Scooter Pro. Ersetzt die Werks-Firmware komplett (MDB +
     DBC), eigenes Display-UI, Updates over-the-air, kein Cloud-Zwang.
     **Stable**, aktiv weiterentwickelt.
@@ -21,7 +21,7 @@ body:
     reibungslosesten. Auf **Windows** flaggt SmartScreen die exe und
     je nach Treibern/Admin-Rechten kann's haken. Auf **Linux** gibt's
     je nach Distro auch Varianz (USB-Permissions, Driver-Auswahl).
-    Wenn's klemmt: im LibreScoot-Discord nachfragen,
+    Wenn's klemmt: im Librescoot-Discord nachfragen,
     <https://discord.gg/VrumFruSzJ>.
 
     Nach der Installation: das **Handbuch** auf
@@ -30,7 +30,7 @@ body:
 
     Kurzdefinition siehe `/glossar librescoot`.
   en: |
-    **LibreScoot** is the open, community-developed firmware for the
+    **Librescoot** is the open, community-developed firmware for the
     unu Scooter Pro. Full replacement for the stock firmware (MDB +
     DBC), own display UI, OTA updates, no cloud dependency. **Stable**
     and actively developed.
@@ -46,7 +46,7 @@ body:
     On **Windows** SmartScreen flags the exe and driver / admin-
     rights variance can cause hiccups. On **Linux** there's distro
     variance too (USB permissions, driver selection). If it gets
-    stuck: ask in the LibreScoot Discord,
+    stuck: ask in the Librescoot Discord,
     <https://discord.gg/VrumFruSzJ>.
 
     After install: the **handbook** at
@@ -69,6 +69,6 @@ links:
       en: "Source code (GitHub)"
   - url: https://discord.gg/VrumFruSzJ
     label:
-      de: "LibreScoot Discord"
-      en: "LibreScoot Discord"
+      de: "Librescoot Discord"
+      en: "Librescoot Discord"
 tags: [librescoot, software]

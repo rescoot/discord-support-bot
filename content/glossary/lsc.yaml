@@ -1,0 +1,26 @@
+id: lsc
+aliases: [lsc-cli, librescoot-cli, ls-cli]
+title:
+  de: "lsc — die Librescoot-CLI"
+  en: "lsc — the Librescoot CLI"
+body:
+  de: |
+    **`lsc`** ist das lokale Kommandozeilen-Tool auf dem Roller —
+    auf MDB und DBC verfügbar. Spricht mit den Librescoot-Services
+    über Redis und steuert sie an: Status, Akkus, Fehler,
+    Einstellungen, OTA, Keycards, Alarm, Logs.
+
+    Befehlsübersicht und volle Referenz: `/faq librescoot-lsc`.
+  en: |
+    **`lsc`** is the local command-line tool on the scooter —
+    available on both MDB and DBC. Talks to the Librescoot services
+    over Redis: status, batteries, faults, settings, OTA, keycards,
+    alarm, logs.
+
+    Command overview and full reference: `/faq librescoot-lsc`.
+links:
+  - url: https://librescoot.org/de/docs/lsc.html
+    label:
+      de: "lsc-Komplettreferenz"
+      en: "lsc full reference"
+tags: [librescoot, software, cli]

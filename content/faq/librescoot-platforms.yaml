@@ -1,0 +1,57 @@
+id: librescoot-platforms
+aliases: [intel-mac, mac-intel, m1, apple-silicon, ls-platforms, supported-os]
+title:
+  de: "Librescoot-Installer: unterstützte Plattformen"
+  en: "Librescoot installer: supported platforms"
+body:
+  de: |
+    Immer den **neuesten Installer** verwenden — Downloads:
+    <https://downloads.librescoot.org>.
+
+    **macOS (Apple Silicon):** ✅ Build ist signiert und notarisiert.
+
+    **macOS (Intel):** ⚠️ ungetestet — niemand im Team hat aktuell
+    Intel-Mac-Hardware zum Verifizieren. Sollte funktionieren; wenn
+    nicht, im Discord Bescheid geben.
+
+    **Windows (x64):** ✅ funktioniert. Build ist nicht signiert,
+    SmartScreen warnt beim Start — *Weitere Informationen* →
+    *Trotzdem ausführen*. Installer installiert automatisch einen
+    USB-Ethernet-Treiber und fragt nach Admin-Rechten.
+
+    **Linux (x64):** ✅ funktioniert. Ggf. `chmod +x` auf die
+    Binary; der Installer fragt per Polkit nach Root-Rechten für
+    den USB-Zugriff.
+
+    **USB-Kabel und -Adapter:** echtes Stolperthema. Billig-
+    USB-A→USB-Mini-B-Adapter, defekte Kabel, kaputte Hubs sind die
+    häufigste Ursache für „eMMC erscheint nicht als Laufwerk" oder
+    USB-Abbrüche während des Flashens. Direkter Anschluss ohne Hub,
+    gutes Mini-B-Kabel.
+
+    Mehr Hänger und Lösungen: `/faq librescoot-installer-troubles`.
+  en: |
+    Always use the **latest installer** — downloads:
+    <https://downloads.librescoot.org>.
+
+    **macOS (Apple Silicon):** ✅ build is signed and notarized.
+
+    **macOS (Intel):** ⚠️ untested — nobody on the team currently
+    has Intel Mac hardware to verify. Should work; if it doesn't,
+    let us know on Discord.
+
+    **Windows (x64):** ✅ works. Build is unsigned, SmartScreen
+    warns at launch — *More info* → *Run anyway*. The installer
+    auto-installs a USB-ethernet driver and asks for admin rights.
+
+    **Linux (x64):** ✅ works. May need `chmod +x` on the binary;
+    the installer asks for root via Polkit for USB access.
+
+    **USB cables and adapters:** real stumbling block. Cheap
+    USB-A→USB-Mini-B adapters, flaky cables, broken hubs are the
+    most common cause of "eMMC doesn't show up as a drive" or USB
+    disconnects mid-flash. Direct connection, no hub, good Mini-B
+    cable.
+
+    More gotchas and fixes: `/faq librescoot-installer-troubles`.
+tags: [librescoot, software, install]

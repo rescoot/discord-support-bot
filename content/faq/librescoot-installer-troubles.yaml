@@ -1,0 +1,78 @@
+id: librescoot-installer-troubles
+aliases: [ls-installer, smartscreen, installer-problem, install-stuck, treiber, driver]
+title:
+  de: "Librescoot-Installer: häufige Hänger"
+  en: "Librescoot installer: common hiccups"
+body:
+  de: |
+    Plattform-typische Stolpersteine beim Librescoot-Installer.
+    Plattform-Übersicht und -Status: `/faq librescoot-platforms`.
+
+    **Windows — SmartScreen-Warnung beim Start:**
+    Der Build ist nicht signiert. Im Dialog auf
+    *Weitere Informationen* klicken → *Trotzdem ausführen*. Der
+    Installer installiert dann automatisch einen USB-Ethernet-Treiber
+    und fragt nach Admin-Rechten.
+
+    **macOS — Apple Silicon:** Build ist signiert und notarisiert,
+    USB läuft direkt. Beim ersten Start fragt er nach deinem Passwort
+    (USB-Zugriff). **Intel Mac:** ungetestet, siehe
+    `/faq librescoot-platforms`.
+
+    **Linux:** ggf. `chmod +x` auf die Binary; der Installer fragt
+    per Polkit nach Root-Rechten für den USB-Zugriff.
+
+    **Allgemeine Hänger:**
+    • **„eMMC erscheint nicht als Laufwerk"** — meist USB-Kabel oder
+      USB-A→Mini-B-Adapter. Direkt am Rechner, kein Hub dazwischen,
+      gutes Mini-B-Kabel.
+    • **„USB disconnect mitten im Flashen"** — gleiche Ursache.
+      Installer neu starten, sauberes Kabel, sauberer Port.
+
+    Vorher gilt immer: **alle Akkus abklemmen** in der Reihenfolge
+    Hauptakkus → CB → AUX. Schritt-für-Schritt-Anleitung (inkl.
+    manueller Installation per Serial/U-Boot, falls der Installer
+    nicht in Frage kommt): <https://librescoot.org/de/docs/install.html>.
+
+    Wenn nichts hilft: ins Librescoot-Discord, mit Plattform, OS-
+    Version und genauer Stelle, an der's hakt.
+  en: |
+    Platform-typical stumbling blocks with the Librescoot installer.
+    Platform overview and status: `/faq librescoot-platforms`.
+
+    **Windows — SmartScreen warning at launch:**
+    The build isn't signed. In the dialog click *More info* → *Run
+    anyway*. The installer then auto-installs a USB-ethernet driver
+    and asks for admin rights.
+
+    **macOS — Apple Silicon:** signed and notarized, USB works
+    directly. First run asks for your password (USB access).
+    **Intel Mac:** untested, see `/faq librescoot-platforms`.
+
+    **Linux:** may need `chmod +x` on the binary; the installer asks
+    for root via Polkit for USB access.
+
+    **Common stalls:**
+    • **"eMMC doesn't show up as a drive"** — usually a bad cable
+      or a USB-A→Mini-B adapter. Direct to the machine, no hub,
+      good Mini-B cable.
+    • **"USB disconnect mid-flash"** — same root cause. Restart
+      the installer, clean cable, clean port.
+
+    Always disconnect **all batteries first** in this order:
+    main → CB → AUX. Step-by-step guide (including manual
+    Serial/U-Boot install, if the installer isn't an option):
+    <https://librescoot.org/docs/install.html>.
+
+    When stuck: hop into the Librescoot Discord with platform, OS
+    version and the exact step that fails.
+links:
+  - url: https://librescoot.org/de/docs/install.html
+    label:
+      de: "Installations-Anleitung"
+      en: "Install guide"
+  - url: https://downloads.librescoot.org/
+    label:
+      de: "Installer-Downloads"
+      en: "Installer downloads"
+tags: [librescoot, software, troubleshooting, install]

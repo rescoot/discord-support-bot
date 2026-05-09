@@ -1,0 +1,74 @@
+id: librescoot-dual-battery
+aliases: [ls-dual-battery, dualbatterie, zweitbatterie, second-battery, doppelakku]
+title:
+  de: "Librescoot: Doppelakku-Betrieb (Zweitbatterie)"
+  en: "Librescoot: dual battery operation"
+body:
+  de: |
+    Der unu Pro hat zwei Akkuschächte, ab Werk ist aber **nur der
+    vordere verkabelt**. Der hintere ist nur Stauraum für einen
+    Reserve-Akku.
+
+    Librescoot kann beide Schächte gleichzeitig betreiben (Reichweite
+    ungefähr verdoppelt, höhere Spitzenleistung) — dafür brauchst du
+    einen **Hardware-Umbau**: Stecker und Kabel zum hinteren Schacht
+    selber verlegen. Frag im Librescoot-Discord nach den aktuellen
+    Optionen.
+
+    **Software-Seite, nach dem Umbau:**
+    ```
+    lsc set scooter.dual-battery true
+    ```
+    Oder am Display: `Menü → Einstellungen → System → Batteriemodus`
+    → „Dualbatterie".
+
+    **Spannungsschutz:** der Roller prüft fortlaufend die
+    Spannungsdifferenz beider Akkus. Geht sie über den Grenzwert
+    (Standard 1 V), wird der hintere Schacht vorübergehend
+    abgeklemmt; sobald sich die Spannungen angleichen, kommt er
+    wieder dazu. Du musst also nicht akribisch gleich geladene Akkus
+    einlegen.
+
+    **Anzeige:** im Doppelakku-Betrieb skaliert die Energie-Anzeige
+    automatisch höher, damit der Balken nicht ständig am Anschlag
+    klebt.
+
+    Ohne Hardware-Umbau bleibt Librescoot im Single-Battery-Betrieb;
+    die Funktion einfach einzuschalten bringt nichts.
+  en: |
+    The unu Pro has two battery bays but **only the front one is
+    wired from the factory**. The rear is just storage for a spare.
+
+    Librescoot can run both bays in parallel (roughly doubles range
+    and lifts peak power) — but you need a **hardware retrofit** to
+    run wiring to the rear bay. Ask in the Librescoot Discord for
+    current options.
+
+    **Software side, after the retrofit:**
+    ```
+    lsc set scooter.dual-battery true
+    ```
+    Or at the display: `Menu → Settings → System → Battery mode` →
+    "Dual battery".
+
+    **Voltage safety:** the scooter continually checks the voltage
+    delta between both packs. If it exceeds the threshold (default
+    1 V), the rear bay is temporarily dropped; once the voltages
+    converge it comes back online. So you don't have to be precious
+    about matching SoC.
+
+    **Display:** in dual-battery mode the energy gauge scales up
+    automatically, so the bar isn't pinned at the limit all the time.
+
+    Without the hardware retrofit, Librescoot stays single-battery;
+    just flipping the setting won't do anything.
+links:
+  - url: https://librescoot.org/de/docs/features/dual-battery.html
+    label:
+      de: "Zweitbatterie"
+      en: "Dual battery"
+  - url: https://librescoot.org/de/handbook/akku.html
+    label:
+      de: "Handbuch: Akku & Energie"
+      en: "Handbook: battery & energy"
+tags: [librescoot, hardware, battery]

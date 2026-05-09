@@ -1,0 +1,68 @@
+id: librescoot-revert
+aliases: [ls-revert, zurueck, stock, scooteros, downgrade, original-firmware]
+title:
+  de: "Librescoot: zurück zur Original-Firmware"
+  en: "Librescoot: revert to stock firmware"
+body:
+  de: |
+    Stock-Firmware-Images sind nicht öffentlich verfügbar. Praktisch
+    heißt das:
+
+    • **Mit eigenem Backup deiner Stock-Boards:** das Backup ist
+      dein einziger Weg zurück — gut aufheben, am besten an
+      mehreren Orten.
+    • **Ohne Backup:** keinen direkten Weg zurück. In Ausnahmefällen
+      kann das Librescoot-Team aushelfen — im Discord nachfragen.
+
+    Wenn du Stock-Firmware **gewartet oder aktualisiert** haben
+    willst (statt zurück zu wechseln): die Werkstatt
+    <https://erollerberlin.com> hat noch die Tools aus
+    unu-GmbH-Zeiten und kann Stock-MDB/DBC tatsächlich updaten.
+
+    **Vor dem Flashen Backup machen.** Der Librescoot-Installer hält
+    vor dem Flashen kurz inne und gibt dir die Gelegenheit, die
+    aktuellen Boards zu sichern — nutz die, wenn du dir die
+    Rückkehroption offen halten willst. DBC-Backup ohne Ausbau ist
+    nicht zumutbar.
+
+    **Garantie?** Das Argument „mit Librescoot verliere ich
+    Garantie" wird im Channel regelmäßig diskutiert. EU-Recht
+    spricht laut Community-Konsens dagegen, dass eine reversible
+    Software-Modifikation Hardware-Ansprüche annulliert. Im Zweifel
+    Boards vor dem Flashen sichern und die Sicherung dokumentieren.
+
+    Vergleich Funktionen Stock ↔ Librescoot:
+    `/faq librescoot-changes`.
+  en: |
+    Stock firmware images aren't publicly available. In practice:
+
+    • **With your own backup of the stock boards:** the backup is
+      your only way back — keep it, ideally in more than one place.
+    • **Without a backup:** no direct way back. In exceptional cases
+      the Librescoot team can help — ask in Discord.
+
+    If you want stock firmware **serviced or updated** (rather than
+    reverted): the <https://erollerberlin.com> workshop still has
+    the original unu-era tools and can actually update stock
+    MDB/DBC firmware.
+
+    **Back up before flashing.** The Librescoot installer pauses
+    before flashing and gives you the opportunity to back up the
+    current boards — take it if you want to keep the option open of
+    going back. DBC backup without removing the board isn't really
+    feasible.
+
+    **Warranty?** "I'll lose warranty with Librescoot" comes up in
+    the channel often. Per community read of EU law, a reversible
+    software modification doesn't void hardware warranty claims. If
+    in doubt, back up the boards before flashing and document the
+    backup.
+
+    Stock ↔ Librescoot feature comparison:
+    `/faq librescoot-changes`.
+links:
+  - url: https://librescoot.org/de/docs/install.html
+    label:
+      de: "Installations- und Manual-Flash-Guide"
+      en: "Install / manual flash guide"
+tags: [librescoot, software, firmware]

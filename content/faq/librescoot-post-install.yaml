@@ -1,0 +1,109 @@
+id: librescoot-post-install
+aliases: [post-install, nach-installation, ls-checkliste, post-flash, check-after-flash]
+title:
+  de: "Librescoot: Checkliste nach der Installation"
+  en: "Librescoot: post-install checklist"
+body:
+  de: |
+    Wenn der Installer durchgelaufen ist, geh diese Punkte einmal
+    durch — die meisten Probleme nach dem Flashen drehen sich um
+    übersprungene Schritte.
+
+    **1. Bluetooth-Kopplung — nicht überspringen.**
+    Im Installer **„Entsperren und Kopplung starten"** wirklich
+    klicken. Erst dann ist der Roller im BT deines Handys sichtbar.
+    Details: `/faq librescoot-bluetooth`.
+
+    **2. Mindestens eine Keycard anlernen.**
+    Im Installer „Start" → Karten nacheinander dranhalten →
+    „Fertig". LED am DBC: orange = Anlernmodus, kurz grün =
+    erfolgreich erkannt. Ohne registrierte Karte sperrst du dich
+    leicht aus. Mehr: `/faq librescoot-keycards`.
+
+    **3. Kompletten Power-Cycle machen.**
+    Bekannter Bug nach Erstinstallation: **Hibernate via App geht
+    erst nach einem vollständigen Stromlos-Zyklus.** Sollte
+    inzwischen behoben sein, aber sicherheitshalber: Hauptakku
+    raus, **CBB** und **AUX** abklemmen, eine Minute warten,
+    in umgekehrter Reihenfolge wieder anklemmen.
+
+    **4. Versionen prüfen.**
+    Im Parkmodus beide Bremsen 3 s halten → Versionsbox erscheint.
+    Alle vier (MDB, DBC, nRF, ECU) sollten eine Version zeigen.
+    Strich oder „unknown" → Komponente nicht sauber geflasht.
+    Mehr: `/faq librescoot-versionsbox`.
+
+    **5. Notstart-Combo testen.**
+    Falls das Display später ausfällt, willst du wissen, dass es
+    geht: Seitenständer hoch, beide Bremsen + Sitzbank-Knopf.
+    Mehr: `/faq librescoot-emergency-start`.
+
+    **6. Updates konfigurieren.**
+    Empfohlene Kombination: **Stable**-Kanal, MDB im **Orchestrate-
+    Modus** (kümmert sich auch um DBC-Updates), DBC-Polling aus.
+    ```
+    lsc set updates.mdb.channel stable
+    lsc set updates.mdb.check-interval 24h
+    lsc set updates.mdb.orchestrate-dbc true
+    lsc set updates.dbc.channel stable
+    lsc set updates.dbc.check-interval 0
+    ```
+    Hintergrund: Mit Orchestrate stößt das MDB DBC-Updates
+    koordiniert an, statt dass das DBC selbst regelmäßig pollt.
+
+    **7. Bei Bedarf: Karten und Routing für Navigation laden.**
+    `/faq librescoot-navigation`.
+
+    Wenn etwas hakt: Discord, mit Versionsnummern, Modell und
+    konkreter Fehlermeldung.
+  en: |
+    When the installer's done, walk through these — most
+    post-flash issues come from skipped steps.
+
+    **1. Bluetooth pairing — don't skip.**
+    Actually click **"Unlock and start pairing"** in the installer.
+    Only then does the scooter become visible in your phone's BT.
+    Details: `/faq librescoot-bluetooth`.
+
+    **2. Enroll at least one keycard.**
+    Installer "Start" → tap your cards one by one → "Done". LED on
+    the DBC: orange = learn mode, short green = card recognized.
+    Without an enrolled card you're one step away from being locked
+    out. More: `/faq librescoot-keycards`.
+
+    **3. Full power-cycle.**
+    Known first-install bug: **app-triggered hibernate only works
+    after a full power-off cycle.** Should be fixed by now, but to
+    be safe: pull the main pack, disconnect **CBB** and **AUX**,
+    wait a minute, reconnect in reverse.
+
+    **4. Check versions.**
+    Park mode, both brakes for 3 s → Versionsbox appears. All four
+    (MDB, DBC, nRF, ECU) should show a version. Dash or "unknown"
+    means a component didn't flash cleanly. More:
+    `/faq librescoot-versionsbox`.
+
+    **5. Test the emergency-start combo.**
+    For when the display dies later — better to know it works now:
+    side stand up, both brakes + seatbox button. More:
+    `/faq librescoot-emergency-start`.
+
+    **6. Configure updates.**
+    Recommended combo: **stable** channel, MDB in **orchestrate
+    mode** (handles DBC updates too), DBC polling off.
+    ```
+    lsc set updates.mdb.channel stable
+    lsc set updates.mdb.check-interval 24h
+    lsc set updates.mdb.orchestrate-dbc true
+    lsc set updates.dbc.channel stable
+    lsc set updates.dbc.check-interval 0
+    ```
+    Reason: in orchestrate mode the MDB triggers DBC updates in a
+    coordinated way, instead of the DBC polling on its own.
+
+    **7. Optional: install maps and routing for navigation.**
+    `/faq librescoot-navigation`.
+
+    If something's off: Discord, with version numbers, scooter model
+    and the exact error.
+tags: [librescoot, software, install]

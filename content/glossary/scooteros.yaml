@@ -1,0 +1,29 @@
+id: scooteros
+aliases: [stock-firmware, original-firmware, unu-firmware, werks-firmware]
+title:
+  de: "scooterOS — Original-Firmware vom unu Pro"
+  en: "scooterOS — stock unu Pro firmware"
+body:
+  de: |
+    **scooterOS** ist die Original-Firmware, mit der unu GmbH den
+    unu Scooter Pro ausgeliefert hat. Letzter offizieller Stand:
+    MDB v1.15.0, DBC v1.15.0, nRF v1.12.0 (`/faq firmware`).
+
+    Mit der Insolvenz von unu sind die Cloud-Server abgeschaltet —
+    Original-App und OTA-Updates funktionieren nicht mehr. Die
+    Firmware selbst läuft weiter, ohne Cloud-Funktionen.
+
+    Alternative: **Librescoot** (`/glossar librescoot`,
+    `/faq librescoot-intro`).
+  en: |
+    **scooterOS** is the original firmware unu GmbH shipped on the
+    unu Scooter Pro. Last official build: MDB v1.15.0, DBC v1.15.0,
+    nRF v1.12.0 (`/faq firmware`).
+
+    With unu's insolvency the cloud servers are off — the original
+    app and OTA updates no longer work. The firmware itself still
+    runs, just without the cloud features.
+
+    Alternative: **Librescoot** (`/glossary librescoot`,
+    `/faq librescoot-intro`).
+tags: [firmware]

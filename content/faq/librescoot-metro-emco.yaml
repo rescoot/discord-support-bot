@@ -1,0 +1,71 @@
+id: librescoot-metro-emco
+aliases: [metro-roller, metro-delivery, emco, alte-firmware, neuer-roller-alt-fw, ls-metro]
+title:
+  de: "Librescoot auf Metro-Delivery- / Emco-Rollern (alte Firmware)"
+  en: "Librescoot on Metro Delivery / Emco scooters (old firmware)"
+body:
+  de: |
+    Roller, die über **Metro Delivery** oder als Neuware bei
+    **Emco** gekauft wurden, kommen oft mit **uralter Firmware** auf
+    dem Roller — typisch MDB v1.8.x, manchmal noch älter. Das ist
+    Jahre vor dem letzten offiziellen unu-Stand (v1.15.0,
+    `/faq firmware`).
+
+    **Symptome dieser Roller:**
+    • Bluetooth verbindet, bricht aber sekündlich ab.
+    • Hoher Stromverbrauch im Stand-by, AUX läuft nach Tagen leer.
+    • Roller-App zeigt keine Akku-Info.
+    • Diverse kleine Bugs, die auf neueren Versionen längst behoben
+      sind.
+
+    **Lösungen:**
+
+    **1. Librescoot drüberflashen.** Empfohlener Weg. Den
+    **neuesten Stable-Installer** nehmen, dann ist auch das
+    BT-Updater-Verhalten richtig und die alte nRF-Firmware wird
+    mit aktualisiert. Anleitung: `/faq librescoot-intro`.
+
+    **2. Original-Firmware updaten lassen.** Die unu-Cloud ist
+    abgeschaltet, und Emco hat nicht die Mittel dazu und kümmert
+    sich auch nicht drum. Wer trotzdem auf Stock bleiben will:
+    die Werkstatt <https://erollerberlin.com> hat noch die Tools
+    aus unu-GmbH-Zeiten und kann Stock-MDB/DBC tatsächlich updaten.
+
+    **Garantie?** EU-Recht spricht laut Community-Konsens dagegen,
+    dass eine Software-Modifikation Hardware-Garantieansprüche
+    annulliert. Im Zweifel ist es trotzdem entspannter, vor dem
+    Flashen die Boards zu sichern (MDB-Backup geht über den
+    Installer; DBC-Backup ist aufwendiger).
+
+    **Versionen ablesen:** `/faq librescoot-versionsbox`.
+  en: |
+    Scooters bought via **Metro Delivery** or new from **Emco**
+    often arrive with **ancient firmware** — typically MDB v1.8.x,
+    sometimes older. That's years behind the last official unu build
+    (v1.15.0, `/faq firmware`).
+
+    **Symptoms on these scooters:**
+    • Bluetooth connects but drops every second.
+    • High standby drain, AUX dies in a few days.
+    • Scooter app shows no battery info.
+    • Various smaller bugs long fixed in newer versions.
+
+    **Options:**
+
+    **1. Flash Librescoot over it.** Recommended. Use the **latest
+    stable installer** — that way the BT updater also handles the
+    old nRF firmware correctly. Guide: `/faq librescoot-intro`.
+
+    **2. Get stock firmware updated.** The unu cloud is off, and
+    Emco doesn't have the tools and isn't dealing with it. If you
+    still want to stay on stock: the <https://erollerberlin.com>
+    workshop still has the original unu-era tools and can actually
+    update stock MDB/DBC firmware.
+
+    **Warranty?** Per community read of EU law, a software
+    modification doesn't void hardware warranty. Still, if you want
+    peace of mind, back up the boards before flashing (MDB backup is
+    in the installer; DBC backup is more involved).
+
+    **Read versions:** `/faq librescoot-versionsbox`.
+tags: [librescoot, firmware, hardware]

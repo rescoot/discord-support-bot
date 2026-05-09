@@ -1,0 +1,84 @@
+id: librescoot-navigation
+aliases: [ls-nav, navigation, karten, maps, routing, valhalla, mbtiles, offline-nav]
+title:
+  de: "Librescoot: Karten und Navigation einrichten"
+  en: "Librescoot: maps and navigation setup"
+body:
+  de: |
+    Anzeige und Routing sind zwei unabhängige Features, beide
+    jeweils offline oder online möglich.
+
+    **Anzeige (Karte auf dem Display):**
+    • Offline: `.mbtiles`-Datei aus
+      <https://github.com/librescoot/osm-tiles/releases> oder von
+      <https://downloads.librescoot.org>. Pakete pro Bundesland;
+      Bremen ~11 MB, Bayern ~367 MB, NRW ~476 MB als grobe
+      Spannweite.
+    • Online: lädt Kacheln vom Server beim Verschieben. Standard,
+      wenn keine lokale Datei vorhanden ist.
+
+    **Routing (Turn-by-Turn):**
+    • Offline: Valhalla läuft auf dem DBC. Du brauchst ein
+      Valhalla-Tar aus
+      <https://github.com/librescoot/valhalla-tiles/releases>.
+      Bremen ~12 MB, die meisten Flächenländer 100–500 MB, Bayern
+      ~672 MB. **Nicht entpacken** — Valhalla liest das Tar direkt.
+    • Online: Remote-Valhalla-Server (`dashboard.valhalla-url`).
+
+    **Installation per Updatemodus** (`/faq librescoot-update-mode`):
+    `.mbtiles` und/oder Valhalla-`.tar` in den Ordner `maps/` legen,
+    Laufwerk auswerfen, USB-Kabel abziehen — der Roller verteilt die
+    Dateien selbst. Die offiziellen Downloads tragen schon den
+    richtigen Dateinamen, du musst nichts umbenennen.
+
+    **Status prüfen:** Im Menü ist „Navigation einrichten" aus, wenn
+    alles passt. Ist es noch da, sagt's dir, was fehlt.
+
+    **Abdeckung der vorgefertigten Pakete:** alle 16 deutschen
+    Bundesländer (Berlin und Brandenburg sind ein gemeinsames
+    Paket). Für andere Regionen baust du dir Kacheln mit `maptool`
+    (Anzeige) bzw. dem Standard-Valhalla-Build (Routing).
+  en: |
+    Display and routing are two independent features, each offline
+    or online.
+
+    **Display (map on the cluster):**
+    • Offline: `.mbtiles` file from
+      <https://github.com/librescoot/osm-tiles/releases> or
+      <https://downloads.librescoot.org>. Per-state packages;
+      Bremen ~11 MB, Bavaria ~367 MB, NRW ~476 MB as a rough
+      range.
+    • Online: pulls tiles from a server while panning. Default if no
+      local file is present.
+
+    **Routing (turn-by-turn):**
+    • Offline: Valhalla runs on the DBC. You need a Valhalla tar
+      from <https://github.com/librescoot/valhalla-tiles/releases>.
+      Bremen ~12 MB, most larger states 100–500 MB, Bavaria ~672 MB.
+      **Don't unpack** — Valhalla reads the tar directly.
+    • Online: remote Valhalla server (`dashboard.valhalla-url`).
+
+    **Install via Update Mode** (`/faq librescoot-update-mode`):
+    drop `.mbtiles` and/or the Valhalla `.tar` into the `maps/`
+    folder, eject the drive, unplug the USB cable — the scooter
+    sorts them out. The official downloads already use the right
+    filename, no rename needed.
+
+    **Check status:** in the menu, "Set up navigation" is gone once
+    everything's wired up. If it's still there, it tells you what's
+    missing.
+
+    **Pre-built packages cover** all 16 German states (Berlin and
+    Brandenburg ship as one combined package). For other regions,
+    build your own with `maptool` (display) or the standard Valhalla
+    build (routing).
+links:
+  - url: https://librescoot.org/de/docs/navigation.html
+    label:
+      de: "Navigation einrichten"
+      en: "Navigation setup"
+  - url: https://downloads.librescoot.org/
+    label:
+      de: "Karten-Downloads"
+      en: "Map downloads"
+tags: [librescoot, software, navigation]
