@@ -50,8 +50,8 @@ UI: dict[str, dict[Locale, str]] = {
         "en": "No match. Try autocompletion to see available entries.",
     },
     "reload_ok": {
-        "de": "Inhalte neu geladen: {faq} FAQ, {glossary} Glossar, {diagnose} Diagnoseflüsse, {forum_welcome} Forum-Begrüßungen.",
-        "en": "Reloaded: {faq} FAQ, {glossary} glossary, {diagnose} diagnose flows, {forum_welcome} forum welcomes.",
+        "de": "Inhalte neu geladen: {faq} FAQ, {glossary} Glossar, {diagnose} Diagnoseflüsse, {forum_welcome} Forum-Begrüßungen, {howto} Howto-Vorlagen.",
+        "en": "Reloaded: {faq} FAQ, {glossary} glossary, {diagnose} diagnose flows, {forum_welcome} forum welcomes, {howto} howto templates.",
     },
     "reload_denied": {
         "de": "Nur Bot-Owner dürfen das.",
@@ -69,6 +69,30 @@ UI: dict[str, dict[Locale, str]] = {
     "welcome_fallback_channel": {
         "de": "👋 Willkommen, {mention}! Tippe `/info` für Community-Infos und Bot-Hilfe.",
         "en": "👋 Welcome, {mention}! Type `/info` for community info and bot help.",
+    },
+    "howto_denied": {
+        "de": "Nur Mods/Admins dürfen das.",
+        "en": "Mods/admins only.",
+    },
+    "howto_missing": {
+        "de": "Keine Howto-Vorlage für {key!r} gefunden.",
+        "en": "No howto template found for {key!r}.",
+    },
+    "howto_no_channel": {
+        "de": "Kein Kanal zum Posten verfügbar.",
+        "en": "No channel available to post in.",
+    },
+    "howto_forbidden": {
+        "de": "Mir fehlen die Rechte, hier zu posten.",
+        "en": "I don't have permission to post here.",
+    },
+    "howto_failed": {
+        "de": "Posten fehlgeschlagen: {error}",
+        "en": "Posting failed: {error}",
+    },
+    "howto_posted": {
+        "de": "Gepostet ✅",
+        "en": "Posted ✅",
     },
 }
 

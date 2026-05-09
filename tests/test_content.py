@@ -71,3 +71,9 @@ def test_forum_welcome_support_loaded(store):
     text = store.forum_welcome.get("support")
     assert text, "support forum welcome missing"
     assert len(text) <= 2000, "forum welcome must fit a single Discord message"
+
+
+def test_howto_ask_loaded(store):
+    text = store.howto.get("ask")
+    assert text, "howto/ask template missing"
+    assert len(text) <= 2000, "howto template must fit a single Discord message"

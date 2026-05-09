@@ -77,6 +77,7 @@ class ContentStore:
     diagnose: dict[str, DiagnoseFlow] = field(default_factory=dict)
     welcome: dict[Locale, str] = field(default_factory=dict)
     forum_welcome: dict[str, str] = field(default_factory=dict)
+    howto: dict[str, str] = field(default_factory=dict)
 
     def lookup_faq(self, query: str) -> Entry | None:
         return _lookup(self.faq, query)
@@ -152,13 +153,15 @@ def load_content(content_dir: Path) -> ContentStore:
     store.diagnose = _load_diagnose(content_dir / "diagnose")
     store.welcome = _load_welcome(content_dir / "welcome")
     store.forum_welcome = _load_forum_welcome(content_dir / "forum_welcome")
+    store.howto = _load_markdown_dir(content_dir / "howto")
     log.info(
-        "content loaded: faq=%d glossary=%d diagnose=%d welcome=%s forum_welcome=%s",
+        "content loaded: faq=%d glossary=%d diagnose=%d welcome=%s forum_welcome=%s howto=%s",
         len(store.faq),
         len(store.glossary),
         len(store.diagnose),
         sorted(store.welcome),
         sorted(store.forum_welcome),
+        sorted(store.howto),
     )
     return store
 
@@ -243,6 +246,10 @@ def _load_welcome(directory: Path) -> dict[Locale, str]:
 
 
 def _load_forum_welcome(directory: Path) -> dict[str, str]:
+    return _load_markdown_dir(directory)
+
+
+def _load_markdown_dir(directory: Path) -> dict[str, str]:
     out: dict[str, str] = {}
     if not directory.is_dir():
         return out
