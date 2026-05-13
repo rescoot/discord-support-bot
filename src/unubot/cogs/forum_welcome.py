@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+from collections import OrderedDict
 from typing import TYPE_CHECKING
 
 import discord
@@ -21,8 +22,23 @@ def _forum_key_for(thread: discord.Thread, support_forum_id: int | None) -> str 
 
 
 class ForumWelcome(commands.Cog):
+    # Discord can redeliver MESSAGE_CREATE for the same forum starter (e.g.
+    # across a gateway resume), which would post the welcome twice. Track
+    # recently-welcomed thread ids and skip repeats. Bounded so memory can't
+    # grow forever.
+    _RECENT_MAX = 512
+
     def __init__(self, bot: UnuBot):
         self.bot = bot
+        self._welcomed: OrderedDict[int, None] = OrderedDict()
+
+    def _mark_welcomed(self, thread_id: int) -> bool:
+        if thread_id in self._welcomed:
+            return False
+        self._welcomed[thread_id] = None
+        while len(self._welcomed) > self._RECENT_MAX:
+            self._welcomed.popitem(last=False)
+        return True
 
     @commands.Cog.listener()
     async def on_message(self, msg: discord.Message) -> None:
@@ -43,6 +59,10 @@ class ForumWelcome(commands.Cog):
         text = self.bot.content.forum_welcome.get(key)
         if not text:
             log.debug("no forum_welcome content for key=%r, skipping thread %s", key, msg.channel.id)
+            return
+
+        if not self._mark_welcomed(msg.channel.id):
+            log.debug("already welcomed thread %s, skipping duplicate", msg.channel.id)
             return
 
         try:
