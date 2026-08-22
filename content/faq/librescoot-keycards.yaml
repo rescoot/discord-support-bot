@@ -44,6 +44,27 @@ body:
 
     Beliebige NFC-Karten oder -Sticker mit UID funktionieren als
     Keycard. Keine Obergrenze.
+
+    **Karten nach einem Update weg?**
+    Der Installer schreibt die Karten bei jedem Durchlauf neu, er
+    verhält sich wie eine Neuinstallation. Für Updates deshalb den
+    **Updatemodus** nehmen und nicht den Installer
+    (`/faq librescoot-update-mode`).
+
+    **Karten wieder einspielen, ohne alles neu zu flashen:**
+    Installer nochmal starten und **DBC und MDB nicht flashen**.
+    Er springt dann direkt zur Karteneinrichtung.
+
+    **Karten lassen sich gar nicht anlernen, LED bleibt dauerhaft
+    an:** dann ist die Installation nicht sauber durchgelaufen,
+    meistens weil es beim DBC-Flashen zu schnell ging. Installer
+    nochmal laufen lassen und beide Flashvorgänge überspringen.
+    Hilft das nicht, nur das MDB flashen und danach einen harten
+    Neustart machen.
+
+    **App zeigt dauerhaft „wird geladen" und der Roller reagiert
+    nicht auf die Karte:** das riecht nach gestörtem I2C-Bus,
+    siehe `/faq dbc-i2c-diodes`.
   en: |
     Stock firmware: cards were welded to the scooter, nothing you
     could change. Librescoot hands the list back to you.
@@ -83,6 +104,25 @@ body:
 
     Any NFC card or sticker with a UID works as a keycard. No upper
     limit.
+
+    **Cards gone after an update?**
+    The installer rewrites the card list on every run; it behaves
+    like a fresh install. Use **update mode** for updates, not the
+    installer (`/faq librescoot-update-mode`).
+
+    **Getting the cards back without reflashing everything:**
+    run the installer again and **skip flashing DBC and MDB**. It
+    jumps straight to card enrolment.
+
+    **Cards won't enrol at all, LED stays permanently lit:** the
+    install didn't finish cleanly, usually from moving too fast
+    during the DBC flash. Run the installer again and skip both
+    flash steps. If that doesn't do it, flash only the MDB and
+    then force a hard restart.
+
+    **App stuck on "loading" and the scooter ignores the card:**
+    that smells like a disturbed I2C bus, see
+    `/faq dbc-i2c-diodes`.
 links:
   - url: https://librescoot.org/de/docs/features/keycards.html
     label:

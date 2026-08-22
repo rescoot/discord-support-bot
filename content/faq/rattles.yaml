@@ -1,0 +1,56 @@
+id: rattles
+aliases: [klappern, klackern, geräusche, knarzen, rappeln, scheppern]
+title:
+  de: "Klappern und Klackern während der Fahrt"
+  en: "Rattles and clonks while riding"
+body:
+  de: |
+    Der Reihe nach, von häufig nach selten:
+
+    **Haltegriff hinten**, der mit dem Schriftzug. Er ist nur an
+    den Seiten verschraubt und in der Mitte lose eingesteckt. Mit
+    Abstand der häufigste Kandidat. Test: im Stand mit der Faust
+    von oben draufschlagen. Klappert es, das Mittelteil verkeilen
+    oder unterfüttern, dann ist Ruhe.
+
+    **Stoßdämpfer hinten.** Metallisches Klackern über Querfugen
+    und Schlaglöcher. Da hilft nur Tausch.
+
+    **Kennzeichenhalter.** Schrauben nachziehen, kostet nichts.
+
+    **Sitzschloss.** Wird oft verdächtigt, ist es aber selten:
+    durch die Sitzbank liegt genug Druck darauf, dass es kaum
+    klappern kann.
+
+    **Lenkkopflager**, wenn das Geräusch aus der Front kommt und
+    beim Bremsen deutlicher wird: `/faq steering-head`.
+
+    Wird das **Hinterrad heiß** oder schleift es hörbar, ist das
+    kein Klapperthema. Dann Bremssattel und Radlager prüfen und
+    die dicken Leistungskabel an ECU und Verteiler unter dem
+    Trittbrett auf festen Sitz kontrollieren.
+  en: |
+    In order, common first:
+
+    **Rear grab handle**, the one with the lettering. It is bolted
+    only at the sides and just plugged in at the centre. By far
+    the most common culprit. Test: thump it from above with your
+    fist while parked. If it rattles, wedge or shim the centre
+    section and it goes quiet.
+
+    **Rear shock.** Metallic clonking over expansion joints and
+    potholes. Only a replacement fixes that.
+
+    **Number plate holder.** Retighten the screws, costs nothing.
+
+    **Seat lock.** Often suspected, rarely guilty: the seat keeps
+    enough pressure on it that it can hardly rattle.
+
+    **Steering head bearing**, if the noise comes from the front
+    and gets clearer under braking: `/faq steering-head`.
+
+    If the **rear wheel gets hot** or audibly drags, this is not a
+    rattle problem. Check the brake caliper and wheel bearing, and
+    make sure the heavy power cables at the ECU and the
+    distribution block under the floorboard are tight.
+tags: [hardware, noise, troubleshooting]

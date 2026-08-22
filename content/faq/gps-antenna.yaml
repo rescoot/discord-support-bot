@@ -1,0 +1,82 @@
+id: gps-antenna
+aliases: [gps, antenne, antennen, kein-gps, gps-fix, sekundärantenne, diversity, sim]
+title:
+  de: "Kein GPS-Fix oder kein Mobilfunk (Antennen am MDB)"
+  en: "No GPS fix or no cellular (antennas on the MDB)"
+body:
+  de: |
+    Am MDB hängen drei Antennenanschlüsse, und sie sind nicht
+    beliebig tauschbar:
+
+    • **LTE** nach vorne links
+    • **LTE-Diversity** nach hinten links. Am MDB steht dafür
+      „AUX". Das hat **nichts** mit der AUX-Batterie zu tun.
+    • **GPS/GLONASS** nach hinten Mitte
+
+    Die GPS-Antenne ist die einzige, die **Spannung bekommt**.
+    Falsch angesteckt kann man sie damit elektrisch beschädigen,
+    also vor dem Zumachen zweimal hinschauen.
+
+    **Kein oder nur seltener Fix:**
+    1. Stecker prüfen. Häufigster Fund ist ein **verkantet
+       aufgeschraubter** Stecker. Handfest reicht, aber gerade.
+    2. Kabel auf dem sichtbaren Weg nach Bruchstellen absuchen.
+    3. Unter Librescoot im **Kartenmodus** SNR und Satellitenzahl
+       ansehen, die blitzen alle paar Sekunden auf. Dauerhaft 0
+       heißt Antenne oder Kabel. 20 bis 30 dB heißt, er sammelt
+       gerade, gib ihm ein paar Minuten.
+    4. Nach dem Tiefschlaf dauert der erste Fix deutlich länger.
+       Im Freien stehen lassen, nicht in der Tiefgarage testen.
+
+    **Die Diversity-Antenne** (SP-S-05-07-002) klebt unter dem
+    Sitzbankscharnier und ist nur für den Mobilfunkempfang da.
+    Für GPS brauchst du sie nicht, ein loses Kabel von dort ist
+    also kein GPS-Problem.
+
+    **Ersatz:** für reines GPS tun es praktisch alle üblichen
+    Klebe- oder Wifi-Antennen mit passendem Stecker. Kombi-
+    Antennen für LTE und GPS gibt es fertig; im Support wurde das
+    so gelöst, dass die neue Antenne neben die alte geklebt und
+    das Kabel parallel verlegt wurde.
+
+    **SIM-Karte:** die **PIN muss deaktiviert** sein, am
+    einfachsten einmal kurz im Handy entfernen. Den APN setzt du
+    mit `lsc set cellular.apn <apn>`, siehe `/faq librescoot-lsc`.
+  en: |
+    The MDB has three antenna connectors and they are not
+    interchangeable:
+
+    • **LTE** goes front left
+    • **LTE diversity** goes rear left. The MDB labels this one
+      "AUX". It has **nothing** to do with the AUX battery.
+    • **GPS/GLONASS** goes rear middle
+
+    The GPS antenna is the only one that **carries voltage**.
+    Hooking it up wrong can damage it electrically, so look twice
+    before you close everything up.
+
+    **No fix, or only occasionally:**
+    1. Check the connectors. The most common find is one screwed
+       on **crooked**. Hand tight is enough, but straight.
+    2. Follow the cable where you can see it and look for breaks.
+    3. On Librescoot, **map mode** shows SNR and satellite count,
+       flashing up every few seconds. A constant 0 means antenna
+       or cable. 20 to 30 dB means it's acquiring, give it a few
+       minutes.
+    4. After hibernate the first fix takes noticeably longer.
+       Test it outside, not in an underground garage.
+
+    **The diversity antenna** (SP-S-05-07-002) is glued under the
+    seat hinge and only serves cellular reception. GPS doesn't
+    need it, so a loose cable from there is not a GPS problem.
+
+    **Replacements:** for GPS alone, more or less any stick-on or
+    wifi antenna with the right connector works. Combined LTE/GPS
+    antennas exist off the shelf; in the support forum people
+    glued the new antenna next to the old one and ran the cable
+    alongside.
+
+    **SIM card:** the **PIN must be disabled**, easiest done by
+    popping it into a phone once. Set the APN with
+    `lsc set cellular.apn <apn>`, see `/faq librescoot-lsc`.
+tags: [hardware, gps, antenna, troubleshooting]

@@ -1,0 +1,82 @@
+id: dbc-i2c-diodes
+aliases: [i2c, schutzdioden, diode, nfc-tot, keycard-geht-nicht, led-tot, dbc-diode]
+title:
+  de: "Keycard wird ignoriert, Status-LED tot (I2C-Dioden am DBC)"
+  en: "Keycard ignored, status LED dead (DBC I2C diodes)"
+body:
+  de: |
+    Symptom: der Roller lässt sich noch per App öffnen, aber die
+    **Keycard wird ignoriert** und die **Status-LED am Tacho bleibt
+    dunkel** oder leuchtet dauerhaft. In schwereren Fällen startet
+    er nach einem Neustart gar nicht mehr.
+
+    **Erst das Billige ausschließen:**
+    • **AUX-Batterie leer.** Ohne AUX kein Kartenleser und keine
+      LED. Das ist der häufigere Fall, siehe `/faq aux-battery`.
+    • **Einmal Tiefschlaf und wieder aufwecken.** In mehreren
+      Fällen kam der Leser danach von selbst zurück.
+    • **Frisch geflasht?** Eine nicht sauber durchgelaufene
+      Librescoot-Installation sieht genau so aus. Bevor jemand
+      lötet: `/faq librescoot-keycards`.
+
+    **Wenn das alles nichts bringt:**
+    Häufigste Hardware-Ursache sind die **I2C-Schutzdioden auf dem
+    DBC**, also in der Displayeinheit, nicht im MDB. Legiert eine
+    durch, zieht sie den I2C-Bus lahm, und an dem Bus hängen
+    Kartenleser und LEDs. Auslöser ist meist Feuchtigkeit im DBC,
+    eine bekannte Schwachstelle des Rollers.
+
+    Der Fix aus dem Support: die betroffene Diode **entfernen**,
+    abknipsen oder sauber auslöten. Danach laufen NFC und LEDs in
+    aller Regel sofort wieder. Manchmal müssen beide raus.
+
+    Ehrlich dazugesagt: die Dioden sitzen da als Schutz, und
+    niemand hier weiß sicher, wogegen genau. Ohne sie liegt der
+    Bus ungeschützt. Folgeschäden sind bisher keine bekannt, aber
+    das bleibt eine Reparatur auf eigenes Risiko.
+
+    **Messen, wenn du magst:** 3,3 V an Pin 6 (+) und Pin 14 (GND)
+    des DBC anlegen, dann SDA und SCL gegen GND messen. Beide
+    sollten auf 3,3 V liegen. Bricht eine Leitung ein, ist die
+    Diode der Kandidat. Geht auch am angesteckten Roller im
+    Parkmodus.
+
+    Kein Lötkolben, keine Lust: `/faq service-partner`.
+  en: |
+    Symptom: the scooter still opens from the app, but the
+    **keycard is ignored** and the **status LED on the cluster
+    stays dark** or stays lit. In worse cases it won't boot at all
+    after a restart.
+
+    **Rule out the cheap causes first:**
+    • **Flat AUX battery.** No AUX, no card reader and no LED.
+      This is the more common one, see `/faq aux-battery`.
+    • **Hibernate and wake it once.** In several cases the reader
+      came back on its own after that.
+    • **Freshly flashed?** A Librescoot install that didn't finish
+      cleanly looks exactly like this. Before anyone reaches for a
+      soldering iron: `/faq librescoot-keycards`.
+
+    **If none of that helps:**
+    The usual hardware cause is the **I2C protection diodes on the
+    DBC**, i.e. in the dashboard unit, not the MDB. When one shorts
+    out it drags the I2C bus down, and the card reader and LEDs
+    hang off that bus. The trigger is usually moisture in the DBC,
+    a known weak spot.
+
+    The fix from the support forum: **remove** the affected diode,
+    clip it or desolder it properly. NFC and LEDs almost always
+    come straight back. Sometimes both have to go.
+
+    Said plainly: those diodes are there as protection and nobody
+    here knows for certain against what. Without them the bus is
+    unprotected. No follow-on damage has been reported so far, but
+    this stays a repair at your own risk.
+
+    **If you want to measure:** feed 3.3 V to pin 6 (+) and pin 14
+    (GND) of the DBC, then measure SDA and SCL against GND. Both
+    should sit at 3.3 V. If one collapses, the diode is your
+    candidate. Works on the connected scooter in parked mode too.
+
+    No iron, no interest: `/faq service-partner`.
+tags: [hardware, repair, dashboard, keycard, troubleshooting]
