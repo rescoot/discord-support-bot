@@ -324,14 +324,19 @@ def _read_yaml(path: Path) -> dict[str, Any] | None:
 
 
 def _coerce_text(value: Any, default: str) -> dict[str, str]:
-    """Accept either a plain string (applied to all locales) or a {de, en} mapping."""
+    """Accept either a plain string (applied to all locales) or a {de, en} mapping.
+
+    Stripped, because a YAML block scalar keeps its trailing newline and Discord
+    drops trailing whitespace when it stores a message. Leaving it in means a
+    freshly rendered embed never compares equal to the one already posted.
+    """
     if value is None:
         return {"de": default, "en": default}
     if isinstance(value, str):
-        return {"de": value, "en": value}
+        return {"de": value.strip(), "en": value.strip()}
     if isinstance(value, dict):
-        return {str(k): str(v) for k, v in value.items() if v is not None}
-    return {"de": str(value), "en": str(value)}
+        return {str(k): str(v).strip() for k, v in value.items() if v is not None}
+    return {"de": str(value).strip(), "en": str(value).strip()}
 
 
 def _coerce_link(raw: Any) -> Link:

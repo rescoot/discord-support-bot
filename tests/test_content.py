@@ -112,3 +112,11 @@ def test_markdown_lists_are_preceded_by_a_blank_line(store):
                     raise AssertionError(
                         f"{entry.id} [{locale}] line {i + 1}: list needs a blank line before it"
                     )
+
+
+def test_bodies_carry_no_trailing_whitespace(store):
+    """Discord strips it on store, so keeping it means a re-rendered embed never
+    matches the posted one."""
+    for entry in {**store.faq, **store.glossary}.values():
+        for locale, body in entry.body.items():
+            assert body == body.strip(), f"{entry.id} [{locale}] has surrounding whitespace"
