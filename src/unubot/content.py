@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+import re
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -323,15 +324,56 @@ def _read_yaml(path: Path) -> dict[str, Any] | None:
     return data
 
 
+# A line that opens a list item, or is nothing but a bold run (a heading like
+# "**Typische Symptome:**"), keeps its own line. Everything else gets folded.
+_LIST_ITEM = re.compile(r"^\s*(?:[•\-*]\s|\d+[.)]\s)")
+_BOLD_HEADING = re.compile(r"^\*\*[^*].*\*\*:?$")
+
+
+def reflow(text: str) -> str:
+    """Fold hard-wrapped source lines back into paragraphs.
+
+    Bodies are wrapped at around 60 columns so they stay readable in a diff,
+    but Discord turns every newline into a line break, which chops sentences
+    apart mid-clause. Blank lines, list items, bold headings and fenced code
+    keep their own line; the rest is joined back together.
+    """
+    out: list[str] = []
+    in_code = False
+    for raw in text.splitlines():
+        line = raw.rstrip()
+        stripped = line.strip()
+        if stripped.startswith("```"):
+            in_code = not in_code
+            out.append(line)
+            continue
+        if in_code or not stripped:
+            out.append(line)
+            continue
+        opens_block = bool(_LIST_ITEM.match(line)) or bool(_BOLD_HEADING.match(stripped))
+        prev = out[-1].strip() if out else ""
+        joinable = (
+            bool(prev)
+            and not opens_block
+            and not _BOLD_HEADING.match(prev)
+            and not prev.startswith("```")
+        )
+        if joinable:
+            out[-1] = f"{out[-1]} {stripped}"
+        else:
+            out.append(line if opens_block else stripped)
+    return "\n".join(out)
+
+
 def _coerce_text(value: Any, default: str) -> dict[str, str]:
     """Accept either a plain string (applied to all locales) or a {de, en} mapping."""
     if value is None:
         return {"de": default, "en": default}
     if isinstance(value, str):
-        return {"de": value, "en": value}
+        return {"de": reflow(value), "en": reflow(value)}
     if isinstance(value, dict):
-        return {str(k): str(v) for k, v in value.items() if v is not None}
-    return {"de": str(value), "en": str(value)}
+        return {str(k): reflow(str(v)) for k, v in value.items() if v is not None}
+    return {"de": reflow(str(value)), "en": reflow(str(value))}
 
 
 def _coerce_link(raw: Any) -> Link:
