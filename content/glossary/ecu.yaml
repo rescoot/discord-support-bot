@@ -5,15 +5,11 @@ title:
   en: "ECU — Motor controller"
 body:
   de: |
-    Die **Electronic Control Unit (ECU)** steuert den Motor und die
-    Rekuperation. Im unu Pro sitzt ein **Motorcontroller von BOSCH**,
-    je nach Variante mit 3 kW oder 4 kW Spitzenleistung.
+    Die **Electronic Control Unit (ECU)** steuert den Motor und die Rekuperation. Im unu Pro sitzt ein **Motorcontroller von BOSCH**, je nach Variante mit 3 kW oder 4 kW Spitzenleistung.
 
     Die ECU spricht über einen CAN-Bus mit dem MDB.
   en: |
-    The **Electronic Control Unit (ECU)** drives the motor and handles
-    regenerative braking. The unu Pro uses a **BOSCH motor
-    controller**, rated at 3 kW or 4 kW peak depending on the variant.
+    The **Electronic Control Unit (ECU)** drives the motor and handles regenerative braking. The unu Pro uses a **BOSCH motor controller**, rated at 3 kW or 4 kW peak depending on the variant.
 
     The ECU talks to the MDB over a CAN bus.
 tags: [hardware, motor]

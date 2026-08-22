@@ -5,29 +5,21 @@ title:
   en: "Librescoot: enrolling and managing keycards"
 body:
   de: |
-    Originalfirmware: Karten waren fix mit dem Roller verheiratet,
-    nichts dran zu drehen. Librescoot gibt dir die Liste zurück.
+    Originalfirmware: Karten waren fix mit dem Roller verheiratet, nichts dran zu drehen. Librescoot gibt dir die Liste zurück.
 
     **Erstkarte (frische Installation):**
-    Beim ersten Boot ohne registrierte Karten startet der
-    Keycard-Service im Auto-Learn-Modus. Die **erste Karte, die du
-    auflegst, wird Master-Keycard**. Die alte Starterkit-Karte tut's
-    auch — Librescoot liest dieselben NFC-UIDs wie die
-    Originalfirmware.
+    Beim ersten Boot ohne registrierte Karten startet der Keycard-Service im Auto-Learn-Modus. Die **erste Karte, die du auflegst, wird Master-Keycard**. Die alte Starterkit-Karte tut's auch — Librescoot liest dieselben NFC-UIDs wie die Originalfirmware.
 
     **Im Installer (während Erstinstallation):**
-    1. Auf **„Start"** klicken → die Status-LED am Tacho leuchtet
-       **gelb** (Anlernmodus).
-    2. Karten **nacheinander** dranhalten — pro angelernte Karte
-       leuchtet die LED kurz **grün**, dann zurück auf gelb. Der
-       Installer zählt mit.
+
+    1. Auf **„Start"** klicken → die Status-LED am Tacho leuchtet **gelb** (Anlernmodus).
+    2. Karten **nacheinander** dranhalten — pro angelernte Karte leuchtet die LED kurz **grün**, dann zurück auf gelb. Der Installer zählt mit.
     3. Auf **„Fertig"** klicken, wenn alle Karten durch sind.
 
-    Wenn die LED nach dem Dranhalten **rot blinkt**, ist die Karte
-    abgelehnt worden (z.B. weil sie schon registriert ist).
-    Reagiert die LED gar nicht: nochmal versuchen, ruhig ~1 s halten.
+    Wenn die LED nach dem Dranhalten **rot blinkt**, ist die Karte abgelehnt worden (z.B. weil sie schon registriert ist). Reagiert die LED gar nicht: nochmal versuchen, ruhig ~1 s halten.
 
     **Weitere Karten anlernen — später, am Roller:**
+
     1. Master-Keycard auflegen, kurz halten → Teach-In-Modus.
     2. Neue Karte auflegen → wird angelernt.
 
@@ -42,52 +34,33 @@ body:
     lsc keycard import cards.json
     ```
 
-    Beliebige NFC-Karten oder -Sticker mit UID funktionieren als
-    Keycard. Keine Obergrenze.
+    Beliebige NFC-Karten oder -Sticker mit UID funktionieren als Keycard. Keine Obergrenze.
 
     **Karten nach einem Update weg?**
-    Der Installer schreibt die Karten bei jedem Durchlauf neu, er
-    verhält sich wie eine Neuinstallation. Für Updates deshalb den
-    **Updatemodus** nehmen und nicht den Installer
-    (`/faq librescoot-update-mode`).
+    Der Installer schreibt die Karten bei jedem Durchlauf neu, er verhält sich wie eine Neuinstallation. Für Updates deshalb den **Updatemodus** nehmen und nicht den Installer (`/faq librescoot-update-mode`).
 
     **Karten wieder einspielen, ohne alles neu zu flashen:**
-    Installer nochmal starten und **DBC und MDB nicht flashen**.
-    Er springt dann direkt zur Karteneinrichtung.
+    Installer nochmal starten und **DBC und MDB nicht flashen**. Er springt dann direkt zur Karteneinrichtung.
 
-    **Karten lassen sich gar nicht anlernen, LED bleibt dauerhaft
-    an:** dann ist die Installation nicht sauber durchgelaufen,
-    meistens weil es beim DBC-Flashen zu schnell ging. Installer
-    nochmal laufen lassen und beide Flashvorgänge überspringen.
-    Hilft das nicht, nur das MDB flashen und danach einen harten
-    Neustart machen.
+    **Karten lassen sich gar nicht anlernen, LED bleibt dauerhaft an:** dann ist die Installation nicht sauber durchgelaufen, meistens weil es beim DBC-Flashen zu schnell ging. Installer nochmal laufen lassen und beide Flashvorgänge überspringen. Hilft das nicht, nur das MDB flashen und danach einen harten Neustart machen.
 
-    **App zeigt dauerhaft „wird geladen" und der Roller reagiert
-    nicht auf die Karte:** das riecht nach gestörtem I2C-Bus,
-    siehe `/faq dbc-i2c-diodes`.
+    **App zeigt dauerhaft „wird geladen" und der Roller reagiert nicht auf die Karte:** das riecht nach gestörtem I2C-Bus, siehe `/faq dbc-i2c-diodes`.
   en: |
-    Stock firmware: cards were welded to the scooter, nothing you
-    could change. Librescoot hands the list back to you.
+    Stock firmware: cards were welded to the scooter, nothing you could change. Librescoot hands the list back to you.
 
     **First card (fresh install):**
-    On the first boot with no registered cards, the keycard service
-    starts in auto-learn mode. **The first card you tap becomes the
-    master keycard.** Your old starter-kit card works fine —
-    Librescoot reads the same NFC UIDs the stock firmware did.
+    On the first boot with no registered cards, the keycard service starts in auto-learn mode. **The first card you tap becomes the master keycard.** Your old starter-kit card works fine — Librescoot reads the same NFC UIDs the stock firmware did.
 
     **In the installer (during first-time install):**
-    1. Click **"Start"** → the status LED on the cluster goes
-       **amber** (learn mode).
-    2. Tap your cards **one by one** — each enrolled card briefly
-       lights the LED **green**, then back to amber. The installer
-       counts.
+
+    1. Click **"Start"** → the status LED on the cluster goes **amber** (learn mode).
+    2. Tap your cards **one by one** — each enrolled card briefly lights the LED **green**, then back to amber. The installer counts.
     3. Click **"Done"** when all cards are in.
 
-    If the LED **flashes red** after a tap, the card was rejected
-    (e.g. already registered). If the LED doesn't react at all,
-    try again, holding steady for ~1 s.
+    If the LED **flashes red** after a tap, the card was rejected (e.g. already registered). If the LED doesn't react at all, try again, holding steady for ~1 s.
 
     **Enrolling more cards — later, at the scooter:**
+
     1. Tap the master card, hold briefly → teach-in mode.
     2. Tap a new card → it gets enrolled.
 
@@ -102,27 +75,18 @@ body:
     lsc keycard import cards.json
     ```
 
-    Any NFC card or sticker with a UID works as a keycard. No upper
-    limit.
+    Any NFC card or sticker with a UID works as a keycard. No upper limit.
 
     **Cards gone after an update?**
-    The installer rewrites the card list on every run; it behaves
-    like a fresh install. Use **update mode** for updates, not the
-    installer (`/faq librescoot-update-mode`).
+    The installer rewrites the card list on every run; it behaves like a fresh install. Use **update mode** for updates, not the installer (`/faq librescoot-update-mode`).
 
     **Getting the cards back without reflashing everything:**
-    run the installer again and **skip flashing DBC and MDB**. It
-    jumps straight to card enrolment.
+    Run the installer again and **skip flashing DBC and MDB**. It jumps straight to card enrolment.
 
-    **Cards won't enrol at all, LED stays permanently lit:** the
-    install didn't finish cleanly, usually from moving too fast
-    during the DBC flash. Run the installer again and skip both
-    flash steps. If that doesn't do it, flash only the MDB and
-    then force a hard restart.
+    **Cards won't enrol at all, LED stays permanently lit:** the install didn't finish cleanly, usually from moving too fast during the DBC flash. Run the installer again and skip both flash steps. If that doesn't do it, flash only the MDB and then force a hard restart.
 
     **App stuck on "loading" and the scooter ignores the card:**
-    that smells like a disturbed I2C bus, see
-    `/faq dbc-i2c-diodes`.
+    That smells like a disturbed I2C bus, see `/faq dbc-i2c-diodes`.
 links:
   - url: https://librescoot.org/docs/features/keycards.html
     label:

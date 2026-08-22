@@ -9,71 +9,51 @@ body:
 
     **Bevorzugt: Bremshebel-Neustart (Reboot ohne Werkzeug)**
 
-    Roller muss an sein. Kein Zerlegen nötig — das ist die richtige
-    Methode für hängende Systeme: Dauer-„Steering column locked",
-    festgefahrene Sitzindikation, Software-Glitches nach Update.
+    Roller muss an sein. Kein Zerlegen nötig — das ist die richtige Methode für hängende Systeme: Dauer-„Steering column locked", festgefahrene Sitzindikation, Software-Glitches nach Update.
 
     1. Beide Bremshebel gleichzeitig ziehen, **40 Sekunden halten**.
-    2. Dabei den **rechten Bremshebel alle 10 Sekunden einmal kurz
-       (~1 s) loslassen**.
+    2. Dabei den **rechten Bremshebel alle 10 Sekunden einmal kurz (~1 s) loslassen**.
     3. Nach 40 s beide Hebel loslassen.
     4. Der Roller rebootet.
 
     **Stromlos machen (vor Reparaturarbeiten am MDB / im Trittbrett)**
 
-    Nicht als Reboot gedacht — das hier ist der Weg, um den Roller
-    komplett spannungsfrei zu kriegen.
+    Nicht als Reboot gedacht — das hier ist der Weg, um den Roller komplett spannungsfrei zu kriegen.
 
     1. Sitz öffnen, **Hauptakku herausnehmen**.
     2. **Einen Pol der AUX abklemmen.**
     3. **CBB-Stecker abziehen.**
     4. Kurz warten, dann in umgekehrter Reihenfolge wieder anschließen.
 
-    Den **DC-Wandler musst du dafür normalerweise nicht trennen** und
-    solltest es auch nicht, siehe `/faq dc-converter-safety`.
+    Den **DC-Wandler musst du dafür normalerweise nicht trennen** und solltest es auch nicht, siehe `/faq dc-converter-safety`.
 
-    Spezialfall: wenn der Sitz sich gar nicht erst öffnen lässt, weil
-    der Roller komplett tot ist, ist die Hauptbatterie sehr
-    wahrscheinlich ohnehin schon inaktiv. Trotzdem mit der gleichen
-    Vorsicht arbeiten.
+    Spezialfall: wenn der Sitz sich gar nicht erst öffnen lässt, weil der Roller komplett tot ist, ist die Hauptbatterie sehr wahrscheinlich ohnehin schon inaktiv. Trotzdem mit der gleichen Vorsicht arbeiten.
 
-    Wenn der Roller gar nicht mehr bootet, gibt's eine vollständige
-    Prozedur ab Wartungshandbuch 2.2.5 (AUX messen → laden/tauschen,
-    CBB tauschen, weiter).
+    Wenn der Roller gar nicht mehr bootet, gibt's eine vollständige Prozedur ab Wartungshandbuch 2.2.5 (AUX messen → laden/tauschen, CBB tauschen, weiter).
   en: |
     Two different things, don't mix them up:
 
     **Preferred: brake-lever reboot (no tools)**
 
-    Scooter must be on. No disassembly — this is the right method for
-    stuck systems: persistent "Steering column locked", frozen seat
-    indication, post-update glitches.
+    Scooter must be on. No disassembly — this is the right method for stuck systems: persistent "Steering column locked", frozen seat indication, post-update glitches.
 
     1. Pull both brake levers, **hold 40 seconds**.
-    2. While holding, **release the right brake briefly (~1 s) every
-       10 seconds**.
+    2. While holding, **release the right brake briefly (~1 s) every 10 seconds**.
     3. After 40 s release both.
     4. The scooter reboots.
 
-    **Full de-power (before repair work on the MDB / in the footrest
-    area)**
+    **Full de-power (before repair work on the MDB / in the footrest area)**
 
-    Not for rebooting — this is how you take the scooter completely
-    off-power.
+    Not for rebooting — this is how you take the scooter completely off-power.
 
     1. Open the seat, **remove the main battery**.
     2. **Disconnect one pole of the AUX.**
     3. **Disconnect the CBB plug.**
     4. Wait briefly, then reconnect in reverse order.
 
-    You **normally don't need to disconnect the DC converter**, and
-    you shouldn't, see `/faq dc-converter-safety`.
+    You **normally don't need to disconnect the DC converter**, and you shouldn't, see `/faq dc-converter-safety`.
 
-    Edge case: if the seat won't even open because the scooter is
-    fully dead, the main battery is most likely already inactive. Work
-    with the same caution anyway.
+    Edge case: if the seat won't even open because the scooter is fully dead, the main battery is most likely already inactive. Work with the same caution anyway.
 
-    For "scooter won't boot at all" there's a full procedure starting
-    at Wartungshandbuch 2.2.5 (measure AUX → charge/swap, swap CBB,
-    keep going).
+    For "scooter won't boot at all" there's a full procedure starting at Wartungshandbuch 2.2.5 (measure AUX → charge/swap, swap CBB, keep going).
 tags: [troubleshooting, reset]

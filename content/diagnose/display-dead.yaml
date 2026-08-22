@@ -4,11 +4,9 @@ title:
   en: "Display won't come on"
 description:
   de: |-
-    Fehlersuche, wenn das Dashboard (DBC) gar nichts mehr anzeigt,
-    obwohl der Roller sonst reagiert.
+    Fehlersuche, wenn das Dashboard (DBC) gar nichts mehr anzeigt, obwohl der Roller sonst reagiert.
   en: |-
-    Troubleshoot when the dashboard (DBC) stays blank even though the
-    scooter otherwise reacts.
+    Troubleshoot when the dashboard (DBC) stays blank even though the scooter otherwise reacts.
 start: other-alive
 
 steps:
@@ -27,37 +25,24 @@ steps:
   aux-first:
     answer:
       de: |-
-        Wenn gar nichts reagiert, ist das kein reines Display-Thema.
-        Starte mit `/diagnose aux` — fast immer ist AUX oder CBB schuld.
+        Wenn gar nichts reagiert, ist das kein reines Display-Thema. Starte mit `/diagnose aux` — fast immer ist AUX oder CBB schuld.
       en: |-
-        If nothing responds, it's not a pure display issue. Start with
-        `/diagnose aux` — AUX or CBB is almost always the cause.
+        If nothing responds, it's not a pure display issue. Start with `/diagnose aux` — AUX or CBB is almost always the cause.
 
   brownout:
     answer:
       de: |-
-        Dashboard kommt kurz und geht wieder aus = meistens AUX-
-        Brownout.
+        Dashboard kommt kurz und geht wieder aus = meistens AUX- Brownout.
 
-        **Erst einen Reset versuchen** (PMICs zurücksetzen — reicht
-        manchmal):
-        Sitzbox auf → **AUX-Stecker abziehen** → **CBB-Stecker abziehen**
-        → kurz warten → in umgekehrter Reihenfolge wieder anschließen.
+        **Erst einen Reset versuchen** (PMICs zurücksetzen — reicht manchmal): Sitzbox auf → **AUX-Stecker abziehen** → **CBB-Stecker abziehen** → kurz warten → in umgekehrter Reihenfolge wieder anschließen.
 
-        Wenn das Display danach immer noch nicht stabil hochkommt:
-        → `/faq aux-battery`. Display weiter jagen, bevor die
-        12-V-Versorgung stabil ist, lohnt sich nicht.
+        Wenn das Display danach immer noch nicht stabil hochkommt: → `/faq aux-battery`. Display weiter jagen, bevor die 12-V-Versorgung stabil ist, lohnt sich nicht.
       en: |-
-        Dashboard briefly comes up and dies again = usually an AUX
-        brownout.
+        Dashboard briefly comes up and dies again = usually an AUX brownout.
 
-        **Try a reset first** (resets the PMICs — sometimes enough):
-        open the seatbox → **disconnect the AUX plug** → **disconnect
-        the CBB plug** → wait briefly → reconnect in reverse order.
+        **Try a reset first** (resets the PMICs — sometimes enough): open the seatbox → **disconnect the AUX plug** → **disconnect the CBB plug** → wait briefly → reconnect in reverse order.
 
-        If the display still won't come up cleanly afterwards:
-        → `/faq aux-battery`. Don't chase the display before the 12 V
-        supply is stable.
+        If the display still won't come up cleanly afterwards: → `/faq aux-battery`. Don't chase the display before the 12 V supply is stable.
 
   flicker:
     prompt:
@@ -72,35 +57,18 @@ steps:
   moisture:
     answer:
       de: |-
-        Kondenswasser im DBC legt die Elektronik lahm — oft intermittierend.
-        Im Wartungshandbuch Kapitel 7.1 („Display beschlägt") beschrieben.
-        Displaycover ab (ist geklebt, mit 3M 468MP ersetzen — `/faq display-repair`),
-        4 Schrauben lösen, DBC vorsichtig trocknen (Luft, Silikagel), dann
-        neu versiegeln.
-        Zum DBC-Test siehe nächster Schritt — wenn du's gerade eh offen hast.
+        Kondenswasser im DBC legt die Elektronik lahm — oft intermittierend. Im Wartungshandbuch Kapitel 7.1 („Display beschlägt") beschrieben. Displaycover ab (ist geklebt, mit 3M 468MP ersetzen — `/faq display-repair`), 4 Schrauben lösen, DBC vorsichtig trocknen (Luft, Silikagel), dann neu versiegeln. Zum DBC-Test siehe nächster Schritt — wenn du's gerade eh offen hast.
       en: |-
-        Condensation inside the DBC kills the electronics — often
-        intermittently. Wartungshandbuch section 7.1 ("Display
-        beschlägt"). Pull the display cover (it's glued; re-glue with
-        3M 468MP — see `/faq display-repair`), undo 4 screws, dry the
-        DBC carefully (air, silica gel), reseal.
-        If you have it open, run the DBC test in the next step.
+        Condensation inside the DBC kills the electronics — often intermittently. Wartungshandbuch section 7.1 ("Display beschlägt"). Pull the display cover (it's glued; re-glue with 3M 468MP — see `/faq display-repair`), undo 4 screws, dry the DBC carefully (air, silica gel), reseal. If you have it open, run the DBC test in the next step.
 
   fpc:
     prompt:
       de: |-
-        Klingt nach einem Problem mit der **Mini-USB-Verbindung** zum
-        DBC oder dem DBC selbst. Das DBC lässt sich **isoliert testen**,
-        indem du es per Mini-USB extern bestromst (Powerbank oder
-        Computer reicht) — das DBC hat ein eigenes Betriebssystem und
-        kommt unabhängig hoch.
+        Klingt nach einem Problem mit der **Mini-USB-Verbindung** zum DBC oder dem DBC selbst. Das DBC lässt sich **isoliert testen**, indem du es per Mini-USB extern bestromst (Powerbank oder Computer reicht) — das DBC hat ein eigenes Betriebssystem und kommt unabhängig hoch.
 
         Hast du das schon gemacht?
       en: |-
-        Sounds like a problem with the **mini-USB link** to the DBC or
-        the DBC itself. The DBC can be **tested isolated** by powering
-        it externally via mini-USB (a powerbank or computer is enough) —
-        it has its own OS and boots independently.
+        Sounds like a problem with the **mini-USB link** to the DBC or the DBC itself. The DBC can be **tested isolated** by powering it externally via mini-USB (a powerbank or computer is enough) — it has its own OS and boots independently.
 
         Have you tried that?
     choices:
@@ -116,76 +84,36 @@ steps:
       de: |-
         Nach Wartungshandbuch 2.2.8 (DBC/Display Funktionstest):
 
-        1. Roller stromlos machen: Hauptakku raus, einen Pol der AUX
-           abklemmen, CBB-Stecker abziehen.
-        2. Mini-USB-Stecker am MDB lösen — dort sind **zwei kleine
-           Rändelschrauben** (am besten mit Kreuz- oder Schlitz-
-           Schraubenzieher zu öffnen, *keine Sechskant*; die Sechskant-
-           schrauben halten das MDB selbst im Schacht).
-        3. Variante A: das gelöste Roller-USB-Kabel an seinem MDB-Ende
-           über Mini-USB→USB-A-Adapter an Powerbank/Computer hängen
-           (2.2.8.1).
-           Variante B: ein externes Mini-USB-Kabel direkt am DBC
-           anstecken (2.2.8.2).
-        4. Display sollte binnen ~10 s das unu-Logo zeigen, nach ~30 s
-           die Parkmodus-Oberfläche.
+        1. Roller stromlos machen: Hauptakku raus, einen Pol der AUX abklemmen, CBB-Stecker abziehen.
+        2. Mini-USB-Stecker am MDB lösen — dort sind **zwei kleine Rändelschrauben** (am besten mit Kreuz- oder Schlitz- Schraubenzieher zu öffnen, *keine Sechskant*; die Sechskant- schrauben halten das MDB selbst im Schacht).
+        3. Variante A: das gelöste Roller-USB-Kabel an seinem MDB-Ende über Mini-USB→USB-A-Adapter an Powerbank/Computer hängen (2.2.8.1). Variante B: ein externes Mini-USB-Kabel direkt am DBC anstecken (2.2.8.2).
+        4. Display sollte binnen ~10 s das unu-Logo zeigen, nach ~30 s die Parkmodus-Oberfläche.
 
-        Wenn's hochkommt → DBC lebt, das Problem ist MDB-seitig
-        (`/faq water-damage-mdb`).
-        Wenn nicht → DBC selbst defekt.
+        Wenn's hochkommt → DBC lebt, das Problem ist MDB-seitig (`/faq water-damage-mdb`). Wenn nicht → DBC selbst defekt.
 
         Starte `/diagnose display-dead` neu, wenn du das Ergebnis hast.
       en: |-
         Wartungshandbuch 2.2.8 (DBC/Display function test):
 
-        1. Fully de-power: main battery out, disconnect one pole of
-           the AUX, then disconnect the CBB.
-        2. Remove the mini-USB plug at the MDB — it's held by **two
-           small thumb screws** (best opened with a Phillips or flat
-           screwdriver; *not* hex — the hex screws hold the MDB itself
-           in the bay).
-        3. Option A: take the loose scooter USB cable, attach a mini-
-           USB→USB-A adapter at its MDB end and plug it into a
-           powerbank/computer (2.2.8.1).
-           Option B: plug an external mini-USB cable directly into the
-           DBC (2.2.8.2).
-        4. The display should show the unu logo within ~10 s and the
-           park-mode UI within ~30 s.
+        1. Fully de-power: main battery out, disconnect one pole of the AUX, then disconnect the CBB.
+        2. Remove the mini-USB plug at the MDB — it's held by **two small thumb screws** (best opened with a Phillips or flat screwdriver; *not* hex — the hex screws hold the MDB itself in the bay).
+        3. Option A: take the loose scooter USB cable, attach a mini- USB→USB-A adapter at its MDB end and plug it into a powerbank/computer (2.2.8.1). Option B: plug an external mini-USB cable directly into the DBC (2.2.8.2).
+        4. The display should show the unu logo within ~10 s and the park-mode UI within ~30 s.
 
-        If it boots → DBC is alive; the problem is on the MDB side
-        (`/faq water-damage-mdb`).
-        If not → the DBC itself is dead.
+        If it boots → DBC is alive; the problem is on the MDB side (`/faq water-damage-mdb`). If not → the DBC itself is dead.
 
         Restart `/diagnose display-dead` with the result.
 
   mdb-side:
     answer:
       de: |-
-        DBC lebt. Dann liegt's am MDB oder am USB-Kabel/an der USB-
-        Buchse am MDB. Mit großer Wahrscheinlichkeit: **Wasserschaden
-        am MDB** — siehe `/faq water-damage-mdb`.
-        Wartungshandbuch 6.3 nennt Austausch von MDB und USB-Kabel als
-        Fix (Teilenummern SP-S-ASM-PCBA-MDB1-01 und SP-S-05-06-002).
-        Im `#support` gibt es einen Community-Prüfservice für
-        defekte MDBs.
+        DBC lebt. Dann liegt's am MDB oder am USB-Kabel/an der USB- Buchse am MDB. Mit großer Wahrscheinlichkeit: **Wasserschaden am MDB** — siehe `/faq water-damage-mdb`. Wartungshandbuch 6.3 nennt Austausch von MDB und USB-Kabel als Fix (Teilenummern SP-S-ASM-PCBA-MDB1-01 und SP-S-05-06-002). Im `#support` gibt es einen Community-Prüfservice für defekte MDBs.
       en: |-
-        DBC is alive. So the problem is the MDB or the USB cable / the
-        USB socket on the MDB itself. Most likely: **water damage at
-        the MDB** — see `/faq water-damage-mdb`.
-        Wartungshandbuch 6.3 lists MDB and USB cable replacement as the
-        fix (part numbers SP-S-ASM-PCBA-MDB1-01 and SP-S-05-06-002).
-        The `#support` channel has a community test service for
-        dead MDBs.
+        DBC is alive. So the problem is the MDB or the USB cable / the USB socket on the MDB itself. Most likely: **water damage at the MDB** — see `/faq water-damage-mdb`. Wartungshandbuch 6.3 lists MDB and USB cable replacement as the fix (part numbers SP-S-ASM-PCBA-MDB1-01 and SP-S-05-06-002). The `#support` channel has a community test service for dead MDBs.
 
   dbc-dead:
     answer:
       de: |-
-        DBC kommt auch extern nicht hoch → DBC ist defekt. Austausch
-        nach Wartungshandbuch (Teilenummer SP-S-ASM-PCBA-DBC1-01).
-        Der Community-Prüfservice im `#support` nimmt DBCs an —
-        vielleicht lässt sich's noch reanimieren. Siehe `/faq spare-parts`.
+        DBC kommt auch extern nicht hoch → DBC ist defekt. Austausch nach Wartungshandbuch (Teilenummer SP-S-ASM-PCBA-DBC1-01). Der Community-Prüfservice im `#support` nimmt DBCs an — vielleicht lässt sich's noch reanimieren. Siehe `/faq spare-parts`.
       en: |-
-        DBC won't boot externally either → DBC is dead. Replace per
-        Wartungshandbuch (part number SP-S-ASM-PCBA-DBC1-01).
-        The community test service in `#support` accepts DBCs —
-        it may still be salvageable. See `/faq spare-parts`.
+        DBC won't boot externally either → DBC is dead. Replace per Wartungshandbuch (part number SP-S-ASM-PCBA-DBC1-01). The community test service in `#support` accepts DBCs — it may still be salvageable. See `/faq spare-parts`.

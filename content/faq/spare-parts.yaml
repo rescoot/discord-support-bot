@@ -5,16 +5,11 @@ title:
   en: "Spare parts: specific community-sourced replacements"
 body:
   de: |
-    Konkrete Ersatzteile, die im `#support` / `#ressourcen` von
-    Community-Mitgliedern verlinkt und als passend bestätigt wurden.
-    Links/Preise wandern — falls ein Angebot weg ist, such nach dem
-    Produktnamen.
+    Konkrete Ersatzteile, die im `#support` / `#ressourcen` von Community-Mitgliedern verlinkt und als passend bestätigt wurden. Links/Preise wandern — falls ein Angebot weg ist, such nach dem Produktnamen.
 
     **12V-AUX-Batterie (Blei-Gel):**
-    • **EMOS B9653**, ca. 18 € — <https://www.amazon.de/dp/B01N95DUQB>
-      — die Standard-Empfehlung im Channel.
-    • Alternative: **Tecnoware** 12V 5Ah Faston 6,3 mm —
-      <https://www.amazon.de/dp/B00FG8FC90>
+    • **EMOS B9653**, ca. 18 € — <https://www.amazon.de/dp/B01N95DUQB> — die Standard-Empfehlung im Channel.
+    • Alternative: **Tecnoware** 12V 5Ah Faston 6,3 mm — <https://www.amazon.de/dp/B00FG8FC90>
 
     **12V-AUX-Batterie (LiFePO4-Alternative):**
     • LiFePo4 12V, ca. 25 € — <https://www.amazon.de/dp/B0CPPBKL16>
@@ -26,19 +21,14 @@ body:
     • <https://www.aliexpress.com/item/1005006152846369.html>
 
     **Sitzschloss (4-Pin-Version):**
-    • <https://de.aliexpress.com/item/1005007041507776.html>
-      — passt mechanisch, aber **der Stecker ist nicht der originale**.
-      Beim Einbau Stecker umlöten oder die Kabel splicen.
+    • <https://de.aliexpress.com/item/1005007041507776.html> — passt mechanisch, aber **der Stecker ist nicht der originale**. Beim Einbau Stecker umlöten oder die Kabel splicen.
 
     **Bremsbeläge vorne:**
-    • **EBC SFA151**, Markenware, ca. 7 €/Paar statt 73,70 € bei Emco —
-      Amazon/Motorradshop-Suche nach „EBC SFA151".
-    • AliExpress Typ 07 (günstige Alternative) —
-      <https://de.aliexpress.com/item/33001185246.html>
+    • **EBC SFA151**, Markenware, ca. 7 €/Paar statt 73,70 € bei Emco — Amazon/Motorradshop-Suche nach „EBC SFA151".
+    • AliExpress Typ 07 (günstige Alternative) — <https://de.aliexpress.com/item/33001185246.html>
 
     **Bremsbeläge hinten:**
-    • **TRW Lucas MCB519EC** — <https://www.mymoto24.de/produkt/495/bremsbelag-trw-lucas-mcb519ec>
-      (vorn und hinten sind unterschiedlich — MCB519EC ist für hinten).
+    • **TRW Lucas MCB519EC** — <https://www.mymoto24.de/produkt/495/bremsbelag-trw-lucas-mcb519ec> (vorn und hinten sind unterschiedlich — MCB519EC ist für hinten).
 
     **Radlager vorne (6201-2RS, ca. 7 € statt 18 € bei Emco):**
     • Amazon.de-Suche nach **„XiKe 6201-2RS Rillenkugellager"**.
@@ -49,27 +39,17 @@ body:
     **Display-Glas wieder kleben:** → `/faq display-repair` (3M 468MP)
 
     **Displayschutzfolie (E-Bike-Folie, passt nach Zuschnitt):**
-    • <https://www.mac-geiz.de/displayschutz-fuer-e-bike-0200001874.html>
-      — schützt nicht gegen Feuchtigkeit von unten, Kondenswasser
-      bleibt also das Thema.
+    • <https://www.mac-geiz.de/displayschutz-fuer-e-bike-0200001874.html> — schützt nicht gegen Feuchtigkeit von unten, Kondenswasser bleibt also das Thema.
 
-    **Displaylinse — Maße zum Selbstzuschnitt:** **112,97 × 99,02 mm**.
-    Die Originallinse hat noch eine Nase, die sich von Hand nicht
-    nachbauen lässt — passt laut Channel aber auch ohne.
+    **Displaylinse — Maße zum Selbstzuschnitt:** **112,97 × 99,02 mm**. Die Originallinse hat noch eine Nase, die sich von Hand nicht nachbauen lässt — passt laut Channel aber auch ohne.
 
-    **Kategorisch nichts gefunden?** Ersatzteilkatalog-PDF im
-    `#ressourcen`-Channel, dann im `#support` mit Beschreibung
-    und Foto fragen.
+    **Kategorisch nichts gefunden?** Ersatzteilkatalog-PDF im `#ressourcen`-Channel, dann im `#support` mit Beschreibung und Foto fragen.
   en: |
-    Specific spare parts that community members have linked and
-    confirmed as fits in `#support` / `#ressourcen`. Links and
-    prices drift — if a listing is gone, search for the product name.
+    Specific spare parts that community members have linked and confirmed as fits in `#support` / `#ressourcen`. Links and prices drift — if a listing is gone, search for the product name.
 
     **12V AUX battery (lead-acid):**
-    • **EMOS B9653**, ~ €18 — <https://www.amazon.de/dp/B01N95DUQB>
-      — the standard channel recommendation.
-    • Alternative: **Tecnoware** 12V 5Ah Faston 6.3 mm —
-      <https://www.amazon.de/dp/B00FG8FC90>
+    • **EMOS B9653**, ~ €18 — <https://www.amazon.de/dp/B01N95DUQB> — the standard channel recommendation.
+    • Alternative: **Tecnoware** 12V 5Ah Faston 6.3 mm — <https://www.amazon.de/dp/B00FG8FC90>
 
     **12V AUX battery (LiFePO4 alternative):**
     • LiFePO4 12V, ~ €25 — <https://www.amazon.de/dp/B0CPPBKL16>
@@ -81,19 +61,14 @@ body:
     • <https://www.aliexpress.com/item/1005006152846369.html>
 
     **Seat lock (4-pin version):**
-    • <https://de.aliexpress.com/item/1005007041507776.html>
-      — fits mechanically, but the **connector is not the original
-      one**. Re-solder the connector or splice the cables when fitting.
+    • <https://de.aliexpress.com/item/1005007041507776.html> — fits mechanically, but the **connector is not the original one**. Re-solder the connector or splice the cables when fitting.
 
     **Front brake pads:**
-    • **EBC SFA151**, brand part, ~ €7/pair vs Emco's €73.70 —
-      search "EBC SFA151" on Amazon/motorcycle shops.
-    • AliExpress Type 07 (budget alternative) —
-      <https://de.aliexpress.com/item/33001185246.html>
+    • **EBC SFA151**, brand part, ~ €7/pair vs Emco's €73.70 — search "EBC SFA151" on Amazon/motorcycle shops.
+    • AliExpress Type 07 (budget alternative) — <https://de.aliexpress.com/item/33001185246.html>
 
     **Rear brake pads:**
-    • **TRW Lucas MCB519EC** — <https://www.mymoto24.de/produkt/495/bremsbelag-trw-lucas-mcb519ec>
-      (front and rear are different — MCB519EC is for the rear).
+    • **TRW Lucas MCB519EC** — <https://www.mymoto24.de/produkt/495/bremsbelag-trw-lucas-mcb519ec> (front and rear are different — MCB519EC is for the rear).
 
     **Front wheel bearings (6201-2RS, ~ €7 vs €18 at Emco):**
     • Search "XiKe 6201-2RS" on amazon.de.
@@ -104,15 +79,9 @@ body:
     **Re-glueing the display glass:** → `/faq display-repair` (3M 468MP)
 
     **Display screen protector (e-bike film, cut to fit):**
-    • <https://www.mac-geiz.de/displayschutz-fuer-e-bike-0200001874.html>
-      — doesn't protect against moisture from below, so condensation
-      is still the issue.
+    • <https://www.mac-geiz.de/displayschutz-fuer-e-bike-0200001874.html> — doesn't protect against moisture from below, so condensation is still the issue.
 
-    **Display lens — dimensions for DIY cut:** **112.97 × 99.02 mm**.
-    The original lens has a small "nose" you can't reproduce with a
-    cutter — but per the channel it still fits without.
+    **Display lens — dimensions for DIY cut:** **112.97 × 99.02 mm**. The original lens has a small "nose" you can't reproduce with a cutter — but per the channel it still fits without.
 
-    **Category not covered?** The parts-catalog PDF is pinned in the
-    `#ressourcen` channel, then ask in `#support` with a
-    description and a photo.
+    **Category not covered?** The parts-catalog PDF is pinned in the `#ressourcen` channel, then ask in `#support` with a description and a photo.
 tags: [parts, repair, community]

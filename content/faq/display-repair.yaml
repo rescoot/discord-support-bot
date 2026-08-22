@@ -5,9 +5,7 @@ title:
   en: "Re-glueing the display glass to the DBC"
 body:
   de: |
-    Aus dem `#support`: **3M 468MP** ist der passende Kleber.
-    Kommt dem Original sehr nahe und ist später wieder ablösbar, falls
-    du das Display nochmal aufmachen musst.
+    Aus dem `#support`: **3M 468MP** ist der passende Kleber. Kommt dem Original sehr nahe und ist später wieder ablösbar, falls du das Display nochmal aufmachen musst.
 
     **DBC ausbauen** ist erfahrungsgemäß lästig, aber überschaubar:
 
@@ -16,37 +14,28 @@ body:
     3. Front ab, das USB-Kabel zum MDB lösen, Stecker abziehen.
 
     Wichtig beim Wiederzusammenbau:
+
     - Schrauben **nicht überdrehen**, das Gehäuse mag das nicht.
-    - **Kabel nicht überdehnen oder einklemmen**, weder die internen
-      Steckerleitungen noch das USB-Kabel unter dem Glas.
+    - **Kabel nicht überdehnen oder einklemmen**, weder die internen Steckerleitungen noch das USB-Kabel unter dem Glas.
 
-    Reste vom alten Kleber gehen meistens mit Isopropanol oder
-    ähnlichem ab — hier gibt's keinen festen Tipp aus dem Channel,
-    also vorsichtig testen.
+    Reste vom alten Kleber gehen meistens mit Isopropanol oder ähnlichem ab — hier gibt's keinen festen Tipp aus dem Channel, also vorsichtig testen.
 
-    Wenn das Glas selbst gebrochen ist und du dir eines zuschneiden
-    willst, stehen die Maße in `/faq spare-parts`.
+    Wenn das Glas selbst gebrochen ist und du dir eines zuschneiden willst, stehen die Maße in `/faq spare-parts`.
   en: |
-    From `#support`: **3M 468MP** is the right tape. Close to
-    the original and removable later if you ever need to open the
-    display again.
+    From `#support`: **3M 468MP** is the right tape. Close to the original and removable later if you ever need to open the display again.
 
     **Pulling the DBC** is annoying but manageable:
 
-    1. Take off the display glass (a.k.a. "Tacholinse") — only glued
-       on.
+    1. Take off the display glass (a.k.a. "Tacholinse") — only glued on.
     2. **4 hex screws (H2.5)** behind it hold the DBC.
     3. Pull the front, undo the USB cable to the MDB, unplug.
 
     On reassembly:
-    - **Don't over-tighten** the screws, the housing doesn't take
-      kindly to it.
-    - **Don't stretch or pinch the cables**, neither the internal
-      connector leads nor the USB cable under the glass.
 
-    Old adhesive usually comes off with isopropanol or similar — no
-    canonical recipe in the channel, so test carefully.
+    - **Don't over-tighten** the screws, the housing doesn't take kindly to it.
+    - **Don't stretch or pinch the cables**, neither the internal connector leads nor the USB cable under the glass.
 
-    If the glass itself is broken and you want to cut a replacement,
-    the dimensions are in `/faq spare-parts`.
+    Old adhesive usually comes off with isopropanol or similar — no canonical recipe in the channel, so test carefully.
+
+    If the glass itself is broken and you want to cut a replacement, the dimensions are in `/faq spare-parts`.
 tags: [repair, dashboard]

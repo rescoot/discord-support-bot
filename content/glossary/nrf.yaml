@@ -5,29 +5,15 @@ title:
   en: "nRF — the Bluetooth chip"
 body:
   de: |
-    Der **nRF** ist quasi das Stammhirn des Rollers: der kleinste,
-    permanent laufende Chip, der die Bluetooth-Verbindung zum Handy
-    handhabt und einen Großteil der Wach-/Schlaf-Logik mitsteuert.
-    Solange AUX oder CBB Strom liefern, läuft auch der nRF.
+    Der **nRF** ist quasi das Stammhirn des Rollers: der kleinste, permanent laufende Chip, der die Bluetooth-Verbindung zum Handy handhabt und einen Großteil der Wach-/Schlaf-Logik mitsteuert. Solange AUX oder CBB Strom liefern, läuft auch der nRF.
 
-    Der nRF hat eine eigene Firmware, separat von ScooterOS auf MDB
-    und DBC. **Soll-Stand: v1.12.0.** Mit älteren Ständen funktioniert
-    die Kommunikation mit der App nicht mehr richtig.
+    Der nRF hat eine eigene Firmware, separat von ScooterOS auf MDB und DBC. **Soll-Stand: v1.12.0.** Mit älteren Ständen funktioniert die Kommunikation mit der App nicht mehr richtig.
 
-    Versionen am Roller ablesen: bei eingeschaltetem Roller beide
-    Bremshebel mindestens 5 s gleichzeitig halten — die Versionsbox
-    zeigt MDB-, DBC- und nRF-Version. Mehr in `/faq firmware`.
+    Versionen am Roller ablesen: bei eingeschaltetem Roller beide Bremshebel mindestens 5 s gleichzeitig halten — die Versionsbox zeigt MDB-, DBC- und nRF-Version. Mehr in `/faq firmware`.
   en: |
-    The **nRF** is effectively the brainstem of the scooter: the
-    smallest always-on chip, which handles the Bluetooth link to your
-    phone and drives a chunk of the wake/sleep logic. As long as AUX
-    or CBB is supplying power, the nRF runs.
+    The **nRF** is effectively the brainstem of the scooter: the smallest always-on chip, which handles the Bluetooth link to your phone and drives a chunk of the wake/sleep logic. As long as AUX or CBB is supplying power, the nRF runs.
 
-    The nRF has its own firmware, separate from ScooterOS on MDB and
-    DBC. **Target: v1.12.0.** Older versions don't talk to the app
-    properly any more.
+    The nRF has its own firmware, separate from ScooterOS on MDB and DBC. **Target: v1.12.0.** Older versions don't talk to the app properly any more.
 
-    To read versions on the scooter: with the scooter on, hold both
-    brake levers for at least 5 s — the Versionsbox shows MDB, DBC and
-    nRF version. More in `/faq firmware`.
+    To read versions on the scooter: with the scooter on, hold both brake levers for at least 5 s — the Versionsbox shows MDB, DBC and nRF version. More in `/faq firmware`.
 tags: [hardware, bluetooth]

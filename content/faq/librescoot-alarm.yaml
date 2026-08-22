@@ -5,19 +5,13 @@ title:
   en: "Librescoot: motion alarm"
 body:
   de: |
-    Librescoot bringt eine eingebaute Alarmanlage mit. Sie nutzt den
-    BMX055-Beschleunigungssensor im MDB; externe Hardware oder ein
-    Abo brauchst du nicht. Ist out of the box aktiv.
+    Librescoot bringt eine eingebaute Alarmanlage mit. Sie nutzt den BMX055-Beschleunigungssensor im MDB; externe Hardware oder ein Abo brauchst du nicht. Ist out of the box aktiv.
 
     **Stufen:**
     • Stufe 1 (leichte Bewegung): Warnblinker als Vorwarnung.
-    • Stufe 2 (anhaltende Bewegung): Warnblinker, plus Hupe falls
-      `alarm.honk` aktiviert ist (Standard: aus).
+    • Stufe 2 (anhaltende Bewegung): Warnblinker, plus Hupe falls `alarm.honk` aktiviert ist (Standard: aus).
 
-    Wird **scharfgeschaltet**, sobald der Roller in den Stand-by geht
-    — mit ~5 s Verzögerung, in der du dich noch entscheiden kannst.
-    Wird **entschärft**, sobald der Roller wieder entsperrt wird
-    (egal wie: Keycard, App, `lsc unlock`).
+    Wird **scharfgeschaltet**, sobald der Roller in den Stand-by geht — mit ~5 s Verzögerung, in der du dich noch entscheiden kannst. Wird **entschärft**, sobald der Roller wieder entsperrt wird (egal wie: Keycard, App, `lsc unlock`).
 
     **Steuern per `lsc`:**
     ```
@@ -37,23 +31,17 @@ body:
     lsc set alarm.hairtrigger-duration 3   # Dauer dieser Vorwarnung in s (default: 3)
     ```
 
-    Mehrere Werte gehen in einem Befehl:
-    `lsc set alarm.enabled true alarm.honk false`.
+    Mehrere Werte gehen in einem Befehl: `lsc set alarm.enabled true alarm.honk false`.
 
     Mehr zu `lsc`: `/faq librescoot-lsc`.
   en: |
-    Librescoot ships with a built-in motion alarm. It uses the MDB's
-    BMX055 accelerometer; no external hardware, no subscription.
-    Active out of the box.
+    Librescoot ships with a built-in motion alarm. It uses the MDB's BMX055 accelerometer; no external hardware, no subscription. Active out of the box.
 
     **Stages:**
     • Stage 1 (light motion): hazard lights as a warning.
-    • Stage 2 (sustained motion): hazards, plus horn if
-      `alarm.honk` is enabled (default: off).
+    • Stage 2 (sustained motion): hazards, plus horn if `alarm.honk` is enabled (default: off).
 
-    **Arms** when the scooter enters stand-by — with a ~5 s delay
-    so you can change your mind. **Disarms** as soon as the scooter
-    is unlocked again (any way: keycard, app, `lsc unlock`).
+    **Arms** when the scooter enters stand-by — with a ~5 s delay so you can change your mind. **Disarms** as soon as the scooter is unlocked again (any way: keycard, app, `lsc unlock`).
 
     **Control via `lsc`:**
     ```
@@ -73,8 +61,7 @@ body:
     lsc set alarm.hairtrigger-duration 3   # length of that warning in s (default: 3)
     ```
 
-    Multiple settings in one go:
-    `lsc set alarm.enabled true alarm.honk false`.
+    Multiple settings in one go: `lsc set alarm.enabled true alarm.honk false`.
 
     More on `lsc`: `/faq librescoot-lsc`.
 links:

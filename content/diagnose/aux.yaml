@@ -4,11 +4,9 @@ title:
   en: "AUX battery / scooter won't wake"
 description:
   de: |-
-    Geführte Fehlersuche für „wacht nicht auf", tote LEDs und Blinker-Ausfälle.
-    Nutzt die unu-App als Diagnose; Multimeter ist optional.
+    Geführte Fehlersuche für „wacht nicht auf", tote LEDs und Blinker-Ausfälle. Nutzt die unu-App als Diagnose; Multimeter ist optional.
   en: |-
-    Guided troubleshoot for "won't wake", dead LEDs and broken turn
-    signals. Uses the unu app for diagnostics; multimeter is optional.
+    Guided troubleshoot for "won't wake", dead LEDs and broken turn signals. Uses the unu app for diagnostics; multimeter is optional.
 start: symptom
 
 steps:
@@ -53,11 +51,9 @@ steps:
   app-long-press:
     prompt:
       de: |-
-        In der unu-App den AUX-Button **lange gedrückt halten**, solange
-        verbunden ist. Die App zeigt dir den AUX-Zustand. Wie sieht's aus?
+        In der unu-App den AUX-Button **lange gedrückt halten**, solange verbunden ist. Die App zeigt dir den AUX-Zustand. Wie sieht's aus?
       en: |-
-        In the unu app, **long-press the AUX button** while connected —
-        the app shows the AUX state. What does it say?
+        In the unu app, **long-press the AUX button** while connected — the app shows the AUX state. What does it say?
     choices:
       - label: { de: "AUX sichtbar schwach / niedrig", en: "AUX clearly weak / low" }
         goto: replace
@@ -69,25 +65,17 @@ steps:
   brownout:
     answer:
       de: |-
-        Dashboard-Brownout und/oder ausfallende Blinker sind klassische
-        Anzeichen einer schwachen AUX: die Ruhespannung reicht noch zum
-        Aufwachen, bricht aber unter Last zusammen.
+        Dashboard-Brownout und/oder ausfallende Blinker sind klassische Anzeichen einer schwachen AUX: die Ruhespannung reicht noch zum Aufwachen, bricht aber unter Last zusammen.
 
-        Nächster Schritt: **AUX tauschen**. Siehe `/faq aux-battery`
-        und vor dem Arbeiten `/faq dc-converter-safety` lesen.
+        Nächster Schritt: **AUX tauschen**. Siehe `/faq aux-battery` und vor dem Arbeiten `/faq dc-converter-safety` lesen.
 
-        Wenn du unsicher bist, frag im `#support` — mit Angabe,
-        wie alt der Roller ist und welche Symptome auftreten.
+        Wenn du unsicher bist, frag im `#support` — mit Angabe, wie alt der Roller ist und welche Symptome auftreten.
       en: |-
-        A dashboard brownout and/or flaky turn signals are classic signs
-        of a weak AUX: resting voltage is still fine, but it collapses
-        under load.
+        A dashboard brownout and/or flaky turn signals are classic signs of a weak AUX: resting voltage is still fine, but it collapses under load.
 
-        Next step: **replace the AUX**. See `/faq aux-battery` and read
-        `/faq dc-converter-safety` before working on it.
+        Next step: **replace the AUX**. See `/faq aux-battery` and read `/faq dc-converter-safety` before working on it.
 
-        If you're unsure, ask in `#support` with the scooter's age
-        and the symptoms.
+        If you're unsure, ask in `#support` with the scooter's age and the symptoms.
 
   aux-or-cbb:
     prompt:
@@ -130,11 +118,9 @@ steps:
   measure:
     prompt:
       de: |-
-        Miss die AUX-Ruhespannung am besten direkt an den Polen.
-        Was zeigt das Multimeter?
+        Miss die AUX-Ruhespannung am besten direkt an den Polen. Was zeigt das Multimeter?
       en: |-
-        Measure the AUX resting voltage — best directly on the posts.
-        What does the meter show?
+        Measure the AUX resting voltage — best directly on the posts. What does the meter show?
     choices:
       - label: { de: "Klar unter 12 V", en: "Clearly below 12 V" }
         goto: replace
@@ -148,38 +134,24 @@ steps:
   aux-likely-short:
     answer:
       de: |-
-        Ohne Messung: wenn der Roller ≥ 2 Jahre alt ist und die typischen
-        Symptome zeigt (keine grüne LED, Dashboard-Brownout, Blinker
-        schwach), ist AUX tauschen der wahrscheinlichste Fix.
-        Siehe `/faq aux-battery` und `/faq dc-converter-safety`.
+        Ohne Messung: wenn der Roller ≥ 2 Jahre alt ist und die typischen Symptome zeigt (keine grüne LED, Dashboard-Brownout, Blinker schwach), ist AUX tauschen der wahrscheinlichste Fix. Siehe `/faq aux-battery` und `/faq dc-converter-safety`.
       en: |-
-        Without measuring: if the scooter is ≥ 2 years old and shows the
-        usual symptoms (no green LED, dashboard brownout, weak signals),
-        replacing the AUX is the most likely fix. See `/faq aux-battery`
-        and `/faq dc-converter-safety`.
+        Without measuring: if the scooter is ≥ 2 years old and shows the usual symptoms (no green LED, dashboard brownout, weak signals), replacing the AUX is the most likely fix. See `/faq aux-battery` and `/faq dc-converter-safety`.
 
   replace:
     answer:
       de: |-
-        **AUX tauschen.** Bauform und Maße wie das Original
-        (12V-Blei-Gel-Batterie). Konkret bewährte Ersatztypen gibt's im
-        `#support` auf Nachfrage.
+        **AUX tauschen.** Bauform und Maße wie das Original (12V-Blei-Gel-Batterie). Konkret bewährte Ersatztypen gibt's im `#support` auf Nachfrage.
 
-        ⚠️ **Vor dem Arbeiten:** Hauptakku raus, AUX-Stecker erst danach
-        lösen. Unbedingt `/faq dc-converter-safety` lesen.
+        ⚠️ **Vor dem Arbeiten:** Hauptakku raus, AUX-Stecker erst danach lösen. Unbedingt `/faq dc-converter-safety` lesen.
 
-        Wenn danach immer noch kein Wake: CBB prüfen (`/glossar cbb`)
-        oder im `#support` mit Symptomen posten.
+        Wenn danach immer noch kein Wake: CBB prüfen (`/glossar cbb`) oder im `#support` mit Symptomen posten.
       en: |-
-        **Replace the AUX.** Same form factor and size as the original
-        (12V gel lead-acid). Ask in `#support` for currently known-
-        good replacement types.
+        **Replace the AUX.** Same form factor and size as the original (12V gel lead-acid). Ask in `#support` for currently known- good replacement types.
 
-        ⚠️ **Before working on it:** remove the main battery first, only
-        then disconnect the AUX. Read `/faq dc-converter-safety`.
+        ⚠️ **Before working on it:** remove the main battery first, only then disconnect the AUX. Read `/faq dc-converter-safety`.
 
-        If it still won't wake after the swap: check the CBB
-        (`/glossary cbb`) or post in `#support` with your symptoms.
+        If it still won't wake after the swap: check the CBB (`/glossary cbb`) or post in `#support` with your symptoms.
     links:
       - url: https://github.com/Julinho666/UNU-CBB-Battery
         label: { de: "CBB/AUX Community-Repo", en: "CBB/AUX community repo" }
@@ -187,21 +159,14 @@ steps:
   find-help:
     answer:
       de: |-
-        Für Hilfe bei der Reparatur: siehe `/faq service-partner` und
-        poste in `#support` mit **PLZ/Region** — dort kommen
-        regionale Empfehlungen. In Berlin ist *Fa. Wilhelm Fahrzeugtechnik*
-        am Südkreuz die etablierte Adresse.
+        Für Hilfe bei der Reparatur: siehe `/faq service-partner` und poste in `#support` mit **PLZ/Region** — dort kommen regionale Empfehlungen. In Berlin ist *Fa. Wilhelm Fahrzeugtechnik* am Südkreuz die etablierte Adresse.
       en: |-
-        For repair help: see `/faq service-partner` and post in
-        `#support` with your **zip/region** — you'll get regional
-        recommendations. In Berlin *Fa. Wilhelm Fahrzeugtechnik* near
-        Südkreuz is the established shop.
+        For repair help: see `/faq service-partner` and post in `#support` with your **zip/region** — you'll get regional recommendations. In Berlin *Fa. Wilhelm Fahrzeugtechnik* near Südkreuz is the established shop.
 
   ask-channel:
     answer:
       de: |-
-        Klingt nicht nach dem klassischen AUX-Muster. Poste am besten im
-        `#support`:
+        Klingt nicht nach dem klassischen AUX-Muster. Poste am besten im `#support`:
         • Alter/Baujahr des Rollers
         • Was genau passiert (und was nicht)
         • Ob/was die App anzeigt (falls verbunden)
@@ -209,8 +174,7 @@ steps:
 
         Je mehr Details, desto schneller die richtige Spur.
       en: |-
-        Doesn't sound like the classic AUX pattern. Post in
-        `#support` with:
+        Doesn't sound like the classic AUX pattern. Post in `#support` with:
         • Scooter age / year
         • What exactly happens (and what doesn't)
         • What the app shows (if it connects)
@@ -221,10 +185,6 @@ steps:
   app-flow:
     answer:
       de: |-
-        Wenn der Roller physisch reagiert (Keycard weckt ihn, Dashboard
-        kommt hoch), ist das eher ein App-Thema → `/diagnose app` oder
-        `/faq app-connect`.
+        Wenn der Roller physisch reagiert (Keycard weckt ihn, Dashboard kommt hoch), ist das eher ein App-Thema → `/diagnose app` oder `/faq app-connect`.
       en: |-
-        If the scooter reacts physically (keycard wakes it, dashboard
-        comes up), this is more of an app issue → `/diagnose app` or
-        `/faq app-connect`.
+        If the scooter reacts physically (keycard wakes it, dashboard comes up), this is more of an app issue → `/diagnose app` or `/faq app-connect`.

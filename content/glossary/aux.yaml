@@ -5,35 +5,19 @@ title:
   en: "AUX — 12V auxiliary battery"
 body:
   de: |
-    Die **AUX-Batterie** ist ein kleiner 12V-Bleiakku, der die Steuer-
-    elektronik (MDB, DBC, Beleuchtung, Blinker) versorgt. Sie übernimmt
-    die Versorgung, sobald der Roller entsperrt ist (Park- oder
-    Fahrmodus). Verriegelt (Stand-by, Hibernate) speist primär die CBB.
+    Die **AUX-Batterie** ist ein kleiner 12V-Bleiakku, der die Steuer- elektronik (MDB, DBC, Beleuchtung, Blinker) versorgt. Sie übernimmt die Versorgung, sobald der Roller entsperrt ist (Park- oder Fahrmodus). Verriegelt (Stand-by, Hibernate) speist primär die CBB.
 
-    Im `#support` ist sie mit großem Abstand der häufigste Defekt —
-    Faustregel aus dem Channel: **ab ~2 Jahren Lebensdauer** sterben AUX
-    gerne. Typische Folgen sind fehlende grüne LED, hängender Boot,
-    nicht funktionierende Blinker und „Roller wacht nicht auf".
+    Im `#support` ist sie mit großem Abstand der häufigste Defekt — Faustregel aus dem Channel: **ab ~2 Jahren Lebensdauer** sterben AUX gerne. Typische Folgen sind fehlende grüne LED, hängender Boot, nicht funktionierende Blinker und „Roller wacht nicht auf".
 
-    Zustand prüfen: In der unu-App auf die **Batterie-Leiste** tippen,
-    dann das **AUX-Symbol lange drücken** — der Dialog zeigt AUX-Spannung
-    und Ladezustand.
+    Zustand prüfen: In der unu-App auf die **Batterie-Leiste** tippen, dann das **AUX-Symbol lange drücken** — der Dialog zeigt AUX-Spannung und Ladezustand.
 
     Siehe `/diagnose aux` und `/faq aux-battery`.
   en: |
-    The **AUX battery** is a small 12V lead-acid pack that powers the
-    control electronics (MDB, DBC, lighting, turn signals). It takes
-    over once the scooter is unlocked (park or drive mode). When
-    locked (stand-by, hibernate) the CBB carries the load.
+    The **AUX battery** is a small 12V lead-acid pack that powers the control electronics (MDB, DBC, lighting, turn signals). It takes over once the scooter is unlocked (park or drive mode). When locked (stand-by, hibernate) the CBB carries the load.
 
-    In `#support` it's by far the most common fault — channel rule
-    of thumb: **once AUX hits ~2 years**, it tends to die. Typical fallout:
-    no green LED, stalled boot, turn signals not working, "scooter won't
-    wake".
+    In `#support` it's by far the most common fault — channel rule of thumb: **once AUX hits ~2 years**, it tends to die. Typical fallout: no green LED, stalled boot, turn signals not working, "scooter won't wake".
 
-    Check state: in the unu app, tap the **battery bar**, then
-    **long-press the AUX icon** — the dialog shows AUX voltage and
-    charge state.
+    Check state: in the unu app, tap the **battery bar**, then **long-press the AUX icon** — the dialog shows AUX voltage and charge state.
 
     See `/diagnose aux` and `/faq aux-battery`.
 tags: [hardware, battery]

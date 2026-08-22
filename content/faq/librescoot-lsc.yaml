@@ -5,9 +5,7 @@ title:
   en: "Librescoot: the `lsc` CLI"
 body:
   de: |
-    `lsc` ist das lokale Kommandozeilen-Tool auf dem Roller —
-    auf MDB und DBC verfügbar. Spricht mit den Librescoot-Services
-    über Redis.
+    `lsc` ist das lokale Kommandozeilen-Tool auf dem Roller — auf MDB und DBC verfügbar. Spricht mit den Librescoot-Services über Redis.
 
     **Häufige Befehle:**
     ```
@@ -35,9 +33,7 @@ body:
 
     **Komplette Referenz:** <https://librescoot.org/docs/lsc.html>
   en: |
-    `lsc` is the local command-line tool on the scooter — available
-    on both MDB and DBC. Talks to the Librescoot services over
-    Redis.
+    `lsc` is the local command-line tool on the scooter — available on both MDB and DBC. Talks to the Librescoot services over Redis.
 
     **Common commands:**
     ```

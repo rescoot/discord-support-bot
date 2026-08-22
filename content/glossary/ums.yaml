@@ -5,30 +5,19 @@ title:
   en: "Update Mode (internal: UMS / USB mass storage)"
 body:
   de: |
-    Im **Updatemodus** stellt der Roller eine 1-GB-Partition als
-    USB-Wechseldatenträger bereit. Auf das Laufwerk legst du
-    Firmware-Updates und Karten-/Routing-Daten in die passenden
-    Ordner; **nach Auswerfen des Laufwerks und Abziehen des
-    USB-Kabels** verarbeitet der Roller die Dateien automatisch.
+    Im **Updatemodus** stellt der Roller eine 1-GB-Partition als USB-Wechseldatenträger bereit. Auf das Laufwerk legst du Firmware-Updates und Karten-/Routing-Daten in die passenden Ordner; **nach Auswerfen des Laufwerks und Abziehen des USB-Kabels** verarbeitet der Roller die Dateien automatisch.
 
-    Aktivieren: am Display über `Menü → Einstellungen → System →
-    Updatemodus starten` oder per CLI mit `lsc usb ums`.
+    Aktivieren: am Display über `Menü → Einstellungen → System → Updatemodus starten` oder per CLI mit `lsc usb ums`.
 
-    Intern heißt der Mechanismus **UMS** (USB Mass Storage); nutzer-
-    seitig spricht alles von „Updatemodus".
+    Intern heißt der Mechanismus **UMS** (USB Mass Storage); nutzer- seitig spricht alles von „Updatemodus".
 
     Komplettanleitung: `/faq librescoot-update-mode`.
   en: |
-    In **Update Mode** the scooter exposes a 1 GB partition as a USB
-    removable drive. Drop firmware updates and map/routing data into
-    the matching folders; **after ejecting the drive and unplugging
-    the USB cable** the scooter processes the files automatically.
+    In **Update Mode** the scooter exposes a 1 GB partition as a USB removable drive. Drop firmware updates and map/routing data into the matching folders; **after ejecting the drive and unplugging the USB cable** the scooter processes the files automatically.
 
-    Activate: at the display via `Menu → Settings → System → Start
-    update mode`, or via CLI with `lsc usb ums`.
+    Activate: at the display via `Menu → Settings → System → Start update mode`, or via CLI with `lsc usb ums`.
 
-    Internally the mechanism is called **UMS** (USB Mass Storage);
-    user-facing everything refers to "Update Mode".
+    Internally the mechanism is called **UMS** (USB Mass Storage); user-facing everything refers to "Update Mode".
 
     Full guide: `/faq librescoot-update-mode`.
 links:

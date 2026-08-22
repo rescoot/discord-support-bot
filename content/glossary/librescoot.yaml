@@ -5,25 +5,15 @@ title:
   en: "Librescoot — open-source firmware"
 body:
   de: |
-    **Librescoot** ist eine offene, community-entwickelte Firmware für
-    den unu Scooter Pro. Eigene Selbstbeschreibung: *„Die Firmware, die
-    dein Roller verdient hat."*
+    **Librescoot** ist eine offene, community-entwickelte Firmware für den unu Scooter Pro. Eigene Selbstbeschreibung: *„Die Firmware, die dein Roller verdient hat."*
 
-    Bringt Offline-Navigation mit Karten, Light-/Dark-Mode, einen
-    Bewegungsalarm, ein verbessertes Lenkradschloss und OTA-Updates
-    mit. Funktioniert komplett ohne Cloud; SIM-Karte ist optional
-    (nur für Updates und Fern-Zugriff).
+    Bringt Offline-Navigation mit Karten, Light-/Dark-Mode, einen Bewegungsalarm, ein verbessertes Lenkradschloss und OTA-Updates mit. Funktioniert komplett ohne Cloud; SIM-Karte ist optional (nur für Updates und Fern-Zugriff).
 
     Wie installieren / aktueller Status: `/faq librescoot-intro`.
   en: |
-    **Librescoot** is an open, community-developed firmware for the
-    unu Scooter Pro. Self-description: *"The firmware your scooter
-    deserves."*
+    **Librescoot** is an open, community-developed firmware for the unu Scooter Pro. Self-description: *"The firmware your scooter deserves."*
 
-    Brings offline navigation with maps, light/dark display modes, a
-    motion alarm, an improved steering lock, and OTA updates. Works
-    fully offline; the SIM is optional (only for updates and remote
-    access).
+    Brings offline navigation with maps, light/dark display modes, a motion alarm, an improved steering lock, and OTA updates. Works fully offline; the SIM is optional (only for updates and remote access).
 
     How to install / current status: `/faq librescoot-intro`.
 links:

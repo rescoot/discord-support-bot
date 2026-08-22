@@ -7,52 +7,21 @@ body:
   de: |
     Was im Channel bestätigt ist:
 
-    1. Der Roller nutzt **BLE (Bluetooth Low Energy)**. BLE ist immer
-       an. Solange der Roller verriegelt ist (Stand-by, Hibernate),
-       speist primär die **CBB**; im Park- oder Fahrmodus übernimmt
-       die **AUX**.
-    2. Der Roller kann mit **mehreren Handys gepaart** sein, aber
-       immer nur **ein Gerät gleichzeitig verbunden**. Wenn die App
-       nichts findet, kann ein anderes Handy schon verbunden sein —
-       dort die Verbindung trennen oder das Gerät ausschalten.
-    3. Zum **Pairen eines neuen Geräts** muss der Roller entsperrt /
-       im Park-Modus sein. Beim Pairing erscheint ein **BLE-Code auf
-       dem Display**, den du in der App bestätigst.
-    4. Wenn die App den Roller **gar nicht** in der BLE-Geräteliste
-       sieht (auch nach Bluetooth aus/ein am Handy), ist der Roller
-       wahrscheinlich **stromlos** — dann ist's kein App-Problem,
-       sondern AUX oder CBB. Siehe `/faq aux-battery` und
-       `/faq cb-battery`. Die Keycard hilft als Test übrigens nicht:
-       ohne Strom liest der NFC-Leser auch nichts.
+    1. Der Roller nutzt **BLE (Bluetooth Low Energy)**. BLE ist immer an. Solange der Roller verriegelt ist (Stand-by, Hibernate), speist primär die **CBB**; im Park- oder Fahrmodus übernimmt die **AUX**.
+    2. Der Roller kann mit **mehreren Handys gepaart** sein, aber immer nur **ein Gerät gleichzeitig verbunden**. Wenn die App nichts findet, kann ein anderes Handy schon verbunden sein — dort die Verbindung trennen oder das Gerät ausschalten.
+    3. Zum **Pairen eines neuen Geräts** muss der Roller entsperrt / im Park-Modus sein. Beim Pairing erscheint ein **BLE-Code auf dem Display**, den du in der App bestätigst.
+    4. Wenn die App den Roller **gar nicht** in der BLE-Geräteliste sieht (auch nach Bluetooth aus/ein am Handy), ist der Roller wahrscheinlich **stromlos** — dann ist's kein App-Problem, sondern AUX oder CBB. Siehe `/faq aux-battery` und `/faq cb-battery`. Die Keycard hilft als Test übrigens nicht: ohne Strom liest der NFC-Leser auch nichts.
 
-    Welche App? **unustasis** ist die aktuell empfohlene App (neuer
-    und besser gepflegt als die offizielle Variante). Wenn du noch in
-    der alten unu-App steckst, jetzt umsteigen, siehe
-    `/faq official-app`.
+    Welche App? **unustasis** ist die aktuell empfohlene App (neuer und besser gepflegt als die offizielle Variante). Wenn du noch in der alten unu-App steckst, jetzt umsteigen, siehe `/faq official-app`.
   en: |
     What's confirmed in the channel:
 
-    1. The scooter uses **BLE (Bluetooth Low Energy)**. BLE is on
-       constantly. While the scooter is locked (stand-by, hibernate)
-       the **CBB** carries the load; in park or drive mode the **AUX**
-       takes over.
-    2. The scooter can be **paired with multiple phones**, but only
-       **one device can be connected at a time**. If your app can't
-       find it, another phone may already be connected — disconnect
-       there or switch the other device off.
-    3. To **pair a new device**, the scooter must be unlocked /
-       in park mode. During pairing a **BLE code appears on the
-       dashboard**; confirm it in the app.
-    4. If the app doesn't see the scooter in the BLE list **at all**
-       (even after toggling Bluetooth on the phone), the scooter is
-       most likely **unpowered** — that's an AUX or CBB problem, not
-       an app problem. See `/faq aux-battery` and `/faq cb-battery`.
-       The keycard isn't a useful test here: with no power the NFC
-       reader can't read it either.
+    1. The scooter uses **BLE (Bluetooth Low Energy)**. BLE is on constantly. While the scooter is locked (stand-by, hibernate) the **CBB** carries the load; in park or drive mode the **AUX** takes over.
+    2. The scooter can be **paired with multiple phones**, but only **one device can be connected at a time**. If your app can't find it, another phone may already be connected — disconnect there or switch the other device off.
+    3. To **pair a new device**, the scooter must be unlocked / in park mode. During pairing a **BLE code appears on the dashboard**; confirm it in the app.
+    4. If the app doesn't see the scooter in the BLE list **at all** (even after toggling Bluetooth on the phone), the scooter is most likely **unpowered** — that's an AUX or CBB problem, not an app problem. See `/faq aux-battery` and `/faq cb-battery`. The keycard isn't a useful test here: with no power the NFC reader can't read it either.
 
-    Which app? **unustasis** is the recommended one — newer and
-    better maintained than the official variant. If you're still on
-    the old unu app, switch now: `/faq official-app`.
+    Which app? **unustasis** is the recommended one — newer and better maintained than the official variant. If you're still on the old unu app, switch now: `/faq official-app`.
 links:
   - url: https://play.google.com/store/apps/details?id=de.freal.unustasis
     label:

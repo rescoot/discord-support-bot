@@ -5,75 +5,45 @@ title:
   en: "Scooter won't enter drive mode"
 body:
   de: |
-    Symptom: Dashboard und Licht sind an, aber der Roller bleibt im
-    Park-Modus. Drei Ursachen, in der Reihenfolge fürs Eingrenzen:
+    Symptom: Dashboard und Licht sind an, aber der Roller bleibt im Park-Modus. Drei Ursachen, in der Reihenfolge fürs Eingrenzen:
 
-    **Schau aufs Dashboard. Werden Tacho-Wert und Sitzbox-Icon (wenn
-    Sitz offen) angezeigt?**
+    **Schau aufs Dashboard. Werden Tacho-Wert und Sitzbox-Icon (wenn Sitz offen) angezeigt?**
 
     **1. Nein, kein Tacho-Wert / Sitzbox-Icon fehlt.**
-    Dann erreicht das DBC keine Daten vom MDB — die Mini-USB-Verbindung
-    ist hin oder das MDB selbst. Das DBC bekommt damit auch kein
-    „ready"-Signal und schaltet nicht in den Fahrmodus.
-    → `/faq water-damage-mdb`.
+    Dann erreicht das DBC keine Daten vom MDB — die Mini-USB-Verbindung ist hin oder das MDB selbst. Das DBC bekommt damit auch kein „ready"-Signal und schaltet nicht in den Fahrmodus. → `/faq water-damage-mdb`.
 
     **2. Ja, Tacho und Sitzbox-Icon sind da, trotzdem kein Fahrmodus.**
-    Dann ist die Datenseite ok, aber die **Hauptbatterie-Spannung
-    kommt nicht an der ECU an**. Die ECU funkt ihren Tacho-Wert über
-    CAN ans MDB, der Wert läuft also auch ohne Antriebsleistung
-    durch — Antrieb selbst geht aber nicht.
-    Das ist meist ein Steck-/Sicherungs-/Kabelthema im Hochstrompfad.
-    Im `#support` mit Bildern und der Beobachtung melden.
+    Dann ist die Datenseite ok, aber die **Hauptbatterie-Spannung kommt nicht an der ECU an**. Die ECU funkt ihren Tacho-Wert über CAN ans MDB, der Wert läuft also auch ohne Antriebsleistung durch — Antrieb selbst geht aber nicht. Das ist meist ein Steck-/Sicherungs-/Kabelthema im Hochstrompfad. Im `#support` mit Bildern und der Beobachtung melden.
 
-    **3. Tacho läuft, Sitzbox-Icon ok, alles wirkt normal — aber genau
-    nach dem Losfahren wirft's dich raus.**
-    Klassischer Seitenständer-Sensor. Aus dem `#support`:
-    > „Wenn es direkt nach dem Losfahren passiert, eventuell
-    > Seitenständersensor."
+    **3. Tacho läuft, Sitzbox-Icon ok, alles wirkt normal — aber genau nach dem Losfahren wirft's dich raus.**
+    Klassischer Seitenständer-Sensor. Aus dem `#support`: > „Wenn es direkt nach dem Losfahren passiert, eventuell > Seitenständersensor."
 
-    Diese Schalter gehen selten ganz kaputt, sie werden meistens nur
-    klebrig. Was hilft:
+    Diese Schalter gehen selten ganz kaputt, sie werden meistens nur klebrig. Was hilft:
+
     - Ständer mehrmals durchklappen, schauen ob er sauber einrastet.
     - Kontaktspray oder etwas Fett auf den Schaltmechanismus.
     - Sichtprüfung auf Schmutz, festgesetzten Staub, Salzkrusten.
 
-    Erst wenn das alles nichts bringt, ist der Schalter selbst dran
-    (Wartungshandbuch 1.6.6.4) bzw. das 16-polige Kabel zwischen DBC
-    und Schalter.
+    Erst wenn das alles nichts bringt, ist der Schalter selbst dran (Wartungshandbuch 1.6.6.4) bzw. das 16-polige Kabel zwischen DBC und Schalter.
   en: |
-    Symptom: dashboard and lights on, but the scooter stays in park.
-    Three causes, in order of how to narrow it down:
+    Symptom: dashboard and lights on, but the scooter stays in park. Three causes, in order of how to narrow it down:
 
-    **Look at the dashboard. Are the speedometer reading and the
-    seatbox icon (when the seat is open) showing?**
+    **Look at the dashboard. Are the speedometer reading and the seatbox icon (when the seat is open) showing?**
 
     **1. No, no speedo value / seatbox icon missing.**
-    Then the DBC isn't getting data from the MDB — the mini-USB link
-    is dead or the MDB itself. With no MDB data the DBC can't see the
-    "ready" signal and never enters drive mode.
-    → `/faq water-damage-mdb`.
+    Then the DBC isn't getting data from the MDB — the mini-USB link is dead or the MDB itself. With no MDB data the DBC can't see the "ready" signal and never enters drive mode. → `/faq water-damage-mdb`.
 
     **2. Yes, speedo and seatbox icon are there, still no drive mode.**
-    The data path is fine, but the **main battery's power isn't
-    reaching the ECU**. The ECU sends the speedo value over CAN to the
-    MDB, so that signal flows even without drive power — but actual
-    propulsion doesn't.
-    Usually a connector / fuse / cable issue in the high-current path.
-    Post in `#support` with photos and what you've observed.
+    The data path is fine, but the **main battery's power isn't reaching the ECU**. The ECU sends the speedo value over CAN to the MDB, so that signal flows even without drive power — but actual propulsion doesn't. Usually a connector / fuse / cable issue in the high-current path. Post in `#support` with photos and what you've observed.
 
-    **3. Speedo running, seatbox icon fine, everything looks normal —
-    but it kicks out of drive right after you set off.**
-    Classic kickstand sensor. From `#support`:
-    > "If it happens right after setting off, possibly the kickstand
-    > sensor."
+    **3. Speedo running, seatbox icon fine, everything looks normal — but it kicks out of drive right after you set off.**
+    Classic kickstand sensor. From `#support`: > "If it happens right after setting off, possibly the kickstand > sensor."
 
-    These switches rarely fail outright, they usually just get sticky.
-    What helps:
+    These switches rarely fail outright, they usually just get sticky. What helps:
+
     - Cycle the stand a few times, watch it engage cleanly.
     - Contact cleaner or a bit of grease on the switch mechanism.
     - Check for dirt, packed dust, salt crust.
 
-    Only if none of that works, look at the switch itself
-    (Wartungshandbuch 1.6.6.4) or the 16-pin cable between DBC and
-    switch.
+    Only if none of that works, look at the switch itself (Wartungshandbuch 1.6.6.4) or the 16-pin cable between DBC and switch.
 tags: [hardware, kickstand, troubleshooting]

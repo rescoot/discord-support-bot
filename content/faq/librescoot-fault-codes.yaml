@@ -5,31 +5,21 @@ title:
   en: "Librescoot: fault codes (B and E series)"
 body:
   de: |
-    Librescoot zeigt dieselben Fehlercodes wie die Original-Firmware
-    — die kommen direkt aus dem Akku (B-Reihe) bzw. der
-    Motorsteuerung (E-Reihe).
+    Librescoot zeigt dieselben Fehlercodes wie die Original-Firmware — die kommen direkt aus dem Akku (B-Reihe) bzw. der Motorsteuerung (E-Reihe).
 
     **B-Reihe — Akku:**
-    • **Temperatur-Schutz** (zu warm/zu kalt zum Laden oder Entladen)
-      — Akku auf normale Temperatur kommen lassen.
-    • **Spannungs- oder Strom-Schutz** (Über-/Unterspannung,
-      Überstrom, Kurzschluss-Schutz) — einmal voll laden, erneut
-      versuchen.
-    • **Kommunikations- oder NFC-Fehler** — Akku entnehmen, eine
-      Minute warten, neu einsetzen.
+    • **Temperatur-Schutz** (zu warm/zu kalt zum Laden oder Entladen) — Akku auf normale Temperatur kommen lassen.
+    • **Spannungs- oder Strom-Schutz** (Über-/Unterspannung, Überstrom, Kurzschluss-Schutz) — einmal voll laden, erneut versuchen.
+    • **Kommunikations- oder NFC-Fehler** — Akku entnehmen, eine Minute warten, neu einsetzen.
     • **Beschädigter Akku** — nicht weiter benutzen, Ersatz.
 
-    Bleibt der Code nach den genannten Schritten, gehört der Akku in
-    die Werkstatt.
+    Bleibt der Code nach den genannten Schritten, gehört der Akku in die Werkstatt.
 
     **E-Reihe — Motor / Elektronik:**
-    • **Akku-Spannungs-Probleme** aus Sicht der ECU — Akku laden, neu
-      versuchen.
+    • **Akku-Spannungs-Probleme** aus Sicht der ECU — Akku laden, neu versuchen.
     • **Motor- oder Sensor-Fehler** — meist nicht ohne Werkstatt.
-    • **Gasgriff-Probleme** — Gas einmal komplett loslassen, kurz
-      warten, neu Gas geben. Tritt häufig auf → Gasgriff/Verkabelung.
-    • **Überhitzung** — anhalten und abkühlen lassen. Wiederholt
-      ohne erkennbaren Grund → Werkstatt.
+    • **Gasgriff-Probleme** — Gas einmal komplett loslassen, kurz warten, neu Gas geben. Tritt häufig auf → Gasgriff/Verkabelung.
+    • **Überhitzung** — anhalten und abkühlen lassen. Wiederholt ohne erkennbaren Grund → Werkstatt.
 
     **Schnell auslesen per CLI:**
     ```
@@ -39,36 +29,25 @@ body:
     ```
 
     **Bug-Bundle für Discord-Support:**
-    `lsc logs` packt die letzten 24 h Service-Logs und Redis-State
-    in ein Tar — ideal für Hilfe-Anfragen.
+    `lsc logs` packt die letzten 24 h Service-Logs und Redis-State in ein Tar — ideal für Hilfe-Anfragen.
 
-    Ausführliche Erklärung:
-    <https://librescoot.org/handbook/fehlerbehebung.html>.
+    Ausführliche Erklärung: <https://librescoot.org/handbook/fehlerbehebung.html>.
   en: |
-    Librescoot shows the same fault codes as the stock firmware —
-    they come straight from the battery (B-series) or the motor
-    controller (E-series).
+    Librescoot shows the same fault codes as the stock firmware — they come straight from the battery (B-series) or the motor controller (E-series).
 
     **B-series — battery:**
-    • **Thermal protection** (too hot/cold to charge or discharge) —
-      let the pack come back to room temp.
-    • **Voltage or current protection** (over/under-voltage,
-      over-current, short-circuit) — fully charge once, retry.
+    • **Thermal protection** (too hot/cold to charge or discharge) — let the pack come back to room temp.
+    • **Voltage or current protection** (over/under-voltage, over-current, short-circuit) — fully charge once, retry.
     • **Comms or NFC error** — pull the pack, wait a minute, reseat.
     • **Damaged pack** — don't use, replace.
 
-    If the code persists after these steps, the pack belongs in a
-    workshop.
+    If the code persists after these steps, the pack belongs in a workshop.
 
     **E-series — motor / electronics:**
-    • **Pack-voltage issues** from the ECU's perspective — charge,
-      retry.
-    • **Motor or sensor faults** — usually not fixable without a
-      workshop.
-    • **Throttle issues** — fully release, wait briefly, reapply. If
-      this recurs → throttle or its wiring is suspect.
-    • **Overheat** — stop and let things cool. Repeated overheats
-      with no obvious reason → workshop.
+    • **Pack-voltage issues** from the ECU's perspective — charge, retry.
+    • **Motor or sensor faults** — usually not fixable without a workshop.
+    • **Throttle issues** — fully release, wait briefly, reapply. If this recurs → throttle or its wiring is suspect.
+    • **Overheat** — stop and let things cool. Repeated overheats with no obvious reason → workshop.
 
     **Quick CLI:**
     ```
@@ -78,11 +57,9 @@ body:
     ```
 
     **Bug bundle for Discord support:**
-    `lsc logs` packs the last 24 h of service logs and Redis state
-    into a tar — perfect for help requests.
+    `lsc logs` packs the last 24 h of service logs and Redis state into a tar — perfect for help requests.
 
-    Detailed explanations:
-    <https://librescoot.org/handbook/troubleshooting.html>.
+    Detailed explanations: <https://librescoot.org/handbook/troubleshooting.html>.
 links:
   - url: https://librescoot.org/handbook/fehlerbehebung.html
     label:

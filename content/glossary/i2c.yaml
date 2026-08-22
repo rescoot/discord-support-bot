@@ -5,22 +5,11 @@ title:
   en: "I2C (bus inside the scooter)"
 body:
   de: |
-    Zweidraht-Bus (SDA für Daten, SCL für Takt), über den im
-    Roller kurze Strecken zwischen Chips verdrahtet sind. Im DBC
-    hängen unter anderem der **NFC-Kartenleser** und die
-    **Status-LEDs** daran.
+    Zweidraht-Bus (SDA für Daten, SCL für Takt), über den im Roller kurze Strecken zwischen Chips verdrahtet sind. Im DBC hängen unter anderem der **NFC-Kartenleser** und die **Status-LEDs** daran.
 
-    Wird der Bus von einem defekten Bauteil auf Masse gezogen,
-    fällt alles daran gleichzeitig aus: Karte wird ignoriert, LED
-    bleibt dunkel. Typischer Fall am unu sind durchlegierte
-    Schutzdioden am DBC, siehe `/faq dbc-i2c-diodes`.
+    Wird der Bus von einem defekten Bauteil auf Masse gezogen, fällt alles daran gleichzeitig aus: Karte wird ignoriert, LED bleibt dunkel. Typischer Fall am unu sind durchlegierte Schutzdioden am DBC, siehe `/faq dbc-i2c-diodes`.
   en: |
-    Two-wire bus (SDA for data, SCL for clock) used for short runs
-    between chips inside the scooter. In the DBC the **NFC card
-    reader** and the **status LEDs** hang off it, among others.
+    Two-wire bus (SDA for data, SCL for clock) used for short runs between chips inside the scooter. In the DBC the **NFC card reader** and the **status LEDs** hang off it, among others.
 
-    If a failed component pulls the bus to ground, everything on
-    it dies at once: card ignored, LED dark. The typical case on
-    the unu is shorted protection diodes on the DBC, see
-    `/faq dbc-i2c-diodes`.
+    If a failed component pulls the bus to ground, everything on it dies at once: card ignored, LED dark. The typical case on the unu is shorted protection diodes on the DBC, see `/faq dbc-i2c-diodes`.
 tags: [hardware, bus]

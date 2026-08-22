@@ -5,19 +5,11 @@ title:
   en: "DBC — Dashboard Computer"
 body:
   de: |
-    Der **Dashboard Computer (DBC)** ist der kleine Rechner hinter dem
-    Display. Er treibt die Anzeige und liest die Keycard ein. Mit dem
-    MDB ist er per Mini-USB verbunden — fällt diese Verbindung aus,
-    bleibt das Display zwar an, zeigt aber keine Daten vom Roller mehr.
+    Der **Dashboard Computer (DBC)** ist der kleine Rechner hinter dem Display. Er treibt die Anzeige und liest die Keycard ein. Mit dem MDB ist er per Mini-USB verbunden — fällt diese Verbindung aus, bleibt das Display zwar an, zeigt aber keine Daten vom Roller mehr.
 
-    Reparatur und Ausbau: `/faq display-repair`.
-    Wenn das Display nicht mehr angeht: `/diagnose display-dead`.
+    Reparatur und Ausbau: `/faq display-repair`. Wenn das Display nicht mehr angeht: `/diagnose display-dead`.
   en: |
-    The **Dashboard Computer (DBC)** is the small computer behind the
-    display. It drives the screen and reads the keycard. It connects
-    to the MDB over mini-USB — if that link breaks, the display stays
-    on but no longer shows scooter data.
+    The **Dashboard Computer (DBC)** is the small computer behind the display. It drives the screen and reads the keycard. It connects to the MDB over mini-USB — if that link breaks, the display stays on but no longer shows scooter data.
 
-    Repair and removal: `/faq display-repair`.
-    If the display won't turn on: `/diagnose display-dead`.
+    Repair and removal: `/faq display-repair`. If the display won't turn on: `/diagnose display-dead`.
 tags: [hardware, architecture]

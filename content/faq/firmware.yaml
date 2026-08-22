@@ -11,20 +11,15 @@ body:
     - **DBC:** v1.15.0
     - **nRF:** v1.12.0
 
-    Alles, was älter ist, ist zu alt. Solche Roller verbinden sich oft
-    gar nicht mehr per Bluetooth, haben Bugs und Dinge funktionieren
-    schlicht nicht.
+    Alles, was älter ist, ist zu alt. Solche Roller verbinden sich oft gar nicht mehr per Bluetooth, haben Bugs und Dinge funktionieren schlicht nicht.
 
-    Versionen am Roller ablesen: bei eingeschaltetem Roller beide
-    Bremshebel mindestens 5 s halten, dann erscheint die Versionsbox.
+    Versionen am Roller ablesen: bei eingeschaltetem Roller beide Bremshebel mindestens 5 s halten, dann erscheint die Versionsbox.
 
     Wenn deins älter ist:
 
-    - Technisch versierte Nutzer:innen kann man durchs Update walken —
-      meld dich im `#support`.
+    - Technisch versierte Nutzer:innen kann man durchs Update walken — meld dich im `#support`.
     - Sonst lieber zur **Werkstatt** (`/faq service-partner`).
-    - Oder gleich auf **Librescoot** umsteigen
-      (`/faq librescoot-intro`).
+    - Oder gleich auf **Librescoot** umsteigen (`/faq librescoot-intro`).
 
     Neue offizielle Firmwares kommen nicht mehr — die Server sind aus.
   en: |
@@ -34,16 +29,13 @@ body:
     - **DBC:** v1.15.0
     - **nRF:** v1.12.0
 
-    Anything older is too old. Those scooters often won't connect over
-    Bluetooth at all, have bugs, and things just don't work.
+    Anything older is too old. Those scooters often won't connect over Bluetooth at all, have bugs, and things just don't work.
 
-    To read the versions on the scooter: with the scooter on, hold
-    both brake levers for at least 5 s — the Versionsbox appears.
+    To read the versions on the scooter: with the scooter on, hold both brake levers for at least 5 s — the Versionsbox appears.
 
     If yours is older:
 
-    - Technically inclined users can be walked through the update —
-      ask in `#support`.
+    - Technically inclined users can be walked through the update — ask in `#support`.
     - Otherwise, take it to a **workshop** (`/faq service-partner`).
     - Or just switch to **Librescoot** (`/faq librescoot-intro`).
 

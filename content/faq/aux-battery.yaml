@@ -5,57 +5,43 @@ title:
   en: "AUX battery: scooter won't wake, dead blinkers, seatbox not detected"
 body:
   de: |
-    Die **12V-AUX-Bleibatterie** ist der häufigste Defekt am unu Pro.
-    Faustregel aus dem `#support`: ab ~2 Jahren Lebensdauer
-    geht die AUX gerne kaputt. Typische Reparaturberichte lauten schlicht
-    „AUX getauscht, startet einwandfrei".
+    Die **12V-AUX-Bleibatterie** ist der häufigste Defekt am unu Pro. Faustregel aus dem `#support`: ab ~2 Jahren Lebensdauer geht die AUX gerne kaputt. Typische Reparaturberichte lauten schlicht „AUX getauscht, startet einwandfrei".
 
     **Typische Symptome einer schwachen/leeren AUX:**
     • Roller reagiert nicht auf Keycard oder App
     • Dashboard geht beim Anschalten kurz an und wieder aus
     • Blinker funktionieren nicht oder flackern
-    • **Sitzbank wird nicht als geschlossen erkannt**, dadurch wird der
-      Hauptakku gar nicht erst aktiviert
+    • **Sitzbank wird nicht als geschlossen erkannt**, dadurch wird der Hauptakku gar nicht erst aktiviert
     • **CBB und AUX laden nicht mehr** (Folge, sobald die AUX zu schwach ist)
 
     **Schnellcheck ohne Werkzeug — Zustand in der App anzeigen:**
+
     1. unu-App mit dem Roller verbinden.
     2. Auf die **Batterie-Leiste** tippen.
-    3. Das **AUX-Symbol lange gedrückt halten** — es öffnet sich ein
-       Dialog mit AUX-Spannung und Ladezustand.
+    3. Das **AUX-Symbol lange gedrückt halten** — es öffnet sich ein Dialog mit AUX-Spannung und Ladezustand.
 
-    **Ersatz:** 12V-Bleibatterie in kompakter Bauform, ähnlich Original.
-    Kanonischer Channel-Vorschlag: **EMOS B9653** (ca. 18 €) —
-    <https://www.amazon.de/dp/B01N95DUQB>.
-    Weitere Optionen und LiFePO4-Alternative: `/faq spare-parts`.
+    **Ersatz:** 12V-Bleibatterie in kompakter Bauform, ähnlich Original. Kanonischer Channel-Vorschlag: **EMOS B9653** (ca. 18 €) — <https://www.amazon.de/dp/B01N95DUQB>. Weitere Optionen und LiFePO4-Alternative: `/faq spare-parts`.
 
     ⚠️ **Vor jedem Eingriff** `/faq dc-converter-safety` lesen.
 
     👉 Interaktiv: `/diagnose aux`
   en: |
-    The **12V AUX lead-acid battery** is the single most common fault on
-    the unu Pro. Channel rule of thumb in `#support`: from about
-    2 years of age the AUX tends to die. Typical repair reports are just
-    "swapped the AUX, starts fine".
+    The **12V AUX lead-acid battery** is the single most common fault on the unu Pro. Channel rule of thumb in `#support`: from about 2 years of age the AUX tends to die. Typical repair reports are just "swapped the AUX, starts fine".
 
     **Typical weak/dead-AUX symptoms:**
     • Scooter doesn't react to keycard or app
     • Dashboard briefly powers on, then dies
     • Turn signals don't work or flicker
-    • **Seatbox isn't detected as closed**, so the main battery never
-      gets activated
+    • **Seatbox isn't detected as closed**, so the main battery never gets activated
     • **CBB and AUX no longer charge** (knock-on effect once AUX is weak)
 
     **Quick check without tools — show state in the app:**
+
     1. Connect the unu app to the scooter.
     2. Tap the **battery bar**.
-    3. **Long-press the AUX icon** — a dialog pops up with AUX voltage and
-       charge state.
+    3. **Long-press the AUX icon** — a dialog pops up with AUX voltage and charge state.
 
-    **Replacement:** a 12V lead-acid in a compact form factor, similar to
-    the original. Canonical channel suggestion: **EMOS B9653** (~ €18) —
-    <https://www.amazon.de/dp/B01N95DUQB>. More options and a LiFePO4
-    alternative: `/faq spare-parts`.
+    **Replacement:** a 12V lead-acid in a compact form factor, similar to the original. Canonical channel suggestion: **EMOS B9653** (~ €18) — <https://www.amazon.de/dp/B01N95DUQB>. More options and a LiFePO4 alternative: `/faq spare-parts`.
 
     ⚠️ **Before any work** read `/faq dc-converter-safety`.
 

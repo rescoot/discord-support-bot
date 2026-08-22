@@ -5,17 +5,11 @@ title:
   en: "MDB — Middle Driver Board"
 body:
   de: |
-    Das **Middle Driver Board (MDB)** ist das zentrale Steuergerät im
-    unu Scooter Pro. Es ist die Schnittstelle zwischen den Akkus, der
-    Motorsteuerung (ECU), dem Dashboard (DBC) und dem Mobilfunk.
+    Das **Middle Driver Board (MDB)** ist das zentrale Steuergerät im unu Scooter Pro. Es ist die Schnittstelle zwischen den Akkus, der Motorsteuerung (ECU), dem Dashboard (DBC) und dem Mobilfunk.
 
-    Wenn das MDB stirbt — typischerweise durch Wasserschaden — geht am
-    Roller faktisch nichts mehr. Siehe `/faq water-damage-mdb`.
+    Wenn das MDB stirbt — typischerweise durch Wasserschaden — geht am Roller faktisch nichts mehr. Siehe `/faq water-damage-mdb`.
   en: |
-    The **Middle Driver Board (MDB)** is the scooter's central control
-    unit. It sits between the batteries, the motor controller (ECU),
-    the dashboard (DBC), and the cellular link.
+    The **Middle Driver Board (MDB)** is the scooter's central control unit. It sits between the batteries, the motor controller (ECU), the dashboard (DBC), and the cellular link.
 
-    When the MDB dies — typically from water damage — the scooter
-    effectively stops working. See `/faq water-damage-mdb`.
+    When the MDB dies — typically from water damage — the scooter effectively stops working. See `/faq water-damage-mdb`.
 tags: [hardware, architecture]
