@@ -32,7 +32,7 @@ body:
 
     Full guide: `/faq librescoot-update-mode`.
 links:
-  - url: https://librescoot.org/de/docs/ums.html
+  - url: https://librescoot.org/docs/ums.html
     label:
       de: "Updatemodus-Anleitung"
       en: "Update mode guide"

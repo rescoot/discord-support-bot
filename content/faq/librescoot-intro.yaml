@@ -15,7 +15,7 @@ body:
     Schraubendreher und ungefähr 20 Minuten.
 
     Anleitung und Downloads:
-    <https://librescoot.org/de/docs/install.html>
+    <https://librescoot.org/docs/install.html>
 
     Der Installer ist offiziell noch beta. macOS läuft am
     reibungslosesten. Auf **Windows** flaggt SmartScreen die exe und
@@ -25,7 +25,7 @@ body:
     <https://discord.gg/VrumFruSzJ>.
 
     Nach der Installation: das **Handbuch** auf
-    <https://librescoot.org/de/handbook/> erklärt die tägliche
+    <https://librescoot.org/handbook/> erklärt die tägliche
     Bedienung, die Zustände, Akkus, Updates und Fehlerbehebung.
 
     Kurzdefinition siehe `/glossar librescoot`.
@@ -55,11 +55,11 @@ body:
 
     Short definition: `/glossary librescoot`.
 links:
-  - url: https://librescoot.org/de/docs/install.html
+  - url: https://librescoot.org/docs/install.html
     label:
       de: "Installer & Anleitung"
       en: "Installer & guide"
-  - url: https://librescoot.org/de/handbook/
+  - url: https://librescoot.org/handbook/
     label:
       de: "Handbuch"
       en: "Handbook"

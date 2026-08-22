@@ -40,7 +40,7 @@ body:
     Codes sind dieselben wie unter scooterOS.
 
     Vollständige Liste:
-    <https://librescoot.org/de/handbook/aenderungen.html>.
+    <https://librescoot.org/handbook/aenderungen.html>.
   en: |
     **What's gone:**
     • **unu cloud** is off, died with unu GmbH. Librescoot runs
@@ -77,7 +77,7 @@ body:
     Full list:
     <https://librescoot.org/handbook/changes-from-scooteros.html>.
 links:
-  - url: https://librescoot.org/de/handbook/aenderungen.html
+  - url: https://librescoot.org/handbook/aenderungen.html
     label:
       de: "Änderungen gegenüber scooterOS"
       en: "Changes from scooterOS"

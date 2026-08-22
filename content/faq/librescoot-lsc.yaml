@@ -33,7 +33,7 @@ body:
     • `--json` — JSON-Ausgabe für Skripte
     • `-v` — verbose
 
-    **Komplette Referenz:** <https://librescoot.org/de/docs/lsc.html>
+    **Komplette Referenz:** <https://librescoot.org/docs/lsc.html>
   en: |
     `lsc` is the local command-line tool on the scooter — available
     on both MDB and DBC. Talks to the Librescoot services over
@@ -65,7 +65,7 @@ body:
 
     **Full reference:** <https://librescoot.org/docs/lsc.html>
 links:
-  - url: https://librescoot.org/de/docs/lsc.html
+  - url: https://librescoot.org/docs/lsc.html
     label:
       de: "lsc-Komplettreferenz"
       en: "lsc full reference"

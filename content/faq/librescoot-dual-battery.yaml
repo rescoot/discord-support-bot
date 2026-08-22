@@ -63,11 +63,11 @@ body:
     Without the hardware retrofit, Librescoot stays single-battery;
     just flipping the setting won't do anything.
 links:
-  - url: https://librescoot.org/de/docs/features/dual-battery.html
+  - url: https://librescoot.org/docs/features/dual-battery.html
     label:
       de: "Zweitbatterie"
       en: "Dual battery"
-  - url: https://librescoot.org/de/handbook/akku.html
+  - url: https://librescoot.org/handbook/akku.html
     label:
       de: "Handbuch: Akku & Energie"
       en: "Handbook: battery & energy"

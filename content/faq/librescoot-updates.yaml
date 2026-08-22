@@ -68,7 +68,7 @@ body:
     retries on the next check. Worst case, force-flash via update
     mode.
 links:
-  - url: https://librescoot.org/de/handbook/updates.html
+  - url: https://librescoot.org/handbook/updates.html
     label:
       de: "Handbuch: Updates"
       en: "Handbook: updates"

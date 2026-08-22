@@ -23,7 +23,7 @@ body:
     **unu by Emco** (von Emco veröffentlichte Variante, abgeleitet von
     unustasis):
     - Android: <https://play.google.com/store/apps/details?id=com.unumotors.ossapp>
-    - iOS: <https://apps.apple.com/app/unu-by-emco/id6566196417>
+    - iOS: <https://apps.apple.com/de/app/unu-by-emco/id6566196417>
 
     Beide sprechen den Roller lokal über Bluetooth an, kein Login, kein
     Internet (siehe `/faq app-connect`). Wenn du noch in der alten
@@ -47,7 +47,7 @@ body:
 
     **unu by Emco** (Emco's published version, derived from unustasis):
     - Android: <https://play.google.com/store/apps/details?id=com.unumotors.ossapp>
-    - iOS: <https://apps.apple.com/app/unu-by-emco/id6566196417>
+    - iOS: <https://apps.apple.com/de/app/unu-by-emco/id6566196417>
 
     Both talk to the scooter locally over Bluetooth, no login, no
     internet (see `/faq app-connect`). If you're still on the original
@@ -63,7 +63,7 @@ links:
     label:
       de: "unustasis (TestFlight)"
       en: "unustasis (TestFlight)"
-  - url: https://apps.apple.com/app/unu-by-emco/id6566196417
+  - url: https://apps.apple.com/de/app/unu-by-emco/id6566196417
     label:
       de: "unu by Emco (iOS)"
       en: "unu by Emco (iOS)"

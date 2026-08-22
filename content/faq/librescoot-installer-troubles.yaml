@@ -32,7 +32,7 @@ body:
     Vorher gilt immer: **alle Akkus abklemmen** in der Reihenfolge
     Hauptakkus → CB → AUX. Schritt-für-Schritt-Anleitung (inkl.
     manueller Installation per Serial/U-Boot, falls der Installer
-    nicht in Frage kommt): <https://librescoot.org/de/docs/install.html>.
+    nicht in Frage kommt): <https://librescoot.org/docs/install.html>.
 
     Wenn nichts hilft: ins Librescoot-Discord, mit Plattform, OS-
     Version und genauer Stelle, an der's hakt.
@@ -67,7 +67,7 @@ body:
     When stuck: hop into the Librescoot Discord with platform, OS
     version and the exact step that fails.
 links:
-  - url: https://librescoot.org/de/docs/install.html
+  - url: https://librescoot.org/docs/install.html
     label:
       de: "Installations-Anleitung"
       en: "Install guide"

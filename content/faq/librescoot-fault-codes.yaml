@@ -43,7 +43,7 @@ body:
     in ein Tar — ideal für Hilfe-Anfragen.
 
     Ausführliche Erklärung:
-    <https://librescoot.org/de/handbook/fehlerbehebung.html>.
+    <https://librescoot.org/handbook/fehlerbehebung.html>.
   en: |
     Librescoot shows the same fault codes as the stock firmware —
     they come straight from the battery (B-series) or the motor
@@ -84,7 +84,7 @@ body:
     Detailed explanations:
     <https://librescoot.org/handbook/troubleshooting.html>.
 links:
-  - url: https://librescoot.org/de/handbook/fehlerbehebung.html
+  - url: https://librescoot.org/handbook/fehlerbehebung.html
     label:
       de: "Handbuch: Fehlerbehebung"
       en: "Handbook: troubleshooting"

@@ -39,7 +39,7 @@ body:
       Valhalla-Server
 
     Mehr zur Offline-/Online-Frage:
-    <https://librescoot.org/de/docs/features/offline-or-online.html>.
+    <https://librescoot.org/docs/features/offline-or-online.html>.
   en: |
     The unu cloud is gone after the bankruptcy. Librescoot works
     fully offline by default (`/faq librescoot-intro`).

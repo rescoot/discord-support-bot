@@ -147,7 +147,7 @@ body:
     • USB disconnect mid-copy → usually a cheap cable/adapter, see
       `/faq librescoot-installer-troubles`.
 links:
-  - url: https://librescoot.org/de/docs/ums.html
+  - url: https://librescoot.org/docs/ums.html
     label:
       de: "Updatemodus-Anleitung"
       en: "Update mode guide"

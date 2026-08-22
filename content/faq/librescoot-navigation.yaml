@@ -73,7 +73,7 @@ body:
     build your own with `maptool` (display) or the standard Valhalla
     build (routing).
 links:
-  - url: https://librescoot.org/de/docs/navigation.html
+  - url: https://librescoot.org/docs/navigation.html
     label:
       de: "Navigation einrichten"
       en: "Navigation setup"
