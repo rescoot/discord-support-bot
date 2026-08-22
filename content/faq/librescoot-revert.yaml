@@ -31,7 +31,9 @@ body:
 
     Stock ↔ Librescoot feature comparison: `/faq librescoot-changes`.
 links:
-  - url: https://librescoot.org/docs/install.html
+  - url:
+      de: https://librescoot.org/docs/install.html
+      en: https://librescoot.org/en/docs/install.html
     label:
       de: "Installations- und Manual-Flash-Guide"
       en: "Install / manual flash guide"

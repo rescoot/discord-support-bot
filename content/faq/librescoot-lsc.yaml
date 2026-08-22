@@ -59,9 +59,11 @@ body:
     • `--json` — JSON output for scripts
     • `-v` — verbose
 
-    **Full reference:** <https://librescoot.org/docs/lsc.html>
+    **Full reference:** <https://librescoot.org/en/docs/lsc.html>
 links:
-  - url: https://librescoot.org/docs/lsc.html
+  - url:
+      de: https://librescoot.org/docs/lsc.html
+      en: https://librescoot.org/en/docs/lsc.html
     label:
       de: "lsc-Komplettreferenz"
       en: "lsc full reference"

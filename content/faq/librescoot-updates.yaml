@@ -39,7 +39,9 @@ body:
 
     OTA update failed? Old version stays active and the scooter retries on the next check. Worst case, force-flash via update mode.
 links:
-  - url: https://librescoot.org/handbook/updates.html
+  - url:
+      de: https://librescoot.org/handbook/updates.html
+      en: https://librescoot.org/en/handbook/updates.html
     label:
       de: "Handbuch: Updates"
       en: "Handbook: updates"

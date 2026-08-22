@@ -95,12 +95,22 @@ links:
     label:
       de: "Label"
       en: "Label"
+  - url:                                    # per-locale target, when the page differs
+      de: https://librescoot.org/handbook/
+      en: https://librescoot.org/en/handbook/
+    label:
+      de: "Handbuch"
+      en: "Handbook"
 tags: [battery, hardware]
 ```
 
 - `aliases` are matched alongside the ID for lookup and autocomplete.
 - English is optional; if missing, German is shown for English users too.
 - `tags` tint the embed (`librescoot` → purple, anything else → unu red).
+- Bodies are **not** hard-wrapped: one line per paragraph or list item, since Discord renders
+  every newline as a line break. Leave a blank line before a markdown list.
+- librescoot.org serves German at the bare path and English under `/en/`, so English text and
+  the English half of a link need the prefix. Tests check both.
 
 ### Forum tag mapping
 

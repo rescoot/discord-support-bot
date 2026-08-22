@@ -20,7 +20,7 @@ def entry_embed(entry: Entry, locale: Locale, footer: str | None = None) -> disc
     if entry.links:
         embed.add_field(
             name=t("more_info", locale),
-            value="\n".join(f"• [{pick(lnk.label, locale) or lnk.url}]({lnk.url})" for lnk in entry.links[:8]),
+            value="\n".join(_link_line(lnk, locale) for lnk in entry.links[:8]),
             inline=False,
         )
     if entry.aliases:
@@ -30,5 +30,11 @@ def entry_embed(entry: Entry, locale: Locale, footer: str | None = None) -> disc
     return embed
 
 
+def _link_line(link: Link, locale: Locale) -> str:
+    url = link.localized_url(locale)
+    return f"• [{pick(link.label, locale) or url}]({url})"
+
+
 def link_line(link: Link, locale: Locale) -> str:
-    return f"[{pick(link.label, locale) or link.url}]({link.url})"
+    url = link.localized_url(locale)
+    return f"[{pick(link.label, locale) or url}]({url})"

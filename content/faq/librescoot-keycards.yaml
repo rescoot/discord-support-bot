@@ -88,7 +88,9 @@ body:
     **App stuck on "loading" and the scooter ignores the card:**
     That smells like a disturbed I2C bus, see `/faq dbc-i2c-diodes`.
 links:
-  - url: https://librescoot.org/docs/features/keycards.html
+  - url:
+      de: https://librescoot.org/docs/features/keycards.html
+      en: https://librescoot.org/en/docs/features/keycards.html
     label:
       de: "Eigene Keycards"
       en: "Custom keycards"

@@ -20,30 +20,32 @@ body:
 
     Für **technische Tiefe** (Architektur, Services, lsc-CLI, Build-Anleitungen): <https://librescoot.org/docs/>.
 
-    **Englische Version** unter <https://librescoot.org/handbook/> bzw. <https://librescoot.org/docs/>.
+    **Englische Version** unter <https://librescoot.org/en/handbook/> bzw. <https://librescoot.org/en/docs/>.
   en: |
-    The **handbook** at <https://librescoot.org/handbook/> is what you're probably looking for with a daily-use question.
+    The **handbook** at <https://librescoot.org/en/handbook/> is what you're probably looking for with a daily-use question.
 
     **English pages currently published:**
-    • **Getting started** — what happens after flashing, enrolling a keycard, a short health check. <https://librescoot.org/handbook/getting-started.html>
-    • **Quick start** — opening the menu, in-ride shortcut menu, Update Mode for maps and firmware, navigation destinations. <https://librescoot.org/handbook/quick-start.html>
-    • **Riding** — keycard, steering lock, brakes, hop-on/hop-off. <https://librescoot.org/handbook/riding.html>
-    • **Troubleshooting** — when the scooter won't react, battery codes (B-series), motor codes (E-series), toasts and warning symbols. <https://librescoot.org/handbook/troubleshooting.html>
-    • **Changes from scooterOS** — what dropped, what's new. <https://librescoot.org/handbook/changes-from-scooteros.html>
+    • **Getting started** — what happens after flashing, enrolling a keycard, a short health check. <https://librescoot.org/en/handbook/getting-started.html>
+    • **Quick start** — opening the menu, in-ride shortcut menu, Update Mode for maps and firmware, navigation destinations. <https://librescoot.org/en/handbook/quick-start.html>
+    • **Riding** — keycard, steering lock, brakes, hop-on/hop-off. <https://librescoot.org/en/handbook/riding.html>
+    • **Troubleshooting** — when the scooter won't react, battery codes (B-series), motor codes (E-series), toasts and warning symbols. <https://librescoot.org/en/handbook/troubleshooting.html>
+    • **Changes from scooterOS** — what dropped, what's new. <https://librescoot.org/en/handbook/changes-from-scooteros.html>
 
     The German handbook is more complete — covers states (drive, park, standby, hibernate), battery & energy, display anatomy, navigation, and updates as separate pages. <https://librescoot.org/handbook/>
 
-    For **technical depth** (architecture, services, lsc CLI, build guides): <https://librescoot.org/docs/>.
+    For **technical depth** (architecture, services, lsc CLI, build guides): <https://librescoot.org/en/docs/>.
 links:
   - url: https://librescoot.org/handbook/
     label:
       de: "Handbuch (DE)"
       en: "Handbook (DE)"
-  - url: https://librescoot.org/handbook/
+  - url: https://librescoot.org/en/handbook/
     label:
-      de: "Handbook (EN)"
+      de: "Handbuch (EN)"
       en: "Handbook (EN)"
-  - url: https://librescoot.org/docs/
+  - url:
+      de: https://librescoot.org/docs/
+      en: https://librescoot.org/en/docs/
     label:
       de: "Tech-Dokumentation"
       en: "Tech documentation"

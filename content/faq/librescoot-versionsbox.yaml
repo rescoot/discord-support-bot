@@ -45,9 +45,11 @@ body:
 
     **Heads up — stock firmware is different:** there it's `hold brakes for 5 seconds`. Librescoot reacts at 3 s. If you know both, just hold a bit longer if unsure.
 
-    What version should you be on? Changelog: <https://librescoot.org/changelog.html>.
+    What version should you be on? Changelog: <https://librescoot.org/en/changelog.html>.
 links:
-  - url: https://librescoot.org/changelog.html
+  - url:
+      de: https://librescoot.org/changelog.html
+      en: https://librescoot.org/en/changelog.html
     label:
       de: "Librescoot Changelog"
       en: "Librescoot changelog"

@@ -41,7 +41,9 @@ body:
 
     More on `lsc`: `/faq librescoot-lsc`.
 links:
-  - url: https://librescoot.org/handbook/updates.html
+  - url:
+      de: https://librescoot.org/handbook/updates.html
+      en: https://librescoot.org/en/handbook/updates.html
     label:
       de: "Handbuch: Updates"
       en: "Handbook: updates"

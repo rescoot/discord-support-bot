@@ -103,7 +103,9 @@ body:
     • Nothing happens after unplug → `lsc power reboot` on the scooter, or reconnect USB and unplug cleanly again.
     • USB disconnect mid-copy → usually a cheap cable/adapter, see `/faq librescoot-installer-troubles`.
 links:
-  - url: https://librescoot.org/docs/ums.html
+  - url:
+      de: https://librescoot.org/docs/ums.html
+      en: https://librescoot.org/en/docs/ums.html
     label:
       de: "Updatemodus-Anleitung"
       en: "Update mode guide"

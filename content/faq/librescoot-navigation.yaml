@@ -37,7 +37,9 @@ body:
 
     **Pre-built packages cover** all 16 German states (Berlin and Brandenburg ship as one combined package). For other regions, build your own with `maptool` (display) or the standard Valhalla build (routing).
 links:
-  - url: https://librescoot.org/docs/navigation.html
+  - url:
+      de: https://librescoot.org/docs/navigation.html
+      en: https://librescoot.org/en/docs/navigation.html
     label:
       de: "Navigation einrichten"
       en: "Navigation setup"

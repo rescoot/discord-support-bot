@@ -114,7 +114,7 @@ def step_embed(flow: DiagnoseFlow, step: DiagnoseStep, locale: Locale) -> discor
         embed.add_field(
             name=t("more_info", locale),
             value="\n".join(
-                f"• [{pick(link.label, locale) or link.url}]({link.url})"
+                f"• [{pick(link.label, locale) or link.localized_url(locale)}]({link.localized_url(locale)})"
                 for link in step.links[:8]
             ),
             inline=False,

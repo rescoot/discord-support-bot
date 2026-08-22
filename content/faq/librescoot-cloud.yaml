@@ -49,7 +49,7 @@ body:
     • Remote lock/unlock or arming the alarm
     • Online tile maps and remote routing via an external Valhalla server
 
-    More on the offline/online tradeoff: <https://librescoot.org/docs/features/offline-or-online.html>.
+    More on the offline/online tradeoff: <https://librescoot.org/en/docs/features/offline-or-online.html>.
 links:
   - url: https://sunshine.rescoot.org
     label:

@@ -9,15 +9,24 @@ from typing import Any
 import yaml
 from rapidfuzz import process as fuzz_process
 
-from .i18n import Locale, pick
+from .i18n import DEFAULT_LOCALE, Locale, pick
 
 log = logging.getLogger(__name__)
 
 
 @dataclass(frozen=True)
 class Link:
-    url: str
+    """A link whose target can differ per locale.
+
+    librescoot.org serves German at the bare path and English under /en/, so
+    an English reader needs a different URL, not just a different label.
+    """
+
+    url: dict[str, str]
     label: dict[str, str]
+
+    def localized_url(self, locale: Locale) -> str:
+        return pick(self.url, locale)
 
 
 @dataclass(frozen=True)
@@ -341,7 +350,7 @@ def _coerce_text(value: Any, default: str) -> dict[str, str]:
 
 def _coerce_link(raw: Any) -> Link:
     if isinstance(raw, str):
-        return Link(url=raw, label={"de": raw, "en": raw})
-    url = str(raw.get("url", "")).strip()
-    label_raw = raw.get("label") or raw.get("text") or url
-    return Link(url=url, label=_coerce_text(label_raw, url))
+        return Link(url=_coerce_text(raw, raw), label=_coerce_text(raw, raw))
+    url = _coerce_text(raw.get("url", ""), "")
+    label_raw = raw.get("label") or raw.get("text") or pick(url, DEFAULT_LOCALE)
+    return Link(url=url, label=_coerce_text(label_raw, pick(url, DEFAULT_LOCALE)))

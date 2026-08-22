@@ -17,7 +17,9 @@ body:
 
     How to install / current status: `/faq librescoot-intro`.
 links:
-  - url: https://librescoot.org/
+  - url:
+      de: https://librescoot.org/
+      en: https://librescoot.org/en/
     label:
       de: "librescoot.org"
       en: "librescoot.org"

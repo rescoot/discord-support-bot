@@ -13,7 +13,9 @@ body:
 
     Command overview and full reference: `/faq librescoot-lsc`.
 links:
-  - url: https://librescoot.org/docs/lsc.html
+  - url:
+      de: https://librescoot.org/docs/lsc.html
+      en: https://librescoot.org/en/docs/lsc.html
     label:
       de: "lsc-Komplettreferenz"
       en: "lsc full reference"

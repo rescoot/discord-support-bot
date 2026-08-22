@@ -21,19 +21,23 @@ body:
 
     **Installation:** via the **installer** (desktop app for Linux, macOS, Windows). You need a USB Mini-B cable, a screwdriver, and around 20 minutes.
 
-    Guide and downloads: <https://librescoot.org/docs/install.html>
+    Guide and downloads: <https://librescoot.org/en/docs/install.html>
 
     The installer is officially still beta. macOS runs the smoothest. On **Windows** SmartScreen flags the exe and driver / admin- rights variance can cause hiccups. On **Linux** there's distro variance too (USB permissions, driver selection). If it gets stuck: ask in the Librescoot Discord, <https://discord.gg/VrumFruSzJ>.
 
-    After install: the **handbook** at <https://librescoot.org/handbook/> covers daily operation, power states, batteries, updates and troubleshooting.
+    After install: the **handbook** at <https://librescoot.org/en/handbook/> covers daily operation, power states, batteries, updates and troubleshooting.
 
     Short definition: `/glossary librescoot`.
 links:
-  - url: https://librescoot.org/docs/install.html
+  - url:
+      de: https://librescoot.org/docs/install.html
+      en: https://librescoot.org/en/docs/install.html
     label:
       de: "Installer & Anleitung"
       en: "Installer & guide"
-  - url: https://librescoot.org/handbook/
+  - url:
+      de: https://librescoot.org/handbook/
+      en: https://librescoot.org/en/handbook/
     label:
       de: "Handbuch"
       en: "Handbook"

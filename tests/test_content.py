@@ -120,3 +120,28 @@ def test_bodies_carry_no_trailing_whitespace(store):
     for entry in {**store.faq, **store.glossary}.values():
         for locale, body in entry.body.items():
             assert body == body.strip(), f"{entry.id} [{locale}] has surrounding whitespace"
+
+
+def test_english_content_links_into_the_english_doc_tree(store):
+    """librescoot.org serves German at the bare path and English under /en/.
+
+    The one allowed exception is the handbook entry, whose English text points
+    readers at the more complete German handbook on purpose.
+    """
+    stray = re.compile(r"https://librescoot\.org/(?!en/)")
+    for entry in {**store.faq, **store.glossary}.values():
+        hits = len(stray.findall(entry.body.get("en", "")))
+        hits += sum(1 for lnk in entry.links if stray.search(lnk.localized_url("en")))
+        allowed = 2 if entry.id == "librescoot-handbook" else 0
+        assert hits <= allowed, (
+            f"{entry.id}: {hits} English link(s) point at the German tree"
+        )
+
+
+def test_link_urls_resolve_per_locale(store):
+    for entry in {**store.faq, **store.glossary}.values():
+        for lnk in entry.links:
+            for locale in ("de", "en"):
+                assert lnk.localized_url(locale).startswith("http"), (
+                    f"{entry.id}: link has no usable url for {locale}"
+                )

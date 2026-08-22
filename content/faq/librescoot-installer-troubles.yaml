@@ -35,11 +35,13 @@ body:
     • **"eMMC doesn't show up as a drive"** — usually a bad cable or a USB-A→Mini-B adapter. Direct to the machine, no hub, good Mini-B cable.
     • **"USB disconnect mid-flash"** — same root cause. Restart the installer, clean cable, clean port.
 
-    Always disconnect **all batteries first** in this order: main → CB → AUX. Step-by-step guide (including manual Serial/U-Boot install, if the installer isn't an option): <https://librescoot.org/docs/install.html>.
+    Always disconnect **all batteries first** in this order: main → CB → AUX. Step-by-step guide (including manual Serial/U-Boot install, if the installer isn't an option): <https://librescoot.org/en/docs/install.html>.
 
     When stuck: hop into the Librescoot Discord with platform, OS version and the exact step that fails.
 links:
-  - url: https://librescoot.org/docs/install.html
+  - url:
+      de: https://librescoot.org/docs/install.html
+      en: https://librescoot.org/en/docs/install.html
     label:
       de: "Installations-Anleitung"
       en: "Install guide"

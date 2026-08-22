@@ -65,7 +65,9 @@ body:
 
     More on `lsc`: `/faq librescoot-lsc`.
 links:
-  - url: https://librescoot.org/docs/features/scooter-alarm.html
+  - url:
+      de: https://librescoot.org/docs/features/scooter-alarm.html
+      en: https://librescoot.org/en/docs/features/scooter-alarm.html
     label:
       de: "Roller-Alarmanlage"
       en: "Scooter alarm"

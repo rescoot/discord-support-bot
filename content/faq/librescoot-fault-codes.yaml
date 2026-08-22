@@ -59,9 +59,11 @@ body:
     **Bug bundle for Discord support:**
     `lsc logs` packs the last 24 h of service logs and Redis state into a tar — perfect for help requests.
 
-    Detailed explanations: <https://librescoot.org/handbook/troubleshooting.html>.
+    Detailed explanations: <https://librescoot.org/en/handbook/troubleshooting.html>.
 links:
-  - url: https://librescoot.org/handbook/fehlerbehebung.html
+  - url:
+      de: https://librescoot.org/handbook/fehlerbehebung.html
+      en: https://librescoot.org/en/handbook/fehlerbehebung.html
     label:
       de: "Handbuch: Fehlerbehebung"
       en: "Handbook: troubleshooting"
