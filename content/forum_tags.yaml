@@ -1,0 +1,56 @@
+# Which FAQ entries the bot offers when a #support post carries a given forum tag.
+#
+# Keys are the tag names as they appear in Discord, matched case-insensitively.
+# Rename a tag in the forum -> rename it here, otherwise it silently stops
+# matching. `python scripts/dump_forum.py` writes the current tag list to
+# state/support_dump/tags.json if you need to check.
+#
+# Lists may be longer than max_suggestions; only the first few actually get
+# posted, so put the most likely answer first. Entries are deduped across tags,
+# so a post tagged both "Akkuproblem" and "Nach Standzeit" won't get the AUX
+# entry twice.
+
+max_suggestions: 2
+
+tags:
+  # Dead scooter, dark display, "seat is open", indicators dead: nearly always
+  # the AUX battery, with the CBB as runner-up.
+  "Roller startet nicht": [aux-battery, cb-battery, hard-reset]
+  "Nach Standzeit": [aux-battery, cb-battery, hard-reset]
+  "Sitzschloss": [aux-battery, hard-reset]
+  "Lenkerschloss": [aux-battery, hard-reset]
+  "Blinker/Licht": [aux-battery, cb-battery]
+
+  "Akkuproblem": [aux-battery, cb-battery, battery-errors]
+
+  # Dark display is usually AUX; a dead NFC reader and dead status LED next to
+  # a working app is the I2C diode story.
+  "Display-Problem": [aux-battery, dbc-i2c-diodes, display-repair, hard-reset]
+
+  # Won't go into drive mode is usually the kickstand/seat interlock; the rest
+  # is motor and ECU territory.
+  "Roller fährt nicht": [kickstand, engine-errors, battery-errors]
+  "Fehlercode": [battery-errors, engine-errors, librescoot-fault-codes]
+
+  "App-Problem": [app-connect, official-app]
+  "Frage zur App": [official-app, app-connect]
+
+  # Half the keycard threads are a dead I2C bus, the other half is an install
+  # that didn't finish. Both entries point at each other.
+  "Keycard/NFC": [dbc-i2c-diodes, librescoot-keycards]
+
+  "GPS/Mobilfunk": [gps-antenna, librescoot-cloud]
+
+  # Most Librescoot posts in support are install hiccups, not "what is this".
+  "Librescoot": [librescoot-installer-troubles, librescoot-handbook, librescoot-fault-codes]
+
+  # Noises are nearly always the grab handle or the steering head, both of
+  # which people can check themselves in five minutes.
+  "Geräusch/Vibration": [rattles, steering-head, service-partner]
+  "Mechanik/Fahrwerk": [steering-head, rattles, service-partner]
+
+  # Crash damage: nothing canned to say, point at a workshop and at where the
+  # community sources parts.
+  "Unfall/Sturz/Schaden": [service-partner, spare-parts]
+
+  # "Sonstiges" is deliberately unmapped - by definition we don't know.

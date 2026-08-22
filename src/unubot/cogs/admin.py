@@ -44,6 +44,7 @@ class Admin(commands.Cog):
                 diagnose=len(store.diagnose),
                 forum_welcome=len(store.forum_welcome),
                 howto=len(store.howto),
+                forum_tags=len(store.forum_tags.tags),
             ),
             ephemeral=True,
         )

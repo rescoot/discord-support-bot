@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import logging
+from collections.abc import Iterable
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -70,6 +71,27 @@ class DiagnoseFlow:
         return pick(self.title, locale) or self.id
 
 
+@dataclass(frozen=True)
+class ForumTagMap:
+    """Discord forum tag name -> FAQ entry ids the bot suggests for that tag.
+
+    Keys are lowercased tag names, so renaming a tag in Discord means renaming
+    it here too. Ids are stable, but nobody can read them in a diff.
+    """
+
+    max_suggestions: int = 3
+    tags: dict[str, tuple[str, ...]] = field(default_factory=dict)
+
+    def suggestions_for(self, tag_names: Iterable[str]) -> list[str]:
+        """FAQ ids for the given tag names, in tag order, deduped and capped."""
+        out: list[str] = []
+        for name in tag_names:
+            for entry_id in self.tags.get(name.strip().lower(), ()):
+                if entry_id not in out:
+                    out.append(entry_id)
+        return out[: self.max_suggestions]
+
+
 @dataclass
 class ContentStore:
     faq: dict[str, Entry] = field(default_factory=dict)
@@ -78,6 +100,7 @@ class ContentStore:
     welcome: dict[Locale, str] = field(default_factory=dict)
     forum_welcome: dict[str, str] = field(default_factory=dict)
     howto: dict[str, str] = field(default_factory=dict)
+    forum_tags: ForumTagMap = field(default_factory=ForumTagMap)
 
     def lookup_faq(self, query: str) -> Entry | None:
         return _lookup(self.faq, query)
@@ -154,16 +177,44 @@ def load_content(content_dir: Path) -> ContentStore:
     store.welcome = _load_welcome(content_dir / "welcome")
     store.forum_welcome = _load_forum_welcome(content_dir / "forum_welcome")
     store.howto = _load_markdown_dir(content_dir / "howto")
+    store.forum_tags = _load_forum_tags(content_dir / "forum_tags.yaml")
+    unknown = sorted(
+        {eid for ids in store.forum_tags.tags.values() for eid in ids if eid not in store.faq}
+    )
+    if unknown:
+        log.warning("forum_tags.yaml points at FAQ ids that don't exist: %s", ", ".join(unknown))
     log.info(
-        "content loaded: faq=%d glossary=%d diagnose=%d welcome=%s forum_welcome=%s howto=%s",
+        "content loaded: faq=%d glossary=%d diagnose=%d welcome=%s forum_welcome=%s howto=%s forum_tags=%d",
         len(store.faq),
         len(store.glossary),
         len(store.diagnose),
         sorted(store.welcome),
         sorted(store.forum_welcome),
         sorted(store.howto),
+        len(store.forum_tags.tags),
     )
     return store
+
+
+def _load_forum_tags(path: Path) -> ForumTagMap:
+    if not path.is_file():
+        return ForumTagMap()
+    raw = _read_yaml(path)
+    if not raw:
+        return ForumTagMap()
+    tags: dict[str, tuple[str, ...]] = {}
+    for name, ids in (raw.get("tags") or {}).items():
+        if isinstance(ids, str):
+            ids = [ids]
+        cleaned = tuple(str(i).strip().lower() for i in (ids or []) if str(i).strip())
+        if cleaned:
+            tags[str(name).strip().lower()] = cleaned
+    try:
+        max_suggestions = max(1, int(raw.get("max_suggestions", 3)))
+    except (TypeError, ValueError):
+        log.warning("forum_tags.yaml: max_suggestions is not a number, using 3")
+        max_suggestions = 3
+    return ForumTagMap(max_suggestions=max_suggestions, tags=tags)
 
 
 def _load_entries(directory: Path) -> dict[str, Entry]:

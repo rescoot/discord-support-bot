@@ -50,8 +50,8 @@ UI: dict[str, dict[Locale, str]] = {
         "en": "No match. Try autocompletion to see available entries.",
     },
     "reload_ok": {
-        "de": "Inhalte neu geladen: {faq} FAQ, {glossary} Glossar, {diagnose} Diagnoseflüsse, {forum_welcome} Forum-Begrüßungen, {howto} Howto-Vorlagen.",
-        "en": "Reloaded: {faq} FAQ, {glossary} glossary, {diagnose} diagnose flows, {forum_welcome} forum welcomes, {howto} howto templates.",
+        "de": "Inhalte neu geladen: {faq} FAQ, {glossary} Glossar, {diagnose} Diagnoseflüsse, {forum_welcome} Forum-Begrüßungen, {howto} Howto-Vorlagen, {forum_tags} Tag-Zuordnungen.",
+        "en": "Reloaded: {faq} FAQ, {glossary} glossary, {diagnose} diagnose flows, {forum_welcome} forum welcomes, {howto} howto templates, {forum_tags} tag mappings.",
     },
     "reload_denied": {
         "de": "Nur Bot-Owner dürfen das.",
@@ -89,6 +89,10 @@ UI: dict[str, dict[Locale, str]] = {
     "howto_failed": {
         "de": "Posten fehlgeschlagen: {error}",
         "en": "Posting failed: {error}",
+    },
+    "forum_tag_suggestions": {
+        "de": "Zu {tags} haben wir das hier, vielleicht hilft es schon:",
+        "en": "For {tags} we have this, it might already help:",
     },
     "howto_posted": {
         "de": "Gepostet ✅",
