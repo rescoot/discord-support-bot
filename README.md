@@ -8,6 +8,9 @@ A community support bot for the [UNU Community Discord](https://discord.gg/) —
 - **`/glossar <begriff>`** — glossary of the tech acronyms people trip over (MDB, DBC, ECU, CBB, AUX, keycard, Redis, hibernate, LibreScoot).
 - **`/diagnose <flow>`** — button-driven troubleshooters. Two to start: AUX battery and app connection.
 - **Welcome DM** on join with channel guide and bot pointers.
+- **Forum auto-response** in `#support`: a new post gets the FAQ entries its forum tags map to
+  (see [`content/forum_tags.yaml`](content/forum_tags.yaml)), and only falls back to the
+  "how to ask" checklist when the tags map to nothing. Re-fires when a mod adds a tag later.
 - **`/reload`** (owner-only) — re-read YAML content without restarting.
 
 All content lives as YAML/Markdown in [`content/`](content/) so it can be edited via PR.
@@ -67,6 +70,7 @@ All via environment variables (or a `.env` file next to the bot):
 | `OWNER_IDS` | Comma-separated Discord user IDs allowed to run `/reload`. |
 | `DEV_GUILD_ID` | Restrict slash-command registration to one guild (instant sync). Empty = global. |
 | `WELCOME_FALLBACK_CHANNEL_ID` | Post welcome there if a member has DMs closed. Empty = silent fallback. |
+| `SUPPORT_FORUM_CHANNEL_ID` | Forum channel the auto-responses apply to. Empty = off. |
 | `LOG_LEVEL` | `DEBUG` / `INFO` / `WARNING` / `ERROR`. Default `INFO`. |
 
 ## Adding content
@@ -97,6 +101,20 @@ tags: [battery, hardware]
 - `aliases` are matched alongside the ID for lookup and autocomplete.
 - English is optional; if missing, German is shown for English users too.
 - `tags` tint the embed (`librescoot` → purple, anything else → unu red).
+
+### Forum tag mapping
+
+`content/forum_tags.yaml` decides which FAQ entries the bot offers for a given `#support` forum tag:
+
+```yaml
+max_suggestions: 2
+tags:
+  "Sitzschloss": [aux-battery, hard-reset]
+```
+
+Keys are Discord tag names, matched case-insensitively, so renaming a tag in Discord means renaming
+it here too. Lists may be longer than `max_suggestions`; put the most likely answer first. Tests fail
+if an entry id doesn't exist.
 
 ### Diagnose flow
 
@@ -151,20 +169,49 @@ src/unubot/
     glossary.py      # /glossar with autocomplete
     diagnose.py      # /diagnose with button-driven flows
     welcome.py       # on_member_join DM
+    forum_welcome.py # #support checklist + tag-matched FAQ entries
+    howto.py         # /howto mod templates
     admin.py         # /reload
 content/
   faq/*.yaml
   glossary/*.yaml
   diagnose/*.yaml
   welcome/{de,en}.md
+  forum_welcome/support.md
+  forum_tags.yaml
 tests/
   test_content.py    # YAML validation, lookup correctness
   test_i18n.py       # locale detection, string interpolation
+scripts/
+  dump_forum.py      # dump #support threads + full history to JSONL
+  suggest.py         # BM25 over that dump: similar past threads + their first answer
 ```
+
+## Support forum tooling
+
+`scripts/dump_forum.py` reads the whole `#support` forum (active and archived posts, full message
+history) into `state/support_dump/threads.jsonl`, plus the current tag list in `tags.json`. It uses
+the bot token from `.env` and needs the **Message Content** intent enabled for the application.
+
+```bash
+python scripts/dump_forum.py                 # everything
+python scripts/dump_forum.py --limit 20      # the 20 newest posts
+```
+
+`scripts/suggest.py` indexes that dump and answers "what did we say last time someone asked this":
+
+```bash
+python scripts/suggest.py "AUX leer, Roller wacht nicht auf" --tag Akkuproblem
+python scripts/suggest.py --eval             # retrieval quality against the dump
+```
+
+Both are offline tools for writing FAQ content and tuning `forum_tags.yaml`. The dump lands in
+`state/`, which is gitignored.
 
 ## Roadmap / not yet built
 
 - Keyword-triggered auto-responder (mod opt-in per channel)
+- Turn the retrieval in `scripts/suggest.py` into a live `/vorschlag` command for mods
 - RAG over `tech-reference/` for open-ended questions
 - Moderation helpers (thread-from-message, close-resolved)
 - More diagnose flows (CBB, dashboard, motor fault codes)
