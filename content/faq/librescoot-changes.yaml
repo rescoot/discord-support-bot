@@ -7,7 +7,7 @@ body:
   de: |
     **Was wegfällt:**
     • **unu-Cloud** ist abgeschaltet, gab's mit unu GmbH. Librescoot läuft komplett offline; Cloud-Optionen siehe `/faq librescoot-cloud`.
-    • Die **Original-unu-App** ist tot (Backend weg). Es gibt eine Community-App, die auch Basis der „unu by Emco"-App ist.
+    • Die **Original-unu-App** ist tot (Backend weg). Für den Roller gibt es die Community-App **stasis for unu** (`/faq official-app`).
 
     **Was dazukommt:**
     • **Karten + Turn-by-Turn-Navigation** auf dem Display (`/faq librescoot-navigation`)
@@ -28,7 +28,7 @@ body:
   en: |
     **What's gone:**
     • **unu cloud** is off, died with unu GmbH. Librescoot runs fully offline; cloud options see `/faq librescoot-cloud`.
-    • The **original unu app** is dead (backend gone). A community app exists, also the basis of the "unu by Emco" app.
+    • The **original unu app** is dead (backend gone). The community app **stasis for unu** is what you use with the scooter (`/faq official-app`).
 
     **What's new:**
     • **Maps + turn-by-turn navigation** on the display (`/faq librescoot-navigation`)

@@ -1,21 +1,15 @@
 id: service-partner
-aliases: [werkstatt, reparaturdienst, mechaniker, emco, unustasis]
+aliases: [werkstatt, reparaturdienst, mechaniker, emco, unustasis, stasis]
 title:
   de: "Werkstatt / Service-Partner finden"
   en: "Finding a workshop / service partner"
 body:
   de: |
-    **Emco** übernimmt den Service für die unu-Roller. Eine Liste der Service-Partner findest du direkt in den Roller-Apps:
-
-    • **unu by Emco** (iOS und Android)
-    • **unustasis** (Android) — ebenfalls mit Partnerliste
+    **Emco** übernimmt den Service für die unu-Roller. Eine Liste der Service-Partner findest du direkt in der Roller-App **stasis for unu**.
 
     **Berlin:** In der Nähe gilt *Fa. Wilhelm Fahrzeugtechnik* (Südkreuz) als empfohlene Adresse.
   en: |
-    **Emco** now handles unu scooter service. You'll find the list of service partners directly in the scooter apps:
-
-    • **unu by Emco** (iOS and Android)
-    • **unustasis** (Android) — also has the partner list
+    **Emco** now handles unu scooter service. You'll find the list of service partners directly in the **stasis for unu** app.
 
     **Berlin area:** *Fa. Wilhelm Fahrzeugtechnik* near Südkreuz is recommended.
 tags: [service]

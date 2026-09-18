@@ -118,7 +118,7 @@ steps:
 
         Wenn der Code nicht kommt oder die App den Roller trotzdem nicht findet, neu starten und mit `/diagnose app` von vorne beginnen.
 
-        App-Empfehlung: **unustasis**. Mehr in `/faq official-app`.
+        App-Empfehlung: **stasis for unu**. Mehr in `/faq official-app`.
       en: |-
         Pairing a new device:
 
@@ -128,7 +128,7 @@ steps:
 
         If the code doesn't appear or the app still can't find the scooter, restart and run `/diagnose app` from the top.
 
-        Recommended app: **unustasis**. More in `/faq official-app`.
+        Recommended app: **stasis for unu**. More in `/faq official-app`.
 
   bonding-lost:
     answer:
@@ -139,7 +139,7 @@ steps:
         2. Roller in der App löschen.
         3. Roller entsperren, in der App neu pairen, BLE-Code auf dem Display in der App bestätigen.
 
-        Wenn das nicht hilft: in `#support` posten mit Handy- Modell, OS-Version, App-Version und welcher App du benutzt (`unustasis` oder `unu by Emco`).
+        Wenn das nicht hilft: in `#support` posten mit Handy- Modell, OS-Version, App-Version und welcher App du benutzt (`stasis for unu` oder noch die alte unu- bzw. „unu by Emco"-App, die aber vermutlich nicht mehr funktioniert).
       en: |-
         If the app says "connected" but the scooter doesn't react, the bond is usually broken:
 
@@ -147,4 +147,4 @@ steps:
         2. Delete the scooter in the app.
         3. Unlock the scooter, pair fresh in the app, confirm the BLE code on the dashboard.
 
-        If that doesn't help: post in `#support` with phone model, OS version, app version, and which app you're using (`unustasis` or `unu by Emco`).
+        If that doesn't help: post in `#support` with phone model, OS version, app version, and which app you're using (`stasis for unu`, or still the old unu / "unu by Emco" app, which probably doesn't work any more).

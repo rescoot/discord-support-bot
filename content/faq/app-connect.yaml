@@ -12,7 +12,7 @@ body:
     3. Zum **Pairen eines neuen Geräts** muss der Roller entsperrt / im Park-Modus sein. Beim Pairing erscheint ein **BLE-Code auf dem Display**, den du in der App bestätigst.
     4. Wenn die App den Roller **gar nicht** in der BLE-Geräteliste sieht (auch nach Bluetooth aus/ein am Handy), ist der Roller wahrscheinlich **stromlos** — dann ist's kein App-Problem, sondern AUX oder CBB. Siehe `/faq aux-battery` und `/faq cb-battery`. Die Keycard hilft als Test übrigens nicht: ohne Strom liest der NFC-Leser auch nichts.
 
-    Welche App? **unustasis** ist die aktuell empfohlene App (neuer und besser gepflegt als die offizielle Variante). Wenn du noch in der alten unu-App steckst, jetzt umsteigen, siehe `/faq official-app`.
+    Welche App? **stasis for unu** (früher unustasis) ist die Community-App für den Roller: ohne Cloud, reine BLE-Verbindung. Wenn du noch in der alten unu-App steckst, jetzt umsteigen, siehe `/faq official-app`.
   en: |
     What's confirmed in the channel:
 
@@ -21,14 +21,18 @@ body:
     3. To **pair a new device**, the scooter must be unlocked / in park mode. During pairing a **BLE code appears on the dashboard**; confirm it in the app.
     4. If the app doesn't see the scooter in the BLE list **at all** (even after toggling Bluetooth on the phone), the scooter is most likely **unpowered** — that's an AUX or CBB problem, not an app problem. See `/faq aux-battery` and `/faq cb-battery`. The keycard isn't a useful test here: with no power the NFC reader can't read it either.
 
-    Which app? **unustasis** is the recommended one — newer and better maintained than the official variant. If you're still on the old unu app, switch now: `/faq official-app`.
+    Which app? **stasis for unu** (formerly unustasis) is the community app for the scooter: cloud-free, BLE-only. If you're still on the old unu app, switch now: `/faq official-app`.
 links:
-  - url: https://play.google.com/store/apps/details?id=de.freal.unustasis
+  - url:
+      de: https://apps.apple.com/de/app/stasis-for-unu/id6497332566
+      en: https://apps.apple.com/app/stasis-for-unu/id6497332566
     label:
-      de: "unustasis (Google Play)"
-      en: "unustasis (Google Play)"
-  - url: https://testflight.apple.com/join/Uzcy1kSH
+      de: "stasis for unu (iOS)"
+      en: "stasis for unu (iOS)"
+  - url:
+      de: https://play.google.com/store/apps/details?id=de.freal.unustasis&hl=de
+      en: https://play.google.com/store/apps/details?id=de.freal.unustasis&hl=en
     label:
-      de: "unustasis (iOS / TestFlight)"
-      en: "unustasis (iOS / TestFlight)"
+      de: "stasis for unu (Google Play)"
+      en: "stasis for unu (Google Play)"
 tags: [app, bluetooth, troubleshooting]
